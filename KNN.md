@@ -3,7 +3,7 @@
 ## How KNN algrorithm works with example : K - Nearest Neighbor
 https://www.youtube.com/watch?v=2YQHPfwVuF8
 
-#### Lazy learner 방식
+### Lazy learner 방식
 
 . Training dataset is stored
 
