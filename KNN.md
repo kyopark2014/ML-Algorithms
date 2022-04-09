@@ -14,7 +14,9 @@ https://www.youtube.com/watch?v=2YQHPfwVuF8
 
 ### k-NN 알고리즘 특징 
 . Non-parametric method used for classification
+
 . Prediction for test data is done on the basis of its neighbour
+
 . k is an interger (small), if k=1, k is assigned to the class of single nearest neighbour
 
 
@@ -55,6 +57,29 @@ Type2:  sqrt((7-3)^2 + (4-7)^2) = sqrt(16+9) = 5
 
 ![image](https://user-images.githubusercontent.com/52392004/162555608-c0022169-a8cd-43ec-9b23-588c298ce083.png)
 
+
+
+
+## 머신 러닝, KNN 알고리즘으로 간단히 맛보기
+https://www.youtube.com/watch?v=g5CXjAjIKoE
+
+타이타닉 탑습자의 나이와 티켓값으로 생존/사망 여부에 대한 데이터가 아래와 같이 있다고 가정합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/162555658-b937b42e-1ddf-47a3-ba12-001be845a535.png)
+
+노란색으로 표시된 위치의 탑승자의 생존/사망 여부를 예측하고자 합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/162555693-b52028c5-011d-408d-a092-13a66977ac1f.png)
+
+k=5인 경우에 노란색과 가장 가까운 5개를 뽑아서 생존이 더 많으므로 생존할 가능성이 많다고 생각할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/162555728-2666aa43-0077-40bb-898c-e9d5d0d56659.png)
+
+아래와 같이 하단의 탑승자가 있을때 k=3으로 예측한다면 사망이 더 많으므로 사망으로 예측합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/162555737-c0bfcece-b58f-4e27-a79f-220221a6cf3c.png)
+
+데이터가 많을 수록 정확도 높아지며, 많은 경험이 성능 향상으로 이어지므로 머신러닝으로 볼수 있다고 합니다. 
 
 
 
