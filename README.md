@@ -8,7 +8,7 @@
 
 . Problem type: Binary/multi-class classification
 
-. 데이터는 table 형태로 제공 
+. 데이터는 table 형태로 제공  
 
 
 #### Classification Algorithms 
