@@ -222,4 +222,36 @@ kn.fit(train_input, train_target)
 kn.score(test_input, test_target)    
 ```    
 
-## f
+## 데이터 전처리를 통한 수상한 도미 찾기 
+
+아래와 같이 무게와 길이에 대한 scale을 맞추면 (25,150)이 도미가 아니라 빙어로 분류 될 수 있습니다. 
+
+```python
+plt.scatter(train_input[:,0], train_input[:,1])
+plt.scatter(25, 150, marker='^')
+plt.scatter(train_input[indexes,0], train_input[indexes,1], marker='D')
+plt.xlim((0, 1000))
+plt.xlabel('length')
+plt.ylabel('weight')
+plt.show()
+```
+
+![image](https://user-images.githubusercontent.com/52392004/185290384-8789475e-c188-4c10-be17-cae06318aaa7.png)
+
+따라서와 같이 z score(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내서, 특성값의 크기와 상관없이 동일한 조건으로 비교할 수 있습니다. 
+
+```python
+mean = np.mean(train_input, axis=0)
+std = np.std(train_input, axis=0)
+train_scaled = (train_input - mean) / std
+new = ([25, 150] - mean) / std
+plt.scatter(train_scaled[:,0], train_scaled[:,1])
+plt.scatter(new[0], new[1], marker='^')
+plt.xlabel('length')
+plt.ylabel('weight')
+plt.show()
+```
+
+결과적으로 아래와 같이 수상한 도미를 데이터 전처리를 통해 찾을 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/185290715-26a0afda-cc26-460d-8941-c4c1d6c812c9.png)
