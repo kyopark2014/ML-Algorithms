@@ -191,7 +191,30 @@ plt.show()
 4) KNN으로 분석합니다. 
 
 ```python
+kn = KNeighborsClassifier()
 kn.fit(train_input, train_target)
 kn.score(test_input, test_target)
 ```
 
+이때 결과는 마찬가지로 1.0 입니다. 
+
+#### sciket-learn으로도 같은 동작을 수행할 수 있습니다.
+
+```python
+from sklearn.model_selection import train_test_split
+train_input, test_input, train_target, test_target = train_test_split(
+    fish_data, fish_target, random_state=42)
+```    
+
+이때 fish_target기준으로 비율을 맞출수도 있습니다.    
+
+```python
+from sklearn.model_selection import train_test_split
+train_input, test_input, train_target, test_target = train_test_split(
+    fish_data, fish_target, stratify=fish_target, random_state=42)
+kn = KNeighborsClassifier()
+kn.fit(train_input, train_target)
+kn.score(test_input, test_target)    
+```    
+
+## f
