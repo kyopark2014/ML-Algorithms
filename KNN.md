@@ -1,4 +1,4 @@
-# K - Nearest Neighbor(kNN) Classification
+# k - Nearest Neighbor(kNN) Classification
 
 ## Machine Learning at Work (O'REILLY)
 
@@ -30,7 +30,7 @@
 
 ## Scikit-learn 이용시 
 
-#### KNN Neighbors Classifier 
+#### kNN Neighbors Classifier 
 
 score()의 값은 정확도로서 정답을 맞힌 개수의 비율을 의미합니다. 
 
@@ -41,7 +41,7 @@ kn = kn.fit(train_input, train_target)
 kn.score(test_input, test_target)
 ```
 
-### KNN Neighbors Regressor
+### kNN Neighbors Regressor
 
 score()의 값은 결정계수(coeffcient of determination)입니다. 
 
@@ -51,10 +51,11 @@ knr = KNeighborsRegressor()
 knr.fit(train_input, train_target)
 print(knr.score(test_input, test_target))
 ```
+<img width="438" alt="image" src="https://user-images.githubusercontent.com/52392004/185509801-b14ef1c2-ba30-484b-815d-cd4128e0d27c.png">
 
 
-## How KNN algrorithm works with example : K - Nearest Neighbor
-https://www.youtube.com/watch?v=2YQHPfwVuF8
+## How KNN algrorithm works with example : [K - Nearest Neighbor](https://www.youtube.com/watch?v=2YQHPfwVuF8)
+
 
 ### Lazy learner 방식
 
