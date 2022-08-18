@@ -72,8 +72,7 @@ plt.show()
 
 8) 데이터 편집 
 
-지금 하는 학습방법은 지도학습이며 훈련을 위하여 데이터(Input)과 정답(Target)이 필요합니다. 아래와 scikit-learn에서 사용하기 위해 array로 저장하여 입력으로  
-사용합니다. 
+지금 하는 학습방법은 지도학습이며 훈련을 위하여 데이터(Input)과 정답(Target)이 필요합니다. 아래와 scikit-learn에서 사용하기 위해 array로 저장하여 입력으로 사용합니다. 
 
 ```python
 length = bream_length+smelt_length
