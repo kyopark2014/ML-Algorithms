@@ -117,3 +117,4 @@ plt.show()
 
 ```python
 kn.predict([[30, 600]])
+```
