@@ -1,4 +1,4 @@
-# KNN을 이용한 binary classification
+# KNN을 이용한 Binary Classification
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 따라서 KNN을 이용해 이진분류 문제를 시험합니다. 
 
