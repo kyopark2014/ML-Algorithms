@@ -3,7 +3,7 @@
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 따라서 KNN을 이용해 이진분류 문제를 시험합니다. 
 
 
-## Hello-Workd
+## Hello-World
 
 scikit-learn을 이용하여 간단하게 knn으로 binary classification을 수행합니다. 
 
