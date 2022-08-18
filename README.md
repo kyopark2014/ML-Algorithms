@@ -1,5 +1,9 @@
 # ML-Algorithms
 
+## 기본 Binary Classification (HelloWorld)
+
+[KNN을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
+
 ## [Amazon SageMaker Built-in Algorithms](https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html)
 
 ### Predict if an item belongs to a category: an email spam filter
