@@ -240,6 +240,12 @@ plt.show()
 
 따라서와 같이 z score(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내서, 특성값의 크기와 상관없이 동일한 조건으로 비교할 수 있습니다. 
 
+<img width="298" alt="image" src="https://user-images.githubusercontent.com/52392004/185291465-9676cdcb-4abc-4534-a887-34f879fa9aa7.png">
+
+x: 대상데이터, x(bar): 평균 (mean), s: 표준편차(std)
+
+아래와 같이 구현할 수 있습니다. 
+
 ```python
 mean = np.mean(train_input, axis=0)
 std = np.std(train_input, axis=0)
