@@ -1,5 +1,13 @@
 # ML-Algorithms
 
+## AI / ML
+
+- 인공지능(AI, Artificial Intelligence): 사람처럼 학습하고 추론할 수 있는 지능을 가진 시스템을 만드는 기술
+
+- 머신러닝(ML, Machine Learning): 규칙을 프로그래밍하지 않아도 자동으로 데이터에서 규칙을 학습하는 알고리즘 연구, 예: Sciket-learn
+
+- 딥려닝(DL, Deep Learning): 인공 신경망, 예: TensorFlow, PyTorch
+
 ## 기본 Binary Classification (HelloWorld)
 
 [KNN을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
