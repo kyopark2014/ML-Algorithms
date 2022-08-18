@@ -73,7 +73,7 @@ plt.show()
 8) 데이터 편집 
 
 지금 하는 학습방법은 지도학습이며 훈련을 위하여 데이터(Input)과 정답(Target)이 필요합니다. 아래와 scikit-learn에서 사용하기 위해 array로 저장하여 입력으로  
-아래와 scikit-learn에서 사용하기 위해 array로 저장합니다. 
+사용합니다. 
 
 ```python
 length = bream_length+smelt_length
@@ -81,7 +81,8 @@ weight = bream_weight+smelt_weight
 fish_data = [[l, w] for l, w in zip(length, weight)]
 ```
 
-결과도 만듭니다. 
+아래와 정답(Target)도 생성합니다. 
+
 ```python
 fish_target = [1]*35 + [0]*14
 print(fish_target)
