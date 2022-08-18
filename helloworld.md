@@ -72,7 +72,7 @@ plt.show()
 
 8) 데이터 편집 
 
-아래와 scikit run에서 사용하기 위해 array로 저장합니다. 
+아래와 scikit-learn에서 사용하기 위해 array로 저장합니다. 
 
 ```python
 length = bream_length+smelt_length
@@ -87,4 +87,33 @@ print(fish_target)
 ```
 
 
-8) scikitrun으로 데이터 준비 
+8) scikit-learn으로 training
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+kn = KNeighborsClassifier()
+kn.fit(fish_data, fish_target)
+kn.score(fish_data, fish_target)
+```
+
+test시 training과 같은 데이터를 사용했으므로 결과는 1이 나옯니다.
+
+<img width="1097" alt="image" src="https://user-images.githubusercontent.com/52392004/185276285-df9e250f-fb23-41f0-9b2d-2f88c18d54ef.png">
+
+9) 시험 
+
+아래와 같이 (30, 600)을 가지는 sample은 도미입니다. 
+
+```python
+plt.scatter(bream_length, bream_weight)
+plt.scatter(smelt_length, smelt_weight)
+plt.scatter(30, 600, marker='^')
+plt.xlabel('length')
+plt.ylabel('weight')
+plt.show()
+```
+
+![image](https://user-images.githubusercontent.com/52392004/185276481-4405e6c5-e850-40c0-964c-a1f3467814db.png)
+
+```python
+kn.predict([[30, 600]])
