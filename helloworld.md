@@ -136,3 +136,62 @@ KNN classifier의 경우에 default로 5개의 주위의 값을 가지고 예측
 kn49 = KNeighborsClassifier(n_neighbors=49)
 ```
 
+## Numpy를 활용하여 Train과 Test 셈플을 만들어서 KNN 적용 
+
+1) fish_data, fish_target을 numpy array로 변경합니다.  
+
+```python
+import numpy as np
+input_arr = np.array(fish_data)
+target_arr = np.array(fish_target)
+```
+target_arr = np.array(fish_target)
+
+2) random index를 생성합니다. 
+
+```python
+np.random.seed(42)
+index = np.arange(49)
+np.random.shuffle(index)
+print(index)
+```
+
+index가 아래와 같이 random하게 생성되었습니다.
+```python
+[13 45 47 44 17 27 26 25 31 19 12  4 34  8  3  6 40 41 46 15  9 16 24 33
+ 30  0 43 32  5 29 11 36  1 21  2 37 35 23 39 10 22 18 48 20  7 42 14 28
+ 38]
+```
+
+3) 앞에서 35개는 train으로 나머지는 test용으로 만듧니다. 
+
+```python
+train_input = input_arr[index[:35]]
+train_target = target_arr[index[:35]]
+test_input = input_arr[index[35:]]
+test_target = target_arr[index[35:]]
+```
+
+이를 아래와 같이 그림으로 확인합니다. 
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(train_input[:, 0], train_input[:, 1])
+plt.scatter(test_input[:, 0], test_input[:, 1])
+plt.xlabel('length')
+plt.ylabel('weight')
+plt.show()
+```
+
+결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/185286750-1dcb2f83-5f36-4edb-9a7d-efbdff62bbb1.png)
+
+4) KNN으로 분석합니다. 
+
+```python
+kn.fit(train_input, train_target)
+kn.score(test_input, test_target)
+```
+
