@@ -51,6 +51,9 @@ knr = KNeighborsRegressor()
 knr.fit(train_input, train_target)
 print(knr.score(test_input, test_target))
 ```
+
+#### Score 계산식 
+
 <img width="438" alt="image" src="https://user-images.githubusercontent.com/52392004/185509801-b14ef1c2-ba30-484b-815d-cd4128e0d27c.png">
 
 
