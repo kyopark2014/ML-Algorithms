@@ -113,8 +113,25 @@ plt.ylabel('weight')
 plt.show()
 ```
 
+그래프에서 보면 아래와 같이 세모는 도미입니다. 
+
 ![image](https://user-images.githubusercontent.com/52392004/185276481-4405e6c5-e850-40c0-964c-a1f3467814db.png)
+
+이제 knn으로 값을 예측해보면 아래와 같이 1이 나오므로 도미로 예측되었음을 알 수 있습니다. 
 
 ```python
 kn.predict([[30, 600]])
 ```
+
+결과는 아래와 같습니다. 
+
+```python
+array([1])
+```
+
+KNN classifier의 경우에 default로 5개의 주위의 값을 가지고 예측을 하는데, 이 값은 아래와 같이 "n_neighbors"를 이용해 변경할 수 있습니다. 
+
+```python
+kn49 = KNeighborsClassifier(n_neighbors=49)
+```
+
