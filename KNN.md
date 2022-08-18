@@ -28,6 +28,29 @@
 . 계산 시간이 오래 걸리는 문제를 해결하기 위해, 근사적인 이웃탐색 방법을 쓰기도 한다. 
 
 
+## Scikit-learn 이용시 
+
+#### KNN Neighbors Classifier 
+
+score()의 값은 정확도로서 정답을 맞힌 개수의 비율을 의미합니다. 
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+kn = KNeighborsClassifier()
+kn = kn.fit(train_input, train_target)  
+kn.score(test_input, test_target)
+```
+
+### KNN Neighbors Regressor
+
+score()의 값은 결정계수(coeffcient of determination)입니다. 
+
+```python
+from sklearn.neighbors import KNeighborsRegressor 
+knr = KNeighborsRegressor()
+knr.fit(train_input, train_target)
+print(knr.score(test_input, test_target))
+```
 
 
 ## How KNN algrorithm works with example : K - Nearest Neighbor
