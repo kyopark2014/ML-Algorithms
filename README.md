@@ -20,6 +20,14 @@
 
 과소적합: train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
 
+#### 규제 (Regulation)
+
+- Ridge: 계수를 제곱한 값을 기준으로 규제를 적용
+
+- Lasso: 계수의 절대값을 기준으로 규제를 적용 
+
+
+
 
 ## [Amazon SageMaker Built-in Algorithms](https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html)
 
