@@ -65,7 +65,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 - 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
 - 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정
 
-
+ 
 
 #### 규제 (Regularization)
 
