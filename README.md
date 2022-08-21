@@ -22,6 +22,8 @@
 
 ## 데이터전처리 
 
+### 표준점수 
+
 특성값을 일정한 기준으로 맞추는 작업이 필요합니다. 이때 Z점수(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내므로, 특성값의 크기와 상관없이 동일한 조건으로 비교가 가능합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/185774334-00e687e7-226e-410b-b6dd-85989f5147e1.png)
@@ -37,6 +39,17 @@ ss.fit(train_input)
 train_scaled = ss.transform(train_input)
 test_scaled = ss.transform(test_input)
 ```
+
+### Train과 Test Set 
+
+Train과 Test의 Set이 골고루 섞이지 않으면 Sampling Bias가 발생할 수 있으므로, 준비된 데이터 중에 일부를 떼어 train set과 test set으로 활용합니다. 
+
+```python
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(
+    fish_data, fish_target, stratify=fish_target, random_state=42)
+
 
 ## Regression
 
