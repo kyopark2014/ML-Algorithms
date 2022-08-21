@@ -26,8 +26,17 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/185774334-00e687e7-226e-410b-b6dd-85989f5147e1.png)
 
+아래와 같이 scikit-learn을 이용하여 표준점수로 변환할 수 있습니다. 
 
+```python
+from sklearn.preprocessing import StandardScaler
 
+ss = StandardScaler()
+ss.fit(train_input)    
+
+train_scaled = ss.transform(train_input)
+test_scaled = ss.transform(test_input)
+```
 
 ## 용어 정리
 
@@ -65,19 +74,7 @@ y=ax+b
 - 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
 - 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정
 
-#### Scaler
 
-아래와 같이 scikit-learn을 이용하여 표준점수로 변환할 수 있습니다. 
-
-```python
-from sklearn.preprocessing import StandardScaler
-
-ss = StandardScaler()
-ss.fit(train_input)    
-
-train_scaled = ss.transform(train_input)
-test_scaled = ss.transform(test_input)
-```
 
 #### 규제 (Regularization)
 
