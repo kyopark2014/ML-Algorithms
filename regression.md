@@ -26,6 +26,10 @@ y=ax+b
    ◇  MulticlassClassification: Crossentropylossfunction
 - 확률적경사하강법 (StochasticGradientDescent): 훈련세트에서 샘플을 무작위로 하나씩 꺼내 손실 함수의 경사를 계산하고 손실이 작아지는 방향으로 파라미터를 업데이트하는 알고리즘, 하이퍼파라미터인 learning rate(step size)와 epoch를 조정
 
+## Linear Regression
+
+[Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는것에 대해 설명합니다. 
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
