@@ -46,11 +46,11 @@ test_input = test_input.reshape(-1, 1)
 
 ```python
 from sklearn.linear_model import LinearRegression
-lr = LinearRegression()
-# 선형 회귀 모델 훈련
+
+lr = LinearRegression()  # 선형 회귀 모델 훈련
 lr.fit(train_input, train_target)
-3) Linear Regression으로 모델을 생성합니다.
 ```
+
 
 4) 길이가 50cm인 농어의 무계를 예측합니다. 
 
