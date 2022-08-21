@@ -108,7 +108,7 @@ print(lr.score(train_poly, train_target))
 print(lr.score(test_poly, test_target))
 ```
 
-이때 얻어진 결정계수(Coefficient of determination)는 아래와 같습니다. 
+이때 얻어진 결정계수(Coefficient of determination)는 아래와 같습니다. test 결과가 train 결과보다 좋으므로 과소적합에 해당 됩니다. 
 
 ```c
 0.9706807451768623
