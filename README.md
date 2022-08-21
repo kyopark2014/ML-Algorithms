@@ -81,9 +81,25 @@ test_scaled = ss.transform(test_input)
 
 - Ridge: 계수를 제곱한 값을 기준으로 규제를 적용
 
+```python
+from sklearn.linear_model import Ridge
+
+ridge = Ridge()
+ridge.fit(train_scaled, train_target)
+print(ridge.score(train_scaled, train_target))
+```
+
 - Lasso: 계수의 절대값을 기준으로 규제를 적용 
 
+```python
+from sklearn.linear_model import Lasso
 
+lasso = Lasso()
+lasso.fit(train_scaled, train_target)
+print(lasso.score(train_scaled, train_target))
+```
+
+- Lasso: 계수의 절대값을 기준으로 규제를 적용 
 ## [Amazon SageMaker Built-in Algorithms](https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html)
 
 ### Predict if an item belongs to a category: an email spam filter
