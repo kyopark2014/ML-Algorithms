@@ -49,7 +49,7 @@ from sklearn.model_selection import train_test_split
 
 train_input, test_input, train_target, test_target = train_test_split(
     fish_data, fish_target, stratify=fish_target, random_state=42)
-
+```
 
 ## Regression
 
