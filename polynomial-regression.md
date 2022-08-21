@@ -93,7 +93,7 @@ plt.show()
 
 얻어진 그래프는 아래와 같습니다. 
 
-![image](https://user-images.githubusercontent.com/52392004/185797100-ea3dfb8e-03a7-4317-8729-e406c14d1248.png)
+![image](https://user-images.githubusercontent.com/52392004/185797305-92c17570-83cc-48df-8fa4-5408f5dd6acc.png)
 
 
 ## 결과 
