@@ -60,7 +60,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 
 
-#### 모델 평가
+## 모델 평가
 
 일반적으로 train set의 score가 test set보다 조금 높음
 
@@ -70,7 +70,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
  
 
-#### 규제 (Regularization)
+### 규제 (Regularization)
 
 모델이 과적합 되게 학습하지 않고 일반성을 가질 수 있도록 파라미터값에 제약을 주는것을 말합니다. L1 규제(Lasso), L2 규제(Ridge), alpha 값으로 규제량을 조정합니다. 
 
