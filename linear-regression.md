@@ -52,10 +52,39 @@ lr.fit(train_input, train_target)
 3) Linear Regression으로 모델을 생성합니다.
 ```
 
-4) 길이가 
+4) 길이가 50cm인 농어의 무계를 예측합니다. 
 
-3) Linear Regression으로 모델을 생성합니다.50일때의 
-3) Linear Regression으로 모델을 생성합니다.
+```python
+print(lr.predict([[50]]))
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+[1241.83860323]
+```
+
+5) 그래프를 그리면 아래와 같이 데이터 영역 밖의 값을 예측할때에 Linear Regression으로 예측한것을 알 수 있습니다. 
+
+```python
+import matplotlib.pyplot as plt
+
+# 훈련 세트의 산점도를 그립니다
+plt.scatter(train_input, train_target)
+# 15에서 50까지 1차 방정식 그래프를 그립니다
+plt.plot([15, 50], [15*lr.coef_+lr.intercept_, 50*lr.coef_+lr.intercept_],'r')
+# 50cm 농어 데이터
+plt.scatter(50, 1241.8, marker='^')
+plt.xlabel('length')
+plt.ylabel('weight')
+plt.show()
+```
+
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/185791485-e57c716a-31fc-4453-a76d-f9d0aa93f6bb.png)
+
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
