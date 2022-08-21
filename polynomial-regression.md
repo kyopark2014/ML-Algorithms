@@ -64,7 +64,7 @@ print(lr.predict([[50**2, 50]]))
 
 ![image](https://user-images.githubusercontent.com/52392004/185797217-f8fdae5b-64f1-4f48-93fe-112a2d295115.png)
 
-그래프읜 변수인 a,b,c에 대한 값은 아래와 같이 확인할 수 있습니다. 
+2차원 그래프의 변수인 a,b,c에 대한 값은 아래와 같이 확인할 수 있습니다. 
 
 ```python
 print(lr.coef_, lr.intercept_)
