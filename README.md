@@ -58,12 +58,26 @@ y=ax+b
 - 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
 - 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정
 
+#### Scaler
 
+아래와 같이 scikit-learn을 이용하여 표준점수로 변환할 수 있습니다. 
 
+```python
+from sklearn.preprocessing import StandardScaler
+
+ss = StandardScaler()
+ss.fit(train_input)    
+
+train_scaled = ss.transform(train_input)
+test_scaled = ss.transform(test_input)
+```
 
 #### 규제 (Regularization)
 
 모델이 과적합 되게 학습하지 않고 일반성을 가질 수 있도록 파라미터값에 제약을 주는것을 말합니다. L1 규제(Lasso), L2 규제(Ridge), alpha 값으로 규제량을 조정합니다. 
+
+<img width="423" alt="image" src="https://user-images.githubusercontent.com/52392004/185773329-8b542165-3c41-42d9-ba0f-e437a2f9f811.png">
+
 
 - Ridge: 계수를 제곱한 값을 기준으로 규제를 적용
 
