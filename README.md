@@ -17,11 +17,11 @@
 
 ### 결정계수 (Coefficient of determination)
 
-score() 호출시 결과는 결정계수로소 1에 가까울수록 예측이 잘된것임을 알 수 있습니다. 
+score() 호출시 결과는 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(1에 가까울수록 예측이 잘된것)를 의미합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
 
-아래는 knn을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. 
+아래는 K Neighbors Regressor을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. 
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier
