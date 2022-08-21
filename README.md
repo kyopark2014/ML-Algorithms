@@ -90,6 +90,25 @@ print(ridge.score(train_scaled, train_target))
 print(ridge.score(test_scaled, test_target))
 ```
 
+alpha를 매개변수로 규제의 강도를 조절할 수 있습니다. 이때, alpha값이 크면 규제 강도가 세짐으로 계수값을 더 줄이고 좀 더 과대적합 해소가 가능합니다. 
+
+```python
+alpha_list = [0.001, 0.01, 0.1, 1, 10, 100]
+for alpha in alpha_list:
+    # 릿지 모델을 만듭니다
+    ridge = Ridge(alpha=alpha)
+    # 릿지 모델을 훈련합니다
+    ridge.fit(train_scaled, train_target)
+    # 훈련 점수와 테스트 점수를 저장합니다
+    train_score.append(ridge.score(train_scaled, train_target))
+    test_score.append(ridge.score(test_scaled, test_target))
+```
+
+아래는 릿지 회귀의 한 예입니다. 
+
+<img width="284" alt="image" src="https://user-images.githubusercontent.com/52392004/185773607-69cefcfb-e931-47c6-b9ff-6f2045015674.png">
+
+
 - Lasso: 계수의 절대값을 기준으로 규제를 적용 
 
 ```python
@@ -117,8 +136,6 @@ for alpha in alpha_list:
     train_score.append(lasso.score(train_scaled, train_target))
     test_score.append(lasso.score(test_scaled, test_target))
 ```
-
-<img width="284" alt="image" src="https://user-images.githubusercontent.com/52392004/185773607-69cefcfb-e931-47c6-b9ff-6f2045015674.png">
 
 ## [Amazon SageMaker Built-in Algorithms](https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html)
 
