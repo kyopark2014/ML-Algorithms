@@ -93,7 +93,7 @@ plt.show()
 
 ## 결과 
 
-아래와 같이 train과 test set에 대한 score는 결정계수 (Coefficient of determination)로서 아래와 같이 확인 할 수 있습니다. 
+아래와 같이 train과 test set에 대한 score는 결정계수(Coefficient of determination)로서 아래와 같이 확인 할 수 있습니다. 
 
 ```python
 print(lr.score(train_input, train_target))
