@@ -30,6 +30,13 @@ y=ax+b
 
 [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는것에 대해 설명합니다. 
 
+## Polynomial Regression
+
+[Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서는 
+
+[Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 Polynomial Regression을 이용합니다.
+
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
