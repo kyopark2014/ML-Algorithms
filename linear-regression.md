@@ -91,6 +91,21 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/52392004/185791485-e57c716a-31fc-4453-a76d-f9d0aa93f6bb.png)
 
 
+## 결과 
+
+아래와 같이 train과 test set에 대한 score는 결정계수 (Coefficient of determination)로서 아래와 같이 확인 할 수 있습니다. 
+
+```python
+print(lr.score(train_input, train_target))
+print(lr.score(test_input, test_target))
+```
+
+이때의 결과는 아래와 같습니다. train에 비해서 test set결과가 큰 차이가 있어서 과소적합에 해당됩니다. 
+
+```c
+0.939846333997604
+0.8247503123313558
+```
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
