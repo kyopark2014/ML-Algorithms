@@ -32,9 +32,7 @@ y=ax+b
 
 ## Polynomial Regression
 
-[Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서는 
-
-[Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 Polynomial Regression을 이용합니다.
+[Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서는 Polynomial Regression을 이용합니다.
 
 
 ## Reference
