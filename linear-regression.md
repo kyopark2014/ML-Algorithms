@@ -100,7 +100,7 @@ print(lr.score(train_input, train_target))
 print(lr.score(test_input, test_target))
 ```
 
-이때의 결과는 아래와 같습니다. train에 비해서 test set결과가 큰 차이가 있어서 과소적합에 해당됩니다. 
+이때의 결과는 아래와 같습니다. train에 비해서 test set결과가 큰 차이가 있어서 과대적합에 해당됩니다. 
 
 ```c
 0.939846333997604
