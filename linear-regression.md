@@ -51,6 +51,10 @@ lr = LinearRegression()  # 선형 회귀 모델 훈련
 lr.fit(train_input, train_target)
 ```
 
+Linear regression으로 농어의 무게를 아래처럼 예측할 수 있습니다. 여기서 기울기 a는 lr.coef_이 되고, 절편 b는 lr.intercept_ 입니다.
+
+![image](https://user-images.githubusercontent.com/52392004/185791887-38a99da0-091f-4e93-993b-2dcfcb94ca23.png)
+
 
 4) 길이가 50cm인 농어의 무계를 예측합니다. 
 
