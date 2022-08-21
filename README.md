@@ -43,6 +43,10 @@ y=ax+b
 - 다중회귀 (MultipleRegression): 여러개의 특성을 사용하는 회귀모델, 소프트맥스함수사용
 - 로지스틱 회귀 (LogisticRegression):선형방정식을 사용한 분류 알고리즘.시그모이드 함수나 소프트맥스 함수를 사용하여 클래스 확률(0~1)을 출력할 수 있음
 - 시그모이드함수 (Sigmoid Function): 선형방정식의 출력을 0에서 1사이의 확률로 압축
+
+![image](https://user-images.githubusercontent.com/52392004/185773923-7ca38926-f792-46c6-b339-f8459c2fea8c.png)
+
+
 - 소프트맥스함수 (SoftmaxFunnction): 다중분류에서 각클래스별 예측출력값을 0에서 1사이의 확률로 압축하고 전체 합이 1이 되도록 변환
 - 손실함수(LossFunction): 예측값과 실제 정답간의 차이를 표현하는 함수
    ◇ Regression: MSE(MeanSquaredError,평균제곱오차)
