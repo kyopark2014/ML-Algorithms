@@ -24,9 +24,7 @@
 
 특성값을 일정한 기준으로 맞추는 작업이 필요합니다. 이때 Z점수(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내므로, 특성값의 크기와 상관없이 동일한 조건으로 비교가 가능합니다. 
 
-<img width="230" alt="image" src="https://user-images.githubusercontent.com/52392004/185773237-2190452a-5aaf-40e7-af6f-08fbb618a524.png">
-
-x: 대상데이터, x bar: 평균(mean), s: 표준편차(std)
+![image](https://user-images.githubusercontent.com/52392004/185774334-00e687e7-226e-410b-b6dd-85989f5147e1.png)
 
 
 
