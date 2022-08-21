@@ -15,12 +15,30 @@
 [KNN을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
 
 
+## 데이터전처리 
+
+특성값을 일정한 기준으로 맞추는 작업이 필요합니다. 이때 Z점수(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내므로, 특성값의 크기와 상관없이 동일한 조건으로 비교가 가능합니다. 
+
+<img width="230" alt="image" src="https://user-images.githubusercontent.com/52392004/185773237-2190452a-5aaf-40e7-af6f-08fbb618a524.png">
+
+x: 대상데이터, x bar: 평균(mean), s: 표준편차(std)
+
+
+
+
 ## 용어 정리
 
 #### Regression
 
-- 회귀 (Regression): 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법
-- 선형회귀 (LinearRegression): 특성(feature)와 Target 사이의 관계를 가장 잘 나타내는 선형 방정식
+- 회귀 (Regression): 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다.
+
+- 선형회귀 (LinearRegression): 특성(feature)와 Target 사이의 관계를 가장 잘 나타내는 아래와 같은 선형 방정식입니다. 여기서 a는 기울기, 계수(coefficient), 가중치(weight)이고, b는 절편입니다. 
+
+```c
+y=ax+b 
+```
+<img width="331" alt="image" src="https://user-images.githubusercontent.com/52392004/185773282-73e5dd34-6a64-4c8d-87a2-0261dc4053b7.png">
+
 - 다항회귀 (PolynomialRegression): 다항식을 사용하여 특성(feature)와 Target사이의 관계를 표현, 비선형
 - 다중회귀 (MultipleRegression): 여러개의 특성을 사용하는 회귀모델, 소프트맥스함수사용
 - 로지스틱 회귀 (LogisticRegression):선형방정식을 사용한 분류 알고리즘.시그모이드 함수나 소프트맥스 함수를 사용하여 클래스 확률(0~1)을 출력할 수 있음
