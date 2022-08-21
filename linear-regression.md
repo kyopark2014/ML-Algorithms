@@ -35,8 +35,8 @@ perch_weight = np.array(
 from sklearn.model_selection import train_test_split
 
 # 훈련 세트와 테스트 세트로 나눕니다
-train_input, test_input, train_target, test_target = train_test_split(
-    perch_length, perch_weight, random_state=42)
+train_input, test_input, train_target, test_target = train_test_split(perch_length, perch_weight, random_state=42)
+
 # 훈련 세트와 테스트 세트를 2차원 배열로 바꿉니다
 train_input = train_input.reshape(-1, 1)
 test_input = test_input.reshape(-1, 1)
