@@ -2,7 +2,7 @@
 
 ## 농어의 길이를 무게로 예측 
 
-[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)의 다항회귀를 참조하여 농어의 길이로 무게를 예측하고자 합니다. 
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)의 다항회귀를 참조하여 농어의 길이로 무게를 예측하고자 합니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/polynomial_regression_simple.ipynb)에서는 jupiter notebook code의 예를 보여줍니다. 
 
 1) 아래와 같이 데이터를 준비합니다. 
 
@@ -97,8 +97,6 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/185797305-92c17570-83cc-48df-8fa4-5408f5dd6acc.png)
 
-
-## 
 
 
 ## 결과 
