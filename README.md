@@ -15,6 +15,8 @@
 [KNN을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
 
 
+### 결정계수 (Coefficient of determination)
+
 - score() 호출시 결과는 결정계수로소 1에 가까울수록 예측이 잘된것임을 알 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
@@ -22,7 +24,7 @@
 
 ## 데이터전처리 
 
-### 표준점수 
+### 표준점수 (Standard score)
 
 특성값을 일정한 기준으로 맞추는 작업이 필요합니다. 이때 Z점수(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내므로, 특성값의 크기와 상관없이 동일한 조건으로 비교가 가능합니다. 
 
