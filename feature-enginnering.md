@@ -1,4 +1,4 @@
-# 특성공학을 이용한 농어 예측
+# 특성공학(Feature Engineering)을 이용한 농어 예측
 
 [Feature Engineering 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/feature_enginnering.ipynb)에서는 농어의 무게를 예측하는 예제입니다. 
 
