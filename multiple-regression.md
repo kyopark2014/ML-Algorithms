@@ -4,6 +4,9 @@
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)에는 여러개의 특성(길이, 두께, 높이)을 사용하여 예측할 때 쓸수 있는데 다중회귀 예제를 아래처럼 제공하고 있습니다. 
 
+[Multiple Regression 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/feature_enginnering.ipynb)에서는 농어의 무게를 예측하는 예제입니다. 
+
+
 데이터를 아래와 같이 pandas로 읽어올 수 있습니다. [CSV 파일](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/perch_full.csv)에는 length, height, width로 도미(perch) 데이터가 정리되어 있습니다.
 
 ```python
