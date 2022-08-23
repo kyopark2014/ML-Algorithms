@@ -1,10 +1,8 @@
-# Regression
-
-## 회귀 (Regression) 방법
+# 회귀 (Regression)
 
 회귀 (Regression)는 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다.
 
-### 선형회귀 (Linear Regression)
+## 선형회귀 (Linear Regression)
 
 특성(feature)와 Target 사이의 관계를 "y = ax + b"와 같은 선형 방정식으로 표시합니다. 여기서 a(coefficient)는 기울기, 계수(coefficient), 가중치(weight)의 의미이고, b는 절편(intercept, constant)입니다. 
 
@@ -12,21 +10,21 @@
 
 [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는것에 대해 설명합니다. 
 
-### 다항회귀 (Polynomial Regression)
+## 다항회귀 (Polynomial Regression)
 
 다항식을 사용하여 특성(feature)와 Target사이의 관계를 표현합니다.
 
 [Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서는 Polynomial Regression을 이용합니다.
 
 
-### 다중회귀(Multiple Regression)
+## 다중회귀(Multiple Regression)
 
 여러개의 특성을 사용하는 회귀모델, 소프트맥스함수사용
 
 [다중회귀(Multiple Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/multiple-regression.md)에서는 농어(perch)의 길이, 두께, 높이를 가지고 예측을 수행하는 방법에 대해 설명합니다. 
 
 
-### 로지스틱 회귀 (LogisticRegression)
+## 로지스틱 회귀 (LogisticRegression)
 
 선형방정식을 사용한 분류 알고리즘으로 시그모이드 함수나 소프트맥스 함수를 사용하여 클래스 확률(0~1)을 출력할 수 있습니다.
  
