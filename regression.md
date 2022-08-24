@@ -45,7 +45,7 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/186538578-b9a9ef45-dae5-4092-a592-622b73957916.png)
 
-![image](https://user-images.githubusercontent.com/52392004/186539045-86f42370-3c68-4101-ace7-bc7e3666f485.png)
+![image](https://user-images.githubusercontent.com/52392004/186540141-a25f1eaa-c287-4b30-8c58-8a63eb9cac29.png)
 
 
 - 손실함수(Loss Function): 예측값과 실제 정답간의 차이를 표현하는 함수
