@@ -43,6 +43,11 @@
 
 - 소프트맥스함수 (Softmax Funnction): 다중분류에서 각클래스별 예측출력값을 0에서 1사이의 확률로 압축하고 전체 합이 1이 되도록 변환합니다.
 
+![image](https://user-images.githubusercontent.com/52392004/186538578-b9a9ef45-dae5-4092-a592-622b73957916.png)
+
+![image](https://user-images.githubusercontent.com/52392004/186539045-86f42370-3c68-4101-ace7-bc7e3666f485.png)
+
+
 - 손실함수(Loss Function): 예측값과 실제 정답간의 차이를 표현하는 함수
 
    ◇ Regression: MSE(MeanSquaredError,평균제곱오차)
