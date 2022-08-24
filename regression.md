@@ -43,7 +43,7 @@
 
 - 소프트맥스함수 (Softmax Funnction): 다중분류에서 각클래스별 예측출력값을 0에서 1사이의 확률로 압축하고 전체 합이 1이 되도록 변환합니다.
 
-![image](https://user-images.githubusercontent.com/52392004/186538578-b9a9ef45-dae5-4092-a592-622b73957916.png)
+![image](https://user-images.githubusercontent.com/52392004/186540209-23c813e4-9806-4fb3-ae07-1d3e673bdb94.png)
 
 ![image](https://user-images.githubusercontent.com/52392004/186540141-a25f1eaa-c287-4b30-8c58-8a63eb9cac29.png)
 
