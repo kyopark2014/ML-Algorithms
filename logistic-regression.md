@@ -168,7 +168,7 @@ print(np.round(proba, decimals=3))
  [0.    0.    0.904 0.002 0.089 0.002 0.001]]
 ```
 
-마찬가지로 표준점수를 계산하고, softmax로 확율을 계산하면 predict_proba로 얻어진 결과와 같습니다. 
+마찬가지로 표준점수를 계산하고, [Softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md#Softmax)로 확율을 계산하면 predict_proba로 얻어진 결과와 같습니다. 
 
 ```python
 decision = lr.decision_function(test_scaled[:5])
