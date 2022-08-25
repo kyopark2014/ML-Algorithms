@@ -100,6 +100,11 @@ print(np.max(gs.cv_results_['mean_test_score']))
 
 4) 여러개 Hyperparameter tuning 한 경우
 
+- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
+- max_depth: 트리의 최대 깊이
+- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 셈플수 
+- n_jobs=-1: 전체 리소스 사용
+
 min_impurity_decrease만 tuning 했을때와 거의 동일한 결과를 얻습니다. 
 
 ```python
@@ -127,6 +132,11 @@ print(gs.best_params_)
 ```
 
 5) Random search를 이용하여 hyperparameter tuning시에 결과입니다.
+
+- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
+- max_depth: 트리의 최대 깊이
+- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 셈플수 
+- min_samples_leaf: 리프노드가 가지고 있어야 할 셈플수
 
 Grid Search와 유사한 결과를 얻었습니다. 
 
