@@ -107,7 +107,7 @@ print(scores)
 - socre_time: 모델을 검증하는 시간
 - test_score: 검증폴더의 점수
 
-최종 결정계수는 아래와 같이 구할 수 있습니다. 여기서 사용한 fold의 수는 5개(기본값)입니다.
+최종 결정계수는 아래와 같이 평균값을 이용해 구할 수 있습니다. 여기서 사용한 fold의 수는 5개(기본값)입니다.
 
 ```python
 import numpy as np
