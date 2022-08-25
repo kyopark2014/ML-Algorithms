@@ -67,6 +67,8 @@ print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
 
 ![image](https://user-images.githubusercontent.com/52392004/186666830-cae6a8f1-43d8-4d07-8066-8979927df07f.png)
 
+[Cross Validation](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/cross_validation.ipynb)의 코드를 아래와 같이 설명합니다. 
+
 1) 데이터를 준비합니다. 
 
 ```python
