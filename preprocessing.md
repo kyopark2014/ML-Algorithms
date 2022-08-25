@@ -135,7 +135,6 @@ print(np.mean(scores['test_score']))
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
-
-
+[교차 검증(cross validation)](https://m.blog.naver.com/ckdgus1433/221599517834)
 
 
