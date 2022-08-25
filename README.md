@@ -69,6 +69,10 @@ train_input, test_input, train_target, test_target = train_test_split(
 
 Validation dataset은 모델을 학습한 후 성능 측정을 하는데 사용됩니다. 또한 이것은 Hyperparameter Optimization(HPO)에도 사용되어 집니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/186666166-e9e40b07-adb4-4b4e-8b89-108d101abf61.png)
+
+
+
 ### k-fold cross validation
 
 전체 데이터셋을 k개의 fold로 분할한 후 각 iteration마다 Validation set을 겹치지 않게 할당하고 Accuracy의 평균을 모델의 성능으로 계산합니다. 
@@ -77,7 +81,6 @@ Validation dataset은 모델을 학습한 후 성능 측정을 하는데 사용�
 
 
 
-![image](https://user-images.githubusercontent.com/52392004/186666166-e9e40b07-adb4-4b4e-8b89-108d101abf61.png)
 
 
 
