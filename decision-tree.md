@@ -55,7 +55,7 @@ train_scaled = ss.transform(train_input)
 test_scaled = ss.transform(test_input)
 ```
 
-scikit-learn의 DecisionTreeClassifier로 결정계수를 구하면 아래와 같이 [Logistric Regression 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)보다는 좋지만 과대적합인 결과를 얻습니다. 
+scikit-learn의 DecisionTreeClassifier로 결정계수를 구하면 아래와 같이 [Logistric Regression 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)보다는 좋지만 과대적합인 결과를 얻습니다. 상세코드는 [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)을 참조합니다. 
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
