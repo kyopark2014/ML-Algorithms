@@ -22,6 +22,9 @@
 
 - Overfitting (High variance) 위험이 있으므로 규제(Regularization) 필요합니다. 대표적인 가지치기 방법은 "Pruning(가지치기)"으로 max_depth를 이용합니다. 
 
+## Decision Tree 예제
+
+[Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)는 아래의 전체 코드를 가지고 있습니다.
 
 1) 데이터를 준비합니다. 
 
@@ -58,7 +61,9 @@ train_scaled = ss.transform(train_input)
 test_scaled = ss.transform(test_input)
 ```
 
-scikit-learn의 DecisionTreeClassifier로 결정계수를 구하면 아래와 같이 [Logistric Regression 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)보다는 좋지만 과대적합인 결과를 얻습니다. 상세코드는 [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)을 참조합니다. 
+2. Decision Tree를 아래와 같이 구합니다.
+
+scikit-learn의 DecisionTreeClassifier로 결정계수를 아래처럼 구할 수 있습니다. 
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
@@ -72,6 +77,8 @@ print(dt.score(test_scaled, test_target))
 0.996921300750433
 0.8592307692307692
 ```
+
+이 값은 [Logistric Regression 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)보다는 좋지만 과대적합(Overfit)인 결과를 얻습니다. 
 
 이때의 트리구조를 sciket-learn의 plot_tree로 그리면, 아래와 같습니다.
 
