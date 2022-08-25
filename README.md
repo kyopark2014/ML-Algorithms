@@ -43,6 +43,8 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 [분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
 
+
+
 ## 모델 평가
 
 일반적으로 train set의 score가 test set보다 조금 높음습니다.
@@ -58,7 +60,9 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 ![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
 
 
+## Hyperparameter Optimization (HPO)
 
+[Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
 
 
 ## 각종 유용한 라이브러리
