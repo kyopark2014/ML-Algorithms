@@ -1,4 +1,4 @@
-## 분류 알고리즘 (Classification)
+# 분류 알고리즘 (Classification)
 
 ## 로지스틱 회귀 (Logistic Regression)
 
