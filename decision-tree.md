@@ -5,6 +5,11 @@
 ![image](https://user-images.githubusercontent.com/52392004/186559659-7522f4ba-62e2-42ec-856a-a47fb9a55061.png)
 
 
+## Criterion 매개변수 
+
+Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
+
+
 ### Gini Impurity
 
 Gini Impurity은 정답이 아닌 값이 나올 확율을 의미 합니다. 
