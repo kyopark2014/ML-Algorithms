@@ -2,11 +2,11 @@
 
 ## AI / ML
 
-- 인공지능(AI, Artificial Intelligence): 사람처럼 학습하고 추론할 수 있는 지능을 가진 시스템을 만드는 기술
+- 인공지능(AI, Artificial Intelligence)은 사람처럼 학습하고 추론할 수 있는 지능을 가진 시스템을 만드는 기술을 의미합니다.
 
-- 머신러닝(ML, Machine Learning): 규칙을 프로그래밍하지 않아도 자동으로 데이터에서 규칙을 학습하는 알고리즘 연구, 예: Sciket-learn
+- 머신러닝(ML, Machine Learning)은 규칙을 프로그래밍하지 않아도 자동으로 데이터에서 규칙을 학습합니다.
 
-- 딥려닝(DL, Deep Learning): 인공 신경망, 예: TensorFlow, PyTorch
+- 딥려닝(DL, Deep Learning)은 인공 신경망에 기반한 머신러닝으로서 TensorFlow, PyTorch가 해당됩니다. 
 
 
 
@@ -33,37 +33,7 @@ print(kn.score(test_input, test_target))
 
 ## 데이터전처리 
 
-### 표준점수 (Standard score)
-
-특성값을 일정한 기준으로 맞추는 작업이 필요합니다. 이때 Z점수(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내므로, 특성값의 크기와 상관없이 동일한 조건으로 비교가 가능합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/185774334-00e687e7-226e-410b-b6dd-85989f5147e1.png)
-
-아래와 같이 scikit-learn을 이용하여 표준점수로 변환할 수 있습니다. 
-
-```python
-from sklearn.preprocessing import StandardScaler
-
-ss = StandardScaler()
-ss.fit(train_input)    
-
-train_scaled = ss.transform(train_input)
-test_scaled = ss.transform(test_input)
-```
-
-### Train과 Test Set 
-
-Train과 Test의 Set이 골고루 섞이지 않으면 Sampling Bias가 발생할 수 있으므로, 준비된 데이터 중에 일부를 떼어 train set과 test set으로 활용합니다. 아래에서는 scikit-learn의 train_test_split을 사용하는 방법을 보여줍니다. 
-
-```python
-from sklearn.model_selection import train_test_split
-
-train_input, test_input, train_target, test_target = train_test_split(
-    fish_data, fish_target, stratify=fish_target, random_state=42)
-```
-
-- stratify=fish_target: fish_target을 기준으로 섞을때 사용합니다. 
-- 기본값은 전체 데이터에서 25%를 test set으로 분리합니다. 
+[Preprocessing](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md)에서는 표준점수(z)를 이용한 데이터 정규화 및 Train/Test Dataset을 준비하는 과정을 설명합니다. 
 
 ## Regression
 
@@ -72,6 +42,8 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 ## Classification
 
 [분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
+
+
 
 ## 모델 평가
 
@@ -88,7 +60,9 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 ![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
 
 
+## Hyperparameter Optimization (HPO)
 
+[Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
 
 
 ## 각종 유용한 라이브러리
