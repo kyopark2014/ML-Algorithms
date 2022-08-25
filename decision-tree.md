@@ -77,9 +77,9 @@ print(dt.score(test_scaled, test_target))
 
 ## Criterion 매개변수 
 
-Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
+결정트리에서 노드를 분할하는 기준에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
 
-아래는 Max Depth가 1인 결정트리의 예입니다.
+아래는 Max Depth가 1인 결정트리를 아래처럼 그릴수 있습니다.
 
 ```python
 plt.figure(figsize=(10,7))
@@ -87,8 +87,7 @@ plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH']
 plt.show()
 ```
 
-이때 아래 그림과 같이 "sugar", "gini", "pH" 아래와 같습니다. 
-
+Max Depth가 1인 결정트리의 한 예입니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
 
@@ -106,6 +105,8 @@ Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니�
 ![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
 
 ### Information Gain 
+
+부모노드가
 
 ![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
 
