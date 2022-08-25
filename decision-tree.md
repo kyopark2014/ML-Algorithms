@@ -1,6 +1,6 @@
 # 결정트리 (Decision Tree)
 
-[Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에 대한 예제를 참조하여 결정트리에 대해 설명합니다. 
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 참조하여 [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서는 결정트리에 대해 예를 보여주고 있습니다. 
 
 아래는 Max Depth가 1인 결정트리의 예입니다.
 
