@@ -22,7 +22,7 @@
 [Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서는 Polynomial Regression을 이용합니다.
 
 
-## 다중회귀(Multiple Regression)
+## 다중회귀 (Multiple Regression)
 
 여러개의 특성을 사용하는 회귀모델, 소프트맥스함수사용
 
