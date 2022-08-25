@@ -61,11 +61,6 @@ print(ridge.score(test_poly, test_target))
 ```
 
 
-아래는 릿지 회귀의 한 예입니다. 
-
-<img width="284" alt="image" src="https://user-images.githubusercontent.com/52392004/185773607-69cefcfb-e931-47c6-b9ff-6f2045015674.png">
-
-
 - Lasso: 계수의 절대값을 기준으로 규제를 적용합니다.
 
 ```python
