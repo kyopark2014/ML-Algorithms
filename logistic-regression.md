@@ -2,8 +2,6 @@
 
 여기의 데이터는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 이용합니다. [상세한 코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic_regression.ipynb)에서 아래의 예제를 jupyter notebook으로 확인할 수 있습니다.
 
-표준점수(z)는 "z = a * 무게 + b * 길이 + c * 두께 + d * 대각선 + e * 높이 + f"와 같이 표현됩니다. 
-
 
 ## 데이터 준비
 
@@ -16,7 +14,7 @@ fish = pd.read_csv('https://bit.ly/fish_csv_data')
 fish.head()
 ```
 
-아래와 같은 fish 데이터를 로드하였습니다.
+아래와 같은 fish 데이터를 로드하였습니다. 표준점수(z)는 "z = a * Weight + b * Length + c * Diagonal + d * Height + e * Width + f"와 같이 표현됩니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/186283925-8861fcfc-2d94-43ee-a61d-404e44e1baba.png)
 
@@ -102,7 +100,8 @@ print(kn.score(train_bream_smelt, target_bream_smelt))
 0.9696969696969697
 ```
 
-아래와 같이 분류 항목을 classes로 확인하고, 계수(coeffcient)들과 절편(intercept)을 확인할 수 있습니다. 이때, Bream, Smelt의 계산된 값을 proba로 찍어보면 0-1의 확률로 아래와 같이 계산됨을 알 수 있습니다. 
+아래와 같이 분류 항목을 classes로 확인하고, 계수(coeffcient)들과 절편(intercept)을 확인할 수 있습니다. 이때, Bream, Smelt의 계산된 값을 proba로 찍어보면 0-1의 확률로 아래와 같이 계산됨을 알 수 있습니다. 표준점수(z)는 "z = a * Weight + b * Length + c * Diagonal + d * Height + e * Width + f"로 표현되므로, 이때 a, b, c, d, e는 "lr.coef_"로 적용됨을 아래와 같이 알 수 있습니다. 
+
 
 ```python
 print(lr.classes_)
