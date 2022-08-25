@@ -81,6 +81,14 @@ Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본�
 
 아래는 Max Depth가 1인 결정트리의 예입니다.
 
+```python
+plt.figure(figsize=(10,7))
+plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
+plt.show()
+```
+
+이때 아래 그림과 같이 "sugar", "gini", "pH" 아래와 같습니다. 
+
 ![image](https://user-images.githubusercontent.com/52392004/186559659-7522f4ba-62e2-42ec-856a-a47fb9a55061.png)
 
 ### Gini Impurity
