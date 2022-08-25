@@ -71,6 +71,10 @@ print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
 
 [Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
 
+## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
 
 
 
