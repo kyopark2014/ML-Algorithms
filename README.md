@@ -12,7 +12,7 @@
 
 ## Binary Classification (HelloWorld)
 
-[KNN을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
+[kNN(k-Nearest Neighbors)을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
 
 
 ### 결정계수 (Coefficient of determination)
@@ -69,82 +69,27 @@ train_input, test_input, train_target, test_target = train_test_split(
 
 Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
 
+## Classification
 
+[분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
 
 ## 모델 평가
 
-일반적으로 train set의 score가 test set보다 조금 높음
+일반적으로 train set의 score가 test set보다 조금 높음습니다.
 
 - 과대적합(Overfitting): 모델의 train set 성능이 test set보다 훨씬 높은 경우 
 - 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
 - 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정
 
- 
+[규제 (Regularization)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regularization.md)을 이용하여 과대적합을 방지할 수 있습니다. 
 
-### 규제 (Regularization)
+Regularization과 Epoch를 비교하면 아래와 같습니다. 
 
-모델이 과적합 되게 학습하지 않고 일반성을 가질 수 있도록 파라미터값에 제약을 주는것을 말합니다. L1 규제(Lasso), L2 규제(Ridge), alpha 값으로 규제량을 조정합니다. 
-
-<img width="423" alt="image" src="https://user-images.githubusercontent.com/52392004/185773329-8b542165-3c41-42d9-ba0f-e437a2f9f811.png">
+![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
 
 
-- Ridge: 계수를 제곱한 값을 기준으로 규제를 적용
-
-```python
-from sklearn.linear_model import Ridge
-
-ridge = Ridge()
-ridge.fit(train_scaled, train_target)
-print(ridge.score(train_scaled, train_target))
-print(ridge.score(test_scaled, test_target))
-```
-
-alpha를 매개변수로 규제의 강도를 조절할 수 있습니다. 이때, alpha값이 크면 규제 강도가 세짐으로 계수값을 더 줄이고 좀 더 과대적합 해소가 가능합니다. 
-
-```python
-alpha_list = [0.001, 0.01, 0.1, 1, 10, 100]
-for alpha in alpha_list:
-    # 릿지 모델을 만듭니다
-    ridge = Ridge(alpha=alpha)
-    # 릿지 모델을 훈련합니다
-    ridge.fit(train_scaled, train_target)
-    # 훈련 점수와 테스트 점수를 저장합니다
-    train_score.append(ridge.score(train_scaled, train_target))
-    test_score.append(ridge.score(test_scaled, test_target))
-```
-
-아래는 릿지 회귀의 한 예입니다. 
-
-<img width="284" alt="image" src="https://user-images.githubusercontent.com/52392004/185773607-69cefcfb-e931-47c6-b9ff-6f2045015674.png">
 
 
-- Lasso: 계수의 절대값을 기준으로 규제를 적용 
-
-```python
-from sklearn.linear_model import Lasso
-
-lasso = Lasso()
-lasso.fit(train_scaled, train_target)
-print(lasso.score(train_scaled, train_target))
-print(lasso.score(test_scaled, test_target))
-```
-
-alpha를 매개변수로 규제의 강도를 조절할 수 있습니다. 이때, alpha값이 크면 규제 강도가 세짐으로 계수값을 더 줄이고 좀 더 과대적합 해소가 가능합니다. 
-
-```python
-train_score = []
-test_score = []
-
-alpha_list = [0.001, 0.01, 0.1, 1, 10, 100]
-for alpha in alpha_list:
-    # 라쏘 모델을 만듭니다
-    lasso = Lasso(alpha=alpha, max_iter=10000)
-    # 라쏘 모델을 훈련합니다
-    lasso.fit(train_scaled, train_target)
-    # 훈련 점수와 테스트 점수를 저장합니다
-    train_score.append(lasso.score(train_scaled, train_target))
-    test_score.append(lasso.score(test_scaled, test_target))
-```
 
 ## 각종 유용한 라이브러리
 

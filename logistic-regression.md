@@ -2,8 +2,6 @@
 
 여기의 데이터는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 이용합니다. [상세한 코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic_regression.ipynb)에서 아래의 예제를 jupyter notebook으로 확인할 수 있습니다.
 
-표준점수(z)는 "z = a * 무게 + b * 길이 + c * 두께 + d * 대각선 + e * 높이 + f"와 같이 표현됩니다. 
-
 
 ## 데이터 준비
 
@@ -16,7 +14,7 @@ fish = pd.read_csv('https://bit.ly/fish_csv_data')
 fish.head()
 ```
 
-아래와 같은 fish 데이터를 로드하였습니다.
+아래와 같은 fish 데이터를 로드하였습니다. 표준점수(z)는 "z = a * Weight + b * Length + c * Diagonal + d * Height + e * Width + f"와 같이 표현됩니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/186283925-8861fcfc-2d94-43ee-a61d-404e44e1baba.png)
 
@@ -82,9 +80,9 @@ print(kn.score(test_scaled, test_target))
 0.85
 ```
 
-## 이진 분류
+## 이진 Logistric Regression
 
-이진분류에서는 표준점수(z)을 확율로 바꾸기 위하여 [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md#Sigmoid) 함수를 사용합니다. 
+이진분류에서는 표준점수(z)을 확율로 바꾸기 위하여 [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#Sigmoid) 함수를 사용합니다. 
 
 데이터를 준비하고, 이진 로지스틱 회귀를 수행합니다. 
 
@@ -102,7 +100,8 @@ print(kn.score(train_bream_smelt, target_bream_smelt))
 0.9696969696969697
 ```
 
-아래와 같이 분류 항목을 classes로 확인하고, 계수(coeffcient)들과 절편(intercept)을 확인할 수 있습니다. 이때, Bream, Smelt의 계산된 값을 proba로 찍어보면 0-1의 확률로 아래와 같이 계산됨을 알 수 있습니다. 
+아래와 같이 분류 항목을 classes로 확인하고, 계수(coeffcient)들과 절편(intercept)을 확인할 수 있습니다. 이때, Bream, Smelt의 계산된 값을 proba로 찍어보면 0-1의 확률로 아래와 같이 계산됨을 알 수 있습니다. 표준점수(z)는 "z = a * Weight + b * Length + c * Diagonal + d * Height + e * Width + f"로 표현되므로, 이때 a, b, c, d, e는 "lr.coef_"로 적용됨을 아래와 같이 알 수 있습니다. 
+
 
 ```python
 print(lr.classes_)
@@ -133,7 +132,7 @@ print(expit(decisions))
 [0.00240145 0.97264817 0.00513928 0.01415798 0.00232731]
 ```
 
-## 다중 분류 
+## 다중 Logistic Regression
 
 표준점수(z)을 확율로 바꾸기 위하여 Softmax 함수를 사용합니다. 다중분류를 쓰는 로지스틱 회귀에서는 C를 이용해 규제 (L2 규제를 기본적용)를 하는데, C 값이 클수록 규제가 약해집니다. 아래와 같이 다중분류로 Logistric regression을 수행합니다. K 최근접 분류보다 좋은 결과를 얻고 있습니다. 
 
@@ -168,7 +167,7 @@ print(np.round(proba, decimals=3))
  [0.    0.    0.904 0.002 0.089 0.002 0.001]]
 ```
 
-마찬가지로 표준점수를 계산하고, [Softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md#Softmax)로 확율을 계산하면 predict_proba로 얻어진 결과와 같습니다. 
+마찬가지로 표준점수를 계산하고, [Softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#Softmax)로 확율을 계산하면 predict_proba로 얻어진 결과와 같습니다. 
 
 ```python
 decision = lr.decision_function(test_scaled[:5])
@@ -190,6 +189,96 @@ print(np.round(proba, decimals=3))
  [0.    0.    0.034 0.935 0.015 0.016 0.   ]
  [0.011 0.034 0.306 0.007 0.567 0.    0.076]
  [0.    0.    0.904 0.002 0.089 0.002 0.001]]
+```
+
+## Low Accuracy Case
+
+Logistic Regression 적용시에 정확도가 떨어지는 케이스에 대해 설명합니다.
+
+1) 데이터를 준비합니다.
+
+pandas로 데이터를 로드합니다. 
+
+```python
+import pandas as pd
+
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+
+wine.head()
+```
+
+이때 데이터의 형태는 아래와 같이 "alcohol", "sugar", "pH"와 같은 항목을 가지고 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186580636-21595001-b203-4c1d-a206-d10575ee85ef.png)
+
+여기의 데이터의 형태는 아래와 같습니다. 
+
+```python
+wine.info()
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 6497 entries, 0 to 6496
+Data columns (total 4 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   alcohol  6497 non-null   float64
+ 1   sugar    6497 non-null   float64
+ 2   pH       6497 non-null   float64
+ 3   class    6497 non-null   float64
+dtypes: float64(4)
+memory usage: 203.2 KB
+```
+
+Train, Test Set을 아래와 같이 준비합니다. 
+
+```python
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
+target = wine['class'].to_numpy()
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(
+    data, target, test_size=0.2, random_state=42)
+
+print(train_input.shape, test_input.shape)
+(5197, 3) (1300, 3)
+```
+
+아래와 같이 정규화를 합니다.
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+ss = StandardScaler()
+ss.fit(train_input)
+
+train_scaled = ss.transform(train_input)
+test_scaled = ss.transform(test_input)
+```
+
+2) Logistic Regression으로 결정계수를 구합니다. 
+
+아래와 같이 과소적합(Underfitting)의 결과를 얻습니다. 
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+lr = LogisticRegression()
+lr.fit(train_scaled, train_target)
+
+print(lr.score(train_scaled, train_target))
+print(lr.score(test_scaled, test_target))
+
+0.7808350971714451
+0.7776923076923077
+```
+
+이때, "alcohol", "sugar", "pH"에 대한 기울기는 아래와 같습니다. 
+
+```python
+print(lr.coef_, lr.intercept_)
+
+[[ 0.51270274  1.6733911  -0.68767781]] [1.81777902]
 ```
 
 ## Reference
