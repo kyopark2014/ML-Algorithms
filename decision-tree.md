@@ -18,7 +18,7 @@
 
 - 데이터의 특성이 특정 변수에 수직/수평적으로 구분되지 못할 경우 분류률이 떨어지고 트리가 복잡해집니다. 즉, Tree의 depth가 깊어질수록 느려집니다.
 
-![image](https://user-images.githubusercontent.com/52392004/186659536-8c6e8f0a-f503-4310-aca7-f96d5a03b526.png)
+![image](https://user-images.githubusercontent.com/52392004/186661527-5362a5ae-894a-4777-8666-07eb6347c0f0.png)
 
 - Overfitting (High variance) 위험이 있으므로 규제(Regularization) 필요합니다. 대표적인 가지치기 방법은 "Pruning(가지치기)"으로 max_depth를 이용합니다. 
 
