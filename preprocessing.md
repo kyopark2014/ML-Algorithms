@@ -117,7 +117,7 @@ print(np.mean(scores['test_score']))
 0.855300214703487
 ```
 
-fold의 숫자를 조정할 때에는 StratifiedKFold을 사용합니다. 아래는 10개의 fold로 나누는 splitter를 이용하였습니다. 
+fold의 숫자를 조정할 때에는, 회귀모델일 경우에는 KFold 분할기를 사용하고, 분류모델일 때에는 StratifiedKFold을 사용합니다. 아래는 10개의 fold로 나누는 splitter를 이용하였습니다. 
 
 ```python
 from sklearn.model_selection import StratifiedKFold
