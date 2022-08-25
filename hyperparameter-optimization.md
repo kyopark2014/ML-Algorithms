@@ -11,12 +11,16 @@ x축은 중요한 파라메터이고 y축은 중요하지 않은 파라메터라
 
 ## 일반적인 가이드라인
 
-- 알고리즘 별 hyperparameter를 이해
-- 경험적으로 중요한 hyperparameter를 먼저 탐색하고 값을 고정
-- 덜 중요한 hyperparameter 를 나중에 탐색
-- 먼저 넓은 범위에 대해 hyperparameter를 탐색하고 좋은 결과가 나온 범위에서 다시 탐색
-- Random Search가 Grid Search에 더 적은 trial로 더 높은 최적화를 기대할 수 있음
-- HPO에 test dataset을 사용하지 않음
+- 알고리즘 별 hyperparameter를 이해합니다.
+- 경험적으로 중요한 hyperparameter를 먼저 탐색하고 값을 고정합니다.
+- 덜 중요한 hyperparameter를 나중에 탐색합니다.
+- 먼저 넓은 범위에 대해 hyperparameter를 탐색하고 좋은 결과가 나온 범위에서 다시 탐색합니다.
+- Random Search가 Grid Search에 더 적은 trial로 더 높은 최적화를 기대할 수 있습니다.
+- HPO에 test dataset을 사용하지 않고, validation dataset을 사용합니다. 
+
+
+
+## 구현 예
 
 
 
