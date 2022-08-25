@@ -191,6 +191,12 @@ print(np.round(proba, decimals=3))
  [0.    0.    0.904 0.002 0.089 0.002 0.001]]
 ```
 
+## Low Accuracy
+
+Logistic Regression 적용시에 정확도가 떨어지는 케이스에 대해 설명합니다.
+
+
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
