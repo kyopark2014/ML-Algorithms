@@ -67,9 +67,6 @@ print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
 
 ![image](https://user-images.githubusercontent.com/52392004/186666830-cae6a8f1-43d8-4d07-8066-8979927df07f.png)
 
-## Hyperparameter Optimization (HPO)
-
-[Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
 
 ## Reference
 
