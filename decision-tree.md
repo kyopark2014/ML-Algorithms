@@ -61,7 +61,7 @@ train_scaled = ss.transform(train_input)
 test_scaled = ss.transform(test_input)
 ```
 
-2. Decision Tree를 아래와 같이 구합니다.
+2) Decision Tree를 아래와 같이 구합니다.
 
 scikit-learn의 DecisionTreeClassifier로 결정계수를 아래처럼 구할 수 있습니다. 
 
@@ -84,6 +84,48 @@ print(dt.score(test_scaled, test_target))
 
 ![image](https://user-images.githubusercontent.com/52392004/186592557-6e7b5a12-e38a-4d6d-add1-c3f8e4fcbd3c.png)
 
+3) 가지치기 (Pruning)
+
+가지치기를 위해 max_depth를 3으로 설정했을때 아래와 같습니다. 
+
+```python
+dt = DecisionTreeClassifier(max_depth=3, random_state=42)
+dt.fit(train_scaled, train_target)
+
+print(dt.score(train_scaled, train_target))
+print(dt.score(test_scaled, test_target))
+
+0.8454877814123533
+0.8415384615384616
+```
+
+이것을 plot_tree로 그리면 아래와 같습니다. 
+
+```python
+plt.figure(figsize=(20,15))
+plot_tree(dt, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
+plt.show()
+```
+
+이때, 아래 그림과 같이 5197개의 sample중에 1141개 sample이 레드 와인으로 분류됩니다.
+
+![image](https://user-images.githubusercontent.com/52392004/186660116-df754bd8-0946-439e-9ae0-f290672b91d5.png)
+
+
+아래는 정규화를 하지 않은 경우인데, 거의 동일한 결과를 얻고 있습니다.
+
+```python
+dt = DecisionTreeClassifier(max_depth=3, random_state=42)
+dt.fit(train_input, train_target)
+
+print(dt.score(train_input, train_target))
+print(dt.score(test_input, test_target))
+
+0.8454877814123533
+0.8415384615384616
+```
+
+
 
 ## Criterion 매개변수 
 
@@ -100,6 +142,7 @@ plt.show()
 Max Depth가 1인 결정트리의 한 예입니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
+
 
 
 ### Gini Impurity
@@ -130,32 +173,6 @@ print(dt.feature_importances_)
 [0.15210271 0.70481604 0.14308125]
 ```
 
-## 가지치기 (Pruning)
-
-가지치기를 위해 max_depth를 3으로 설정했을때 아래와 같습니다. 
-
-```python
-dt = DecisionTreeClassifier(max_depth=3, random_state=42)
-dt.fit(train_scaled, train_target)
-
-print(dt.score(train_scaled, train_target))
-print(dt.score(test_scaled, test_target))
-
-0.8454877814123533
-0.8415384615384616
-```
-
-이것을 plot_tree로 그리면 아래와 같습니다. 
-
-```python
-plt.figure(figsize=(20,15))
-plot_tree(dt, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
-plt.show()
-```
-
-이때, 아래 그림과 같이 5197개의 sample중에 1141개 sample이 레드 와인으로 분류됩니다.
-
-![image](https://user-images.githubusercontent.com/52392004/186660116-df754bd8-0946-439e-9ae0-f290672b91d5.png)
 
 
 ## Decision Tree의 Hyperparameter
