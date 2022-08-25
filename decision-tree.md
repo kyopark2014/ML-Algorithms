@@ -9,15 +9,18 @@
 
 - 결과를 해석하고 이해하기 쉽습니다.
 - 분류/회귀에 모두 사용 가능합니다.
-- Data preprocessing이 거의 필요하지 않습니다.
+- Data preprocessing(Scailing) 이 거의 필요하지 않습니다.
 - Outliner에 민감하지 않습니다.
-- 연속형 변수, 범주형 변수(Category)에 모두 적용 가능합니다.
+- 연속형 변수(Numinical feature), 범주형 변수(Category)에 모두 적용 가능합니다.
 - 대규모의 데이터 셋에서도 잘 동작합니다. 
 
 #### 단점
 
-- 데이터의 특성이 특정 변수에 수직/수평적으로 구분되지 못할 경우 분류률이 떨어지고 트리가 복잡해집니다.
-- Overfitting (High variance) 위험이 있으므로 규제(Regularization) 필요합니다. 대표적인 방법은 "Pruning(가지치기)"입니다. 
+- 데이터의 특성이 특정 변수에 수직/수평적으로 구분되지 못할 경우 분류률이 떨어지고 트리가 복잡해집니다. 즉, Tree의 depth가 깊어질수록 느려집니다.
+
+![image](https://user-images.githubusercontent.com/52392004/186659536-8c6e8f0a-f503-4310-aca7-f96d5a03b526.png)
+
+- Overfitting (High variance) 위험이 있으므로 규제(Regularization) 필요합니다. 대표적인 가지치기 방법은 "Pruning(가지치기)"으로 max_depth를 이용합니다. 
 
 
 1) 데이터를 준비합니다. 
