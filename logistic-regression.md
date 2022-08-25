@@ -195,7 +195,91 @@ print(np.round(proba, decimals=3))
 
 Logistic Regression 적용시에 정확도가 떨어지는 케이스에 대해 설명합니다.
 
+1) 데이터를 준비합니다.
 
+pandas로 데이터를 로드합니다. 
+
+```python
+import pandas as pd
+
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+
+wine.head()
+```
+
+이때 데이터의 형태는 아래와 같이 "alcohol", "sugar", "pH"와 같은 항목을 가지고 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186580636-21595001-b203-4c1d-a206-d10575ee85ef.png)
+
+여기의 데이터의 형태는 아래와 같습니다. 
+
+```python
+wine.info()
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 6497 entries, 0 to 6496
+Data columns (total 4 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   alcohol  6497 non-null   float64
+ 1   sugar    6497 non-null   float64
+ 2   pH       6497 non-null   float64
+ 3   class    6497 non-null   float64
+dtypes: float64(4)
+memory usage: 203.2 KB
+```
+
+Train, Test Set을 아래와 같이 준비합니다. 
+
+```python
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
+target = wine['class'].to_numpy()
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(
+    data, target, test_size=0.2, random_state=42)
+
+print(train_input.shape, test_input.shape)
+(5197, 3) (1300, 3)
+```
+
+아래와 같이 정규화를 합니다.
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+ss = StandardScaler()
+ss.fit(train_input)
+
+train_scaled = ss.transform(train_input)
+test_scaled = ss.transform(test_input)
+```
+
+2) Logistic Regression으로 결정계수를 구합니다. 
+
+아래와 같이 과소적합(Underfitting)의 결과를 얻습니다. 
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+lr = LogisticRegression()
+lr.fit(train_scaled, train_target)
+
+print(lr.score(train_scaled, train_target))
+print(lr.score(test_scaled, test_target))
+
+0.7808350971714451
+0.7776923076923077
+```
+
+이때, "alcohol", "sugar", "pH"에 대한 기울기는 아래와 같습니다. 
+
+```python
+print(lr.coef_, lr.intercept_)
+
+[[ 0.51270274  1.6733911  -0.68767781]] [1.81777902]
+```
 
 ## Reference
 
