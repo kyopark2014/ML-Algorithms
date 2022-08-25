@@ -2,6 +2,11 @@
 
 회귀 (Regression)는 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다.
 
+## k-최근접 이웃 회귀(k-Nearest Neighbors)
+
+[kNN (k-Nearest Neighbors)](https://github.com/kyopark2014/ML-Algorithms/blob/main/KNN.md)은 가장 가까운 이웃 샘플을 찾고 이 샘플들의 타깃 값을 평균하여 예측값으로 삼습니다. 
+
+
 ## 선형회귀 (Linear Regression)
 
 특성(feature)와 Target 사이의 관계를 "y = ax + b"와 같은 선형 방정식으로 표시합니다. 여기서 a(coefficient)는 기울기, 계수(coefficient), 가중치(weight)의 의미이고, b는 절편(intercept, constant)입니다. 
