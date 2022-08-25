@@ -7,7 +7,9 @@
 
 상세 예제는 [다중회귀(Multiple Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/multiple-regression.md)을 참조합니다.
 
-- Ridge: 계수를 제곱한 값을 기준으로 규제를 적용합니다. 
+## Ridge
+
+Ridge 계수를 제곱한 값을 기준으로 규제를 적용합니다. 
 
 ```python
 from sklearn.linear_model import Ridge
@@ -60,8 +62,9 @@ print(ridge.score(test_poly, test_target))
 0.9853164821839827
 ```
 
+## Lasso
 
-- Lasso: 계수의 절대값을 기준으로 규제를 적용합니다.
+Lasso는 계수의 절대값을 기준으로 규제를 적용합니다.
 
 ```python
 from sklearn.linear_model import Lasso
