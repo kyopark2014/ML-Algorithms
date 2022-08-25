@@ -123,9 +123,51 @@ print(dt.feature_importances_)
 [0.15210271 0.70481604 0.14308125]
 ```
 
+## 가지치기 (Pruning)
+
+가지치기를 위해 max_depth를 3으로 설정했을때 아래와 같습니다. 
+
+```python
+dt = DecisionTreeClassifier(max_depth=3, random_state=42)
+dt.fit(train_scaled, train_target)
+
+print(dt.score(train_scaled, train_target))
+print(dt.score(test_scaled, test_target))
+
+0.8454877814123533
+0.8415384615384616
+```
+
+이것을 plot_tree로 그리면 아래와 같습니다. 
+
+```python
+plt.figure(figsize=(20,15))
+plot_tree(dt, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
+plt.show()
+```
+
+이때, 아래 그림과 같이 5197개의 sample중에 1141개 sample이 레드 와인으로 분류됩니다.
+
+![image](https://user-images.githubusercontent.com/52392004/186660116-df754bd8-0946-439e-9ae0-f290672b91d5.png)
+
+
+## Decision Tree의 Hyperparameter
+
+‘min’값을 높이거나 ’max’값을 줄이면 모델에 규제가 커져 이용하여 과대적합(overfit)을 막을 수 있습니다. 
+
+- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수
+- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 수
+- min_weight_fraction_leaf: min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려
+- max_leaf_nodes: 리프노드의 최대 수
+- max_features: 각 노드에서 분할에 사용할 특성의 최대 수
+- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
+- max_depth: 트리의 최대 깊이 (루트 노드 깊이=0)
+
+
 
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
+[sklearn.tree.DecisionTreeClassifie](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 
