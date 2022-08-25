@@ -89,7 +89,7 @@ print(gs.best_params_)
 
 4) 여러개 Hyperparameter tuning 한 경우
 
-거의 동일한 결과를 얻습니다. 
+min_impurity_decrease만 tuning 했을때와 거의 동일한 결과를 얻습니다. 
 
 ```python
 params = {'min_impurity_decrease': np.arange(0.0001, 0.001, 0.0001),
@@ -115,3 +115,34 @@ print(gs.best_params_)
 {'max_depth': 14, 'min_impurity_decrease': 0.0004, 'min_samples_split': 12}
 ```
 
+5) Random search를 이용하여 hyperparameter tuning시에 결과입니다.
+
+Grid Search와 유사한 결과를 얻었습니다. 
+
+```python
+params = {'min_impurity_decrease': uniform(0.0001, 0.001),
+          'max_depth': randint(20, 50),
+          'min_samples_split': randint(2, 25),
+          'min_samples_leaf': randint(1, 25),
+          }
+from sklearn.model_selection import RandomizedSearchCV
+
+gs = RandomizedSearchCV(DecisionTreeClassifier(random_state=42), params, 
+                        n_iter=100, n_jobs=-1, random_state=42)
+gs.fit(train_input, train_target)
+
+dt = gs.best_estimator_
+print(dt.score(train_input, train_target))
+print(dt.score(test_input, test_target))
+
+0.8928227823744468
+0.86
+```
+
+이때 사용된 hyperparameter 값은 아래와 같습니다. 
+
+```python
+print(gs.best_params_)
+
+{'max_depth': 39, 'min_impurity_decrease': 0.00034102546602601173, 'min_samples_leaf': 7, 'min_samples_split': 13}
+```
