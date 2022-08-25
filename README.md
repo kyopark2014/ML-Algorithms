@@ -71,7 +71,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 ## Classification
 
-[분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 class를 분류할 수 있습니다. 
+[분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
 
 ## 모델 평가
 
