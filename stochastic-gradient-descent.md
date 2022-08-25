@@ -84,6 +84,10 @@ print(sc.score(test_scaled, test_target))
 0.925
 ```
 
+손실함수를 hinge로 했을때에 epoch의 증가에 따른 정확도 그림은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/186547410-282dee58-c8eb-422f-a398-4f66ed2444d5.png)
+
 
 ## Reference
 
