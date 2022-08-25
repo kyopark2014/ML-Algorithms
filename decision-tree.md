@@ -20,17 +20,68 @@
 - Overfitting (High variance) 위험이 있으므로 규제(Regularization) 필요합니다. 대표적인 방법은 "Pruning(가지치기)"입니다. 
 
 
+1) 데이터를 준비합니다. 
+
+데이터를 읽어옵니다. 여기에는 "alcohol", "sugar", "pH"라는 3개의 column이 있습니다.
+
+```python 
+import pandas as pd
+
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+
+wine.head()
+```
 
 
-아래는 Max Depth가 1인 결정트리의 예입니다.
+![image](https://user-images.githubusercontent.com/52392004/186591846-a6ee86b4-6c7a-4036-8a14-b896ce1a71e0.png)
 
-![image](https://user-images.githubusercontent.com/52392004/186559659-7522f4ba-62e2-42ec-856a-a47fb9a55061.png)
+Train / Test Set을 만들고 정규화를 합니다.
+
+```python
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
+target = wine['class'].to_numpy()
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(
+    data, target, test_size=0.2, random_state=42)
+
+from sklearn.preprocessing import StandardScaler
+
+ss = StandardScaler()
+ss.fit(train_input)
+
+train_scaled = ss.transform(train_input)
+test_scaled = ss.transform(test_input)
+```
+
+scikit-learn의 DecisionTreeClassifier로 결정계수를 구하면 아래와 같이 [Logistric Regression 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)보다는 좋지만 과대적합인 결과를 얻습니다. 
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+dt = DecisionTreeClassifier(random_state=42)
+dt.fit(train_scaled, train_target)
+
+print(dt.score(train_scaled, train_target))
+print(dt.score(test_scaled, test_target))
+
+0.996921300750433
+0.8592307692307692
+```
+
+이때의 트리구조를 sciket-learn의 plot_tree로 그리면, 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/186592557-6e7b5a12-e38a-4d6d-add1-c3f8e4fcbd3c.png)
 
 
 ## Criterion 매개변수 
 
 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
 
+아래는 Max Depth가 1인 결정트리의 예입니다.
+
+![image](https://user-images.githubusercontent.com/52392004/186559659-7522f4ba-62e2-42ec-856a-a47fb9a55061.png)
 
 ### Gini Impurity
 
