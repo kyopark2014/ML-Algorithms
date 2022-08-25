@@ -1,5 +1,7 @@
 # 결정트리 (Decision Tree)
 
+[Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에 대한 예제를 참조하여 결정트리에 대해 설명합니다. 
+
 아래는 Max Depth가 1인 결정트리의 예입니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/186559659-7522f4ba-62e2-42ec-856a-a47fb9a55061.png)
@@ -25,4 +27,10 @@ Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니�
 ### Information Gain 
 
 ![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
+
+
+## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
 
