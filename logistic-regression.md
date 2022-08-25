@@ -193,7 +193,7 @@ print(np.round(proba, decimals=3))
 
 ## Low Accuracy Case
 
-Logistic Regression 적용시에 정확도가 떨어지는 케이스에 대해 설명합니다.
+Logistic Regression 적용시에 [정확도가 떨어지는 케이스](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)에 대해 설명합니다. 
 
 1) 데이터를 준비합니다.
 
