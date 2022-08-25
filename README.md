@@ -65,6 +65,15 @@ train_input, test_input, train_target, test_target = train_test_split(
 - stratify=fish_target: fish_target을 기준으로 섞을때 사용합니다. 
 - 기본값은 전체 데이터에서 25%를 test set으로 분리합니다. 
 
+### Splitting dataset
+
+Validation dataset은 모델을 학습한 후 성능 측정
+
+![image](https://user-images.githubusercontent.com/52392004/186666166-e9e40b07-adb4-4b4e-8b89-108d101abf61.png)
+
+
+
+
 ## Regression
 
 Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
