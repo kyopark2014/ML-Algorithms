@@ -89,7 +89,9 @@ plt.show()
 
 이때 아래 그림과 같이 "sugar", "gini", "pH" 아래와 같습니다. 
 
-![image](https://user-images.githubusercontent.com/52392004/186559659-7522f4ba-62e2-42ec-856a-a47fb9a55061.png)
+
+![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
+
 
 ### Gini Impurity
 
