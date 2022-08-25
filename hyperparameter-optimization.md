@@ -22,6 +22,96 @@ x축은 중요한 파라메터이고 y축은 중요하지 않은 파라메터라
 
 ## 구현 예
 
+1) 데이터를 준비합니다.
 
+```python
+import pandas as pd
 
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
+target = wine['class'].to_numpy()
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(
+    data, target, test_size=0.2, random_state=42)
+print(train_input.shape, test_input.shape)
+
+(5197, 3) (1300, 3)
+```
+
+2) Hyperparameter tuning 없이 Training한 경우는 아래와 같고, 과대적합(Overfiting)되고 있습니다.
+
+```
+from sklearn.tree import DecisionTreeClassifier
+
+dt = DecisionTreeClassifier(random_state=42)
+dt.fit(train_input, train_target)
+
+print(dt.score(train_input, train_target))
+print(dt.score(test_input, test_target))
+
+0.996921300750433
+0.8584615384615385
+```
+
+3) min_impurity_decrease(분할로 얻어질 최소한의 불순도 감소량)을 Hyperparameter tuning 한 경우입니다.
+
+GridSearchCV로 min_impurity_decrease을 튜닝시에 이전보다 개선이 있습니다. 
+
+```python
+from sklearn.model_selection import GridSearchCV
+
+params = {'min_impurity_decrease': [0.0001, 0.0002, 0.0003, 0.0004, 0.0005]}
+
+from sklearn.tree import DecisionTreeClassifier
+
+gs = GridSearchCV(DecisionTreeClassifier(random_state=42), params, n_jobs=-1)
+
+gs.fit(train_input, train_target)
+
+dt = gs.best_estimator_
+print(dt.score(train_input, train_target))
+print(dt.score(test_input, test_target))
+
+0.892053107562055
+0.8615384615384616
+```
+
+최고일때의 min_impurity_decrease의 값은 0.001입니다.
+
+```python
+print(gs.best_params_)
+
+{'min_impurity_decrease': 0.0001}
+```
+
+4) 여러개 Hyperparameter tuning 한 경우
+
+거의 동일한 결과를 얻습니다. 
+
+```python
+params = {'min_impurity_decrease': np.arange(0.0001, 0.001, 0.0001),
+          'max_depth': range(5, 20, 1),
+          'min_samples_split': range(2, 100, 10)
+          }
+gs = GridSearchCV(DecisionTreeClassifier(random_state=42), params, n_jobs=-1)
+gs.fit(train_input, train_target)
+
+dt = gs.best_estimator_
+print(dt.score(train_input, train_target))
+print(dt.score(test_input, test_target))
+
+0.892053107562055
+0.8615384615384616
+```
+
+이때의 최적값입니다. 
+
+```python
+print(gs.best_params_)
+
+{'max_depth': 14, 'min_impurity_decrease': 0.0004, 'min_samples_split': 12}
+```
 
