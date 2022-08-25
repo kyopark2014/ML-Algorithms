@@ -69,7 +69,9 @@ train_input, test_input, train_target, test_target = train_test_split(
 
 Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
 
+## Classification
 
+[분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 class를 분류할 수 있습니다. 
 
 ## 모델 평가
 
