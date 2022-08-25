@@ -87,6 +87,17 @@ print(gs.best_params_)
 {'min_impurity_decrease': 0.0001}
 ```
 
+이때, 사용된 교차검증 Set들에 대한 결과는 아래와 같습니다. 
+
+```python
+print(gs.cv_results_['mean_test_score'])
+print(np.max(gs.cv_results_['mean_test_score']))
+
+[0.85780355 0.85799604 0.85799604 ... 0.86126601 0.86165063 0.86357629]
+0.8683865773302731
+```
+
+
 4) 여러개 Hyperparameter tuning 한 경우
 
 min_impurity_decrease만 tuning 했을때와 거의 동일한 결과를 얻습니다. 
