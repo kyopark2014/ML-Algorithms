@@ -71,6 +71,27 @@ Validation dataset은 모델을 학습한 후 성능 측정을 하는데 사용�
 
 ![image](https://user-images.githubusercontent.com/52392004/186666166-e9e40b07-adb4-4b4e-8b89-108d101abf61.png)
 
+아래와 같이 scikit-learn의 train_test_split()을 2번 사용하면, test_input(Test Set)으로 20%를 분리하고, 나머지 80%를 다시 80%의 sub_input(Train Set)과 val_input(Test Set)으로 지정할 수 있습니다. Training dataset(sub_input)으로 모델을 학습(Train)을 한후에, Validation dataset(val_input)으로 성능을 측정하거나 HPO를 수행하고, Test dataset으로 최종모델의 성능을 평가합니다. 
+
+```python
+import pandas as pd
+
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
+target = wine['class'].to_numpy()
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(
+    data, target, test_size=0.2, random_state=42)
+
+sub_input, val_input, sub_target, val_target = train_test_split(
+    train_input, train_target, test_size=0.2, random_state=42)
+
+print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
+
+(6497, 3) (4157, 3) (1040, 3) (1300, 3)
+```
 
 
 ### k-fold cross validation
