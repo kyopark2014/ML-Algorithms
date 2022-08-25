@@ -139,7 +139,7 @@ plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH']
 plt.show()
 ```
 
-Max Depth가 1인 결정트리의 한 예입니다. 
+아래와 같이 Max Depth가 1인 결정트리를 그릴수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
 
