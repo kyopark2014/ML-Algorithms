@@ -33,7 +33,7 @@ print(kn.score(test_input, test_target))
 
 ## 데이터전처리 
 
-[Preprocessing](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md)에서는 데이터의 정규화 및 Train/Test Dataset을 준비하는 과정을 설명합니다. 
+[Preprocessing](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md)에서는 표준점수(z)를 이용한 데이터 정규화 및 Train/Test Dataset을 준비하는 과정을 설명합니다. 
 
 ## Regression
 
