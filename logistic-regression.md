@@ -80,7 +80,7 @@ print(kn.score(test_scaled, test_target))
 0.85
 ```
 
-## 이진 분류
+## 이진 Logistric Regression
 
 이진분류에서는 표준점수(z)을 확율로 바꾸기 위하여 [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#Sigmoid) 함수를 사용합니다. 
 
@@ -132,7 +132,7 @@ print(expit(decisions))
 [0.00240145 0.97264817 0.00513928 0.01415798 0.00232731]
 ```
 
-## 다중 분류 
+## 다중 Logistic Regression
 
 표준점수(z)을 확율로 바꾸기 위하여 Softmax 함수를 사용합니다. 다중분류를 쓰는 로지스틱 회귀에서는 C를 이용해 규제 (L2 규제를 기본적용)를 하는데, C 값이 클수록 규제가 약해집니다. 아래와 같이 다중분류로 Logistric regression을 수행합니다. K 최근접 분류보다 좋은 결과를 얻고 있습니다. 
 
