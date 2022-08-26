@@ -61,9 +61,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 0.9973541965122431 0.8905151032797809
 ```
 
-alcohol, sugar, pH의 중요도는 
-ㅇㅏ래와 
-
+alcohol, sugar, pH의 중요도는 아래와 같이 sugar의 중요도가 더 높습니다. 
 
 ```python
 rf.fit(train_input, train_target)
@@ -72,6 +70,7 @@ print(rf.feature_importances_)
 [0.23167441 0.50039841 0.26792718]
 ```
 
+OOB(Out-of-Bag) 샘플을 이용하여 아래와 같이 validation을 수행합니다. 
 
 ```python
 rf = RandomForestClassifier(oob_score=True, n_jobs=-1, random_state=42)
