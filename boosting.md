@@ -19,8 +19,31 @@
 
 ### 코드 분석 
 
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient_boosting.ipynb)에 대해 설명합니다. 
 
+아래와 같이 GradientBoostingClassifier을 이용하여 n_estimators의 기본값인 100을 사용할때 아래와 같은 결과를 얻을 수 있습니다. 
 
+```python
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.model_selection import cross_validate
+
+gb = GradientBoostingClassifier(random_state=42)
+scores = cross_validate(gb, train_input, train_target, return_train_score=True, n_jobs=-1)
+
+print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+
+0.8881086892152563 0.8720430147331015
+```
+
+아래와 같이 n_estimators을 500으로 설정시에 과대정합(Overfit)된 결과를 얻을수 있습니다. 
+
+gb = GradientBoostingClassifier(n_estimators=500, learning_rate=0.2, random_state=42)
+scores = cross_validate(gb, train_input, train_target, return_train_score=True, n_jobs=-1)
+
+print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+
+0.9464595437171814 0.8780082549788999
+```
 
 
 ## Histogram-based Gradient Boosting
