@@ -8,7 +8,8 @@
 
 1) Bootstrap dataset 생성합니다.
 
-2) Feature중 Random하게 n개 선택 후, 선택한 feature로 결정트리(Decision Tree) 생성후 반복
+2) Feature중 Random하게 n개 선택 후, 선택한 feature로 결정트리(Decision Tree) 생성후 반복합니다.
+
    - scikit-learn는 100개의 결정트리를 기본값으로 생성하여 사용 
 
 3) Inference: 모든 Tree를 사용하고 분류한 후 최종 Voting합니다.
