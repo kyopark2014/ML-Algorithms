@@ -1,5 +1,15 @@
 # Boosting
 
+## Boosting 방식의 특징
+
+- 여러 개의 약한 예측 모델을 순차적으로 구축하여 하나의 강한 예측 모델을 만듬니다.
+- 앙상블 기법에 속합니다.
+- 각 단계에서 만드는 예측 모델은 이전 단계의 예측 모델의 단점을 보완합니다.
+- 각 단계를 거치면서 예측 모델의 성능이 좋아집니다.
+- Adaboost(Adaptive Boosting), GBM(Gradient Boosting Machines), XGBoost(eXtreme Gradient Boost), LightGBM(Light Gradient Boost Machines), CatBoost…
+- 순차적으로 하므로 병렬화 안되므로 느린데, 이를 수정한게 XGBoost나 LightGBM이 있습니다.
+
+
 ## Gradient Boosting
 
 - 경사하강법을 사용하여 트리를 앙상블에 추가합니다. 결정트리를 계속 추가하면서 가장 낮은 곳을 찾아 이동합니다.
@@ -34,3 +44,7 @@ XGBClassifier 클래스에서 tree_method=‘hist’ 로 지정하여 히스토�
 Microsoft에서 만든 LightGBM 으로 히스토그램 기반 그레이디언트 부스팅 알고리즘 사용
  
 
+
+## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
