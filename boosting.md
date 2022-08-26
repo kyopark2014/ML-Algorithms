@@ -54,7 +54,32 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 - 트리의 갯수 (n_estimator)를 지정하지 않고 부스팅 반복 횟수(max_iter)를 지정
 - 특성 중요도를 확인하기 위하여 permutation_importance를 사용합니다. permutation_importance() 함수가 반환하는 객체는 반복해서 얻은 특성중요도, 평균, 표준편차를 담고 있습니다. 
 
+#### 코드 분석
 
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/historam_gradient_boosting.ipynb)에 대해 설명합니다.
+
+```python
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.model_selection import cross_validate
+
+hgb = HistGradientBoostingClassifier(random_state=42)
+scores = cross_validate(hgb, train_input, train_target, return_train_score=True, n_jobs=-1)
+
+print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+
+0.9321723946453317 0.8801241948619236
+```
+
+중요도를 확인하기 위하여 permutation_importance()을 이용합니다. 
+
+```python
+from sklearn.inspection import permutation_importance
+
+hgb.fit(train_input, train_target)
+result = permutation_importance(hgb, train_input, train_target, n_repeats=10,
+                                random_state=42, n_jobs=-1)
+print(result.importances_mean)
+```
 
 
 ## XGBoost (eXtreme Gradient Boost)
