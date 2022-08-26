@@ -111,11 +111,25 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 ```
 
 
-
-
 ## LightGBM
 
 Microsoft에서 만든 LightGBM 으로 히스토그램 기반 그레이디언트 부스팅 알고리즘입니다. 
+
+#### 코드 분석
+
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/light_gbm.ipynb)에 대해 설명합니다.
+
+```python
+from lightgbm import LGBMClassifier
+from sklearn.model_selection import cross_validate
+
+lgb = LGBMClassifier(random_state=42)
+scores = cross_validate(lgb, train_input, train_target, return_train_score=True, n_jobs=-1)
+
+print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+
+0.935828414851749 0.8801251203079884
+```
 
 #### 코드 분석
 
