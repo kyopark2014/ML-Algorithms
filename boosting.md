@@ -23,24 +23,28 @@
 - Gradient Boosting의 속도와 성능을 개선합니다. 
 - 입력 특성을 256개로 나눔니다. 여기서 256개의 구간 중 하나를 떼어 놓고 누락된 값을 위해 사용합니다.
 - 트리의 갯수 (n_estimator)를 지정하지 않고 부스팅 반복 횟수(max_iter)를 지정
+- 특성 중요도를 확인하기 위하여 permutation_importance를 사용합니다. permutation_importance() 함수가 반환하는 객체는 반복해서 얻은 특성중요도, 평균, 표준편차를 담고 있습니다. 
+
+
+
 
 ## XGBoost (eXtreme Gradient Boost)
 
-- “대규모의 데이터셋을 어떻게 더 빠르게 학습할 수 있을까?” 의 해결책입니다.
+- Gradient Boost를 개량하여 대규모 dataset을 처리합니다. 
 - 분류/회귀/Rank문제 모두 사용 가능합니다.
 - Gradient Boosting 을 개량, Gradient Boosting의 보다 정규화된 형태입니다. 
 - L1, L2 regularization을 사용하여 overfitting을 막고 모델을 일반화 합니다.
 - 병렬 학습이 가능하여 빠른 학습 가능합니다.
 - 학습데이터셋의 missing value도 처리 가능합니다.
 - 높은 성능을 보여줍니다. 
+- scikit-learn에서 지원하지 않습니다. 
+- XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
-
-XGBClassifier 클래스에서 tree_method=‘hist’ 로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용
 
 
 ## LightGBM
 
-Microsoft에서 만든 LightGBM 으로 히스토그램 기반 그레이디언트 부스팅 알고리즘 사용
+Microsoft에서 만든 LightGBM 으로 히스토그램 기반 그레이디언트 부스팅 알고리즘입니다. 
  
 
 
