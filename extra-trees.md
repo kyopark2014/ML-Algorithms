@@ -9,6 +9,8 @@
 
 ## 코드분석
 
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/extra_trees.ipynb)의 내용을 아래와 같이 설명합니다. 
+
 1) 데이터를 준비합니다. 
 
 ```python

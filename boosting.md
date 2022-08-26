@@ -17,6 +17,11 @@
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있음 (n_estimators , learning_rate)
 - 일반적으로 Random forest보다 나은 성능을 기대하지만 순차적으로 계산하여야 하므로 느립니다. 
 
+### 코드 분석 
+
+
+
+
 
 ## Histogram-based Gradient Boosting
 
