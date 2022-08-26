@@ -12,6 +12,13 @@
 
 [결정트리 (Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여, 데이터에 내재되어 있는 패턴을 변수의 조합으로 나타내는 회귀/분류 모델을 Tree형태로 만들 수 있습니다. 
 
+## Random Forest
+
+[Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)에서는 앙상블학습(Ensemble learning)의 하나인 Random Forest 방식에 대해 설명합니다. 
+
+## Extra Trees
+
+[Extra Trees](https://github.com/kyopark2014/ML-Algorithms/blob/main/extra-trees.md)에 대해 설명합니다. 
 
  
 ## 관련 용어 
