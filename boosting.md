@@ -23,6 +23,8 @@
 
 아래와 같이 GradientBoostingClassifier을 이용하여 n_estimators의 기본값인 100을 사용할때 아래와 같은 결과를 얻을 수 있습니다. 
 
+
+
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import cross_validate
@@ -35,7 +37,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 0.8881086892152563 0.8720430147331015
 ```
 
-아래와 같이 n_estimators을 500으로 설정시에 과대정합(Overfit)된 결과를 얻을수 있습니다. 
+아래와 같이 n_estimators(Tree의 갯수)을 500으로 설정시에 과대정합(Overfit)된 결과를 얻을수 있습니다. 또한, learning_rate(학습륜)을 이용하여 학습속도를 조정할 수 있습니다. 
 
 ```python
 gb = GradientBoostingClassifier(n_estimators=500, learning_rate=0.2, random_state=42)
@@ -79,6 +81,8 @@ hgb.fit(train_input, train_target)
 result = permutation_importance(hgb, train_input, train_target, n_repeats=10,
                                 random_state=42, n_jobs=-1)
 print(result.importances_mean)
+
+[0.05969231 0.20238462 0.049     ]
 ```
 
 
