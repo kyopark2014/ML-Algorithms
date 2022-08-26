@@ -17,7 +17,7 @@
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있음 (n_estimators , learning_rate)
 - 일반적으로 Random forest보다 나은 성능을 기대하지만 순차적으로 계산하여야 하므로 느립니다. 
 
-### 코드 분석 
+#### 코드 분석 
 
 [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient_boosting.ipynb)에 대해 설명합니다. 
 
@@ -37,6 +37,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 
 아래와 같이 n_estimators을 500으로 설정시에 과대정합(Overfit)된 결과를 얻을수 있습니다. 
 
+```python
 gb = GradientBoostingClassifier(n_estimators=500, learning_rate=0.2, random_state=42)
 scores = cross_validate(gb, train_input, train_target, return_train_score=True, n_jobs=-1)
 
