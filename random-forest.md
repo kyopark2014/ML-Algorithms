@@ -45,9 +45,11 @@ wine.head()
 
 2) Random Forest 방식으로 Training을 수행합니다. 
 
-Train/Test dataset의 결과를 보면 아래와 같이 과대적합이지만, [결정트리로 수행한 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)보다는 좋은 결과를 얻고 있습니다. 
+- Train/Test dataset의 결과를 보면 아래와 같이 과대적합이지만, [결정트리로 수행한 결과](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)보다는 좋은 결과를 얻고 있습니다. 
 
-여기서, [k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D)을 cross_validate()을 이용해 수행하고 있습니다. n_splits를 지정하고 있지 않으므로 기본값인 5번 수행하고 있습니다. 
+- [k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D)을 cross_validate()을 이용해 수행하고 있습니다. n_splits를 지정하고 있지 않으므로 기본값인 5번 수행하고 있습니다. 
+
+- return_train_score은 명시적으로 Train Fold의 점수를 받을지 여부를 설정합니다. 
 
 ```python
 from sklearn.model_selection import cross_validate
