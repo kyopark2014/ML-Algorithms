@@ -61,6 +61,8 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 0.9973541965122431 0.8905151032797809
 ```
 
+alcohol, sugar, pH의 중요도는 
+ㅇㅏ래와 
 
 
 ```python
