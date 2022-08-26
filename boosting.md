@@ -131,7 +131,6 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 0.935828414851749 0.8801251203079884
 ```
 
-#### 코드 분석
 
 
 ## Reference
