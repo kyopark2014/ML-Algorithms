@@ -94,12 +94,30 @@ print(result.importances_mean)
 - scikit-learn에서 지원하지 않습니다. 
 - XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
+#### 코드 분석
+
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 
+
+```python
+from xgboost import XGBClassifier
+from sklearn.model_selection import cross_validate
+
+xgb = XGBClassifier(tree_method='hist', random_state=42)
+scores = cross_validate(xgb, train_input, train_target, return_train_score=True, n_jobs=-1)
+
+print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+
+0.9555033709953124 0.8799326275264677
+```
+
+
 
 
 ## LightGBM
 
 Microsoft에서 만든 LightGBM 으로 히스토그램 기반 그레이디언트 부스팅 알고리즘입니다. 
- 
+
+#### 코드 분석
 
 
 ## Reference
