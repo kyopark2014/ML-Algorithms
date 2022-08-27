@@ -15,6 +15,12 @@ fruits = np.load('fruits_300.npy')
 fruits_2d = fruits.reshape(-1, 100*100)
 ```
 
+
+https://github.com/kyopark2014/ML-Algorithms/blob/main/fruits.md#logistic-regression%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EB%B6%84%EB%A5%98%ED%95%B4%EB%B3%B4%EA%B8%B0
+
+0.9966666666666667
+0.6095898628234864
+
 PCA를 이용해 
 
 from sklearn.decomposition import PCA
