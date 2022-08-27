@@ -130,6 +130,35 @@ print(np.mean(scores['fit_time']))
 0.03617258071899414
 ```
 
+## Elbow Method
+
+몇 차원까지 축소할것인가를 구하기 위한 예제 코드 입니다. 
+
+```python
+from sklearn.datasets import fetch_openml
+
+mnist = fetch_openml('mnist_784', version=1, as_frame=False)
+mnist.target = mnist.target.astype(np.uint8)
+
+from sklearn.model_selection import train_test_split
+
+X = mnist["data"]
+y = mnist["target"]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+pca = PCA()
+pca.fit(X_train)
+cumsum = np.cumsum(pca.explained_variance_ratio_)
+d = np.argmax(cumsum >= 0.95) + 1 # 154
+
+print(d) #154
+```
+
+이때의 Elbow는 아래와 같습니다. 
+
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/52392004/187025188-3fe736de-cdd7-463e-a523-a90350e0ebc3.png">
+
 
 
 ## Reference
