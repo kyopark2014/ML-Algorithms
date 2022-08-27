@@ -69,6 +69,8 @@ class sklearn.cluster.KMeans (
 
 ## 코드 예제
 
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/kmeans.ipynb)을 아래에서 설명합니다.
+
 1) 데이터를 준비합니다.
 
 [PCA로 데이터를 축소](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)합니다. 
