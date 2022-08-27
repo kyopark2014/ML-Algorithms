@@ -43,6 +43,15 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 [분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
 
+## k-Means
+
+[k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 labdel이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
+
+## PCA (Principal Component Analysis)
+
+[PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
+
+
 
 
 ## 모델 평가
