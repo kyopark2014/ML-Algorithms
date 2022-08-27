@@ -45,7 +45,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 ## k-Means
 
-[k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 labdel이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
+[k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 lable이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
 
 ## PCA (Principal Component Analysis)
 
