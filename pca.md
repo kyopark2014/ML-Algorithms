@@ -19,8 +19,9 @@ PCA는 데이터의 분산(variance)을 최대한 보존하면서 서로 직교�
 - 많은 계산량을 필요로 합니다. 
 
 
+## 구현 예제 
 
-## 이미지 데이터 로드하기
+1) 이미지 데이터 로드하기
 
 [과일사진 이미지](https://github.com/kyopark2014/ML-Algorithms/blob/main/fruits.md)를 아래처럼 로드합니다. 
 
@@ -33,9 +34,7 @@ fruits = np.load('fruits_300.npy')
 fruits_2d = fruits.reshape(-1, 100*100)
 ```
 
-
-
-## PCA 적용 
+2) PCA를 적용합니다.
 
 아래와 같이 PCA로 50 차원(dimensions)으로 데이터를 축소합니다. 이 경우에 아래처럼 10000이 50으로 축소가 됩니다.
 
