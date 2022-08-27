@@ -109,6 +109,47 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/52392004/187010940-c59b491e-66cc-4eb0-a674-18979e5950b9.png)
 
 
+## Logistic Regression을 이용해 분류해보기 
+
+dataset을 train, test으로 분리후 logistic regression으로 분류시에 아래처럼 매우 좋은 결과를 얻습니다. 
+
+```python
+import numpy as np
+
+fruits = np.load('fruits_300.npy')
+fruits_2d = fruits.reshape(-1, 100*100)
+target = np.array([0] * 100 + [1] * 100 + [2] * 100)
+
+from sklearn.model_selection import train_test_split
+train_input, test_input, train_target, test_target = train_test_split(
+    fruits_2d, target, test_size=0.2, random_state=42)
+
+from sklearn.linear_model import LogisticRegression
+
+lr = LogisticRegression()
+
+lr.fit(train_input, train_target)
+
+print(lr.score(train_input, train_target))
+print(lr.score(test_input, test_target))
+
+1.0
+0.9833333333333333
+```
+
+[교차검증(Cross Validation)](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D)을 이용해서 구하면 조금 더 정확한 값을 구할수 있습니다. 
+
+```python
+from sklearn.model_selection import cross_validate
+
+scores = cross_validate(lr, fruits_2d, target)
+print(np.mean(scores['test_score']))
+print(np.mean(scores['fit_time']))
+
+0.9966666666666667
+0.6095898628234864
+```
+
 
 
 ## Reference
