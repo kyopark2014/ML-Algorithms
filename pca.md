@@ -21,6 +21,8 @@ PCA는 데이터의 분산(variance)을 최대한 보존하면서 서로 직교�
 
 ## 구현 예제 
 
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/pca.ipynb)의 내용을 아래에서 설명합니다. 
+
 1) 이미지 데이터 로드하기
 
 [과일사진 이미지](https://github.com/kyopark2014/ML-Algorithms/blob/main/fruits.md)를 아래처럼 로드합니다. 
