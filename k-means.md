@@ -71,7 +71,7 @@ class sklearn.cluster.KMeans (
 
 1) 데이터를 준비합니다.
 
-pca로 데이터를 축소합니다. 
+[PCA로 데이터를 축소](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)합니다. 
 
 ```python
 !wget https://bit.ly/fruits_300_data -O fruits_300.npy
