@@ -69,10 +69,81 @@ class sklearn.cluster.KMeans (
 
 ## 코드 예제
 
+1) 데이터를 준비합니다.
 
+pca로 데이터를 축소합니다. 
+
+```python
+!wget https://bit.ly/fruits_300_data -O fruits_300.npy
+
+import numpy as np
+
+fruits = np.load('fruits_300.npy')
+fruits_2d = fruits.reshape(-1, 100*100)
+
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components=50)
+pca.fit(fruits_2d)
+
+fruits_pca = pca.transform(fruits_2d)
+print(fruits_2d.shape)
+print(fruits_pca.shape)
+
+(300, 10000)
+(300, 50)
+```
+
+2) k-Means를 이용하여 아래와 같이 3개의 군집으로 분류합니다. 
+
+아래와 같이 pineapple로 111개, banana로 98개, apple로 91개가 분류되었습니다.
+
+```python
+from sklearn.cluster import KMeans
+
+km = KMeans(n_clusters=3, random_state=42)
+km.fit(fruits_pca)
+
+print(np.unique(km.labels_, return_counts=True))
+
+(array([0, 1, 2], dtype=int32), array([111,  98,  91]))
+```
+
+이것을 보기쉽게 그리면 아래와 같습니다. 
+
+```python
+for label in range(0, 3):
+    draw_fruits(fruits[km.labels_ == label])
+    print("\n")
+```    
+
+![image](https://user-images.githubusercontent.com/52392004/187024353-312790c5-dfca-427a-b9ad-d6183dbb4f43.png)
+
+![image](https://user-images.githubusercontent.com/52392004/187024360-dca1cca2-6e97-436a-8e28-a6f555389ef5.png)
+
+![image](https://user-images.githubusercontent.com/52392004/187024367-ddad9100-3ea8-4bb8-90ee-d5921bfb1bb9.png)
+
+
+3) 전체적인 분포도를 그리면 아래와 같습니다.
+
+```python
+for label in range(0, 3):
+    data = fruits_pca[km.labels_ == label]
+    plt.scatter(data[:,0], data[:,1])
+plt.legend(['apple', 'banana', 'pineapple'])
+plt.show()
+```
+
+결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187024410-475bad1d-1c7e-4785-bc8c-20ed5e0c8071.png)
+
+k-Means는 비지도학습(Unsupervised Learning)으로 정답 labdel이 없는 데이터를 이용하여 상기와 같이 3개의 카테고리로 분류할 수 있습니다. 
 
 
 ## Reference
 
 [sklearn.cluster.KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
