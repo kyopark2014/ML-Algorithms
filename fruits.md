@@ -1,8 +1,8 @@
 # 과일사진 이미지 
 
-[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)의 과일사진을 로드하고 구조를 확인하고자 합니다. 
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)의 과일사진을 로드하고 구조를 확인하고자 합니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/fruits.ipynb)에 아래의 Sample Code가 있습니다. 
 
-과일사진인 fruits_300.npy를 로드하면 100x100 크기의 이미지 300개를 로드할 수 있습니다. 
+아래와 같이 과일사진인 fruits_300.npy를 로드하면 100x100 크기의 이미지 300개를 로드할 수 있습니다. 
 
 ```python
 !wget https://bit.ly/fruits_300_data -O fruits_300.npy
