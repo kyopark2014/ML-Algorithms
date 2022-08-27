@@ -14,7 +14,7 @@ print(fruits.shape)
 (300, 100, 100)
 ```
 
-해당 이미지 셈플은 사과, 파인에플, 바나나 입니다. 
+해당 이미지 셈플은 'apple', 'pineapple', 'banana' 입니다. 
 
 ```python
 import matplotlib.pyplot as plt
