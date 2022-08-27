@@ -104,7 +104,7 @@ for i in range(10):
 plt.show()
 ```
 
-일부 사과 이미지가 바나나로 분류가 됩니다. 
+아래와 같이 일부 사과 이미지가 바나나로 분류가 됩니다. 단순히 이미지 평균값의 차이만 가지고도 어느정도 분류가 가능합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187010940-c59b491e-66cc-4eb0-a674-18979e5950b9.png)
 
