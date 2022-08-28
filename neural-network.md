@@ -6,13 +6,13 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 
 ## Neural Network 특징 
 
-- 신경망 모델은 네트워크로 표현 된 프로그램입니다.
+- 신경망 모델은 네트워크로 표현된 프로그램입니다.
 - 각 노드의 Net값은 각 입력(Input)이 가중치(Weight)합으로 표현합니다.
 - 각 노드의 출력(Output)은 노드의 Net값에 Activation Function을 적용한 값입니다.
 - 각 노드의 출력은 다음 레이어의 입력입니다.
 - 레이어를 추가하여 비선형 모델링이 가능합니다.
 - 문제의 복잡도가 증가함에 따라 필요한 노드의 개수도 증가합니다.
-- Overfitting 보다는 Generalized 된 모델이 좋습니다. 
+- Overfitting 보다는 Generalized 된 모델이 좋습니다. Tranin dataset에 많아질수록 Loss 함수가 작아지는데, validation dataset의 Loss가 줄다가 증가하기 시작하면 모델학습을 중지합니다. 
 
 ### Shallow Network
 
@@ -23,10 +23,12 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 ### Deep Network
 
 - 가중치의 개수가 급증하는 것을 피할 수 있습니다.
-- 보다 복잡한 문제를 풀 수 있습니다.
+- 보다 복잡한 문제를 풀 수 있습니다. 층이 늘어날수록 비선형이 늘어나면서 복잡한 문제도 풀수 있습니다. (Fine Transform)
 - 최적화하기 어렵고, 과적합되기 쉽고, 내부공변량 변화가 커서 학습하기 어려습니다.
 
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/52392004/187060185-99e36ba2-f90d-4b51-91c8-e0f8ddcb05b8.png">
+
+#### Gradient Descent 
 
 
 
