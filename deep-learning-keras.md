@@ -1,6 +1,6 @@
 # Deep Learning (Keras) 실습
 
-아래에서는 Fashion MNIST를 이용하여 사진에 대한 Classification을 Keras로 구현합니다. 
+아래에서는 Fashion MNIST를 이용하여 사진에 대한 Classification을 Keras로 구현합니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/deep-learning-practice.ipynb)를 아래에서 상세하게 설명하고 있습니다. 
 
 ## Fashion MNIST 데이터를 준비
 
