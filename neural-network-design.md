@@ -22,5 +22,17 @@ Regression 모델에서 값의 범위는 -inf레서 inf이어야 하므로, 출�
 
 ![image](https://user-images.githubusercontent.com/52392004/187061053-0ae1250d-09b6-4854-bd1e-ac4cedde5301.png)
 
+### Multi Class Classification
+
+아래와 같이 입력값이 3개의 label을 가지는 모델을 만들고자 합니다. 
+
+<img width="459" alt="image" src="https://user-images.githubusercontent.com/52392004/187061253-3caefcb8-d0b6-4e44-9c2a-b6068f05ab1c.png">
+
+이때, Red는 (1,0,0), Yellow는 (0,1,0), blue는 (0,0,1)로 아래처럼 나타낼수 있습니다. (one hot encoding)
+
+![image](https://user-images.githubusercontent.com/52392004/187061260-ddb954d9-6d75-496a-a543-9471f96410eb.png)
+
+![image](https://user-images.githubusercontent.com/52392004/187062032-74b25974-2d64-492f-810e-f0e8eaf30a5b.png)
+
 
 
