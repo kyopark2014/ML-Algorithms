@@ -24,7 +24,7 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 
 - 가중치의 개수가 급증하는 것을 피할 수 있습니다.
 - 보다 복잡한 문제를 풀 수 있습니다. 층이 늘어날수록 비선형이 늘어나면서 복잡한 문제도 풀수 있습니다. (Fine Transform)
-- 최적화하기 어렵고, 과적합되기 쉽고, [내부공변량 변화](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)가 커서 학습하기 어려습니다.
+- 최적화하기 어렵고, 과적합되기 쉽고, [내부공변량 변화 (Internal Covariate Shift)](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)가 커서 학습하기 어려습니다.
 
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/52392004/187060185-99e36ba2-f90d-4b51-91c8-e0f8ddcb05b8.png">
 
