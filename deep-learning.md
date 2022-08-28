@@ -30,6 +30,7 @@ from tensorflow import keras
 
 (train_input, train_target), (test_input, test_target) = keras.datasets.fashion_mnist.load_data()
 train_scaled = train_input / 255.0
+test_scaled = test_input / 255.0
 
 from sklearn.model_selection import train_test_split
 train_scaled, val_scaled, train_target, val_target = train_test_split(
@@ -48,17 +49,33 @@ model = model_fn(keras.layers.Dropout(0.3))    ## Dropout
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')   # Optimizer, Loss Function
 
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5', save_best_only=True)   # Callback to save the best
+
 history = model.fit(train_scaled, train_target, 
                     epochs=20, 
                     batch_size=32, 
                     verbose=1, 
-                    validation_data=(val_scaled, val_target)) # epoch, batch_size
+                    validation_data=(val_scaled, val_target),
+                    callbacks=[checkpoint_cb])      # epoch, batch_size
 
-test_scaled = test_input / 255.0
+model = keras.models.load_model('best-model.h5')
+
+model.evaluate(val_scaled, val_target)
+
+375/375 [==============================] - 0s 873us/step - loss: 0.3125 - accuracy: 0.8909
+[0.3125297725200653, 0.890916645526886]
+```
+
+Test dataset에 대한 
+ㄱㅕㄹ
+
+
+```python
 model.evaluate(test_scaled, test_target)
+313/313 [==============================] - 0s 1ms/step - loss: 0.3394 - accuracy: 0.8841
+[0.33944830298423767, 0.8841000199317932]
 
-313/313 [==============================] - 0s 952us/step - loss: 0.3613 - accuracy: 0.8867
-[0.36126381158828735, 0.8866999745368958]
+
 ```
 
 상기와 같이 89%의 정확도를 얻었습니다. 
