@@ -10,7 +10,6 @@
 
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/52392004/187052186-e3c810ed-1487-425e-8e91-93307dccfbc9.png">
 
-<img width="508" alt="image" src="https://user-images.githubusercontent.com/52392004/187052187-7efe5d5a-e96f-4da3-ad9f-4c1a8ffbeeb2.png">
 
 
 ## Binary Classification (HelloWorld)
@@ -75,6 +74,10 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 ## Hyperparameter Optimization (HPO)
 
 [Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
+
+## ML application
+
+![image](https://user-images.githubusercontent.com/52392004/187052254-d12b4cb5-8835-457c-80d9-0c279de9f9dc.png)
 
 
 ## 각종 유용한 라이브러리
