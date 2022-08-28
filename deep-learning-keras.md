@@ -249,6 +249,8 @@ model.evaluate(val_scaled, val_target)
 
 ## 콜백
 
+save_best_only로 저장후 다시 로드해서 사용합니다. 
+
 ```python
 model = model_fn(keras.layers.Dropout(0.3))
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', 
@@ -257,26 +259,24 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy',
 checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5', 
                                                 save_best_only=True)
 
-model.fit(train_scaled, train_target, epochs=20, verbose=1, 
+model.fit(train_scaled, train_target, epochs=20, verbose=0, 
           validation_data=(val_scaled, val_target),
           callbacks=[checkpoint_cb])
-          
+```
+
+가장 좋은 성능을 가진 모델을 로딩하고 evaluate 합니다. 
+
+```python
 model = keras.models.load_model('best-model.h5')
 
 model.evaluate(val_scaled, val_target)
+```
 
-model = model_fn(keras.layers.Dropout(0.3))
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', 
-              metrics='accuracy')
+이후 결과는 아래처럼 확인합니다.
 
-checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5', 
-                                                save_best_only=True)
-early_stopping_cb = keras.callbacks.EarlyStopping(patience=2,
-                                                  restore_best_weights=True)
-
-history = model.fit(train_scaled, train_target, epochs=20, verbose=0, 
-                    validation_data=(val_scaled, val_target),
-                    callbacks=[checkpoint_cb, early_stopping_cb])
+```python
+375/375 [==============================] - 1s 2ms/step - loss: 0.3172 - accuracy: 0.8863
+[0.31721678376197815, 0.8862500190734863]
 ```
 
 ## Reference 
