@@ -55,7 +55,8 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
 ```
 
-optimizer를 
+optimizer를 최적화할때는 accuracy가 최적인 상태로 수렴하는 시간과 최대 accuracy을 기준으로 합니다. 
+
 
 
 ### Dropout
@@ -71,6 +72,11 @@ Neural Network에서 불필요한 일부 Node를 제외함으로써 과적합(Ov
 
 ![image](https://user-images.githubusercontent.com/52392004/187076917-472b0c3b-83d9-4293-9862-4454eb54192a.png)
 
+```python
+model = model_fn(keras.layers.Dropout(0.3))
+
+model.summary()
+```
 
 ### Batch Normalization
 
