@@ -8,6 +8,9 @@
 
 - 딥려닝(DL, Deep Learning)은 인공 신경망에 기반한 머신러닝으로서 TensorFlow, PyTorch가 해당됩니다. 
 
+<img width="381" alt="image" src="https://user-images.githubusercontent.com/52392004/187052186-e3c810ed-1487-425e-8e91-93307dccfbc9.png">
+
+<img width="508" alt="image" src="https://user-images.githubusercontent.com/52392004/187052187-7efe5d5a-e96f-4da3-ad9f-4c1a8ffbeeb2.png">
 
 
 ## Binary Classification (HelloWorld)
