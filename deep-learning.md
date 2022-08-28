@@ -18,7 +18,58 @@
 
 ### Classification 예제
 
-[상세코드](
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/deep_learnig.ipynb)는 Fashion MNIST를 가지고 classification을 하는 deep learning 예제를 보여줍니다. 
+
+```python
+import tensorflow as tf
+
+tf.keras.utils.set_random_seed(42)
+tf.config.experimental.enable_op_determinism()
+
+from tensorflow import keras
+
+(train_input, train_target), (test_input, test_target) = keras.datasets.fashion_mnist.load_data()
+
+from sklearn.model_selection import train_test_split
+
+(train_input, train_target), (test_input, test_target) = keras.datasets.fashion_mnist.load_data()
+
+train_scaled = train_input / 255.0
+
+train_scaled, val_scaled, train_target, val_target = train_test_split(
+    train_scaled, train_target, test_size=0.2, random_state=42)
+    
+def model_fn(a_layer=None):
+    model = keras.Sequential(name='fashion')
+    model.add(keras.layers.Flatten(input_shape=(28, 28), name='flatten'))   ## Batch Normalization
+    model.add(keras.layers.Dense(100, activation='relu', name='hidden'))    ## Activation Function
+    if a_layer:
+        model.add(a_layer)
+    model.add(keras.layers.Dense(10, activation='softmax', name='output'))
+    return model
+
+model = model_fn(keras.layers.Dropout(0.3))    ## Dropout
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')   # Optimizer, Loss Function
+
+history = model.fit(train_scaled, train_target, 
+                    epochs=20, 
+                    batch_size=32, 
+                    verbose=1, 
+                    validation_data=(val_scaled, val_target)) # epoch, batch_size
+
+model.evaluate(val_scaled, val_target)
+
+375/375 [==============================] - 0s 611us/step - loss: 0.3242 - accuracy: 0.8917
+[0.3241635262966156, 0.8916666507720947]
+```
+
+상기와 같이 89%의 정확도를 얻었습니다. 
+
+이때의 history graph는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187084827-f0cf2722-13bf-46c7-ba2d-fd0778e57d8c.png)
+
 
 
 
