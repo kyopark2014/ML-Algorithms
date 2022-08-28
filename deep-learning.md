@@ -66,19 +66,14 @@ model.evaluate(val_scaled, val_target)
 [0.3125297725200653, 0.890916645526886]
 ```
 
-Test dataset에 대한 
-ㄱㅕㄹ
-
+Test dataset에 대한 결과는 아래와 같습니다. 
 
 ```python
 model.evaluate(test_scaled, test_target)
 313/313 [==============================] - 0s 1ms/step - loss: 0.3394 - accuracy: 0.8841
 [0.33944830298423767, 0.8841000199317932]
-
-
 ```
 
-상기와 같이 89%의 정확도를 얻었습니다. 
 
 이때의 history graph는 아래와 같습니다. 
 
