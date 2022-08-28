@@ -47,6 +47,17 @@ model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1)
 
 ![image](https://user-images.githubusercontent.com/52392004/187076472-21b31bbd-3bbb-4f89-8e0a-b457bf11cc49.png)
 
+기본값인 RMSprop을 아래처럼 adom으로 변경 할 수 있습니다. 
+
+```python
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')
+
+model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
+```
+
+optimizer를 
+
+
 ### Dropout
 
 Neural Network에서 불필요한 일부 Node를 제외함으로써 과적합(Overfitting) 문제를 해결할 수 있습니다. 
