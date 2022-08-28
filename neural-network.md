@@ -34,6 +34,14 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 ![image](https://user-images.githubusercontent.com/52392004/187053501-b317063c-fec9-4f63-8593-c865d521be64.png)
 
 
+## 모델 학습 방법 
+
+- 뉴런 개수 최적화
+- 훈련 반복횟수 최적화
+- 정규화 방법 사용
+- 트레이닝 데이터 확보
+
+![image](https://user-images.githubusercontent.com/52392004/187053612-59da01eb-60fc-40a1-a6c8-d70c5c1d0b75.png)
 
 
 
