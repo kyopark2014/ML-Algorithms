@@ -67,7 +67,7 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 - 정규화 방법 사용
 - 트레이닝 데이터 확보
 
-아래는 itteration을 통해 Error의 변화를 보여줍니다. Train dataset의 에러는 계속 주는데, Validation dataset은 어느정도까지만 줄어듭니다.  
+아래는 itteration을 통해 Error의 변화를 보여줍니다. Train dataset의 에러는 계속 주는데, Validation dataset은 어느정도까지만 줄어듭니다. (Overfitting)
 
 ![image](https://user-images.githubusercontent.com/52392004/187053619-9ad1fe1c-a4b8-469c-b32d-0cfebb277e25.png)
 
