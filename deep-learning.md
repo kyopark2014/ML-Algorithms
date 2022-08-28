@@ -86,5 +86,10 @@ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Ma
 
 ## Deep Learning 실습
 
-[Deep Learning 실습](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning-keras.md)에서는 Keras를 이용한 실습에 대해 설명합니다. 
+[Deep Learning 실습](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning-keras.md)에서는 Fashion MNIST 데이터를 이용하여 Keras 실습에 대해 설명합니다. 
+
+
+## Reference 
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
