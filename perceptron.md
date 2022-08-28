@@ -25,6 +25,11 @@ Perceptron을 이용해 AND, OR, NOT을 표현하면 아래와 같습니다.
 ![image](https://user-images.githubusercontent.com/52392004/187052913-3f7a55e3-c494-426f-b478-290ad9a1ba91.png)
 
 
+#### 활성함수 (Activation Function)
+
+Activation Function에는 Hard Limit, [Signoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#sigmoid), [ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#relu-rectified-linear-unit), [Leaky ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#leaky-relu)가 포함됩니다. 
+
+
 
 ## Multi Layer Perceptron
 
