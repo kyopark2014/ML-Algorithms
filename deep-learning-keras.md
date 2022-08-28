@@ -1,4 +1,5 @@
-## Neural Network 실습
+## Deep Learning (Keras) 실습
+
 
 1) Fashion MNIST 데이터를 준비합니다. 
 
