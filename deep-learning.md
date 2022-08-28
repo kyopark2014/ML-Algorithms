@@ -58,10 +58,11 @@ history = model.fit(train_scaled, train_target,
                     verbose=1, 
                     validation_data=(val_scaled, val_target)) # epoch, batch_size
 
-model.evaluate(val_scaled, val_target)
+test_scaled = test_input / 255.0
+model.evaluate(test_scaled, test_target)
 
-375/375 [==============================] - 0s 611us/step - loss: 0.3242 - accuracy: 0.8917
-[0.3241635262966156, 0.8916666507720947]
+313/313 [==============================] - 0s 952us/step - loss: 0.3613 - accuracy: 0.8867
+[0.36126381158828735, 0.8866999745368958]
 ```
 
 상기와 같이 89%의 정확도를 얻었습니다. 
