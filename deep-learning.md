@@ -4,11 +4,23 @@
 
 [Neural Network](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network.md)에서는 Neural Network의 특징 및 Error Back Propagation을 이용하여 최적의 Weight를 찾기 위한 방법에 대해 설명합니다. 
 
+## Deep Learning 방법
+
+- Keras: TensorFlow2.0에서 내장 라이브러리로 사용, 사용 용이
+- TensorFlow: 산업계에서 선호, 구글이 만든 ML framework (2015), GPU 사용 용이하나 사용법이 복잡함 (함수 python 문법에서 제한이 있어 디버깅 불편)
+- CNTK: 마이크로소프트
+- theano: 학계
+- PyTorch: 함수형 Python 사용이 가능하여 디버깅 용이, 상용화 어려움 
+
 ## Neural Network 실습
 
 1) Fashion MNIST 데이터를 준비합니다. 
 
-패션 MNIST 셈플을 사용합니다. 이것은 10가지 class에 대하여 28x28 픽셀의 이미지 70,000개를 제공합니다. 이중 60000개는 train.input으로 10000개는 test_input으로 아래처럼 저장합니다. 
+패션 MNIST 셈플을 사용합니다. 이것은 10가지 class에 대하여 28x28 픽셀의 이미지 70,000개를 제공합니다. 
+
+<img width="337" alt="image" src="https://user-images.githubusercontent.com/52392004/187072325-912a6ee3-57f3-4184-a473-8a34013283a4.png">
+
+이중 60000개는 train.input으로 10000개는 test_input으로 아래처럼 저장합니다. 
 
 ```python
 import tensorflow as tf
@@ -50,7 +62,7 @@ plt.show()
 
 2) Artifical Neural Network으로 패션 아이템 분리하기 
 
-아래와 같이 기본 Neural Network로 모델을 훈련합니다.
+아래와 같이 입력증과 출력층으로만 된 Neural Network로 모델을 훈련합니다.
 
 ```python
 import tensorflow as tf
@@ -76,6 +88,7 @@ model.evaluate(val_scaled, val_target)
 375/375 [==============================] - 0s 611us/step - loss: 0.4422 - accuracy: 0.8506
 [0.44223520159721375, 0.8505833148956299]
 ```
+
 
 
 
