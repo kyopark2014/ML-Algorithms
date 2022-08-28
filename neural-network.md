@@ -71,4 +71,6 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 
 ![image](https://user-images.githubusercontent.com/52392004/187053619-9ad1fe1c-a4b8-469c-b32d-0cfebb277e25.png)
 
+## Neural Network 설계 방법
 
+[Neural Network 설계](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md)에서는 Regression, Two class classification, Multi class classification에 대해 설명합니다. 
