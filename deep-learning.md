@@ -43,7 +43,7 @@ model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1)
 
 ### Activation Function
 
-아래와 같이 activation function을 dense에서 지정할때 지정할 수 있습니다. 예) signoid, softmax, relu
+아래와 같이 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)을 dense에서 지정할때 지정할 수 있습니다. 예) signoid, softmax, relu
 
 ```python
 model = keras.Sequential(name='fashion')
