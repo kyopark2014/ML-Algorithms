@@ -215,7 +215,69 @@ model.save_weights('model-weights.h5')
 model.save('model-whole.h5')
 ```
 
+## 모델 복원 
 
+아래처럼 weight를 복원 할 수 있습니다. 
+
+```python
+model = model_fn(keras.layers.Dropout(0.3))
+
+model.load_weights('model-weights.h5')
+
+import numpy as np
+
+val_labels = np.argmax(model.predict(val_scaled), axis=-1)
+print(np.mean(val_labels == val_target))
+
+0.87875
+```
+
+아래처럼 전체를 로드후에 evaluate로 분석할 수 있습니다. 
+
+```python
+model = keras.models.load_model('model-whole.h5')
+
+model.evaluate(val_scaled, val_target)
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+375/375 [==============================] - 0s 828us/step - loss: 0.3315 - accuracy: 0.8788
+[0.33149588108062744, 0.8787500262260437]
+```
+
+## 콜백
+
+```python
+model = model_fn(keras.layers.Dropout(0.3))
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', 
+              metrics='accuracy')
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5', 
+                                                save_best_only=True)
+
+model.fit(train_scaled, train_target, epochs=20, verbose=1, 
+          validation_data=(val_scaled, val_target),
+          callbacks=[checkpoint_cb])
+          
+model = keras.models.load_model('best-model.h5')
+
+model.evaluate(val_scaled, val_target)
+
+model = model_fn(keras.layers.Dropout(0.3))
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', 
+              metrics='accuracy')
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5', 
+                                                save_best_only=True)
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=2,
+                                                  restore_best_weights=True)
+
+history = model.fit(train_scaled, train_target, epochs=20, verbose=0, 
+                    validation_data=(val_scaled, val_target),
+                    callbacks=[checkpoint_cb, early_stopping_cb])
+```
 
 ## Reference 
 
