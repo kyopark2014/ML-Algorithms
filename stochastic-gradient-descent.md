@@ -30,10 +30,32 @@ Weight는 아래처럼 Error의 미분으로 표현됩니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187074828-fe5c8079-49fa-4cfe-bad3-56f35a1231a9.png)
 
+activation function으로 signoid를 쓰면 미분값이 0.25가 됩니다. 
+
 ![image](https://user-images.githubusercontent.com/52392004/187074885-56f2531e-628a-4b55-8170-7714a17a011e.png)
 
+[Deep network](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network.md#deep-network)와 같이 layer가 증가하면, weight의 변화가 줄어서 더이상 학습이 안되어버리므로 signoid를 activation function으로 사용할 수 없게 됩니다. 이것을 Gradient vanishing problem이라고 합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187074794-34a16dd4-83e4-4d23-9f8f-9cac583b8133.png)
+
+#### ReLU (Rectified Linear Unit)
+
+Activation function으로 ReLU (Rectified Linear Unit)를 사용하여 Gradient vanishing 문제를 해결할 수 있습니다. 
+
+ReLU의 그래프는 아래와 같습니다.
+
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/52392004/187075181-69d7c063-b725-4ace-a6f7-50d0341dff58.png">
+
+수식은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/187075198-08d51814-6e66-4ba0-a5ab-5f125fbfe951.png)
+
+ReLU의 경우에 Sigmoid보다 약 6배 빠름지만, 학습데이터를 다 썼는데 한번도 사용되지 않은 노드가 있다면 Weight가 빠지면서 노드가 죽어버리는 문제점이 발생 할 수 있습니다. 이를 위해서, Learning rate를 작게 설정하거나 Leaky ReLU를 사용합니다. 
+
+#### Leaky ReLU
+
+Leaky ReLU는 
+
 
 
 
