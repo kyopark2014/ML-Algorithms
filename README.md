@@ -17,21 +17,7 @@
 [kNN(k-Nearest Neighbors)을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
 
 
-### 결정계수 (Coefficient of determination)
 
-score() 호출시 결과는 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(1에 가까울수록 예측이 잘된것)를 의미합니다.
-
-![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
-
-아래는 K Neighbors Classifier을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. 
-
-```python
-from sklearn.neighbors import KNeighborsClassifier
-
-kn = KNeighborsClassifier()
-kn.fit(train_input, train_target)
-print(kn.score(test_input, test_target))
-```
 
 ## 데이터전처리 
 
@@ -62,6 +48,24 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 ## 모델 평가
 
+### 결정계수 (Coefficient of determination)
+
+score() 호출시 결과는 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(1에 가까울수록 예측이 잘된것)를 의미합니다.
+
+![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
+
+아래는 K Neighbors Classifier을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. 
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+kn = KNeighborsClassifier()
+kn.fit(train_input, train_target)
+print(kn.score(test_input, test_target))
+```
+
+### 모델적함
+
 일반적으로 train set의 score가 test set보다 조금 높음습니다.
 
 - 과대적합(Overfitting): 모델의 train set 성능이 test set보다 훨씬 높은 경우 
@@ -75,7 +79,7 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 ![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
 
 
-## Hyperparameter Optimization (HPO)
+### Hyperparameter Optimization (HPO)
 
 [Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
 
