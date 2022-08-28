@@ -16,7 +16,7 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 
 ### 문제의 정의 
 
-![image](https://user-images.githubusercontent.com/52392004/187053296-e7665b40-6214-41a9-b402-15d54ea54c8e.png)
+![image](https://user-images.githubusercontent.com/52392004/187053314-5ce8d8cc-8569-49a7-9cc7-5a3793938eb2.png)
 
 ![image](https://user-images.githubusercontent.com/52392004/187053252-e341f296-587f-4947-8fdb-c4ea75664848.png)
 
