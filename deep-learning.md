@@ -12,6 +12,37 @@
 - theano: 학계
 - PyTorch: 함수형 Python 사용이 가능하여 디버깅 용이, 상용화 어려움 
 
+
+
+## Keras Model
+
+Keras이 손실함수는 "sparse_categorical_crossentropy"을 씁니다. 이진분류의 경우에는 binary_crossentropy를, 다중분류의 경우에는 categorical_crossentropy을 사용합니다.
+
+만약 티셔츠가 (1,0,0,0,0,0,0,0,0,0)와 같이
+[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md#multi-class-classification)을 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187072798-c115d22c-18d5-4c89-81a9-d51ee5849269.png)
+
+이때 아래처럼 정의 할 
+
+
+```python
+import tensorflow as tf
+from tensorflow import keras
+
+from sklearn.model_selection import train_test_split
+
+train_scaled, val_scaled, train_target, val_target = train_test_split(
+    train_scaled, train_target, test_size=0.2, random_state=42)
+
+dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,))
+model = keras.Sequential(dense)
+
+model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
+model.fit(train_scaled, train_target, epochs=5, verbose=1) 
+```
+
+
 ## Neural Network 실습
 
 1) Fashion MNIST 데이터를 준비합니다. 
@@ -88,6 +119,7 @@ model.evaluate(val_scaled, val_target)
 375/375 [==============================] - 0s 611us/step - loss: 0.4422 - accuracy: 0.8506
 [0.44223520159721375, 0.8505833148956299]
 ```
+
 
 
 
