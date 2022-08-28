@@ -39,7 +39,7 @@ model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
 model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
 ```
 
-#### GPU check
+#### GPU 상태 확인 
 
 아래처럼 console에서 nvidia-smi라는 명령어로 GPU 상태를 확인할 수 있습니다. 
 
