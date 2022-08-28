@@ -23,7 +23,7 @@ Keras이 손실함수는 "sparse_categorical_crossentropy"을 씁니다. 이진�
 
 ![image](https://user-images.githubusercontent.com/52392004/187072798-c115d22c-18d5-4c89-81a9-d51ee5849269.png)
 
-이때 아래처럼 정의 할 
+이때 아래처럼 정의할 수 있습니다. 
 
 
 ```python
@@ -35,7 +35,7 @@ from sklearn.model_selection import train_test_split
 train_scaled, val_scaled, train_target, val_target = train_test_split(
     train_scaled, train_target, test_size=0.2, random_state=42)
 
-dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,))
+dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,))   # Output
 model = keras.Sequential(dense)
 
 model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
@@ -91,9 +91,12 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/52392004/187068125-5f4464da-f2aa-4512-b8d2-2033e2c56dd0.png)
 
 
-2) Artifical Neural Network으로 패션 아이템 분리하기 
+2) 입력층/출력층만을 가지는 Artifical Neural Network으로 패션 아이템 분리하기 
 
 아래와 같이 입력증과 출력층으로만 된 Neural Network로 모델을 훈련합니다.
+
+![image](https://user-images.githubusercontent.com/52392004/187073354-3bc01ec0-ba49-470f-a44e-634317e0f06b.png)
+
 
 ```python
 import tensorflow as tf
