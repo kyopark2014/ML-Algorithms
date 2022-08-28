@@ -39,6 +39,13 @@ model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
 model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
 ```
 
+#### Optimizer
+
+[Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)를 모든 데이터를 가지고 에러값을 찾은후 기울기를 구해서 Weight를 업데이트 하븐데, [Stochastic Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)는 확율을 이용해서 속도를 개선합니다. Momentum과 Step size를 모두 고려한 Adam이 있습니다. (가장 많이 쓰임) 
+
+![image](https://user-images.githubusercontent.com/52392004/187076053-51cab41e-e87f-4432-b6b8-be170b10fead.png)
+
+
 #### GPU 상태 확인 
 
 아래처럼 console에서 nvidia-smi라는 명령어로 GPU 상태를 확인할 수 있습니다. 
