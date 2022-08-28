@@ -8,7 +8,7 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/187052605-4935035d-5faf-4a66-b326-87affa297063.png)
 
-연속된 perceptron은 아래와 같은 형태로 구성됩니다.
+연속된 perceptron은 아래와 같은 형태로 구성되는데, 이를 Artificial Neural Network라고 부릅니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187052824-3ce286c3-a2dd-498e-8396-12d9aca31455.png)
 
