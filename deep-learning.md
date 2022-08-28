@@ -21,7 +21,7 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/187072798-c115d22c-18d5-4c89-81a9-d51ee5849269.png)
 
-아래처럼 Artifical Neural Network를 정의할 수 있습니다. 
+아래처럼 Artifical Neural Network를 정의할 수 있습니다. 모델 훈련은 fit()으로 진행하는데, batch_size의 기본값은 32입니다. 만약 train_scaled가 4800개라면, epoch가 5개이고, batch_size가 32일때 한번의 epoch가 1500개씩 사용하게 됩니다. batch_size가 너무 크면 GPU에 올라갈수 없는 경우도 있으므로 중요한 옵션입니다. 
 
 ```python
 import tensorflow as tf
@@ -36,8 +36,18 @@ dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,))   # Out
 model = keras.Sequential(dense)
 
 model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
-model.fit(train_scaled, train_target, epochs=5, verbose=1) 
+model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
 ```
+
+#### GPU check
+
+아래처럼 console에서 nvidia-smi라는 명령어로 GPU 상태를 확인할 수 있습니다. 
+
+```c
+sh-4.2$ nvidia-smi
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+```
+
 
 
 ## Neural Network 실습
@@ -94,6 +104,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/187073354-3bc01ec0-ba49-470f-a44e-634317e0f06b.png)
 
+다중선형분류이므로 출력층의 activation function으로는 softmax를 쓰고, Loss 함수로는 categorical crossentropy를 사용합니다. 
 
 ```python
 import tensorflow as tf
@@ -108,7 +119,22 @@ dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,))   # out
 model = keras.Sequential(dense)
 
 model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
-model.fit(train_scaled, train_target, epochs=5, verbose=1) 
+model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
+```
+
+모델 훈련은 아래와 같이 5번의 epoch로 진행됩니다. 여기서, loss는 crossentropy값이고 accuracy는 정확도를 의미합니다. 
+
+```python
+Epoch 1/5
+1500/1500 [==============================] - 1s 772us/step - loss: 0.6071 - accuracy: 0.7967
+Epoch 2/5
+1500/1500 [==============================] - 1s 785us/step - loss: 0.4785 - accuracy: 0.8394
+Epoch 3/5
+1500/1500 [==============================] - 1s 765us/step - loss: 0.4561 - accuracy: 0.8484
+Epoch 4/5
+1500/1500 [==============================] - 1s 779us/step - loss: 0.4447 - accuracy: 0.8536
+Epoch 5/5
+1500/1500 [==============================] - 1s 811us/step - loss: 0.4372 - accuracy: 0.8548
 ```
 
 이때의 결과는 아래와 같습니다. 
@@ -120,6 +146,7 @@ model.evaluate(val_scaled, val_target)
 [0.44223520159721375, 0.8505833148956299]
 ```
 
+3) 
 
 
 
