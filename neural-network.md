@@ -8,7 +8,7 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 
 - 신경망 모델은 네트워크로 표현 된 프로그램입니다.
 - 각 노드의 Net값은 각 입력(Input)이 가중치(Weight)합으로 표현합니다.
-- 각 노드의 출력(Output)은 노드의 Net값에Activation Function을 적용한 값입니다.
+- 각 노드의 출력(Output)은 노드의 Net값에 Activation Function을 적용한 값입니다.
 - 각 노드의 출력은 다음 레이어의 입력입니다.
 - 레이어를 추가하여 비선형 모델링이 가능합니다.
 - 문제의 복잡도가 증가함에 따라 필요한 노드의 개수도 증가합니다.
