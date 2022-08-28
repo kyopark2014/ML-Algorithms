@@ -39,23 +39,23 @@ print(kn.score(test_input, test_target))
 
 ## Machine Learning
 
-### Supervised Learning
+### 1) Supervised Learning
 
-#### Regression
+#### - Regression
 
 Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
 
-#### Classification
+#### - Classification
 
 [분류 알고리즘 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
 
-### Unsupervised Learning
+### 2) Unsupervised Learning
 
-#### Clustering: k-Means
+#### - Clustering: k-Means
 
 [k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 label이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
 
-#### Dimensionally Reduction: PCA (Principal Component Analysis)
+#### - Dimensionally Reduction: PCA (Principal Component Analysis)
 
 [PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
 
