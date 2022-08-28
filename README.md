@@ -64,7 +64,7 @@ kn.fit(train_input, train_target)
 print(kn.score(test_input, test_target))
 ```
 
-### 모델적
+### 모델 적합 
 
 일반적으로 train set의 score가 test set보다 조금 높음습니다.
 
