@@ -4,6 +4,32 @@
 
 Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Multi Layer Perceptron](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md)에 대해 설명합니다. 
 
+## Neural Network 특징 
+
+- 신경망 모델은 네트워크로 표현 된 프로그램입니다.
+- 각 노드의 Net값은 각 입력(Input)이 가중치(Weight)합으로 표현합니다.
+- 각 노드의 출력(Output)은 노드의 Net값에Activation Function을 적용한 값입니다.
+- 각 노드의 출력은 다음 레이어의 입력입니다.
+- 레이어를 추가하여 비선형 모델링이 가능합니다.
+- 문제의 복잡도가 증가함에 따라 필요한 노드의 개수도 증가합니다.
+- Overfitting 보다는 Generalized 된 모델이 좋습니다. 
+
+### Shallow Network
+
+노드의 개수가 늘어나면 가중치 개수가 기하급수적으로 늘어나게 됩니다. 
+
+<img width="255" alt="image" src="https://user-images.githubusercontent.com/52392004/187060127-33725f3a-40d1-4842-b36c-913a0e67430e.png">
+
+### Deep Network
+
+- 가중치의 개수가 급증하는 것을 피할 수 있습니다.
+- 보다 복잡한 문제를 풀 수 있습니다.
+- 최적화하기 어렵고, 과적합되기 쉽고, 내부공변량 변화가 커서 학습하기 어려습니다.
+
+<img width="574" alt="image" src="https://user-images.githubusercontent.com/52392004/187060185-99e36ba2-f90d-4b51-91c8-e0f8ddcb05b8.png">
+
+
+
 ## Neural Network 학습방법 
 
 #### 학습준비물
