@@ -91,6 +91,17 @@ Internal Covariate Shift (내부공변량 변화)는 [z-fold cross validation](h
 ![image](https://user-images.githubusercontent.com/52392004/187077375-02d10cd7-e932-4931-963d-47055e302339.png)
 
 
+아래처럼 Flatten()을 이용하여 구현합니다. 
+
+```python
+model = keras.Sequential(name='fashion')
+model.add(keras.layers.Flatten(input_shape=(28, 28), name='flatten'))
+model.add(keras.layers.Dense(100, activation='relu', name='hidden'))
+model.add(keras.layers.Dense(10, activation='softmax', name='output'))
+
+model.summary()
+```
+
 
 ### GPU 상태 확인 
 
