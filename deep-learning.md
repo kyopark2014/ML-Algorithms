@@ -41,6 +41,19 @@ model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
 model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1) 
 ```
 
+### Activation Function
+
+아래와 같이 activation function을 dense에서 지정할때 지정할 수 있습니다. 예) signoid, softmax, relu
+
+```python
+model = keras.Sequential(name='fashion')
+model.add(keras.layers.Flatten(input_shape=(28, 28), name='flatten'))
+model.add(keras.layers.Dense(100, activation='relu', name='hidden'))
+model.add(keras.layers.Dense(10, activation='softmax', name='output'))
+
+model.summary()
+```
+
 ### Optimizer (개선된 gradient descent method)
 
 [Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)는 모든 데이터를 가지고 에러값을 찾은 후에 기울기를 구해서 Weight를 업데이트 합니다. [Stochastic Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)는 확율을 이용해서 속도를 개선합니다. Adam은 Momentum과 Step size를 모두 고려하여 가장 많이 사용되고 있습니다.
