@@ -26,6 +26,16 @@ Perceptron을 이용해 AND, OR, NOT을 표현하면 아래와 같습니다.
 
 ## Multi Layer Perceptron
 
-Input, Hidden, Output의 3종류의 Layer를 만들 수 있습니다. 
+Input (입력층), Hidden (은닉층), Output (출력층)의 3종류의 Layer들를 만들 수 있습니다. 
 
 <img width="356" alt="image" src="https://user-images.githubusercontent.com/52392004/187052984-7ff7702d-71db-495d-9b6d-94de0cb6675d.png">
+
+Layer 구조를 통해 비선형 모델링이 가능합니다. 
+
+
+
+#### Universal Approximation Theorem
+
+- Boolean Function: 2 Layers
+- Continuous Function: 3 Layers
+- Arbitrary Function: 3 Layers
