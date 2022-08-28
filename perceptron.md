@@ -24,11 +24,14 @@ Perceptron을 이용해 AND, OR, NOT을 표현하면 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187052913-3f7a55e3-c494-426f-b478-290ad9a1ba91.png)
 
+
+
 ## Multi Layer Perceptron
 
 Input (입력층), Hidden (은닉층), Output (출력층)의 3종류의 Layer들를 만들 수 있습니다. 
 
-<img width="356" alt="image" src="https://user-images.githubusercontent.com/52392004/187052984-7ff7702d-71db-495d-9b6d-94de0cb6675d.png">
+![Uploading image.png…]()
+
 
 Layer 구조를 통해 비선형 모델링이 가능합니다. 
 
