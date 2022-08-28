@@ -46,6 +46,10 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 [PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
 
 
+## Deep Laarning
+
+[Deep Learning](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md)에 대해 설명합니다. 
+
 ## 모델 평가
 
 ### 결정계수 (Coefficient of determination)
