@@ -28,8 +28,6 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/52392004/187060185-99e36ba2-f90d-4b51-91c8-e0f8ddcb05b8.png">
 
-#### Gradient Descent 
-
 
 
 ## Neural Network 학습방법 
