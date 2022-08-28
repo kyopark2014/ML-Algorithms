@@ -80,7 +80,7 @@ print(kn.score(test_input, test_target))
 - 과대적합(Overfitting): 모델의 train set 성능이 test set보다 훨씬 높은 경우 
 - 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
 
-아래와 같이 Linear classification에서 과적합(Overfitting)이 발생할 수 있습니다. 
+아래와 같이 Linear regression에서 과적합(Overfitting)이 발생할 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187076564-174edbf0-26ba-434f-937c-6a8e8e9e46e7.png)
 
