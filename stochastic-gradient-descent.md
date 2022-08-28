@@ -4,6 +4,8 @@ Loss를 줄이기 위해서 반복적으로 기울기를 계산하여 변수의 
 
 ## Gradient Descent
 
+아래와 같이 경사하강법을 수행할 수 있습니다. 
+
 1) 임의의 시작점을 Random하게 선택합니다.
 2) 현재 위치의 경사를 구합니다.
 3) 기울기의 반대방향으로 조금 이동합니다.
@@ -18,10 +20,20 @@ Weight는 아래처럼 Error의 미분으로 표현됩니다.
 ![image](https://user-images.githubusercontent.com/52392004/187074671-d487c330-6f1e-4745-985e-5f3c813799a6.png)
 
 
-이때의 Error값은 아래처럼 변화합니다. 
+이때의 Error값은 아래처럼 변화시키면서 Weight의 Error를 개선합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187074618-9b5ab505-fd28-4de7-a75f-4af062c7e95c.png)
 
+## Gradient vanishing & exploding
+
+(t+1)의 Weight는 이전 Weight에서 learning rate와 gradient의 곲을 뺀것입니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187074828-fe5c8079-49fa-4cfe-bad3-56f35a1231a9.png)
+
+![image](https://user-images.githubusercontent.com/52392004/187074885-56f2531e-628a-4b55-8170-7714a17a011e.png)
+
+
+![image](https://user-images.githubusercontent.com/52392004/187074794-34a16dd4-83e4-4d23-9f8f-9cac583b8133.png)
 
 
 
