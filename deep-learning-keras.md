@@ -1,7 +1,8 @@
-## Deep Learning (Keras) 실습
+# Deep Learning (Keras) 실습
 
+아래에서는 Fashion MNIST를 이용하여 사진에 대한 Classification을 Keras로 구현합니다. 
 
-1) Fashion MNIST 데이터를 준비합니다. 
+## Fashion MNIST 데이터를 준비
 
 패션 MNIST 셈플을 사용합니다. 이것은 10가지 class에 대하여 28x28 픽셀의 이미지 70,000개를 제공합니다. 
 
@@ -47,7 +48,7 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/52392004/187068125-5f4464da-f2aa-4512-b8d2-2033e2c56dd0.png)
 
 
-2) 입력층/출력층만을 가지는 Artifical Neural Network으로 패션 아이템 분리하기 
+## 입력층/출력층 만을 가지는 Artifical Neural Network으로 패션 아이템 분리하기 
 
 아래와 같이 입력증과 출력층으로만 된 Neural Network로 모델을 훈련합니다.
 
@@ -95,7 +96,8 @@ model.evaluate(val_scaled, val_target)
 [0.44223520159721375, 0.8505833148956299]
 ```
 
-3) 
+
+## 
  
 
 
