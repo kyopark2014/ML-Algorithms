@@ -193,7 +193,7 @@ print(np.round(proba, decimals=3))
 
 ## SGDClassifier
 
-확률적 경사하강법(SGD, Stochastic Gradient Descent)을 이용하여 선형모델로 Linear classifiers을 구현할 수 있습니다.
+[확률적 경사하강법(SGD, Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#stochastic-gradient-descent)을 이용하여 선형모델로 Linear classifiers을 구현할 수 있습니다.
 
 ```python
 from sklearn.model_selection import cross_validate
