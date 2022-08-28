@@ -4,7 +4,7 @@
 
 뉴런의 수학적모델을 위해 Rosenblatt이 1957년에 개발한 **선형분류모형**로서 인식의 기본단위를 의미합니다. 
 
-아래에서 x1, x2, 1은 입력으로서, 가중치 w1, w2를 가지고 있습니다. 여기서, 가중치는 수상돌기의 발달정도를 의미하고, 활성함수 f에 의해 어떤 임계치를 넘으면 출력으로 y를 만들게 됩니다. y의 범위는 0에서 1인데, 0보다 큰 값을 받으면 1을 출력하므로 hard limit이라고 불립니다. 
+아래에서 x1, x2, 1은 입력으로서, 가중치 w1, w2를 가지고 있습니다. 여기서, 가중치는 수상돌기의 발달정도를 의미하고, [활성함수(Activation Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function) f에 의해 어떤 임계치를 넘으면 출력으로 y를 만들게 됩니다. y의 범위는 0에서 1인데, 0보다 큰 값을 받으면 1을 출력하므로 hard limit이라고 불립니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187052605-4935035d-5faf-4a66-b326-87affa297063.png)
 
