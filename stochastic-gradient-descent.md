@@ -46,7 +46,7 @@ ReLU의 그래프는 아래와 같습니다.
 
 <img width="317" alt="image" src="https://user-images.githubusercontent.com/52392004/187075181-69d7c063-b725-4ace-a6f7-50d0341dff58.png">
 
-수식은 아래와 같습니다.
+수식은 아래와 같습니다. Net값이 음수일때는 0이고, 양수일때는 입력을 그래도 사용하므로, 중첩이 되어도 원래값을 유지합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187075198-08d51814-6e66-4ba0-a5ab-5f125fbfe951.png)
 
