@@ -30,7 +30,7 @@ Weight는 아래처럼 Error의 미분으로 표현됩니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187074828-fe5c8079-49fa-4cfe-bad3-56f35a1231a9.png)
 
-activation function으로 signoid를 쓰면 미분값이 0.25가 됩니다. 
+[activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)으로 signoid를 쓰면 미분값이 0.25가 됩니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187074885-56f2531e-628a-4b55-8170-7714a17a011e.png)
 
