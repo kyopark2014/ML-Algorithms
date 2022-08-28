@@ -16,6 +16,12 @@
 
 ## Keras Model
 
+### Classification 예제
+
+[상세코드](
+
+
+
 ### 손실함수 
 
 이진분류의 경우에는 binary_crossentropy를, 다중분류의 경우에는 categorical_crossentropy을 사용합니다. 또한, 만약 티셔츠를 (1,0,0,0,0,0,0,0,0,0)와 같이
