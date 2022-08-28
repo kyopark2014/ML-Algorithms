@@ -14,5 +14,4 @@
 
 선형분류모델은 아래처럼 표시될수 있는데, 입력값이 직선보다 위에 있으면 1이고 아래있으면 0을 의미합니다. 
 
-![image](https://user-images.githubusercontent.com/52392004/187052833-7e477622-cfa1-4ee9-a2e9-fc34de89fca7.png)
-
+![image](https://user-images.githubusercontent.com/52392004/187052865-db5a5eaf-bfa2-49cc-bcc8-54c9e702ac69.png)
