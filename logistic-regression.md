@@ -191,6 +191,33 @@ print(np.round(proba, decimals=3))
  [0.    0.    0.904 0.002 0.089 0.002 0.001]]
 ```
 
+## SGDClassifier
+
+확률적 경사하강법(SGD, Stochastic Gradient Descent)을 이용하여 선형모델로 Linear classifiers을 구현할 수 있습니다.
+
+```python
+from sklearn.model_selection import cross_validate
+from sklearn.linear_model import SGDClassifier
+
+sc = SGDClassifier(loss='log', max_iter=5, random_state=42)
+
+scores = cross_validate(sc, train_scaled, train_target, n_jobs=-1)
+
+import numpy as np
+print(np.mean(scores['test_score']))
+```
+
+상기의 sample 사용시 3 class가 n_splits보다 작으므로 결과는 좋지 않습니다. 
+
+```python
+/home/ec2-user/anaconda3/envs/python3/lib/python3.8/site-packages/sklearn/model_selection/_split.py:676: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+  warnings.warn(
+
+0.7144927536231884
+```
+
+
+
 ## Low Accuracy Case
 
 Logistic Regression 적용시에 [정확도가 떨어지는 케이스](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic-regression-low-accuracy.ipynb)에 대해 설명합니다. 
@@ -284,3 +311,5 @@ print(lr.coef_, lr.intercept_)
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
+[sklearn.linear_model.SGDClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)
