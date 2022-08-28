@@ -14,7 +14,7 @@ Regression 모델에서 값의 범위는 -inf레서 inf이어야 하므로, 출�
 
 <img width="454" alt="image" src="https://user-images.githubusercontent.com/52392004/187060971-1e7f7a6b-2a58-45b9-ae1d-3091c97a7832.png">
 
-이때, Red는 1, Black은 0으로 치환할 수 있는데, activation function으로 sigmoid를 사용하여 구현할 수 있습니다. 이때의 loss function은 cross entropy를 사용하면 됩니다. 
+이때, Red는 1, Black은 0으로 치환할 수 있는데, activation function으로 [sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#sigmoid)를 사용하여 구현할 수 있습니다. 이때의 loss function은 cross entropy를 사용하면 됩니다. 
 
 <img width="317" alt="image" src="https://user-images.githubusercontent.com/52392004/187061056-2fb47fbe-0865-45ec-8884-5f5123feb154.png">
 
@@ -31,6 +31,8 @@ Regression 모델에서 값의 범위는 -inf레서 inf이어야 하므로, 출�
 이때, Red는 (1,0,0), Yellow는 (0,1,0), blue는 (0,0,1)로 아래처럼 나타낼수 있습니다. (one hot encoding)
 
 ![image](https://user-images.githubusercontent.com/52392004/187061260-ddb954d9-6d75-496a-a543-9471f96410eb.png)
+
+따라서, 아래처럼 출력층이 만들어지는데, 이때 activation function으로 [softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#softmax)를 쓰고, [Loss Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)은 MSE, Cross-Entropy를 쓸수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187062032-74b25974-2d64-492f-810e-f0e8eaf30a5b.png)
 
