@@ -59,6 +59,21 @@ Neural Network에서 불필요한 일부 Node를 제외함으로써 과적합(Ov
 ![image](https://user-images.githubusercontent.com/52392004/187076917-472b0c3b-83d9-4293-9862-4454eb54192a.png)
 
 
+### Batch Normalization
+
+Internal Covariate Shift
+
+[z-fold cross validation](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D)처럼 입력 데이터(mini batch)의 분포가 바뀌는 현상을 말합니다.   
+
+
+노드의 가중치가 바뀌면 입력의 분포가 바뀌게 되는 현상
+바뀌게 되는 분포가 레이어를 타고 전파되는 문제
+
+내부 공격랴 변화 
+
+![image](https://user-images.githubusercontent.com/52392004/187076987-35763aa5-494f-4e74-9e22-f958a317352b.png)
+
+
 
 ### GPU 상태 확인 
 
