@@ -97,14 +97,124 @@ model.evaluate(val_scaled, val_target)
 ```
 
 
-## Deep Network를 이용
+## 다중 Network를 이용
 
 입력층에 784개, 은닉층(Hidden layer)에 100개, 출력층으로 10개 Node를 사용합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187078300-e056019d-94b3-45be-a5e0-c53da2fd396d.png)
 
- 
- 
+### Layer 추가 방법
+
+#### 1) Dense를 추가하는 방법 
+
+```python
+dense1 = keras.layers.Dense(100, activation='sigmoid', input_shape=(784,), name='hidden')
+dense2 = keras.layers.Dense(10, activation='softmax', name='output')
+
+model = keras.Sequential([dense1, dense2], name='fashion')
+
+model.summary()
+```
+
+#### 2) keras.Sequential내부에서 정의하는 방법 
+
+```python
+model = keras.Sequential([
+    keras.layers.Dense(100, activation='sigmoid', input_shape=(784,), name='hidden'),
+    keras.layers.Dense(10, activation='softmax', name='output')
+], name='fashion')
+
+model.summary()
+```
+
+#### 3) model에 add 하는 방법
+
+```python
+model = keras.Sequential(name='fashion')
+model.add(keras.layers.Dense(100, activation='sigmoid', input_shape=(784,), name='hidden'))
+model.add(keras.layers.Dense(10, activation='softmax', name='output'))
+
+model.summary()
+```
+
+## Activation function을 바꾸는 방법
+
+아래처럼 layer를 dense로 추가할때, "activation"을 추가합니다. 
+
+```python
+model.add(keras.layers.Dense(100, activation='relu', name='hidden'))
+```
+
+## Optimizer
+
+아래는 Optimzer를 [Stochastic Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#stochastic-gradient-descent)로 지정하는 예제입니다. 
+
+```python
+model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics='accuracy')
+```
+
+또는 아래처럼 쓸수도 있습니다. 
+
+```python
+sgd = keras.optimizers.SGD()  # Stocastic Gradient Descent
+model.compile(optimizer=sgd, loss='sparse_categorical_crossentropy', metrics='accuracy')
+```
+
+기본값은 RMSprop 입니다. 
+
+## 검증손실
+
+model 훈련시 결과를 history로 받아서 아래처럼 결과를 볼 수 있습니다.
+
+```python
+model = model_fn()
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')
+
+history = model.fit(train_scaled, train_target, epochs=20, verbose=0, 
+                    validation_data=(val_scaled, val_target))
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.xlabel('epoch')
+plt.ylabel('loss')
+plt.legend(['train', 'val'])
+plt.show()
+```                    
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187082737-e0bfa3fc-6acb-4da3-ba37-e320c391bfe0.png)
+
+
+## Dropout
+
+아래처럼 Droupt을 지정할 수 있습니다. 
+
+```python
+model = model_fn(keras.layers.Dropout(0.3))
+
+model.summary()
+```
+
+![image](https://user-images.githubusercontent.com/52392004/187082823-33f7da15-1c2a-4c69-934d-c9f71faa2f30.png)
+
+
+## 모델 저장 
+
+아래처럼 model의 weight만 저장하거나 전체를 저장할 수 있습니다. 
+
+```python
+model = model_fn(keras.layers.Dropout(0.3))
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', 
+              metrics='accuracy')
+
+history = model.fit(train_scaled, train_target, epochs=10, verbose=0, 
+                    validation_data=(val_scaled, val_target))
+
+model.save_weights('model-weights.h5')
+model.save('model-whole.h5')
+```
+
 
 
 ## Reference 
