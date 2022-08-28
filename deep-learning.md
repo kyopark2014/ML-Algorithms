@@ -15,3 +15,11 @@
 선형분류모델은 아래처럼 표시될수 있는데, 입력값이 직선보다 위에 있으면 1이고 아래있으면 0을 의미합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187052865-db5a5eaf-bfa2-49cc-bcc8-54c9e702ac69.png)
+
+Perceptron을 이용해 AND, OR, NOT을 표현하면 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/187052902-01df2b3c-5e68-41a6-928a-ca3755f28261.png)
+
+또한, Artificial Neural Network를 이용해 XOR를 표현할수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/187052913-3f7a55e3-c494-426f-b478-290ad9a1ba91.png)
