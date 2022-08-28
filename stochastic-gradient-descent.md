@@ -2,6 +2,29 @@
 
 Loss를 줄이기 위해서 반복적으로 기울기를 계산하여 변수의 값을 변경해 나가는 과정을 수행하여 정확도를 높입니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient-descent.ipynb)에서는 물고기 데이터에 확율적 경사하강법을 적용한 예입니다.
 
+## Gradient Descent
+
+1) 임의의 시작점을 Random하게 선택합니다.
+2) 현재 위치의 경사를 구합니다.
+3) 기울기의 반대방향으로 조금 이동합니다.
+4) 기울기가 0인 곳에 도달 할 때 까지 반복합니다. 
+
+Error 값은 아래처럼 MSE로 정의할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187074635-7f25adde-6ce3-42ac-b7b5-d78a2efa2948.png)
+
+Weight는 아래처럼 Error의 미분으로 표현됩니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187074671-d487c330-6f1e-4745-985e-5f3c813799a6.png)
+
+
+이때의 Error값은 아래처럼 변화합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187074618-9b5ab505-fd28-4de7-a75f-4af062c7e95c.png)
+
+
+
+
 ## 적용 예
 
 1) 데이터를 준비합니다. 여기서 얻어온 데이터는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)를 참조합니다.
