@@ -97,7 +97,13 @@ model.evaluate(val_scaled, val_target)
 ```
 
 
-## 
+## Deep Network를 이용
+
+입력층에 784개, 은닉층(Hidden layer)에 100개, 출력층으로 10개 Node를 사용합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187078300-e056019d-94b3-45be-a5e0-c53da2fd396d.png)
+
+ 
  
 
 
