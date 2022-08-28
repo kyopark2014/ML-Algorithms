@@ -8,5 +8,8 @@ Regression 모델에서 값의 범위는 -inf레서 inf이어야 하므로, 출�
 
 ![image](https://user-images.githubusercontent.com/52392004/187060927-41d2dc0e-fc4d-4e91-b975-9648ae5c9328.png)
 
-### 
+### Two Class Classification
+
+<img width="454" alt="image" src="https://user-images.githubusercontent.com/52392004/187060971-1e7f7a6b-2a58-45b9-ae1d-3091c97a7832.png">
+
 
