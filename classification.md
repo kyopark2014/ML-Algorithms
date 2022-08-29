@@ -45,7 +45,7 @@ k차원의 벡터에서 i번째 원소를 z_i, i번째 클래스가 정답일 �
 
 ![image](https://user-images.githubusercontent.com/52392004/186542970-f41721df-7539-4424-a922-1e375859e889.png)
 
-[Logistric regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)의 다중분류를 한 예로 보면, 아래와 같이 Fish 데이터가 어떤 class일 확율을 scikit-learn의 LogisticRegression을 이용하여 softmax 함수로 구하고 있음을 알수 있습니다. 
+[Logistric regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)의 다중분류를 한 예로 보면, 아래와 같이 Fish 데이터가 어떤 class일 확율을 scikit-learn의 Logistic Regression을 이용하여 softmax 함수로 구하고 있음을 알수 있습니다. 
 
 
 ```python
