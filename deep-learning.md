@@ -165,9 +165,16 @@ Internal Covariate Shift (내부공변량 변화)는 [z-fold cross validation](h
 
 ![image](https://user-images.githubusercontent.com/52392004/187076987-35763aa5-494f-4e74-9e22-f958a317352b.png)
 
+Batch Normalization에서는 각 layer에 들어가는 input을 normalize 시킴으로써 layer의 학습을 가속하는데, 이 때 whitening 등의 방법을 쓰는 대신 각 mini-batch의 mean과 variance를 구하여 normalize한다.
+실제로 이 Batch Normalization을 네트워크에 적용시킬 때는, 특정 Hidden Layer에 들어가기 전에 Batch Normalization Layer를 더해주어 input을 modify해준 뒤 새로운 값을 activation function으로 넣어주는 방식으로 사용한다.
+
 이 경우에 아래와 같이 입력을 정규분포로 변환하는 Layer를 추가(z-transform)하는 방법으로 해결 할 수 있습니다. 에러 그래프가 수렴하지 않고 계속 튀는 경우에 Batch normalization을 고려할 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187077375-02d10cd7-e932-4931-963d-47055e302339.png)
+
+```p
+실제로 이 Batch Normalization을 네트워크에 적용시킬 때는, 특정 Hidden Layer에 들어가기 전에 Batch Normalization Layer를 더해주어 input을 modify해준 뒤 새로운 값을 activation function으로 넣어주는 방식으로 사용한다.
+
 
 
 ## Flatten 
