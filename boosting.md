@@ -117,7 +117,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 
 ## LightGBM
 
-Microsoft에서 만든 LightGBM 으로 히스토그램 기반 그레이디언트 부스팅 알고리즘입니다. 
+Microsoft에서 만든 LightGBM 으로 Histogram-based Gradient Boosting 알고리즘입니다. 
 
 #### 코드 분석
 
