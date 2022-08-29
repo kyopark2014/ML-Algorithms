@@ -9,7 +9,7 @@
 
 ## 선형회귀 (Linear Regression)
 
-특성(feature)와 Target 사이의 관계를 "y = ax + b"와 같은 선형 방정식으로 표시합니다. 여기서 a(coefficient)는 기울기, 계수(coefficient), 가중치(weight)의 의미이고, b는 절편(intercept, constant)입니다. 
+특성(feature)와 Target 사이의 관계를 "y = ax + b"와 같은 선형 방정식으로 표시합니다. 여기서, a(coefficient)는 기울기, 계수(coefficient), 가중치(weight)의 의미이고, b는 절편(intercept, constant)입니다. 
 
 <img width="331" alt="image" src="https://user-images.githubusercontent.com/52392004/185773282-73e5dd34-6a64-4c8d-87a2-0261dc4053b7.png">
 
@@ -24,7 +24,7 @@
 
 ## 다중회귀 (Multiple Regression)
 
-여러개의 특성을 사용하는 회귀모델, 소프트맥스함수사용
+여러개의 특성을 사용하는 회귀 모델로서, [softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#softmax)함수를 사용합니다. 
 
 [다중회귀(Multiple Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/multiple-regression.md)에서는 농어(perch)의 길이, 두께, 높이를 가지고 예측을 수행하는 방법에 대해 설명합니다. 
 
