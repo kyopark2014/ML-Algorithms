@@ -172,21 +172,15 @@ Internal Covariate Shift (내부공변량 변화)는 [z-fold cross validation](h
 ![image](https://user-images.githubusercontent.com/52392004/187077375-02d10cd7-e932-4931-963d-47055e302339.png)
 
 
-Batch Normalization에서는 각 layer에 들어가는 input을 normalize 시킴으로써 layer의 학습을 가속하는데, 이 때 whitening 등의 방법을 쓰는 대신 각 mini-batch의 mean과 variance를 구하여 normalize한다. 실제로 이 Batch Normalization을 네트워크에 적용시킬 때는, 특정 Hidden Layer에 들어가기 전에 Batch Normalization Layer를 더해주어 input을 modify해준 뒤 새로운 값을 activation function으로 넣어주는 방식으로 사용한다. ([심층 인공 신경망 모델 (배치 정규화)](https://wikidocs.net/84506))
+Batch Normalization에서는 각 layer에 들어가는 input을 normalize 시킴으로써 layer의 학습을 가속하는데, 이 때 whitening 등의 방법을 쓰는 대신 각 mini-batch의 mean과 variance를 구하여 normalize한다. 실제로 이 Batch Normalization을 네트워크에 적용시킬 때는, 특정 Hidden Layer에 들어가기 전에 Batch Normalization Layer를 더해주어 input을 modify해준 뒤 새로운 값을 activation function으로 넣어주는 방식으로 사용한다. 
+
+아래와 같이 은닉층  사용합니다. 
+또는 아래와 같이다ㅇ 사용합니다. 
+또는 아래와  사용합니다. 
 
 ```python
-input = tf.keras.layers.Input(shape=(2,))
-net = tf.keras.layers.Dense(units=32)(input)
-net = tf.keras.layers.BatchNormalization()(net)
-net = tf.keras.layers.Activation(activation='relu')(net)
-net = tf.keras.layers.Dense(units=32)(net)
-net = tf.keras.layers.BatchNormalization()(net)
-net = tf.keras.layers.Activation(activation='relu')(net)
-net = tf.keras.layers.Dense(units=1)(net)
-model = tf.keras.models.Model(input, net)
+model.add(keras.layers.BatchNormalization()
 ```
-
-
 
 ## Flatten 
 
