@@ -202,3 +202,4 @@ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Ma
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
+[심층 인공 신경망 모델 (배치 정규화)](https://wikidocs.net/84506)
