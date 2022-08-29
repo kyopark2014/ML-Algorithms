@@ -174,9 +174,7 @@ Internal Covariate Shift (내부공변량 변화)는 [z-fold cross validation](h
 
 Batch Normalization에서는 각 layer에 들어가는 input을 normalize 시킴으로써 layer의 학습을 가속하는데, 이 때 whitening 등의 방법을 쓰는 대신 각 mini-batch의 mean과 variance를 구하여 normalize한다. 실제로 이 Batch Normalization을 네트워크에 적용시킬 때는, 특정 Hidden Layer에 들어가기 전에 Batch Normalization Layer를 더해주어 input을 modify해준 뒤 새로운 값을 activation function으로 넣어주는 방식으로 사용한다. 
 
-아래와 같이 은닉층  사용합니다. 
-또는 아래와 같이다ㅇ 사용합니다. 
-또는 아래와  사용합니다. 
+아래와 같이 은닉층 다음에서 아래와 같이 사용합니다. 
 
 ```python
 model.add(keras.layers.BatchNormalization()
