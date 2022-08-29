@@ -77,8 +77,8 @@ print(kn.score(test_input, test_target))
 
 일반적으로 train set의 score가 test set보다 조금 높음습니다.
 
-- 과대적합(Overfitting): 모델의 train set 성능이 test set보다 훨씬 높은 경우 
-- 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우
+- 과대적합(Overfitting): 모델의 train set 성능이 test set보다 훨씬 높은 경우입니다.
+- 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우 입니다.
 
 아래와 같이 Linear regression에서 과적합(Overfitting)이 발생할 수 있습니다. 
 
@@ -86,7 +86,7 @@ print(kn.score(test_input, test_target))
 
 
 
-- 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정
+- 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정입니다. 
 
 [규제 (Regularization)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regularization.md)을 이용하여 과대적합을 방지할 수 있습니다. 
 
