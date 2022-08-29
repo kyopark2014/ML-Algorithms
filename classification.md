@@ -22,7 +22,7 @@
 
 ## Boosting
 
-여러 개의 약한 예측 모델을 순차적으로 구축하여 하나의 강한 예측 모델을 만들수 있습니다. 여기서는 Boosting을 사용하는 [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting), [Histogram-based Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#histogram-based-gradient-boosting), [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#xgboost-extreme-gradient-boost), [LightGBM](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#lightgbm)에 대해 설명합니다. 
+여러 개의 약한 예측 모델을 순차적으로 구축하여 하나의 강한 예측 모델을 만들수 있습니다. 여기서는 [Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)을 사용하는 [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting), [Histogram-based Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#histogram-based-gradient-boosting), [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#xgboost-extreme-gradient-boost), [LightGBM](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#lightgbm)에 대해 설명합니다. 
 
 
 ## 관련 용어 
