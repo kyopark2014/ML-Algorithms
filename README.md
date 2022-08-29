@@ -50,6 +50,11 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 [Deep Learning](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md)에 대해 예제 중심으로 설명합니다. 
 
+#### Image Classification
+
+[Image 분류](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md)에 대해 설명합니다.
+
+
 ## 모델 평가
 
 ### 결정계수 (Coefficient of determination)
