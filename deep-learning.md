@@ -180,6 +180,21 @@ Batch Normalization에서는 각 layer에 들어가는 input을 normalize 시킴
 model.add(keras.layers.BatchNormalization()
 ```
 
+아래는 [deep CNN의 한 예](https://buomsoo-kim.github.io/keras/2018/05/05/Easy-deep-learning-with-Keras-11.md/)입니다.
+
+```python
+model.add(Conv2D(filters = 50, kernel_size = (3,3), strides = (1,1), padding = 'same', kernel_initializer='he_normal'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size = (2,2)))
+model.add(Conv2D(filters = 50, kernel_size = (3,3), strides = (1,1), padding = 'same', kernel_initializer='he_normal'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Conv2D(filters = 50, kernel_size = (3,3), strides = (1,1), padding = 'same', kernel_initializer='he_normal'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size = (2,2)))
+```
 ## Flatten 
 
 아래처럼 Flatten()을 이용하여, 입력을 모두 1차원 배열로 변환합니다. 
