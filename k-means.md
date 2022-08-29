@@ -69,7 +69,7 @@ class sklearn.cluster.KMeans (
 
 ## 코드 예제
 
-[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/kmeans.ipynb)을 아래에서 설명합니다.
+[과일데이터](https://github.com/kyopark2014/ML-Algorithms/blob/main/fruits.md)를 이용하여 Unsupervised Learning인 K-Means로 분류하고자 합니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/kmeans.ipynb)을 아래에서 설명합니다.
 
 1) 데이터를 준비합니다.
 
