@@ -172,7 +172,7 @@ Internal Covariate Shift (내부공변량 변화)는 [z-fold cross validation](h
 
 ## Flatten 
 
-아래처럼 Flatten()을 이용하여 구현합니다. 
+아래처럼 Flatten()을 이용하여, 입력을 모두 1차원 배열로 변환합니다. 
 
 ```python
 model = keras.Sequential(name='fashion')
