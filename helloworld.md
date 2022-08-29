@@ -238,11 +238,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/185290384-8789475e-c188-4c10-be17-cae06318aaa7.png)
 
-따라서와 같이 z score(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내서, 특성값의 크기와 상관없이 동일한 조건으로 비교할 수 있습니다. 
-
-<img width="298" alt="image" src="https://user-images.githubusercontent.com/52392004/185291465-9676cdcb-4abc-4534-a887-34f879fa9aa7.png">
-
-x: 대상데이터, x(bar): 평균 (mean), s: 표준편차(std)
+[z score(표준점수, standard score)](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-standard-score%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A0%95%EA%B7%9C%ED%99%94)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내서, 특성값의 크기와 상관없이 동일한 조건으로 비교할 수 있습니다. 
 
 아래와 같이 구현할 수 있습니다. 
 
