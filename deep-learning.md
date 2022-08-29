@@ -10,7 +10,7 @@
 - TensorFlow: 산업계에서 선호, 구글이 만든 ML framework (2015), GPU 사용 용이하나 사용법이 복잡함 (함수 python 문법에서 제한이 있어 디버깅 불편)
 - CNTK: 마이크로소프트
 - theano: 학계
-- PyTorch: 함수형 Python 사용이 가능하여 디버깅 용이, 상용화 어려움 
+- PyTorch: 함수형 Python 사용이 가능하여 디버깅 용이, 연구용으로 많이 사용
 
 
 
