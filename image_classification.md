@@ -5,10 +5,11 @@
 
 ## Convolutional Neural Networks
 
-Convolution은 Kernel을 잉요하여 Feature map을 추출합니다. 
+Convolution은 Kernel을 잉요하여 Feature map을 추출합니다. 이때 Convolution에 대한 수식은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/187317312-80fde04e-e19a-456a-986f-c9757ca72365.png)
 
 
-![image](https://user-images.githubusercontent.com/52392004/187317227-becd2f28-7e42-4d50-80b8-9ce81593c021.png)
 
 
 ## Reference 
