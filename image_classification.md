@@ -11,20 +11,20 @@ Convolution은 Kernel을 이용하여 Feature map을 추출합니다. 이때 Con
 
 ![image](https://user-images.githubusercontent.com/52392004/187317373-5033a609-d8e4-454d-9e4e-1464fd065fad.png)
 
-Neural network에서 입력값에 Kernel로 convolution하려면 180 회전하여 사용하여야 합니다. 따라서, 학습의 목적과 복잡도를 생각할때, 180도 회전없는 [Cross-Correlation](https://glassboxmedicine.com/2019/07/26/convolution-vs-cross-correlation/)을 이용합니다. Cross-Correlation에 대한 수식은 아래와 같습니다. 
+Neural network에서 입력값에 Kernel로 convolution하려면 180 회전하여 사용하여야 합니다. 따라서, 연산의 효율성을 고려하여, 180도 회전없는 [Cross-Correlation](https://glassboxmedicine.com/2019/07/26/convolution-vs-cross-correlation/)을 이용합니다. Cross-Correlation에 대한 수식은 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187317929-08b95e8c-5cd6-4558-9066-42fe127e8347.png)
 
 
 ### Padding
 
-아래는 Keras에서 Convolution을 적용할때 사용하는 코드를 보여줍니다. 여기서 Padding에는 kernel을 이용한 convolution을 (0,0)에서 시작하여 입력값이 줄어드는 "valid"와 kernel에 매칭되지 않는 부분을 0으로 padding하여 원래 입력값을 유지하는 "same"의 옵션이 있습니다.
+아래는 Keras에서 Convolution을 적용할때 사용하는 코드를 보여줍니다. 여기서 Padding에는 kernel을 이용한 convolution을 (0,0)에서 시작하여 입력값이 줄어드는 "valid"와 kernel에 매칭되지 않는 부분을 0으로 padding하여 원래 입력값을 유지(full cross correlation)하는 "same"의 옵션이 있습니다.
 
 ```python
 model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='same', input_shape=(28,28,1)))
 ```
 
-상기와 같이 28x28인 이미지를 3x3크기의 Weight kernel 32개를 Convolution으로 적용하면, 32개의 Feature map이 생성됩니다. 
+상기와 같이 28x28인 이미지를 3x3크기의 Weight kernel 32개를 Convolution으로 적용하면, 32개의 Feature map이 생성됩니다. 이때, Feature map의 크기는 padding이 "same"(full cross correlation)이므로 원본과 같은 32x32 입니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187319120-7bb8e3d3-e5bf-4b27-8e6c-641763f885ae.png)
 
