@@ -5,7 +5,7 @@
 
 ## Convolutional Neural Networks
 
-#### Convolution
+### Convolution
 
 Convolution은 Kernel을 이용하여 Feature map을 추출합니다. 이때 Convolution에 대한 수식은 아래와 같습니다.
 
@@ -16,7 +16,7 @@ Neural network에서 입력값에 Kernel로 convolution하려면 180 회전하�
 ![image](https://user-images.githubusercontent.com/52392004/187317929-08b95e8c-5cd6-4558-9066-42fe127e8347.png)
 
 
-#### Padding
+### Padding
 
 아래는 Keras에서 Convolution을 적용할때 사용하는 코드를 보여줍니다. 여기서 Padding에는 kernel을 이용한 convolution을 (0,0)에서 시작하여 입력값이 줄어드는 "valid"와 kernel에 매칭되지 않는 부분을 0으로 padding하여 원래 입력값을 유지하는 "same"의 옵션이 있습니다.
 
