@@ -37,6 +37,10 @@ model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='sam
 
 [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)을 아래와 같이 Convolution Neural Network을 구성하여 Image Classification을 구현합니다.
 
+![image](https://user-images.githubusercontent.com/52392004/187320259-a941410d-22ea-47d2-b14c-aa0ddbc09ff2.png)
+
+이것을 구현하는 순서는 아래와 같습니다. 
+
 1) 입력되는 이미지의 크기는 28x28 입니다.
 2) 3x3 Kernel 32개를 이용하여 Convolution을 진행하여 32개의 Feature map을 생성합니다.
 3) Pooling Layter에서 이미지를 1/2로 down-scale을 하여, Feature map 크기를 14x14로 줄입니다.
@@ -45,8 +49,6 @@ model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='sam
 6) Neural Network에서 사용하기 편리하도록 Flatten을 이용하여 1차원 행열로 변경합니다.
 7) 100개의 Node를 가지는 Hiden Layer를 적용합니다.
 8) Output layer에서는 activation function으로 softmax를 적용합니다.
-
-![image](https://user-images.githubusercontent.com/52392004/187320259-a941410d-22ea-47d2-b14c-aa0ddbc09ff2.png)
 
 ### 구현된 코드 
 
