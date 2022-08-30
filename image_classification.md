@@ -33,6 +33,8 @@ model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='sam
 
 ## Image Classification
 
+### 구현방법 
+
 [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)을 아래와 같이 Convolution Neural Network을 구성하여 Image Classification을 구현합니다.
 
 1) 입력되는 이미지의 크기는 28x28 입니다.
@@ -45,6 +47,141 @@ model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='sam
 8) Output layer에서는 activation function으로 softmax를 적용합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187320259-a941410d-22ea-47d2-b14c-aa0ddbc09ff2.png)
+
+### 구현된 코드 
+
+이를 [Code로 구현](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/image_classification.ipynb)하면 아래와 같습니다. 
+
+1) Fashion MNIST를 읽어와서 전처리를 하고 Train/Test dataset을 아래처럼 생성합니다. 
+```python
+import tensorflow as tf
+
+tf.keras.utils.set_random_seed(42)
+
+from tensorflow import keras
+from sklearn.model_selection import train_test_split
+
+(train_input, train_target), (test_input, test_target) = \
+    keras.datasets.fashion_mnist.load_data()
+
+train_scaled = train_input.reshape(-1, 28, 28, 1) / 255.0
+test_scaled = test_input.reshape(-1, 28, 28, 1) / 255.0
+
+train_scaled, val_scaled, train_target, val_target = train_test_split(
+    train_scaled, train_target, test_size=0.2, random_state=42)
+```    
+
+2) CNN을 구성합니다. 
+
+```python
+model = keras.Sequential(name='fashion')
+model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='same', input_shape=(28,28,1)))
+model.add(keras.layers.MaxPooling2D(2))
+model.add(keras.layers.Conv2D(64, kernel_size=(3,3), activation='relu', padding='same'))
+model.add(keras.layers.MaxPooling2D(2))
+
+model.add(keras.layers.Flatten(input_shape=(28, 28), name='flatten'))   ## Flatten
+model.add(keras.layers.Dense(100, activation='relu', name='hidden'))    ## Activation Function
+model.add(keras.layers.Dropout(0.4))
+model.add(keras.layers.Dense(10, activation='softmax', name='output'))    
+```
+
+생성된 모델은 아래와 같습니다. 
+
+```python
+model.summary()
+
+Model: "fashion"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_2 (Conv2D)           (None, 28, 28, 32)        320       
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 14, 14, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_3 (Conv2D)           (None, 14, 14, 64)        18496     
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 7, 7, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ hidden (Dense)              (None, 100)               313700    
+                                                                 
+ dropout_1 (Dropout)         (None, 100)               0         
+                                                                 
+ output (Dense)              (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 333,526
+Trainable params: 333,526
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+3) 모델은 훈련시킵니다. 
+
+```python
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', 
+              metrics='accuracy')
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-cnn-model.h5', 
+                                                save_best_only=True)
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=2,
+                                                  restore_best_weights=True)
+
+history = model.fit(train_scaled, train_target, epochs=20,
+                    validation_data=(val_scaled, val_target),
+                    callbacks=[checkpoint_cb, early_stopping_cb])
+```
+
+4) 결과를 확인합니다. 
+
+아래와 같이 손실함수를 그려보면, 6번째 epoch일때 최상의 결과를 얻고 있습니다. 
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.xlabel('epoch')
+plt.ylabel('loss')
+plt.legend(['train', 'val'])
+plt.show()
+```
+
+이때의 그림입니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187322325-aca8ce28-f5c2-4137-981b-520e11ade26e.png)
+
+validation dataset에 대한 결과는 아래와 같습니다. 
+
+```python
+model.evaluate(val_scaled, val_target)
+375/375 [==============================] - 1s 2ms/step - loss: 0.2141 - accuracy: 0.9204
+[0.21413874626159668, 0.9204166531562805]
+```
+
+test dataset에 대한 결과는 아래와 같습니다. 
+
+```python
+model.evaluate(test_scaled, test_target)
+313/313 [==============================] - 1s 2ms/step - loss: 0.2360 - accuracy: 0.9161
+[0.23603354394435883, 0.916100025177002]
+```
+
+validation dataset의 0번째가 '가방'일 경우에, 아래처럼 class들에 대한 리스트를 만들어서 predict()를 하면 classification 결과를 활용 수 있습니다. 
+
+```python
+classes = ['티셔츠', '바지', '스웨터', '드레스', '코트',
+           '샌달', '셔츠', '스니커즈', '가방', '앵클 부츠']
+import numpy as np
+preds = model.predict(val_scaled[0:1])
+print(classes[np.argmax(preds)])
+
+가방
+```
 
 ## Deep CNN Layer 소개 
 
