@@ -11,7 +11,7 @@ Convolution은 Kernel을 이용하여 Feature map을 추출합니다. 이때 Con
 
 ![image](https://user-images.githubusercontent.com/52392004/187317373-5033a609-d8e4-454d-9e4e-1464fd065fad.png)
 
-Neural network에서 입력값에 Kernel로 convolution하려면 180 회전하여 사용하여야 합니다. 따라서, 학습의 목적과 복잡도를 생각할때, 180도 회전없는 [Cross-Correlation]https://glassboxmedicine.com/2019/07/26/convolution-vs-cross-correlation/)을 이용합니다. Cross-Correlation에 대한 수식은 아래와 같습니다. 
+Neural network에서 입력값에 Kernel로 convolution하려면 180 회전하여 사용하여야 합니다. 따라서, 학습의 목적과 복잡도를 생각할때, 180도 회전없는 [Cross-Correlation](https://glassboxmedicine.com/2019/07/26/convolution-vs-cross-correlation/)을 이용합니다. Cross-Correlation에 대한 수식은 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187317929-08b95e8c-5cd6-4558-9066-42fe127e8347.png)
 
