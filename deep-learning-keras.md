@@ -103,6 +103,10 @@ model.evaluate(val_scaled, val_target)
 
 ![image](https://user-images.githubusercontent.com/52392004/187078300-e056019d-94b3-45be-a5e0-c53da2fd396d.png)
 
+<img width="629" alt="image" src="https://user-images.githubusercontent.com/52392004/187562060-041834a9-1c47-447d-8599-052ebde5e3d0.png">
+
+
+
 ### Layer 추가 방법
 
 #### 1) Dense를 추가하는 방법 
