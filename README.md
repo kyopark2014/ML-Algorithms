@@ -52,7 +52,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 #### Image Classification
 
-Deep Learning을 이용한 [Image 분류](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md)방법에 대해 설명합니다.
+[Deep Learning을 이용한 Image 분류](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md)방법에 대해 설명합니다.
 
 
 ## 모델 평가
