@@ -195,6 +195,7 @@ print(classes[np.argmax(preds)])
 
 Neural Network의 마지막 3 Fully-Connected Layer는 각각 4096, 4096, 1000 개의 Unit으로 구성돼 있으며, 1000 Unit을 가지는 출력층은 classification을 위한 Softmax 함수를 사용한다.
 
+유사한 데이터에 대한 CNN 모델을 Transfer learning을 이용하면 적은 노력으로 좋은 결과를 얻을 수 있습니다. 
 
 
 ## Reference 
