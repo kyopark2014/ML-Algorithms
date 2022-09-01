@@ -109,8 +109,7 @@ model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1)
 
 ### Activation Function
 
-아래와 같이 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)을 dense에서 지정할때 지정할 수 있습니다. 예) signoid, softmax, relu
-
+신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)을  지정할때 지정할 수 있습니다. 
 ```python
 model = keras.Sequential(name='fashion')
 model.add(keras.layers.Flatten(input_shape=(28, 28), name='flatten'))
