@@ -75,7 +75,20 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/188037315-0c49fd37-4727-4ee0-b0ee-f4d114c0a9fe.png)
 
-따라서,
+
+3) padding 설정 
+
+상기의 평균(mean), 중간값(median)값과 histogram을 참조하여, 입력데이터의 길이를 100으로 지정합니다. 즉, 길이가 100보다 짧으면 0을 패딩하고, 100보다 길면 앞부분을 잘라냅니다. padding과 truncationg을 이용하여 아래와 같이 pre/post를 설정할 수 있습니다. 
+
+```python
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+train_seq = pad_sequences(train_input, maxlen=100)
+
+# train_seq = pad_sequences(train_input, truncating='pre', padding = 'pre', maxlen=100)
+```
+
+
  
 
 ## Reference
