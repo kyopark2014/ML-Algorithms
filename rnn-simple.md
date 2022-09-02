@@ -156,7 +156,7 @@ print(train_oh.shape)
 
 6) 순환신경망 훈련하기 
 
-- [Optimizer](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#optimizer-%EA%B0%9C%EC%84%A0%EB%90%9C-gradient-descent-method)는 RMSprop을 사용하는데, 이때 learning rate는 1e-4을 넣습니다. (기본값은 1e-3) 
+- [Optimizer](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#optimizer-%EA%B0%9C%EC%84%A0%EB%90%9C-gradient-descent-method)는 RMSprop을 사용하는데, 이때 learning rate는 1e-4을 넣습니다. (기본값은 1e-3) learning rate를 낮은 값을 사용하면, 학습을 천천히하게 가장 적은 loss를 가지도록 훈련을 시킬 수 있습니다. 대신 속도가 느려집니다.  
 
 - 이진분류이므로 loss function은 binary_crossentropy를 사용합니다. 
 
@@ -164,7 +164,7 @@ print(train_oh.shape)
 
 - callback으로 성능이 좋은것을 저장하고, 3번동안 개선이 안되면 학습을 종료하도록 합니다. 
 
-- batch_size는 기본이 32인데 아래처럼 64로 설정합니다. 
+- batch_size는 기본이 32인데 아래처럼 64로 설정합니다. 앞에서 learning rate을 줄이면서 늦어지는 속도를 높이기 위해 조정하였습니다. 보통은 batch size를 줄이는것이 작게 유지하는것이 성능이 향상된다고 합니다. 
 
 ```python
 rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
@@ -180,7 +180,8 @@ history = model.fit(train_oh, train_target, epochs=100, batch_size=64,
                     validation_data=(val_oh, val_target),
                     callbacks=[checkpoint_cb, early_stopping_cb])
 ```
-이것의 결과는 아래와 같습니다. 
+
+이것의 결과는 아래와 같습니다. 아래와 같이 epoch가 100까지 가기전에 종료됩니다. 
 
 ```python
 Epoch 1/100
@@ -194,13 +195,30 @@ Epoch 59/100
 313/313 [==============================] - 6s 18ms/step - loss: 0.4126 - accuracy: 0.8212 - val_loss: 0.4654 - val_accuracy: 0.7830
 Epoch 60/100
 313/313 [==============================] - 6s 18ms/step - loss: 0.4117 - accuracy: 0.8229 - val_loss: 0.4624 - val_accuracy: 0.7844
+```
 
-이것의 결과는 아래와 같습니다.
+이것의 결과는 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/188150748-89721f2a-e7d4-47d9-94ef-baf52aa1b88f.png)
 
+One hot encoding으로 인해 메모리가 너무 커지는 문제가 있을 수 있습니다. 
 
- 
+```python
+print(train_seq.nbytes, train_oh.nbytes)
+
+10000000 5000000000
+ ```
+
+따라서, 아래와 같이 one hot encoding 대신에 embedding을 이용하기도 합니다. 
+
+
+
+## Embedding을 이용하기 
+
+
+
+
+
 
 ## Reference
 
