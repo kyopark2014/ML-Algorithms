@@ -102,7 +102,7 @@ print(train_seq[5])
 
 4) 순환신경망 만들기
 
-SimpleRNN을 이용해 아래와 같이 8개의 neuron, 100개의 시퀀스길이, 500의 단어표현길이 (one hot encoding)로 순환신경망을 정의할 수 있습니다. 
+SimpleRNN을 이용해 아래와 같이 8개의 neuron, 100개의 시퀀스길이, 500의 단어표현길이 (one hot encoding)로 순환신경망을 정의할 수 있습니다. 또한 이것은 이진분류이므로 output layer의 activation 함수는 "sigmoid"를 이용합니다. 
 
 ```python
 from tensorflow import keras
@@ -114,7 +114,11 @@ model.add(keras.layers.SimpleRNN(8, input_shape=(100, 500)))   # neuron:8
 model.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
 
 model.summary()
+```
 
+이때의 결과는 아래와 같습니다. 
+
+```python
 Model: "imdb"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -129,6 +133,43 @@ Trainable params: 4,081
 Non-trainable params: 0
 ```
 
+순환층 파라메터의 수는 one hot encoding에 의한 단어표현길이(500) x neuron의 수(8) + 셀 내부의 순환 (8x8) + 편향(bias, 8) 이므로 전체가 4072개입니다. 추가적으로 output layer의 neuron의 수(8) + Bias(1)을 합치면 전체의 파라미터수는 4081개 입니다. 
+
+
+Train과 Validation을 위한 dataset들을 one hot encoding을 합니다.
+
+
+5) One hot encoding
+
+```python
+train_oh = keras.utils.to_categorical(train_seq)
+val_oh = keras.utils.to_categorical(val_seq)
+```
+
+train_oh의 크기를 보면, one hot encoding에 의해 아래처럼 되었음을 알 수 있습니다. 
+
+```python
+print(train_oh.shape)
+
+(25000, 100, 500)
+```
+
+6) 순환신경망 훈련하기 
+
+```python
+rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
+model.compile(optimizer=rmsprop, loss='binary_crossentropy', 
+              metrics=['accuracy'])
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-simplernn-model.h5', 
+                                                save_best_only=True)
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=3,
+                                                  restore_best_weights=True)
+
+history = model.fit(train_oh, train_target, epochs=100, batch_size=64,
+                    validation_data=(val_oh, val_target),
+                    callbacks=[checkpoint_cb, early_stopping_cb])
+```
 
 
  
