@@ -156,6 +156,10 @@ print(train_oh.shape)
 
 6) 순환신경망 훈련하기 
 
+Optimizer는 RMSprop을 사용하는데, 이때 learning rate는 1e-4을 넣습니다. (기본값은 1e-3) 
+
+
+
 ```python
 rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
 model.compile(optimizer=rmsprop, loss='binary_crossentropy', 
