@@ -180,6 +180,24 @@ history = model.fit(train_oh, train_target, epochs=100, batch_size=64,
                     validation_data=(val_oh, val_target),
                     callbacks=[checkpoint_cb, early_stopping_cb])
 ```
+이것의 결과는 아래와 같습니다. 
+
+```python
+Epoch 1/100
+313/313 [==============================] - 9s 22ms/step - loss: 0.6989 - accuracy: 0.5041 - val_loss: 0.6978 - val_accuracy: 0.5038
+Epoch 2/100
+313/313 [==============================] - 6s 19ms/step - loss: 0.6946 - accuracy: 0.5102 - val_loss: 0.6949 - val_accuracy: 0.5102
+Epoch 3/100
+313/313 [==============================] - 6s 19ms/step - loss: 0.6920 - accuracy: 0.5200 - val_loss: 0.6930 - val_accuracy: 0.5146
+......
+Epoch 59/100
+313/313 [==============================] - 6s 18ms/step - loss: 0.4126 - accuracy: 0.8212 - val_loss: 0.4654 - val_accuracy: 0.7830
+Epoch 60/100
+313/313 [==============================] - 6s 18ms/step - loss: 0.4117 - accuracy: 0.8229 - val_loss: 0.4624 - val_accuracy: 0.7844
+
+이것의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/188150748-89721f2a-e7d4-47d9-94ef-baf52aa1b88f.png)
 
 
  
