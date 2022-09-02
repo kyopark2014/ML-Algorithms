@@ -88,6 +88,48 @@ train_seq = pad_sequences(train_input, maxlen=100)
 # train_seq = pad_sequences(train_input, truncating='pre', padding = 'pre', maxlen=100)
 ```
 
+아래와 같이 train_seq에서 1개의 sample을 보면, padding에 의해 앞의 0으로 채워졌음을 알 수 있습니다. 
+```python
+print(train_seq[5])
+
+[  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   1   2 128  74  12   2 163  15   4   2   2   2   2  32  85
+ 156  45  40 148 139 121   2   2  10  10   2 173   4   2   2  16   2   8
+   4 226  65  12  43 127  24   2  10  10]
+```
+
+4) 순환신경망 만들기
+
+SimpleRNN을 이용해 아래와 같이 8개의 neuron, 100개의 시퀀스길이, 500의 단어표현길이 (one hot encoding)로 순환신경망을 정의할 수 있습니다. 
+
+```python
+from tensorflow import keras
+
+model = keras.Sequential(name='imdb')
+
+# input_shaepe = (시퀀스 길이 * 단어표현길이 (one hot encoding))
+model.add(keras.layers.SimpleRNN(8, input_shape=(100, 500)))   # neuron:8 
+model.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
+
+model.summary()
+
+Model: "imdb"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ simple_rnn_11 (SimpleRNN)   (None, 8)                 4072      
+                                                                 
+ output (Dense)              (None, 1)                 9         
+                                                                 
+=================================================================
+Total params: 4,081
+Trainable params: 4,081
+Non-trainable params: 0
+```
+
+
 
  
 
