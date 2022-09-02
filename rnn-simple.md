@@ -47,10 +47,36 @@ train_input, val_input, train_target, val_target = train_test_split(
     train_input, train_target, test_size=0.2, random_state=42)
 ```    
 
-이때,
+이때, 시퀀스의 길이는 병렬작업등을 고려하여 적절한 길이를 선정하여야 합니다. 이를 위해 평균(mean)과 중간값(median)값을 확인하면 아래와 같습니다. 여기서 중간값은 전체 분포의 중간을 나타냅니다. 
+
+```python
+import numpy as np
+
+lengths = np.array([len(x) for x in train_input])
+
+print(np.mean(lengths), np.median(lengths))
+
+239.00925 178.0
+```
+
+또, train_input의 길이를 보면 아래 그래프와 같이 200단아 이내의 리뷰가 많음을 알 수 있습니다. 
+
+
+```python
+import matplotlib.pyplot as plt
+
+plt.hist(lengths)
+plt.xlabel('length')
+plt.ylabel('frequency')
+plt.show()
+```
+
+이때의 그래프입니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/188037315-0c49fd37-4727-4ee0-b0ee-f4d114c0a9fe.png)
+
+따라서,
  
-
-
 
 ## Reference
 
