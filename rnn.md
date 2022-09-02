@@ -49,6 +49,9 @@ Embedding의 하나의 방법으로 [Word2Vec](https://word2vec.kr/search/)가 �
 ![image](https://user-images.githubusercontent.com/52392004/188033702-4562c422-0653-466c-8929-7a6a684d3252.png)
 
 
+## 실습예제
+
+
 
 
 
