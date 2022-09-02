@@ -215,6 +215,42 @@ print(train_seq.nbytes, train_oh.nbytes)
 
 ## Embedding을 이용하기 
 
+[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-embeding.ipynb)에서는 embedding을 적용했을때의 예제를 보여줍니다. 
+
+Embedding을 이용하여 500개의 단어, 16개의 실수로 이루어진 벡터로 embdding을 하는데 sequence의 길이(input_length)는 100입니다. 
+
+```python
+from tensorflow import keras
+
+model2 = keras.Sequential(name='imdb')
+
+model2.add(keras.layers.Embedding(500, 16, input_length=100))
+model2.add(keras.layers.SimpleRNN(8))   # neuron:8
+model2.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
+
+model2.summary()
+```
+
+model summary는 아래와 같습니다. 
+
+```python
+Model: "imdb"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 100, 16)           8000      
+                                                                 
+ simple_rnn_1 (SimpleRNN)    (None, 8)                 200       
+                                                                 
+ output (Dense)              (None, 1)                 9         
+                                                                 
+=================================================================
+Total params: 8,209
+Trainable params: 8,209
+Non-trainable params: 0
+_________________________________________________________________
+```
+
 
 
 
