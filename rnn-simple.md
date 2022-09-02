@@ -156,9 +156,15 @@ print(train_oh.shape)
 
 6) 순환신경망 훈련하기 
 
-Optimizer는 RMSprop을 사용하는데, 이때 learning rate는 1e-4을 넣습니다. (기본값은 1e-3) 
+- [Optimizer](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#optimizer-%EA%B0%9C%EC%84%A0%EB%90%9C-gradient-descent-method)는 RMSprop을 사용하는데, 이때 learning rate는 1e-4을 넣습니다. (기본값은 1e-3) 
 
+- 이진분류이므로 loss function은 binary_crossentropy를 사용합니다. 
 
+- accuracy가 높아지는 방향으로 훈련이 되도록 matric으로 "accuracy"를 설정합니다. 
+
+- callback으로 성능이 좋은것을 저장하고, 3번동안 개선이 안되면 학습을 종료하도록 합니다. 
+
+- batch_size는 기본이 32인데 아래처럼 64로 설정합니다. 
 
 ```python
 rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
