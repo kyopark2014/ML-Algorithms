@@ -44,9 +44,9 @@
 - 실수값의 크기가 의미를 가지므로 단어간의 관계 표현이 가능합니다.
 - 실수값은 임의로 정하지 않고 데이터를 이용해 학습하여 구합니다. 
 
-Embedding의 하나의 방법으로 [Word2Vec](https://word2vec.kr/search)가 있는데, "한국-서울+도쿄"
+Embedding의 하나의 방법으로 [Word2Vec](https://word2vec.kr/search/)가 있는데, "한국-서울+도쿄"로 입력하면 아래와 같은 결과를 얻을 수 있습니다. 
 
-
+![image](https://user-images.githubusercontent.com/52392004/188033702-4562c422-0653-466c-8929-7a6a684d3252.png)
 
 
 
