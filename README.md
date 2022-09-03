@@ -69,7 +69,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 #### RNN - GRU
 
-[GSM(Gated Recurrent Unit)를 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-gru.md)에 대해 설명합니다. 
+[GRU(Gated Recurrent Unit)를 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-gru.md)에 대해 설명합니다. 
 
 
 
