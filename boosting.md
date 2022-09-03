@@ -17,7 +17,6 @@
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있습니다. (n_estimators , learning_rate)
 - 일반적으로 Random forest보다 나은 성능을 기대하지만 순차적으로 계산하여야 하므로 느립니다. 
 
-#### 코드 분석 
 
 [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient_boosting.ipynb)에 대해 설명합니다. 
 
@@ -56,7 +55,6 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 - 트리의 갯수 (n_estimator)를 지정하지 않고 부스팅 반복 횟수(max_iter)를 지정
 - 특성 중요도를 확인하기 위하여 permutation_importance를 사용합니다. permutation_importance() 함수가 반환하는 객체는 반복해서 얻은 특성중요도, 평균, 표준편차를 담고 있습니다. 
 
-#### 코드 분석
 
 [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/historam_gradient_boosting.ipynb)에 대해 설명합니다.
 
@@ -98,7 +96,6 @@ print(result.importances_mean)
 - scikit-learn에서 지원하지 않습니다. 
 - XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
-#### 코드 분석
 
 [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 
 
@@ -119,7 +116,6 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 
 Microsoft에서 만든 LightGBM 으로 [Histogram-based Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#histogram-based-gradient-boosting) 알고리즘입니다. 
 
-#### 코드 분석
 
 [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/light_gbm.ipynb)에 대해 설명합니다.
 
