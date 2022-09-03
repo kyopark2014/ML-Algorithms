@@ -39,3 +39,6 @@ train_seq = pad_sequences(train_input, maxlen=100)
 val_seq = pad_sequences(val_input, maxlen=100)
 ```
 
+2) GRU model을 
+
+
