@@ -51,10 +51,7 @@ Embedding의 하나의 방법으로 [Word2Vec](https://word2vec.kr/search/)가 �
 
 ## 실습예제
 
-
-
-
-
+[Simple Neural Network로 영화리뷰(IMDB)를 이진분류](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-simple.md)로 분석합니다. 
 
 
 
@@ -63,4 +60,4 @@ Embedding의 하나의 방법으로 [Word2Vec](https://word2vec.kr/search/)가 �
 [순환 신경망(Recurrent Neural Network, RNN)](https://wikidocs.net/22886)
 
 
-[영화리뷰데이터](https://www.imdb.com/)
+[영화 리뷰 데이터](https://www.imdb.com/)
