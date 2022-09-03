@@ -13,7 +13,7 @@ LSTM(Long Short-Term Memory)은 단기 기억을 오래 기억하기 위해 고�
 - forget gate (삭제 게이트): 입력과 이전 time step의 은닉상태(hidden state)의 합을 signoid 사용하여 일정값 이하는 삭제합니다.
 - input gate (입력 게이트): 입력이 각각 sigmoid와 tanh activation function을 지나 multiplication 되며 cell state에 더해집니다. 
 - output gate (출력 게이트): 입력과 이전 time step의 은닉상태(hidden state)의 합을 signoid 한것과 현재의 cell state의 값을 tanh한 값을 multiplication하여 현재의 hidden state를 구합니다. 
-- cell state (셀상태): 이전 cell state와 input gateway와 output gateway의 값을 합하여, 현재의 cell state를 정의합니다. Long term memory의 역할을 합니다. 
+- cell state (셀상태): 이전 cell state와 input gate와 output gate의 값을 합하여, 현재의 cell state를 정의합니다. Long term memory의 역할을 합니다. 
 
 #### LTSM Sample
 
