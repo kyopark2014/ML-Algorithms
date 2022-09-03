@@ -217,6 +217,8 @@ print(train_seq.nbytes, train_oh.nbytes)
 
 Embedding을 이용하여 500개의 단어, 16개의 실수로 이루어진 벡터로 embdding을 하는데 sequence의 길이(input_length)는 100입니다. 
 
+아래는 [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-embeding.ipynb)에 대해 설명하고 있습니다. 
+
 ```python
 from tensorflow import keras
 
