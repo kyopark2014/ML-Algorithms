@@ -1,11 +1,11 @@
-# KNN을 이용한 Binary Classification
+# kNN(k-Nearest Neighbors)을 이용한 binary classification
 
-[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 따라서 KNN을 이용해 이진분류 문제를 시험합니다. 
+kNN을 이용해 이진분류 문제를 설명합니다. 
 
 
 ## Hello-World
 
-scikit-learn을 이용하여 간단하게 knn으로 binary classification을 수행합니다. 
+scikit-learn을 이용하여 간단하게 knn으로 binary classification을 수행합니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/helloworld.ipynb)에 대해 아래에서 설명합니다. 
 
 1) 소스 다운로드 받기 
 
@@ -257,3 +257,8 @@ plt.show()
 결과적으로 아래와 같이 수상한 도미를 데이터 전처리를 통해 찾을 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/185290715-26a0afda-cc26-460d-8941-c4c1d6c812c9.png)
+
+
+## Reference 
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
