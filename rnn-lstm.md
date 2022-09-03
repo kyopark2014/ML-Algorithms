@@ -42,6 +42,8 @@ val_seq = pad_sequences(val_input, maxlen=100)
 
 2) LTSM 모델을 만듧니다. 
 
+[Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md#embedding)적용후 8개의 neuron으로 LTSM을 정의합니다. 이진 분류이므로 output layer의 activation function으로 signoid를 사용합니다.  
+
 ```python
 from tensorflow import keras
 
@@ -54,7 +56,7 @@ model.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
 model.summary()
 ```
 
-이때의 결과는 아래와 같습니다. 
+이때의 결과는 아래와 같습니다. 여기서 LSTM의 파라메터는 (16 X 8) + (8 X 8) + 8 = 800개가 됩니다. 
 
 ```python
 Model: "LTSM"
@@ -124,6 +126,45 @@ plt.show()
 아래와 같은 Loss 그래프를 확인할 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/188255580-72a6c0a9-b4d5-4237-a902-b361a2ed653e.png)
+
+과적합을 방지하기 위하여 drop out적용할 수 있습니다. 여기서, "return_sequence"을 true로 설정하여, time step의 마지막 상태뿐 아니라, 이전 모든 time step의 결과를 LSTM으로 전달할 수 있습니다. 
+
+```python
+model3 = keras.Sequential(name='LTSM with dropout')
+
+model3.add(keras.layers.Embedding(500, 16, input_length=100))
+model3.add(keras.layers.LSTM(8, dropout=0.3, return_sequences=True))
+model3.add(keras.layers.LSTM(8, dropout=0.3))
+model3.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
+
+model3.summary()
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+Model: "LTSM with dropout"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_1 (Embedding)      (None, 100, 16)           8000      
+_________________________________________________________________
+lstm_1 (LSTM)                (None, 100, 8)            800       
+_________________________________________________________________
+lstm_2 (LSTM)                (None, 8)                 544       
+_________________________________________________________________
+output (Dense)               (None, 1)                 9         
+=================================================================
+Total params: 9,353
+Trainable params: 9,353
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/188255943-423d4235-1caa-43fb-8b78-2cc3aa5721b2.png)
+
 
 
 
