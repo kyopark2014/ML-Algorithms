@@ -15,7 +15,7 @@ LSTM(Long Short-Term Memory)은 단기 기억을 오래 기억하기 위해 고�
 - output gate (출력 게이트): 입력과 이전 time step의 은닉상태(hidden state)의 합을 signoid 한것과 현재의 cell state의 값을 tanh한 값을 multiplication하여 현재의 hidden state를 구합니다. 
 - cell state (셀상태): 이전 cell state와 input gate와 output gate의 값을 합하여, 현재의 cell state를 정의합니다. Long term memory의 역할을 합니다. 
 
-#### LTSM Sample
+## LTSM Sample
 
 [LSTM 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-ltsm.ipynb)를 아래에서 설명합니다.
 
