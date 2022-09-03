@@ -1,4 +1,4 @@
-# ML-Algorithms
+# ML Algorithms
 
 ## AI / ML
 
