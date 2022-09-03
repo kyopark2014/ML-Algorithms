@@ -1,22 +1,10 @@
 # 순환신경망 - LSTM
 
-Simple RNN은 시퀀스가 길어질수록 학습이 어렵다. 
-
-[Simple RNN 이용한 영화 리뷰](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)에서 하나의 시퀀스안에는 여러개의 단어가 있고, 시퀀스의 길이는 time step의 길이와 같습니다. 병렬처리를 위해서는 시퀀스의 길이를 제한하게 되는데, 이때 시퀀스 길이보다 더 긴 시퀀스는 앞단을 자르고(기본), 작은 시퀀스는 0으로 채웁니다(Padding). 이와같이 긴 리뷰는 긴 시퀀스를 가지고, 마지막 time step의 정보는 앞단의 정보를 얕은 수준으로 갖게 되는데, text 전체에 대한 이해도가 낮아지므로 LSTM, GRU가 개발되었습니다. 
+[Simple RNN 이용한 영화 리뷰](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)에서 하나의 시퀀스안에는 여러개의 단어가 있고, 시퀀스의 길이는 time step의 길이와 같습니다. 병렬처리를 위해서는 시퀀스의 길이를 제한하게 되는데, 이때 시퀀스 길이보다 더 긴 시퀀스는 앞단을 자르고(default), 작은 시퀀스는 0으로 채웁니다(Padding). 이와같이 긴 리뷰는 긴 시퀀스를 가지고, 마지막 time step의 정보는 앞단의 정보를 얕은 수준으로 갖게 되는데, text 전체에 대한 이해도가 낮아지므로 LSTM, GRU가 개발되었습니다. 
 
 ## LSTM 
 
-Gradient Update Rule은 아래와 같습니다. 
-
-```python
-new weight = weight - learning rate * gradient
-```
-
-
-
-
 LSTM(Long Short-Term Memory)은 단기 기억을 오래 기억하기 위해 고안된 인공 신경망입니다. 입력 게이트, 삭제 게이트, 출력 게이트 역할을 하는 셀로 구성됩니다. 단일 데이터 포인트(이미지)뿐 아니라 전체 데이터 시퀀스(음성, 비디오) 처리 가능을 제공합니다. 필기 인식, 음성인식, 기계 번역, 로봇 제어등이 이용됩니다. 아래에는 [LSTM의 구조](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)를 보여줍니다. 
-
 
 ![image](https://user-images.githubusercontent.com/52392004/188254856-6a9a5b90-3b8c-4e16-9a95-1dee75821930.png)
 
@@ -26,6 +14,117 @@ LSTM(Long Short-Term Memory)은 단기 기억을 오래 기억하기 위해 고�
 - input gate (입력 게이트): 입력이 각각 sigmoid와 tanh activation function을 지나 multiplication 되며 cell state에 더해집니다. 
 - output gate (출력 게이트): 입력과 이전 time step의 은닉상태(hidden state)의 합을 signoid 한것과 현재의 cell state의 값을 tanh한 값을 multiplication하여 현재의 hidden state를 구합니다. 
 - cell state (셀상태): 이전 cell state와 input gateway와 output gateway의 값을 합하여, 현재의 cell state를 정의합니다. Long term memory의 역할을 합니다. 
+
+#### LTSM Sample
+
+[LSTM 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-ltsm.ipynb)를 아래에서 설명합니다.
+
+1) 데이터를 준비합니다. 
+
+```python
+import tensorflow as tf
+
+from tensorflow.keras.datasets import imdb
+
+(train_input, train_target), (test_input, test_target) = imdb.load_data(
+    num_words=500)
+
+from sklearn.model_selection import train_test_split
+
+train_input, val_input, train_target, val_target = train_test_split(
+    train_input, train_target, test_size=0.2, random_state=42)
+
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+train_seq = pad_sequences(train_input, maxlen=100)
+val_seq = pad_sequences(val_input, maxlen=100)
+```
+
+2) LTSM 모델을 만듧니다. 
+
+```python
+from tensorflow import keras
+
+model = keras.Sequential(name='LTSM')
+
+model.add(keras.layers.Embedding(500, 16, input_length=100))
+model.add(keras.layers.LSTM(8))
+model.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
+
+model.summary()
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+Model: "LTSM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, 100, 16)           8000      
+_________________________________________________________________
+lstm (LSTM)                  (None, 8)                 800       
+_________________________________________________________________
+output (Dense)               (None, 1)                 9         
+=================================================================
+Total params: 8,809
+Trainable params: 8,809
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+3) LTSM을 훈련시킵니다. 
+
+```python
+rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
+model.compile(optimizer=rmsprop, loss='binary_crossentropy', 
+              metrics=['accuracy'])
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-lstm-model.h5', 
+                                                save_best_only=True)
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=3,
+                                                  restore_best_weights=True)
+
+history = model.fit(train_seq, train_target, epochs=100, batch_size=64,
+                    validation_data=(val_seq, val_target),
+                    callbacks=[checkpoint_cb, early_stopping_cb])
+```                    
+
+아래와 같이 epoch가 45에서 훈련이 종료됩니다. 
+
+```python
+Epoch 1/100
+313/313 [==============================] - 8s 27ms/step - loss: 0.6926 - accuracy: 0.5401 - val_loss: 0.6918 - val_accuracy: 0.5872
+Epoch 2/100
+313/313 [==============================] - 8s 25ms/step - loss: 0.6901 - accuracy: 0.6211 - val_loss: 0.6879 - val_accuracy: 0.6440
+Epoch 3/100
+313/313 [==============================] - 8s 25ms/step - loss: 0.6791 - accuracy: 0.6594 - val_loss: 0.6629 - val_accuracy: 0.6740
+...
+Epoch 43/100
+313/313 [==============================] - 8s 25ms/step - loss: 0.4032 - accuracy: 0.8192 - val_loss: 0.4351 - val_accuracy: 0.8012
+Epoch 44/100
+313/313 [==============================] - 8s 25ms/step - loss: 0.4025 - accuracy: 0.8198 - val_loss: 0.4363 - val_accuracy: 0.8002
+Epoch 45/100
+313/313 [==============================] - 8s 25ms/step - loss: 0.4013 - accuracy: 0.8206 - val_loss: 0.4352 - val_accuracy: 0.8014
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.xlabel('epoch')
+plt.ylabel('loss')
+plt.legend(['train', 'val'])
+plt.show()
+```
+
+아래와 같은 Loss 그래프를 확인할 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/188255580-72a6c0a9-b4d5-4237-a902-b361a2ed653e.png)
+
 
 
 ## Reference
