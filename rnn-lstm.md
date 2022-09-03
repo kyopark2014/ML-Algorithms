@@ -40,9 +40,14 @@ train_seq = pad_sequences(train_input, maxlen=100)
 val_seq = pad_sequences(val_input, maxlen=100)
 ```
 
+pad_sequences는 sample의 수가 maxlen(100)보다 작으면 0으로 padding을 추가합니다. 
+
+
+
+
 2) LTSM 모델을 만듧니다. 
 
-[Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md#embedding)적용후 8개의 neuron으로 LTSM을 정의합니다. 이진 분류이므로 output layer의 activation function으로 signoid를 사용합니다.  
+[Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md#embedding)적용후 8개의 neuron으로 LTSM을 정의합니다. 이진 분류이므로 output layer의 activation function으로 signoid를 사용합니다. keras.layers.Embedding (단어사전크기, 특징백터 사이즈,...,input_legth=입력 시퀀스 길이)로 표현합니다. 
 
 ```python
 from tensorflow import keras
@@ -56,7 +61,10 @@ model.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
 model.summary()
 ```
 
-이때의 결과는 아래와 같습니다. 여기서 LSTM의 파라메터는 (16 X 8) + (8 X 8) + 8 = 800개가 됩니다. 
+
+
+이때의 결과는 아래와 같습니다. 여기서 LSTM의 파라메터는 (16 X 8) + (8 X 8) + 8 = 800개가 됩니다. 특징백터크기(16)이고 neuron의 수는 8인데, 1개의 셀은 8개의 neuron을 순환하므로 8x8을 더해줍니다. 마지막 8은 bias(절편)입니다. 
+
 
 ```python
 Model: "LTSM"
@@ -76,6 +84,10 @@ _________________________________________________________________
 ```
 
 3) LTSM을 훈련시킵니다. 
+
+[Optimizer](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#optimizer-%EA%B0%9C%EC%84%A0%EB%90%9C-gradient-descent-method)는 RMSprop이 기본적으로 사용되는 여기서는 leaning_rate를 1e-4를 쓰고 있습니다. (기본은 1.e-3)
+
+
 
 ```python
 rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
@@ -127,7 +139,9 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/188255580-72a6c0a9-b4d5-4237-a902-b361a2ed653e.png)
 
-과적합을 방지하기 위하여 drop out적용할 수 있습니다. 여기서, "return_sequence"을 true로 설정하여, time step의 마지막 상태뿐 아니라, 이전 모든 time step의 결과를 LSTM으로 전달할 수 있습니다. 
+
+
+과적합을 방지하기 위하여 drop out적용할 하고 2개의 LSTM을 아래처럼 적용할 수 있습니다. 여기서, "return_sequence"을 true로 설정하여, time step의 마지막 상태뿐 아니라, 이전 모든 time step의 결과를 LSTM으로 전달할 수 있습니다. 
 
 ```python
 model3 = keras.Sequential(name='LTSM with dropout')
@@ -139,6 +153,8 @@ model3.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
 
 model3.summary()
 ```
+
+
 
 이때의 결과는 아래와 같습니다. 
 
