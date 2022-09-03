@@ -131,4 +131,21 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/188257045-b3091143-31b2-4c18-927c-467ccc5ff681.png)
 
+최적일때의 결과를 로드해서 확인하면 아래와 같습니다.
 
+```python
+test_seq = pad_sequences(test_input, maxlen=100)
+
+rnn_model = keras.models.load_model('best-gru-model.h5')
+
+rnn_model.evaluate(test_seq, test_target)
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+782/782 [==============================] - 5s 6ms/step - loss: 0.4384 - accuracy: 0.7966
+
+[0.43842393159866333, 0.7965999841690063]
+```
+[0.43842393159866333, 0.7965999841690063]
