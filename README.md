@@ -130,6 +130,11 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187052254-d12b4cb5-8835-457c-80d9-0c279de9f9dc.png)
 
+## Machine Learning Examples
+
+### XBoost를 이용한 Fraud Detection
+
+[Fraud Detection](https://github.com/kyopark2014/ML-Algorithms/blob/main/xboost-fraud-detection.md)에서는 XBoost를 이용한 분류에 대해 설명합니다. 
 
 ## 각종 유용한 라이브러리
 
