@@ -50,14 +50,29 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 [Deep Learning](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md)에 대해 예제 중심으로 설명합니다. 
 
-#### Image Classification
+### Image Classification
 
 [Deep Learning을 이용한 Image 분류](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md)방법에 대해 설명합니다.
 
 
-#### Recurrent Neural Network
+### Recurrent Neural Network
 
-[순환신경망(RNN)](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)을 영화리뷰(Text)에 적용한 예를 설명합니다. 
+순환신경망(Recurrent Neural Network)을 이용하여, 영화리뷰(Text)의 내용이 positive/negative인지 분류하는 예제를 설명합니다. 
+
+#### RNN - Simple
+
+[Simple 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)을 설명합니다. 
+
+#### RNN - LSTM
+
+[LSTM(Long Short-Term Memory)을 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-lstm.md)에 대해 설명합니다.
+
+#### RNN - GRU
+
+[GSM(Gated Recurrent Unit)를 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-gru.md)에 대해 설명합니다. 
+
+
+
 
 
 ## 모델 평가
