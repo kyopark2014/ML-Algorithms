@@ -2,19 +2,18 @@
 
 ## GRU 
 
-GRU(Gated Recurrent Unit)에 대해 설명합니다. 아래에서는 GRU의 셀의 구조를 보여주고 있습니다. 
+GRU(Gated Recurrent Unit)는 [LSTM](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-lstm.md)과 흡사하지만 경량화된 모델입니다. 아래에서는 GRU의 셀의 구조를 보여주고 있습니다. 여기서, Activation function으로 빨간색은 sigmoid이고 파란색은 tanh 입니다. 
+
+- Update Gate는 LSTM의 Forget Gate와 Input Gate 처럼 동작합니다. 
+- Reset Gate는 얼마나 많은 과거 정보를 삭제할지를 결정할 수 있습니다. 
+
 
 ![image](https://user-images.githubusercontent.com/52392004/188256227-e21516f9-456b-424d-b23c-02c4794e12b1.png)
 
 이것은 [LSTM](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-lstm.md)의 Cell state가 없으며, update와 reset gate를 가지고 있습니다. 
 
 
-- Update Gate는 LSTM의 Forget Gate와 Input Gate 처럼 동작합니다. 
-- Reset Gate는 얼마나 많은 과거 정보를 삭제할지를 결정할 수 있습니다. 
 
-Activation function으로 빨간색은 sigmoid이고 파란색은 tanh 입니다. 
-
-LSTM과 흡사하지만 경량화된 모델입니다. 
 
 ## GRU Sample
 
@@ -40,6 +39,8 @@ val_seq = pad_sequences(val_input, maxlen=100)
 ```
 
 2) GRU model을 만듧니다. 
+
+Embedding은 keras.layers.Embedding (단어사전크기, 특징백터 사이즈,...,input_legth=입력 시퀀스 길이)로 표현합니다. 
 
 ```python
 from tensorflow import keras
