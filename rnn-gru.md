@@ -39,6 +39,93 @@ train_seq = pad_sequences(train_input, maxlen=100)
 val_seq = pad_sequences(val_input, maxlen=100)
 ```
 
-2) GRU model을 
+2) GRU model을 만듧니다. 
+
+```python
+from tensorflow import keras
+
+model = keras.Sequential(name='GRU')
+
+model.add(keras.layers.Embedding(500, 16, input_length=100))
+model.add(keras.layers.GRU(8))
+model.add(keras.layers.Dense(1, activation='sigmoid', name='output'))
+
+model.summary()
+```
+
+
+이때 생성된 모델은 아래와 같습니다. 
+
+```python
+Model: "GRU"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 100, 16)           8000      
+                                                                 
+ gru_1 (GRU)                 (None, 8)                 624       
+                                                                 
+ output (Dense)              (None, 1)                 9         
+                                                                 
+=================================================================
+Total params: 8,633
+Trainable params: 8,633
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+
+3) 모델을 훈련합니다. 
+
+```python
+rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
+model.compile(optimizer=rmsprop, loss='binary_crossentropy', 
+               metrics=['accuracy'])
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-gru-model.h5', 
+                                                save_best_only=True)
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=3,
+                                                  restore_best_weights=True)
+
+history = model.fit(train_seq, train_target, epochs=100, batch_size=64,
+                     validation_data=(val_seq, val_target),
+                     callbacks=[checkpoint_cb, early_stopping_cb])
+```                     
+
+아래와 같이 epoch가 72일때 훈련이 종료됩니다. 
+
+```python
+Epoch 1/100
+313/313 [==============================] - 11s 34ms/step - loss: 0.6927 - accuracy: 0.5191 - val_loss: 0.6922 - val_accuracy: 0.5362
+Epoch 2/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.6910 - accuracy: 0.5620 - val_loss: 0.6904 - val_accuracy: 0.5528
+Epoch 3/100
+313/313 [==============================] - 10s 32ms/step - loss: 0.6883 - accuracy: 0.5794 - val_loss: 0.6873 - val_accuracy: 0.5780
+...
+Epoch 70/100
+313/313 [==============================] - 10s 31ms/step - loss: 0.4088 - accuracy: 0.8170 - val_loss: 0.4348 - val_accuracy: 0.7986
+Epoch 71/100
+313/313 [==============================] - 10s 31ms/step - loss: 0.4084 - accuracy: 0.8169 - val_loss: 0.4348 - val_accuracy: 0.7994
+Epoch 72/100
+313/313 [==============================] - 10s 31ms/step - loss: 0.4086 - accuracy: 0.8163 - val_loss: 0.4339 - val_accuracy: 0.8006
+```
+
+
+아래와 같이 결과를 확인합니다. 
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.xlabel('epoch')
+plt.ylabel('loss')
+plt.legend(['train', 'val'])
+plt.show()
+```
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/188257045-b3091143-31b2-4c18-927c-467ccc5ff681.png)
 
 
