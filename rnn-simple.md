@@ -215,8 +215,6 @@ print(train_seq.nbytes, train_oh.nbytes)
 
 ## Embedding을 이용하기 
 
-[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-embeding.ipynb)에서는 embedding을 적용했을때의 예제를 보여줍니다. 
-
 Embedding을 이용하여 500개의 단어, 16개의 실수로 이루어진 벡터로 embdding을 하는데 sequence의 길이(input_length)는 100입니다. 
 
 ```python
@@ -253,6 +251,26 @@ _________________________________________________________________
 
 이때에 Embedding층 파라메터 갯수 = 500 x 16 = 8000개이고, 순환층 파라메터는 갯수 = 16*8 + 8*8 + 8 = 200개입니다. 
 
+아래와 같이 학습을 진행합니다. 
+
+```python
+rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
+model2.compile(optimizer=rmsprop, loss='binary_crossentropy', 
+               metrics=['accuracy'])
+
+checkpoint_cb = keras.callbacks.ModelCheckpoint('best-embedding-model.h5', 
+                                                save_best_only=True)
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=3,
+                                                  restore_best_weights=True)
+
+history = model2.fit(train_seq, train_target, epochs=100, batch_size=64,
+                     validation_data=(val_seq, val_target),
+                     callbacks=[checkpoint_cb, early_stopping_cb])
+```                     
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/188250998-fb21fc8a-df94-48f4-b359-85f528cb5670.png)
 
 
 
