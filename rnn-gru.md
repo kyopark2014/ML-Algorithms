@@ -17,7 +17,7 @@ GRU(Gated Recurrent Unit)는 [LSTM](https://github.com/kyopark2014/ML-Algorithms
 
 ## GRU Sample
 
-[GRE 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-gru.ipynb)를 아래에서 설명합니다. 
+[GRU 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/rnn-gru.ipynb)를 아래에서 설명합니다. 
 
 1) 데이터를 준비합니다. 
 
