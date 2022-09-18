@@ -1,4 +1,4 @@
-# XBoost를 이용한 Fraud Detection
+# XGBoost를 이용한 Fraud Detection
 
 ## Dataset
 
