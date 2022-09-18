@@ -85,7 +85,7 @@ model.evaluate(test_scaled, test_target)
 ### 손실함수 
 
 이진분류의 경우에는 binary_crossentropy를, 다중분류의 경우에는 categorical_crossentropy을 사용합니다. 또한, 만약 티셔츠를 (1,0,0,0,0,0,0,0,0,0)와 같이
-[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md#multi-class-classification)으로 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 여기서는 Keras이 손실함수로 "sparse_categorical_crossentropy"을 씁니다. "sparse"를 붙이면 one hot encoding을 처리하여 줍니다. 
+[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md#multi-class-classification)으로 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 여기서는 Keras이 손실함수로 "sparse_categorical_crossentropy"을 사용합니다. "sparse"를 붙이면 one hot encoding을 처리하여 줍니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187072798-c115d22c-18d5-4c89-81a9-d51ee5849269.png)
 
@@ -109,7 +109,7 @@ model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1)
 
 ### Activation Function
 
-신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같은 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)을 지정할때 지정할 수 있습니다. 신경망에서 미분시 계단함수를 쓸수 없으므로, signoid를 사용하는데, 이것은 신경망의 층이 깊어지면 signoid의 미분값이 계속 작아져서 ReLU를 사용하기도 합니다. 
+신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같은 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)을 지정할 때 지정할 수 있습니다. 신경망에서 미분시 계단함수를 쓸 수 없으므로, signoid를 사용하는데, 이것은 신경망의 층이 깊어지면 signoid의 미분값이 계속 작아져서 ReLU를 사용하기도 합니다. 
 
 ```python
 model = keras.Sequential(name='fashion')
