@@ -21,11 +21,16 @@ Sensitivity 또는 true positive rate (TPR)로도 생각할 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/190935655-ece4b472-ae13-4df7-8524-2e23f3109f37.png)
 
+실제로 참인것을 거짓으로 예측하면 안되는 경우에 Recall이 중요합니다. 즉, 거짓인것을 중점적으로 찾을때 중요한 지표입니다. 예) 암진단 
+
+
 ## Precision
 
 Precision(정밀도)는 positive로 예측된 관측치중 제대로 예측된 비중을 보여주는데, 도출된 결과가 얼마나 정확한지 보여줍니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/190937018-175c0987-8dfe-49a3-9589-03d5f237292a.png)
+
+실제로 거짓인것을 참으로 예측하면 안되는 경우에 Precision이 중요합니다. 즉, 참인것을 중점적으로 찾을때 중요한 지표입니다. 예) 스팸메일 
 
 
 ## F1 Score
@@ -48,6 +53,7 @@ print(classification_report(y_true=y_test, y_pred = predictions))
 ```
 
 이때의 결과는 아래와 같습니다. 
+
 ```python
               precision    recall  f1-score   support
 
