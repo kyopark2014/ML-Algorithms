@@ -8,7 +8,7 @@ Confusion matrix는 실제 데이터와 예측 데이터에 대한 분포를 표
 
 ## Accuracy
 
-Accuracy(정확도)는 아래와 같이 정의할 수 있습니다. 데이터에 따라 accuracy가 항상 좋은 성능 평가지표가 되지 않을 수도 있습니다. 
+Accuracy(정확도)는 아래와 같이 정의할 수 있습니다. 불균형(Imbalance) 데이터에서는 accuracy가 항상 좋은 성능 평가지표가 되지 않을 수도 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/190932881-ae8e0ad3-7c80-4d71-aa60-a086e6e1c8ef.png)
 
@@ -30,9 +30,7 @@ Precision(정밀도)는 positive로 예측된 관측치중 제대로 예측된 �
 
 ## F1 Score
 
-F1 Score는 Precision과 Recall의 harmonic mean(조화 평균)입니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/190937207-10658a03-76f2-468e-a29c-0a7f4e42706f.png)
+F1 Score는 Precision과 Recall의 harmonic mean(조화 평균)입니다. F1 score는 데이터 label이 불균형(Imbalance) 구조일 때, 모델의 성능을 정확하게 평가할 수 있으며, 성능을 하나의 숫자로 표현할 수 있습니다. 
 
 
 ![image](https://user-images.githubusercontent.com/52392004/190932892-85c8214f-d2ca-434e-94d4-155085f4785e.png)
@@ -48,3 +46,5 @@ F1 Score는 Precision과 Recall의 harmonic mean(조화 평균)입니다.
 [Confusion Matrix - wikipedia](https://en.wikipedia.org/wiki/Confusion_matrix)
 
 [[ML] 모델의 성능, 어떻게 평가해야 하나? - Confusion matrix](https://sooyounhan.blogspot.com/2020/09/ml-confusion-matrix.html)
+
+[분류성능평가지표 - Precision(정밀도), Recall(재현율) and Accuracy(정확도)](https://sumniya.tistory.com/26)
