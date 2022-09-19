@@ -10,6 +10,13 @@ Confusion matrix는 실제 데이터와 예측 데이터에 대한 분포를 표
 
 ![image](https://user-images.githubusercontent.com/52392004/190932881-ae8e0ad3-7c80-4d71-aa60-a086e6e1c8ef.png)
 
+## Recall
+
+Recall(재현율)
+
+## F1 Score
+
+![image](https://user-images.githubusercontent.com/52392004/190932892-85c8214f-d2ca-434e-94d4-155085f4785e.png)
 
 
 
