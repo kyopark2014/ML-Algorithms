@@ -126,9 +126,12 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 평가지표중 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)에 대해 설명합니다. 
 
 
-### Hyperparameter Optimization (HPO)
+
+## Hyperparameter Optimization (HPO)
 
 [Hyperparameter Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)에서는 머신러닝 학습 알고리즘별 최적의 Hyperparameter 조합을 찾아가는 과정을 의미 합니다. 
+
+
 
 ## ML application
 
