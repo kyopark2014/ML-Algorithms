@@ -39,7 +39,26 @@ F1 Score는 Precision과 Recall의 harmonic mean(조화 평균)입니다. F1 sco
 
 ## Confusion Matrix 예제
 
-[Fraud Detection](https://github.com/kyopark2014/ML-xgboost/tree/main/jupyter-local)에서는 XGBoostfmf dldyd
+[Fraud Detection](https://github.com/kyopark2014/ML-xgboost/tree/main/jupyter-local)에서는 XGBoost을 이용해 Predict를 수행합니다. 이때의 결과는 아래와 같이 확인할 수 있습니다. 
+
+```python
+from sklearn.metrics import classification_report
+
+print(classification_report(y_true=y_test, y_pred = predictions))
+```
+
+이때의 결과는 아래와 같습니다. 
+```python
+              precision    recall  f1-score   support
+
+           0       0.99      0.72      0.83       967
+           1       0.09      0.79      0.16        33
+
+    accuracy                           0.72      1000
+   macro avg       0.54      0.75      0.50      1000
+weighted avg       0.96      0.72      0.81      1000
+```
+
 
 ## Reference
 
