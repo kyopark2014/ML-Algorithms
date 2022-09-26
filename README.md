@@ -11,7 +11,10 @@
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/52392004/187052186-e3c810ed-1487-425e-8e91-93307dccfbc9.png">
 
 
-_Abc fdfd
+_Abc fdfd_
+
+_This notebook was created and tested on an ml.m4.xlarge notebook instance._
+
 
 ## Binary Classification (HelloWorld)
 
