@@ -175,5 +175,7 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 ![image](https://user-images.githubusercontent.com/52392004/162556347-9d57ea09-1741-4645-a785-82b27466e8a2.png)
 
 
+## Reference
 
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
