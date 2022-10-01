@@ -179,3 +179,4 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
+[딥러닝 텐서플로 교과서 - 서지영, 길벗]
