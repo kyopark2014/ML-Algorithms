@@ -32,7 +32,7 @@ Regression 모델에서 값의 범위는 -inf레서 inf이어야 하므로, 출�
 
 ![image](https://user-images.githubusercontent.com/52392004/187061260-ddb954d9-6d75-496a-a543-9471f96410eb.png)
 
-따라서, 아래처럼 출력층이 만들어지는데, 이때 activation function으로 [softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#softmax)를 쓰고, [Loss Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)은 Cross-Entropy 또는 MSE를 쓸수 있습니다. 
+따라서, 아래처럼 출력층이 만들어지는데, 이때 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#activation-function)으로 [softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#softmax)를 쓰고, [Loss Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)은 Cross-Entropy 또는 MSE를 쓸수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187062032-74b25974-2d64-492f-810e-f0e8eaf30a5b.png)
 
