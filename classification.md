@@ -25,7 +25,9 @@
 여러 개의 약한 예측 모델을 순차적으로 구축하여 하나의 강한 예측 모델을 만들수 있습니다. 여기서는 [Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)을 사용하는 [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting), [Histogram-based Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#histogram-based-gradient-boosting), [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#xgboost-extreme-gradient-boost), [LightGBM](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#lightgbm)에 대해 설명합니다. 
 
 
-## 관련 용어 
+## Activation Function
+
+활성화함수(Activation Function)는 입력신호가 일정 기준 이상이면 출력신호로 변환하는 함수를 의미 합니다. 
 
 ### Sigmoid
 
@@ -64,7 +66,7 @@ print(np.round(proba, decimals=3))
 
 ![image](https://user-images.githubusercontent.com/52392004/186540141-a25f1eaa-c287-4b30-8c58-8a63eb9cac29.png)
 
-### Loss Function
+## Loss Function
 
 손실함수(Loss Function)는 예측값과 실제 정답간의 차이를 표현하는 함수입니다. 
 
@@ -74,7 +76,7 @@ print(np.round(proba, decimals=3))
    
 - MulticlassClassification: Cross entropy loss function
 
-### Stochastic Gradient Descent
+## Stochastic Gradient Descent
 
 [확률적경사하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)은 Train set에서 샘플을 무작위로 하나씩 꺼내 손실 함수의 경사를 계산하고 손실이 작아지는 방향으로 파라미터를 업데이트하는 알고리즘입니다. 
 
