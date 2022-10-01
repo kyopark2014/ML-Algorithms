@@ -12,4 +12,10 @@
 
 [확률적 경사 하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)
 
+[Drop out](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#dropout)
 
+[Batch Normalization](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)
+
+[Flatten](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#flatten)
+
+[GPU 상태 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#gpu-%EC%83%81%ED%83%9C-%ED%99%95%EC%9D%B8)
