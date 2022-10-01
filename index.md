@@ -33,3 +33,8 @@
 [k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation)
 
 [Epoch](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#epoch)
+
+[합성곱 신경망(Convolutional Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#convolutional-neural-network)
+
+[순환신경망 (Recurrent Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)
+
