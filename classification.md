@@ -8,7 +8,7 @@
 
 [Logistic Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)에서는 상세한 로지스틱 회귀에 대해 설명합니다. 
  
-## 결정트리 (Decision Tree)
+## Decision Tree
 
 [결정트리 (Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여, 데이터에 내재되어 있는 패턴을 변수의 조합으로 나타내는 회귀/분류 모델을 Tree형태로 만들 수 있습니다. 
 
