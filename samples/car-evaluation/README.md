@@ -1,6 +1,6 @@
 # Car Evaluation
 
-Chapter 2. 텐서플로2 코드 맛보기 
+[Chapter 2. 텐서플로2 코드 맛보기](https://github.com/gilbutITbook/080263/blob/master/chap2/python_2%EC%9E%A5.ipynb)을 참조합니다. 
 
 ## Columns 정보
 
