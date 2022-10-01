@@ -65,7 +65,7 @@ print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
 
 k-fold cross validation를 이용한 교차검증을 할수 있는데, 전체 데이터셋을 k개의 fold로 분할한 후 각 iteration마다 Validation set을 겹치지 않게 할당하고 Accuracy의 평균을 모델의 성능으로 계산합니다. 
 
-<img src="https://user-images.githubusercontent.com/52392004/186666830-cae6a8f1-43d8-4d07-8066-8979927df07f.png" width="800">
+<img src="https://user-images.githubusercontent.com/52392004/186666830-cae6a8f1-43d8-4d07-8066-8979927df07f.png" width="600">
 
 
 [Cross Validation](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/cross_validation.ipynb)의 코드를 아래와 같이 설명합니다. 
