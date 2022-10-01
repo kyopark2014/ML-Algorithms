@@ -3,7 +3,9 @@
 
 [Keras Model](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#keras-model)을 이용하여 이미지를 분류하는 방법에 대해 설명합니다.
 
-## Convolutional Neural Networks
+## Convolutional Neural Network
+
+합성곱 신경망(Convolutional Neural Network)은 이미지 또는 비디오상의 객체를 식별하는 이미지 분류에 이용할 수 있습니다. 
 
 ### Convolution
 
