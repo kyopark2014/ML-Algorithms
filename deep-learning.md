@@ -120,7 +120,9 @@ model.add(keras.layers.Dense(10, activation='softmax', name='output'))
 model.summary()
 ```
 
-### Optimizer (개선된 gradient descent method)
+### Optimizer 
+
+Optimizer는 [손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)을 기반으로 네트워크 업데이트 방법을 결정합니다. Adam, RMSPrep 등이 있습니다. 
 
 [Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)는 모든 데이터를 가지고 에러값을 찾은 후에 기울기를 구해서 Weight를 업데이트 합니다. [Stochastic Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)는 확율을 이용해서 속도를 개선합니다. Adam은 Momentum과 Step size를 모두 고려하여 가장 많이 사용되고 있습니다.
 
