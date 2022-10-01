@@ -28,3 +28,6 @@
 
 [결정계수 (Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/README.md#coefficient-of-determination)
 
+[PCA (Principal Component Analysis)](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)
+
+[k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation)
