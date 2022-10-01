@@ -79,9 +79,9 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 ## 모델 평가
 
-### 결정계수 (Coefficient of determination)
+### Coefficient of determination
 
-score() 호출시 결과는 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(1에 가까울수록 예측이 잘된것)를 의미합니다.
+결정계수 (Coefficient of determination)는 score() 호출시 결과인데, 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(1에 가까울수록 예측이 잘된것)를 의미합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
 
