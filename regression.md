@@ -2,9 +2,9 @@
 
 회귀 (Regression)는 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다.
 
-## k-최근접 이웃 회귀(k-Nearest Neighbors)
+## k-Nearest Neighbors
 
-[kNN (k-Nearest Neighbors)](https://github.com/kyopark2014/ML-Algorithms/blob/main/KNN.md)은 가장 가까운 이웃 샘플을 찾고 이 샘플들의 타깃 값을 평균하여 예측값으로 삼습니다. 
+[k-최근접 이웃 회귀 (k-Nearest Neighbors)](https://github.com/kyopark2014/ML-Algorithms/blob/main/KNN.md)은 가장 가까운 이웃 샘플을 찾고 이 샘플들의 타깃 값을 평균하여 예측값으로 삼습니다. 
 
 
 ## 선형회귀 (Linear Regression)
@@ -15,20 +15,20 @@
 
 [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는것에 대해 설명합니다. 
 
-## 다항회귀 (Polynomial Regression)
+## Polynomial Regression
 
-다항식을 사용하여 특성(feature)와 Target사이의 관계를 표현합니다.
+다항회귀(Polynomial Regression)은 다항식을 사용하여 특성(feature)와 Target사이의 관계를 표현합니다.
 
 [Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서는 Polynomial Regression을 이용합니다.
 
 
-## 다중회귀 (Multiple Regression)
+## Multiple Regression
 
-여러개의 특성을 사용하는 회귀 모델로서, [softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#softmax)함수를 사용합니다. 
+다중회귀 (Multiple Regression)은 여러개의 특성을 사용하는 회귀 모델로서, [softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#softmax)함수를 사용합니다. 
 
 [다중회귀(Multiple Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/multiple-regression.md)에서는 농어(perch)의 길이, 두께, 높이를 가지고 예측을 수행하는 방법에 대해 설명합니다. 
 
-## 특성공학 (Feature Engineering)
+## Feature Engineering
 
 [특성공학(Feature Engineering)](https://github.com/kyopark2014/ML-Algorithms/blob/main/feature-enginnering.md)이용하여 농어의 두께를 좀더 정확하게 예측할 수 있습니다. 이때, 과대적합을 방지하기 위하여 릿지와 라쏘로 규제(Regularization)을 수행합니다. 
 
