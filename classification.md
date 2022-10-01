@@ -27,7 +27,7 @@
 
 ## Activation Function
 
-활성화함수(Activation Function)는 입력신호가 일정 기준 이상이면 출력신호로 변환하는 함수를 의미 합니다. 
+활성화함수(Activation Function)는 입력신호가 일정 기준 이상이면 출력신호로 변환하는 함수를 의미 합니다. [Nueral Network - Activation Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#activation-function)에서는 신경망에서 Activation Function에 대해 예제를 보여주고 있습니다. 
 
 ### Sigmoid
 
