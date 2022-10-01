@@ -82,10 +82,10 @@ model.evaluate(test_scaled, test_target)
 
 
 
-### 손실함수 
+### Loss Function 
 
 이진분류의 경우에는 binary_crossentropy를, 다중분류의 경우에는 categorical_crossentropy을 사용합니다. 또한, 만약 티셔츠를 (1,0,0,0,0,0,0,0,0,0)와 같이
-[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md#multi-class-classification)으로 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 여기서는 Keras이 손실함수로 "sparse_categorical_crossentropy"을 사용합니다. "sparse"를 붙이면 one hot encoding을 처리하여 줍니다. 
+[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md#multi-class-classification)으로 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 여기서는 Keras이 [손실함수 (Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)로 "sparse_categorical_crossentropy"을 사용합니다. "sparse"를 붙이면 one hot encoding을 처리하여 줍니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187072798-c115d22c-18d5-4c89-81a9-d51ee5849269.png)
 
