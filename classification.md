@@ -41,7 +41,7 @@
 - MulticlassClassification: Cross entropy loss function
 
 [Neural Network - Loss Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#loss-function)에서는 신경망에서 손실함수를 사용하는 예를 보여주고 있습니다.
-
+ 
 ## Stochastic Gradient Descent
 
 [확률적경사하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)은 Train set에서 샘플을 무작위로 하나씩 꺼내 손실 함수의 경사를 계산하고 손실이 작아지는 방향으로 파라미터를 업데이트하는 알고리즘입니다. 
