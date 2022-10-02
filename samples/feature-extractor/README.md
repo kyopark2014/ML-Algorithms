@@ -1,6 +1,6 @@
-# 특성 추출 기업 (Feature Extractor)
+# 특성 추출 기법 (Feature Extractor)
 
-[Chapter 5.3.1 특성추출기법](https://github.com/gilbutITbook/080263/blob/master/chap5/python_5%EC%9E%A5.ipynb)을 참조하여, [knn.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/samples/knn/knn.ipynb)를 아래와 같이 설명합니다. 
+[Chapter 5.3.1 특성추출기법](https://github.com/gilbutITbook/080263/blob/master/chap5/python_5%EC%9E%A5.ipynb)을 참조하여, [feature-extractor.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/samples/feature-extractor/feature-extractor.ipynb)를 아래와 같이 설명합니다. 
 
 
 
