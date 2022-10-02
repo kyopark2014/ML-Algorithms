@@ -20,7 +20,12 @@ Neural network에서 입력값에 Kernel로 convolution하려면 180 회전하�
 
 ### Padding
 
-아래는 Keras에서 Convolution을 적용할때 사용하는 코드를 보여줍니다. 여기서 Padding에는 kernel을 이용한 convolution을 (0,0)에서 시작하여 입력값이 줄어드는 "valid"와 kernel에 매칭되지 않는 부분을 0으로 padding하여 원래 입력값을 유지(full cross correlation)하는 "same"의 옵션이 있습니다.
+경계 처리 방법으로 valid와 same을 선택할 수 있습니다. 
+
+- valid: 유효한 영역만 출력되므로 출력 이미지 크기는 입력 이미지 크기보다 작습니다. kernel을 이용한 convolution을 (0,0)에서 시작하여 입력값이 줄어듭니다.
+- same: 출력 이미지 크기가 입력 이미지 크기와 동일합니다. kernel에 매칭되지 않는 부분을 0으로 padding하여 원래 입력값을 유지(full cross correlation)합니다.
+
+아래는 Keras에서 Convolution을 적용할때 사용하는 코드를 보여줍니다. 
 
 ```python
 model.add(keras.layers.Conv2D(32, kernel_size=3, activation='relu', padding='same', input_shape=(28,28,1)))
@@ -213,3 +218,5 @@ Neural Network의 마지막 3 Fully-Connected Layer는 각각 4096, 4096, 1000 �
 [VGG16 – Convolutional Network for Classification and Detection](https://neurohive.io/en/popular-networks/vgg16/)
 
 [VGG16 논문 리뷰 — Very Deep Convolutional Networks for Large-Scale Image Recognition](https://medium.com/@msmapark2/vgg16-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0-very-deep-convolutional-networks-for-large-scale-image-recognition-6f748235242a)
+
+[딥러닝 텐서플로 교과서 - 서지영, 길벗](https://github.com/gilbutITbook/080263)
