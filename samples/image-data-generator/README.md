@@ -2,7 +2,9 @@
 
 [Chapter 5.3.1 특성추출기법 - 이미지 데이터 확장](https://github.com/gilbutITbook/080263/blob/master/chap5/python_5%EC%9E%A5.ipynb)을 참조하여, [image-data-generator.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/samples/image-data-generator/image-data-generator.ipynb)를 아래와 같이 설명합니다. 
 
-1) 데이터를 로드 합니다. 
+## Data Loading
+
+데이터를 아래처럼 읽어옵니다. 
 
 ```python
 from numpy import expand_dims
