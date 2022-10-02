@@ -6,7 +6,7 @@
 
 [Gini Impurity](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md#gini-impurity)
 
-[활성화함수(Activation Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#activation-function)
+[활성화함수(Activation Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md)
 
 [손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)
 
