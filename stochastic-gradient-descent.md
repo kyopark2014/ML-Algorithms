@@ -40,29 +40,7 @@ Weight는 아래처럼 Error의 미분으로 표현됩니다.
 
 ### ReLU (Rectified Linear Unit)
 
-Activation function으로 ReLU (Rectified Linear Unit)를 사용하여 Gradient vanishing 문제를 해결할 수 있습니다. 
-
-ReLU의 그래프는 아래와 같습니다.
-
-<img width="317" alt="image" src="https://user-images.githubusercontent.com/52392004/187075181-69d7c063-b725-4ace-a6f7-50d0341dff58.png">
-
-수식은 아래와 같습니다. Net값이 음수일때는 0이고, 양수일때는 입력을 그래도 사용하므로, 중첩이 되어도 원래값을 유지합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/187075198-08d51814-6e66-4ba0-a5ab-5f125fbfe951.png)
-
-ReLU의 경우에 Sigmoid보다 약 6배 빠름지만, 학습데이터를 다 썼는데 한번도 사용되지 않은 노드가 있다면 Weight가 빠지면서 노드가 죽어버리는 문제점이 발생 할 수 있습니다. 이를 위해서, Learning rate를 작게 설정하거나 Leaky ReLU를 사용합니다. 
-
-### Leaky ReLU
-
-Leaky ReLU는 아래와 같으 그래프입니다.
-
-<img width="370" alt="image" src="https://user-images.githubusercontent.com/52392004/187075354-be598ec4-4fc1-47a8-b236-4657127e82b8.png">
-
-이것은 아래처럼 정의합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/187075372-2a8d4197-a86d-4485-b6fb-f054f38becdf.png)
-
-
+Activation function으로 [ReLU (Rectified Linear Unit)](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#relu)를 사용하여 Gradient vanishing 문제를 해결할 수 있습니다. 
 
 
 ## 적용 예
