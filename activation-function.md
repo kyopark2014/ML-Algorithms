@@ -77,3 +77,9 @@ print(np.round(proba, decimals=3))
 이때의 결과는 아래와 같습니다. 여기서, Fish0의 데이터는 Perch인 확율이 0.841임을 알수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/186540141-a25f1eaa-c287-4b30-8c58-8a63eb9cac29.png)
+
+
+## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
