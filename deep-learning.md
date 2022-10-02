@@ -109,7 +109,7 @@ model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1)
 
 ### Activation Function
 
-신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같은 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md#%ED%99%9C%EC%84%B1%ED%95%A8%EC%88%98-activation-function)을 지정할 때 지정할 수 있습니다. 신경망에서 미분시 계단함수를 쓸 수 없으므로, signoid를 사용하는데, 이것은 신경망의 층이 깊어지면 signoid의 미분값이 계속 작아져서 ReLU를 사용하기도 합니다. 
+신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같은 [activation function](https://github.com/kyopark2014/ML-Algorithms/edit/main/activation-function.md)을 지정할 때 지정할 수 있습니다. 신경망에서 미분시 계단함수를 쓸 수 없으므로, signoid를 사용하는데, 이것은 신경망의 층이 깊어지면 signoid의 미분값이 계속 작아져서 ReLU를 사용하기도 합니다. 
 
 ```python
 model = keras.Sequential(name='fashion')
