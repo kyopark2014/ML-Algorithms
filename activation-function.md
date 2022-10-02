@@ -21,6 +21,32 @@ CNN의 Conv2D에서 activation function의 기본값입니다. 입력 뉴런과 
 
 ![image](https://user-images.githubusercontent.com/52392004/185773923-7ca38926-f792-46c6-b339-f8459c2fea8c.png)
 
+signoid를 쓰면 미분값이 0.25이 되므로 [Gradient vanishing problem](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-vanishing--exploding)이 발생하는데 이를 해결하기 위해 ReLU등이 활용됩니다. 
+
+### ReLU
+
+Activation function으로 ReLU (Rectified Linear Unit)를 사용하여 Gradient vanishing 문제를 해결할 수 있습니다. 
+
+ReLU의 그래프는 아래와 같습니다.
+
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/52392004/187075181-69d7c063-b725-4ace-a6f7-50d0341dff58.png">
+
+수식은 아래와 같습니다. Net값이 음수일때는 0이고, 양수일때는 입력을 그래도 사용하므로, 중첩이 되어도 원래값을 유지합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187075198-08d51814-6e66-4ba0-a5ab-5f125fbfe951.png)
+
+ReLU의 경우에 Sigmoid보다 약 6배 빠름지만, 학습데이터를 다 썼는데 한번도 사용되지 않은 노드가 있다면 Weight가 빠지면서 노드가 죽어버리는 문제점이 발생 할 수 있습니다. 이를 위해서, Learning rate를 작게 설정하거나 Leaky ReLU를 사용합니다. 
+
+### Leaky ReLU
+
+Leaky ReLU는 아래와 같으 그래프입니다.
+
+<img width="370" alt="image" src="https://user-images.githubusercontent.com/52392004/187075354-be598ec4-4fc1-47a8-b236-4657127e82b8.png">
+
+이것은 아래처럼 정의합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187075372-2a8d4197-a86d-4485-b6fb-f054f38becdf.png)
+
 ### Softmax
 
 소프트맥스함수 (Softmax Funnction)는 다중분류에서 각클래스별 예측출력값을 0에서 1사이의 확률로 압축하고 전체 합이 1이 되도록 변환합니다.
