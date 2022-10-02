@@ -39,7 +39,7 @@ ReLU의 경우에 Sigmoid보다 약 6배 빠름지만, 학습데이터를 다 �
 
 ### Leaky ReLU
 
-Leaky ReLU는 아래와 같으 그래프입니다.
+Leaky ReLU는 아래와 같은 그래프입니다.
 
 <img width="370" alt="image" src="https://user-images.githubusercontent.com/52392004/187075354-be598ec4-4fc1-47a8-b236-4657127e82b8.png">
 
