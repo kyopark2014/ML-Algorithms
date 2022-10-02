@@ -2,8 +2,18 @@
 
 활성화함수(Activation Function)는 입력신호가 일정 기준 이상이면 출력신호로 변환하는 함수를 의미 합니다. [Nueral Network - Activation Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#activation-function)에서는 신경망에서 Activation Function에 대해 예제를 보여주고 있습니다. 
 
+
+Activation Function에는 Hard Limit, [Signoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#sigmoid), [ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#relu-rectified-linear-unit), [Leaky ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#leaky-relu)가 포함됩니다. 
+
+아래와 같은 여러종류의 Activation Function이 Deep Learning등에서 활용되고 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/187075789-d80d2ec9-f16e-4fbe-90f8-16ebaca88752.png)
+
+
+
 ### Linear
 
+CNN의 Conv2D에서 activation function의 기본값입니다. 입력 뉴런과 가중치로 계산된 결과값이 그대로 출력됩니다. 
 
 ### Sigmoid
 
