@@ -1,6 +1,6 @@
 # 이미지 데이터 확장
 
-[Chapter 5.3.1 특성추출기법 - 이미지 데이터 확장](https://github.com/gilbutITbook/080263/blob/master/chap5/python_5%EC%9E%A5.ipynb)을 참조하여, [image-data-generator.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/samples/image-data-generator/image-data-generator.ipynb)를 아래와 같이 설명합니다. 
+[Chapter 5.3.1 특성추출기법 - 이미지 데이터 확장](https://github.com/gilbutITbook/080263/blob/master/chap5/python_5%EC%9E%A5.ipynb)을 참조하여, [image-data-generator.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/dl-textbook/image-data-generator/image-data-generator.ipynb)를 아래와 같이 설명합니다. 
 
 ## Data Loading
 
