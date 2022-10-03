@@ -56,7 +56,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 - 특성 중요도를 확인하기 위하여 permutation_importance를 사용합니다. permutation_importance() 함수가 반환하는 객체는 반복해서 얻은 특성중요도, 평균, 표준편차를 담고 있습니다. 
 
 
-[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/historam_gradient_boosting.ipynb)에 대해 설명합니다.
+[historam_gradient_boosting.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/historam_gradient_boosting.ipynb)에 대해 설명합니다.
 
 ```python
 from sklearn.ensemble import HistGradientBoostingClassifier
