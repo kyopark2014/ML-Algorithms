@@ -23,7 +23,7 @@
 
 [확률적 경사 하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)
 
-[Drop out](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#dropout)
+[Dropout](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#dropout)
 
 [Padding](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#padding)
 
