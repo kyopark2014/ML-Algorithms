@@ -19,11 +19,7 @@
 
 ## 용어모음
 
-[Gini Impurity](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md#gini-impurity)
-
 [활성화함수(Activation Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md)
-
-[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)
 
 [확률적 경사 하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)
 
@@ -43,6 +39,8 @@
 
 [Epoch](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#epoch)
 
+[Gini Impurity](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md#gini-impurity)
+
 
 
 ## 유용한 명령어 
@@ -57,4 +55,6 @@
 [Coefficient of determination (결정계수)](https://github.com/kyopark2014/ML-Algorithms/blob/main/README.md#coefficient-of-determination)
 
 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)
+
+[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)
 
