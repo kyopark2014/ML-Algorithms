@@ -4,7 +4,7 @@
 
 ## 데이터 준비
 
-아래와 같이 pandas를 통해 fish data를 로딩합니다. 이 데이터는 캐글의 [Red Wine Quality](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)에 있습니다. 
+아래와 같이 pandas를 통해 fish data를 로딩합니다. 이 데이터는 캐글의 [Red Wine Quality](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)에 있습니다. 또한, [fish_csv_data](https://raw.githubusercontent.com/rickiepark/hg-mldl/master/fish.csv)는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)에서 가져왔습니다. 
 
 ```python
 import pandas as pd
