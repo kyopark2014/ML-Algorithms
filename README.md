@@ -148,7 +148,9 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ### XGBoost를 이용한 Fraud Detection
 
-[Fraud Detection](https://github.com/kyopark2014/ML-Algorithms/blob/main/xboost-fraud-detection.md)에서는 XGBoost를 이용한 분류에 대해 설명합니다. 
+[XGBoost로 Fraud Detection](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)
+
+[XGBoost로 Breast cancer 분석](https://github.com/kyopark2014/ML-xgboost/tree/main/breast-cancer)
 
 ## 각종 유용한 라이브러리
 
