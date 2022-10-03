@@ -1,6 +1,6 @@
 # Logistic Regression
 
-여기의 데이터는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 이용합니다. [상세한 코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic_regression.ipynb)에서 아래의 예제를 jupyter notebook으로 확인할 수 있습니다.
+여기의 데이터는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 이용합니다. [logistic_regression.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic_regression.ipynb)에서 아래의 예제를 jupyter notebook으로 확인할 수 있습니다.
 
 
 ## 데이터 준비
