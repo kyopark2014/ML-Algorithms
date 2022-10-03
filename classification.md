@@ -54,3 +54,7 @@ Hyperper Parameter로 learning rate(step size)와 epoch가 있습니다.
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
 [소프트맥스 회귀(Softmax Regression)](https://wikidocs.net/35476)
+
+[Deep Learning with TensorFlow2 and Keras - Packt - images](https://static.packt-cdn.com/downloads/9781838823412_ColorImages.pdf)
+
+[Deep Learning with TensorFlow2 and Keras - Packt - github](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras)
