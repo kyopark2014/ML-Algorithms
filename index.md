@@ -2,6 +2,12 @@
 
 ## Algorithms 
 
+[회귀 (Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)
+
+[분류 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)
+
+
+
 [결정트리 (Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)
 
 [Logistic Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)
