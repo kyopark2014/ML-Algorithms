@@ -58,3 +58,5 @@ Hyperper Parameter로 learning rate(step size)와 epoch가 있습니다.
 [Deep Learning with TensorFlow2 and Keras - Packt - images](https://static.packt-cdn.com/downloads/9781838823412_ColorImages.pdf)
 
 [Deep Learning with TensorFlow2 and Keras - Packt - github](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras)
+
+[딥러닝 텐서플로 교과서 - 서지영, 길벗](https://github.com/gilbutITbook/080263)
