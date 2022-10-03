@@ -97,7 +97,7 @@ print(result.importances_mean)
 - XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
 
-[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 
+[xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 
 
 ```python
 from xgboost import XGBClassifier
@@ -117,7 +117,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 Microsoft에서 만든 LightGBM 으로 [Histogram-based Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#histogram-based-gradient-boosting) 알고리즘입니다. 
 
 
-[상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/light_gbm.ipynb)에 대해 설명합니다.
+[light_gbm.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/light_gbm.ipynb)에 대해 설명합니다.
 
 ```python
 from lightgbm import LGBMClassifier
