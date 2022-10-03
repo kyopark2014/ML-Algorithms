@@ -1,6 +1,8 @@
 # 분류 (Classification)
 
-여기에서는 Sample을 몇개의 Class중에 하나로 분류하는 문제를 다릅니다.
+분류 (Classification)은 어떤 대상을 정해진 범주(Class)에 구분해 넣는 작업을 뜻합니다. 머신러닝에서 분류는 주어진 Feature에 따라 어떤 대상을 유한한 범주(타깃값)로 구분하는 방법입니다. 여기서 **타깃값은 범주형 데이터** 점이 중요합니다. 범주형 데이터는 객관식 문제와 같이 선택지가 있는 값입니다. 개와 고양이를 구분하는 문제, 스팸 메일과 일반 메일을 구분하는 문제, 질병 검사 결과가 양성인지 음성인지 구분하는 문제등이 있습니다. 
+
+[회귀 (Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)
 
 ## 로지스틱 회귀 (Logistic Regression)
 
@@ -60,3 +62,5 @@ Hyperper Parameter로 learning rate(step size)와 epoch가 있습니다.
 [Deep Learning with TensorFlow2 and Keras - Packt - github](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras)
 
 [딥러닝 텐서플로 교과서 - 서지영, 길벗](https://github.com/gilbutITbook/080263)
+
+[머신러닝·딥러닝 문제해결 전략 - 신백균, 골든래빗](https://github.com/BaekKyunShin/musthave_mldl_problem_solving_strategy)
