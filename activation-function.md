@@ -1,6 +1,10 @@
 # 활성화함수 (Activation Function)
 
-활성화함수(Activation Function)는 입력신호가 일정 기준 이상이면 출력신호로 변환하는 함수를 의미 합니다. 
+활성화함수(Activation Function)는 입력신호가 일정 기준 이상이면 출력신호로 변환하는 함수를 의미 합니다. 아래는 activation fuction의 한 예입니다. 여기서 x는 input, w은 weight, b는 bias를 의미합니다. 
+
+<img width="535" alt="image" src="https://user-images.githubusercontent.com/52392004/193482564-69ff8f1a-66e9-48cc-a714-fd5b4bd43203.png">
+
+
 
 Activation Function에는 Hard Limit, [Signoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid), [ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#relu), [Leaky ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#leaky-relu)가 있으며, 아래와 같이 여러종류의 Activation Function이 Deep Learning등에서 활용되고 있습니다. 
 
