@@ -26,7 +26,6 @@
 
 [Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md#embedding)
 
-[결정계수 (Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/README.md#coefficient-of-determination)
 
 [PCA (Principal Component Analysis)](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)
 
@@ -37,4 +36,10 @@
 [합성곱 신경망(Convolutional Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#convolutional-neural-network)
 
 [순환신경망 (Recurrent Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)
+
+## Matrics
+
+[Coefficient of determination (결정계수)](https://github.com/kyopark2014/ML-Algorithms/blob/main/README.md#coefficient-of-determination)
+
+[Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)
 
