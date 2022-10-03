@@ -1,4 +1,4 @@
-# 분류 알고리즘 (Classification)
+# 분류 (Classification)
 
 여기에서는 Sample을 몇개의 Class중에 하나로 분류하는 문제를 다릅니다.
 
