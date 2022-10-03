@@ -1,5 +1,9 @@
 # ML Algorithms
 
+## 용어 Index
+
+[Index](https://github.com/kyopark2014/ML-Algorithms/blob/main/index.md)에서는 주요 용어에 대한 링크를 제공합니다. 
+
 ## AI / ML
 
 - 인공지능(AI, Artificial Intelligence)은 사람처럼 학습하고 추론할 수 있는 지능을 가진 시스템을 만드는 기술을 의미합니다.
@@ -177,9 +181,6 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/162556347-9d57ea09-1741-4645-a785-82b27466e8a2.png)
 
-## 용어 Index
-
-[Index](https://github.com/kyopark2014/ML-Algorithms/blob/main/index.md)에서는 주요 용어에 대한 링크를 제공합니다. 
 
 
 ## Reference
