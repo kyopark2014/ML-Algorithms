@@ -4,10 +4,11 @@
 
 ### 4장. 데이터를 한눈에 : 주요 시각화 그래프
 
- * 수치형 데이터 시각화: [[ch4] Data Visualization Distributions](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch4-data-visualization-distributions.ipynb)
+ * 수치형 데이터 시각화: [Data Visualization Distributions](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch4-data-visualization-distributions.ipynb)
 
- * 범주형 데이터 시각화: [[ch4] Data Visualization Categorical](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch4-data-visualization-categorical.ipynb)
+ * 범주형 데이터 시각화: [Data Visualization Categorical](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch4-data-visualization-categorical.ipynb)
 
+ * 데이터 관계 시각화: [Data Visualization Relational](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch4-data-visualization-relational.ipynb)
 
 
 ## Reference
