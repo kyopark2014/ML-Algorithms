@@ -21,9 +21,12 @@ CNN의 Conv2D에서 activation function의 기본값입니다. 입력 뉴런과 
 
 signoid를 쓰면 미분값이 0.25이 되므로 [Gradient vanishing problem](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-vanishing--exploding)이 발생하는데 이를 해결하기 위해 ReLU등이 활용됩니다. 
 
-### Hyperbolic Tangent 함수
+### tanh
 
-tanh는 선형함수의 결과를 -1에서 1사이에서 비선형형태로 변형하여 줍니다. 시그모이드에서 결과값의 평균이 0이 아닌 양수로 편향된 문제를 해결하는데 사용했지만, 기울기 소멸(Gradient vanishing)문제는 여전히 발생합니다. 
+Hyperbolic Tangent(tanh)는 선형함수의 결과를 -1에서 1사이에서 비선형형태로 변형하여 줍니다. 시그모이드에서 결과값의 평균이 0이 아닌 양수로 편향된 문제를 해결하는데 사용했지만, 기울기 소멸(Gradient vanishing)문제는 여전히 발생합니다. 
+
+<img width="541" alt="image" src="https://user-images.githubusercontent.com/52392004/193482437-47f06467-747b-4ac9-86a3-db4a565bdd24.png">
+
 
 ### ReLU
 
