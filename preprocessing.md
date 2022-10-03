@@ -138,6 +138,8 @@ print(np.mean(scores['test_score']))
 
 Dataset 1000개에 대한 배치 크기가 20이라면, sample 단위 20개마다 모델 가중치를 한번씩 업데이트 시킨다는 의미입니다. 즉, 50번 (=1000/20)의 가중치가 업데이트 됩니다. 이때 epoch가 10이고 모델크기가 20이라면, 가중치를 50번 업데이트하는것을 총 10번 반복한다는 의미입니다.  각 데이터 sample이 총 10번씩 사용되는것이므로, 결과적으로 총 500번 업데이트 됩니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/193483155-3294fbaf-fa2f-4b20-9ead-aa80d13748f0.png)
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
