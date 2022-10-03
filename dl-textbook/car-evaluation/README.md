@@ -1,6 +1,6 @@
 # Car Evaluation
 
-[Chapter 2. 텐서플로2 코드 맛보기](https://github.com/gilbutITbook/080263/blob/master/chap2/python_2%EC%9E%A5.ipynb)을 참조하여, [car_evalutation.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/samples/car-evaluation/car_evalutation.ipynb)를 아래와 같이 설명합니다. 
+[Chapter 2. 텐서플로2 코드 맛보기](https://github.com/gilbutITbook/080263/blob/master/chap2/python_2%EC%9E%A5.ipynb)을 참조하여, [car_evalutation.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/dl-textbook/car-evaluation/car_evalutation.ipynb)를 아래와 같이 설명합니다. 
 
 ## Columns 정보
 
