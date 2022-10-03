@@ -82,7 +82,7 @@ print(kn.score(test_scaled, test_target))
 
 ## 이진 Logistric Regression
 
-이진분류에서는 표준점수(z)을 확율로 바꾸기 위하여 [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#Sigmoid) 함수를 사용합니다. 
+이진분류에서는 표준점수(z)을 확율로 바꾸기 위하여 [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid) 함수를 사용합니다. 
 
 데이터를 준비하고, 이진 로지스틱 회귀를 수행합니다. 
 
