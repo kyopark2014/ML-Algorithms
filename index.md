@@ -1,8 +1,23 @@
 # INDEX
 
+## Algorithms 
+
 [결정트리 (Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)
 
+[Logistic Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)
+
 [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)
+
+[PCA (Principal Component Analysis)](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)
+
+[합성곱 신경망(Convolutional Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#convolutional-neural-network)
+
+[순환신경망 (Recurrent Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)
+
+
+
+
+## 용어모음
 
 [Gini Impurity](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md#gini-impurity)
 
@@ -14,28 +29,28 @@
 
 [Drop out](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#dropout)
 
-[Batch Normalization](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)
+[Padding](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#padding)
 
 [Flatten](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#flatten)
 
-[GPU 상태 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#gpu-%EC%83%81%ED%83%9C-%ED%99%95%EC%9D%B8)
-
-[Error Back Propagation](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network.md#error-back-propagation)
-
-[Padding](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#padding)
-
 [Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md#embedding)
 
+[Batch Normalization](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)
 
-[PCA (Principal Component Analysis)](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)
+[Error Back Propagation](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network.md#error-back-propagation)
 
 [k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation)
 
 [Epoch](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#epoch)
 
-[합성곱 신경망(Convolutional Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/image_classification.md#convolutional-neural-network)
 
-[순환신경망 (Recurrent Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)
+
+## 유용한 명령어 
+
+[GPU 상태 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#gpu-%EC%83%81%ED%83%9C-%ED%99%95%EC%9D%B8)
+
+
+
 
 ## Matrics
 
