@@ -19,7 +19,7 @@
 - 베이지안 최적화: [Bayesian Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-bayesian-optimization.ipynb)
 
 ### 6장. [경진대회] 자전거 대여 수요 예측
-- 탐색적 데이터 분석:
+- 탐색적 데이터 분석: [EDA](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch6-EDA.ipynb)
 - 베이스라인 모델 : 
 - 성능 개선 : 
 - 환경 세팅된 노트북 양식: 
