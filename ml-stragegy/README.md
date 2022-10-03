@@ -28,11 +28,11 @@
 
 ### 7장. [경진대회] 범주형 데이터 이진분류
 
-- 탐색적 데이터 분석 :
-- 베이스라인 모델 :
-- 성능 개선 I :
-- 성능 개선 II :
-- 환경 세팅된 노트북 양식 :
+- 탐색적 데이터 분석:
+- 베이스라인 모델: [Baseline](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-baseline.ipynb)
+- 성능 개선 I:
+- 성능 개선 II:
+- 환경 세팅된 노트북 양식:
 
 
 
