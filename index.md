@@ -4,7 +4,7 @@
 
 [회귀 (Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)
 
-[분류 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)
+[분류 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)
 
 
 
