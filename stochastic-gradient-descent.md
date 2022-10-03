@@ -24,6 +24,12 @@ Weight는 아래처럼 Error의 미분으로 표현됩니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187074618-9b5ab505-fd28-4de7-a75f-4af062c7e95c.png)
 
+
+아래 그림은 gradient descent를 최적화하는 예제입니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/193482799-0e09acbe-1abd-4ebe-bc64-0179709ff158.png)
+
+
 ## Gradient vanishing & exploding
 
 (t+1)의 Weight는 이전 Weight에서 learning rate와 gradient의 곲을 뺀것입니다. 
