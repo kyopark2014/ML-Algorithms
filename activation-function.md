@@ -60,6 +60,11 @@ Leaky ReLU는 아래와 같은 그래프입니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187075372-2a8d4197-a86d-4485-b6fb-f054f38becdf.png)
 
+### ELU
+
+<img width="459" alt="image" src="https://user-images.githubusercontent.com/52392004/193482494-bcac05ec-8200-4875-82eb-fc0d7bbbcc3d.png">
+
+
 ### Softmax
 
 소프트맥스함수 (Softmax Funnction)는 다중분류에서 각클래스별 예측출력값을 0에서 1사이의 확률로 압축하고 전체 합이 1이 되도록 변환합니다.
