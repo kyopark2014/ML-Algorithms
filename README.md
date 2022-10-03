@@ -27,6 +27,8 @@
 
 ### 1) Supervised Learning
 
+![image](https://user-images.githubusercontent.com/52392004/193483246-85a5fe3c-4c33-40ef-aa58-994970f54d66.png)
+
 #### Regression
 
 Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
@@ -34,6 +36,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 #### Classification
 
 [Classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
+
 
 ### 2) Unsupervised Learning
 
