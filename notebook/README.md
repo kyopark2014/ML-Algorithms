@@ -2,6 +2,8 @@
 
 ## Data Loading
 
+pandas를 이용한 데이터 로드 방법은 아래와 같습니다. 
+
 ```python
 import pandas as pd
 pd.options.display.max_rows=20
