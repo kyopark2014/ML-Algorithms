@@ -11,12 +11,12 @@
 ### 5장. 다시 살펴보는 머신러닝 주요 개념
 
 - 회귀 평가지표 값 계산: [Regression Evaluation Metric](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-regression-evaluation-metric.ipynb)
- * 피처 스케일링: [Feature Scaling](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-feature-scaling.ipynb) 
- * 교차 검증: [Cross Validation](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-cross-validation.ipynb)
- * 선형 회귀 모델: [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-linear-regression.ipynb)   
- * 결정 트리: [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-decision-tree.ipynb)
- * 랜덤 포레스트: [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-randomforest.ipynb)
- * 베이지안 최적화: [Bayesian Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-bayesian-optimization.ipynb)
+- 피처 스케일링: [Feature Scaling](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-feature-scaling.ipynb) 
+- 교차 검증: [Cross Validation](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-cross-validation.ipynb)
+- 선형 회귀 모델: [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-linear-regression.ipynb)   
+- 결정 트리: [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-decision-tree.ipynb)
+- 랜덤 포레스트: [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-randomforest.ipynb)
+- 베이지안 최적화: [Bayesian Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-bayesian-optimization.ipynb)
 
 ## Reference
 
