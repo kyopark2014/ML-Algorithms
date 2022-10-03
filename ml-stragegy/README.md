@@ -18,6 +18,16 @@
 - 랜덤 포레스트: [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-randomforest.ipynb)
 - 베이지안 최적화: [Bayesian Optimization](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch5-bayesian-optimization.ipynb)
 
+### 6장. [경진대회] 자전거 대여 수요 예측
+- 탐색적 데이터 분석:
+- 베이스라인 모델 : 
+- 성능 개선 : 
+- 환경 세팅된 노트북 양식: 
+
+
+
+
+
 ## Reference
 
 [머신러닝·딥러닝 문제해결 전략 - 신백균, 골든래빗](https://github.com/BaekKyunShin/musthave_mldl_problem_solving_strategy)
