@@ -24,6 +24,7 @@
 - 성능 개선 : 
 - 환경 세팅된 노트북 양식: 
 
+[EDA & Ensemble Model (Top 10 Percentile)](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/EDA-and-ensemble-model.ipynb)
 
 
 
