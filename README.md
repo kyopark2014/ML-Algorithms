@@ -146,9 +146,7 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ## Machine Learning Examples
 
-### XGBoost를 이용한 Fraud Detection
-
-[XGBoost로 Fraud Detection](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)
+[XGBoost로 보험 사기 검출](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)
 
 [XGBoost로 Breast cancer 분석](https://github.com/kyopark2014/ML-xgboost/tree/main/breast-cancer)
 
