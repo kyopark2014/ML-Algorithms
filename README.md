@@ -86,7 +86,7 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 ## 모델 평가
 
-[평가 (Evaluation)]은 알고리즘마다 다른 모델 평가 지표에 대해 설명합니다. 
+[평가 (Evaluation)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md)은 알고리즘에  모델 평가 지표에 대해 설명합니다. 
 
 
 
