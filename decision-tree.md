@@ -1,7 +1,5 @@
 # 결정트리 (Decision Tree)
 
-[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 참조하여 [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서는 결정트리에 대해 예를 보여주고 있습니다. 
-
 결정트리(Decision Tree)에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)가 있습니다. 
 
 ## 장단점
@@ -35,7 +33,10 @@
 
 ## Decision Tree 예제
 
-[Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)는 아래의 전체 코드를 가지고 있습니다.
+[decision_tree.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서는 결정트리에 대해 예를 보여주고 있는데 
+아래에서 
+아래에서 상
+
 
 1) 데이터를 준비합니다. 
 
