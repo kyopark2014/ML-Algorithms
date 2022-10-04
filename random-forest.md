@@ -1,8 +1,6 @@
 # Random Forest
 
-다수의 [Decision tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)의 분류 결과를 취합해서 최종 예측값을 결정하는 앙상블 학습입니다. [random_forest.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/random_forest.ipynb)에서 아래의 코드를 보여줍니다.
-
-- 앙상블 학습(Ensemble learning): 여러 개의 분류기를 생성하고, 그 예측을 결합함으로써 보다 정확한 예측을 도출하는 기법을 의미합니다. 
+다수의 [Decision tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)의 분류 결과를 취합해서 최종 예측값을 결정하는 앙상블 학습입니다. 앙상블 학습(Ensemble learning)은 여러 개의 분류기를 생성하고, 그 예측을 결합함으로써 보다 정확한 예측을 도출하는 기법을 의미합니다. 
 
 ## 구현방법
 
@@ -17,6 +15,8 @@
 4) Validation: Bootstrap을 통해 랜덤 중복추출을 했을 때, Original dataset의 샘플 중에서 Bootstrap 과정에서 선택되지 않은 샘플들을 OOB(Out-of-Bag) 샘플이라 하고, 이 샘플들을 이용하여 Validation 수행합니다.
 
 ## 코드분석
+
+[random_forest.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/random_forest.ipynb)에 대해 아래와 같이 설명합니다. 
 
 1) 데이터를 준비합니다.
 
