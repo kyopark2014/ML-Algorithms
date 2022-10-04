@@ -2,10 +2,10 @@
 
 ## 분류(Classification)의 평가 지표
 
-- [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy)
-- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision)
-- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall)
-- [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score)
+- [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy): 결과가 얼마나 바르게 나뉘었냐를 보여줍니다. 
+- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다.
+- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall): 데이터 분포를 고려하여 특정 class가 얼마나 정확하게 예측되었는지를 보여줍니다. 
+- [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score): 
 
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
 
@@ -50,5 +50,9 @@ print(kn.score(test_input, test_target))
 ```
 
 ## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
+[Machine Learning at Work - 한빛미디어]
 
 [sklearn.metrics.classification_report](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
