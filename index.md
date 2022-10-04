@@ -37,6 +37,7 @@
 
 [Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md)
 
+[One-Hot Encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md#one-hot-encoding)
 
 [Batch Normalization](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)
 
