@@ -1,4 +1,6 @@
-# Logistic Regression
+# 로지스틱 회귀 (Logistic Regression)
+
+로지스틱 회귀는 분류 (Classification) 알고리즘입니다. 
 
 [logistic_regression.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic_regression.ipynb)를 아래와 같이 설명합니다.
 
@@ -312,3 +314,7 @@ print(lr.coef_, lr.intercept_)
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
 [sklearn.linear_model.SGDClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)
+
+[Machine Learning at Work - 한빛미디어]
+
+[Using Machine Learning to Predict Parking Difficulty](https://ai.googleblog.com/2017/02/using-machine-learning-to-predict.html)
