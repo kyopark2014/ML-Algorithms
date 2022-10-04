@@ -34,7 +34,7 @@ Sensitivity 또는 true positive rate (TPR)로도 생각할 수 있습니다.
 
 ## Precision
 
-Precision(정밀도)는 데이터 분포를 고려하여 positive/negative로 예측된 관측치중 제대로 예측된 비중을 보여주는데, 도출된 결과가 얼마나 정확한지 보여줍니다. 
+Precision(정밀도)는 데이터 분포를 고려하여 positive 예측된 관측치중 제대로 예측된 비중을 보여주는데, 도출된 결과가 얼마나 정확한지 보여줍니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/190937018-175c0987-8dfe-49a3-9589-03d5f237292a.png)
 
