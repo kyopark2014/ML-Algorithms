@@ -11,6 +11,17 @@
 - 예측 성능은 보통이지만 학습 속도가 빠르다
 - 과적합을 방지하는 규제항이 추가되어 있다.  
 - 특히 출력의 확률을 계산할 수 있다는 특성을 가지고 있어서 광고로 인한 클릭 예측과 같은 분야에도 활용된다. 
+- Logistic Regression은 선형 분리 가능한 대상을 분리하는 알고리즘이므로 결정경계가 직선입니다. 
+
+#### Logistric Regression과 Perceptron의 차이점 
+
+- [활성화함수](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md)로 [Sigmoid 함수](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid) 또는 Logistic sigmoid function을 씁니다.
+- [손실함수](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)로 교차 엔트로피 오차 함수(Cross-entropy error function)을 사용합니다.
+- 규제항(Regularization term)이 추가되어서 과적합을 방지할 수 있습니다. 
+- 온라인학습과 배치학습에 모두 적용할 수 있습니다. 
+
+
+
 
 ## Logstic Regression 예제 
 
