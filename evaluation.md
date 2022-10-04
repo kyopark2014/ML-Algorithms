@@ -3,8 +3,8 @@
 ## 분류(Classification)의 평가 지표
 
 - [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy): 단순히 결과가 얼마나 바르게 나뉘었는지를 보여줍니다. 데이터 분포가 한쪽으로 치우치면 의미가 없습니다. 
-- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall): 데이터 분포를 고려하여 특정 class가 얼마나 정확하게 예측되었는지를 보여줍니다. 예) 암을 검출할때 놓치지 않는것
-- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다. 예) 스펨을 검출할때 스펨을 정확히 찾는것  
+- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall): 데이터 분포를 고려하여 특정 class가 얼마나 정확하게 예측되었는지를 보여줍니다. 예) 암을 검출할때 놓치지 않는것 (정상이 암으로 판정될 수 있음)
+- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다. 예) 스펨을 검출할때 스펨을 정확히 찾는것 (스펨을 놓칠수도 있으나 정상은 메일이 스펨으로 분류되지 않음)
 - [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score): 정밀도와 재현율의 조화 평균입니다. F1 Score가 높으면 재현율과 정밀도가 고르게 높다는 의미입니다. 
 
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
