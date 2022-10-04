@@ -1,6 +1,6 @@
 # 결정트리 (Decision Tree)
 
-결정트리(Decision Tree)에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)가 있습니다. 
+결정트리(Decision Tree)의 특징은 아래와 같습니다. 또한 결정트리에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)가 있습니다. 
 
 ## 장단점
 
