@@ -10,7 +10,7 @@
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
 
 
-## 회귀(Regression)의 평규 지표
+## 회귀(Regression)의 평가 지표
 
 ## Coefficient of determination
 
