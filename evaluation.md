@@ -3,9 +3,9 @@
 ## 분류의 평가 지표
 
 - [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy)
-- [정밀도](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision)
-- [재현율](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall)
-- [F-점수](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score)
+- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision)
+- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall)
+- [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score)
 
 
 
