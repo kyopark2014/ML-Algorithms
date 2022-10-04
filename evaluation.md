@@ -9,6 +9,25 @@
 
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
 
+scikit-learn의 classification_report를 이용하여 [아래처럼 acuracy, precision, recall, f1 score를 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#classification-report)할 수 있습니다. 
+
+```python
+from sklearn.metrics import classification_report
+print(classification_report(y_true=y_test, y_pred = predictions))
+```
+
+이때의 결과의 예는 아래와 같습니다. 
+```python
+              precision    recall  f1-score   support
+
+           0       0.99      0.72      0.83       967
+           1       0.09      0.79      0.16        33
+
+    accuracy                           0.72      1000
+   macro avg       0.54      0.75      0.50      1000
+weighted avg       0.96      0.72      0.81      1000
+```
+
 
 ## 회귀(Regression)의 평가 지표
 
@@ -29,3 +48,7 @@ kn = KNeighborsClassifier()
 kn.fit(train_input, train_target)
 print(kn.score(test_input, test_target))
 ```
+
+## Reference
+
+[sklearn.metrics.classification_report](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
