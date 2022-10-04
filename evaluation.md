@@ -12,7 +12,9 @@
 
 ## 회귀(Regression)의 평규 지표
 
-### Coefficient of determination
+## Coefficient of determination
+
+결정계수(Coefficient of determination)는 수식에서 R^2를 의미합니다. 
 
 score() 호출시, 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(Coefficient of determination)을 나타내는데 1에 가까울수록 예측이 잘된것)를 의미합니다.
 
