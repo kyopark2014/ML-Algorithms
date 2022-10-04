@@ -40,21 +40,13 @@
 
 ## Loss Function
 
-손실함수(Loss Function)는 예측값과 실제 정답간의 차이를 표현하는 함수입니다. 
-
-- Regression: MSE(MeanSquaredError,평균제곱오차)
-   
-- Logistic Regression: Logistic loss function (Binary cross entropy loss function)
-   
-- MulticlassClassification: Cross entropy loss function
-
-[Neural Network - Loss Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#loss-function)에서는 신경망에서 손실함수를 사용하는 예를 보여주고 있습니다.
+[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)는 예측값과 실제 정답간의 차이를 표현하는 함수입니다. 
  
 ## Stochastic Gradient Descent
 
 [확률적경사하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)은 Train set에서 샘플을 무작위로 하나씩 꺼내 손실 함수의 경사를 계산하고 손실이 작아지는 방향으로 파라미터를 업데이트하는 알고리즘입니다. 
 
-Hyperper Parameter로 learning rate(step size)와 epoch가 있습니다.
+Hyperper Parameter로 learning rate(step size와 epoch가 있습니다.
 
 
 ## Reference
