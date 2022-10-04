@@ -9,10 +9,12 @@
 
 - 결과를 해석하고 이해하기 쉽습니다.
 - 분류/회귀에 모두 사용 가능합니다.
-- Data preprocessing(Scailing) 이 거의 필요하지 않습니다.
+- 입력 데이터를 정규화할 필요가 없어서, Data preprocessing(Scailing)을 거의 하지 않습니다.
 - Outliner에 민감하지 않습니다.
 - 연속형 변수(Numinical feature), 범주형 변수(Category)에 모두 적용 가능합니다.
 - 대규모의 데이터 셋에서도 잘 동작합니다. 
+- 결정트리의 
+
 
 #### 단점
 
@@ -20,7 +22,14 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/186661527-5362a5ae-894a-4777-8666-07eb6347c0f0.png)
 
-- Overfitting (High variance) 위험이 있으므로 규제(Regularization) 필요합니다. 대표적인 가지치기 방법은 "Pruning(가지치기)"으로 max_depth를 이용합니다. 
+
+- 트리가 깊어질수록 학습에 사용되는 데이터 수가 적어져, 과적합(Overfitting)이 발생하기 쉬워지므로, 규제(Regularization)이 필요합니다. 대표적인 가지치기 방법은 "Pruning(가지치기)"으로 max_depth를 이용합니다. 
+- 비선형 문제에도 적용할 수 있지만, 선형 분리 문제는 잘 풀지 못합니다. 
+- 데이터 분포가 특정 클래스에 쏠려 있으면 잘 풀지 못합니다.
+- 데이터의 작은 변화에도 결과가 크게 바뀌기 쉽습니다. 
+- 예측성능은 보통입니다. 
+- 배치 학습으로만 학습할 수 있습니다. 
+
 
 ## Decision Tree 예제
 
