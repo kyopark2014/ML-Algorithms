@@ -1,4 +1,6 @@
-# Neural Network
+# 신경망 (Neural Network)
+
+신경망은 다중 퍼셉트론이라고 불리며, [퍼셉트론](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md)이라고도 
 
 ## Perceptron
 
