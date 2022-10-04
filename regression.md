@@ -1,6 +1,6 @@
 # 회귀 (Regression)
 
-회귀(Regression)는 예측하고 싶은 종속변수((devendent variable)가 숫자일때 사용하는 머신러닝 방법으로, 독립변수(independent variable)와 종속변수 간의 관계를 모델링하는 방법입니다. 회귀가 [분류(Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)과 다른점은 종속변수(타깃값)가 범주형 데이터가 아니라는 사실입니다. 회귀에서 종속변수는 수치형 데이터입니다. 독립변수와 종속변수의 관계에 따라 선형회귀(Linear regression)과 다중 선형 회귀(multiple linear regression)등으로 구분 됩니다. 
+회귀(Regression)는 예측하고 싶은 종속변수(devendent variable)가 숫자일때 사용하는 머신러닝 방법으로, 독립변수(independent variable)와 종속변수 간의 관계를 모델링하는 방법입니다. 회귀가 [분류(Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)과 다른점은 종속변수(타깃값)가 범주형 데이터가 아니라는 사실입니다. 회귀에서 종속변수는 수치형 데이터입니다. 독립변수와 종속변수의 관계에 따라 선형회귀(Linear regression)과 다중 선형 회귀(multiple linear regression)등으로 구분 됩니다. 
 
 ## k-Nearest Neighbors
 
