@@ -49,7 +49,7 @@
 
 [Gini Impurity](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md#gini-impurity)
 
-
+[Softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/softmax.md)
 
 ## 유용한 명령어 
 
