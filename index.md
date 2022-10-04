@@ -35,7 +35,8 @@
 
 [Flatten](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#flatten)
 
-[Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md#embedding)
+[Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md)
+
 
 [Batch Normalization](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#batch-normalization)
 
