@@ -1,5 +1,8 @@
 # Embedding
 
-Random Forest
-
 자연어를 컴퓨터가 처리하도록 하기 위해서 숫자로 바꾸는 방법을 알아야 합니다. 문자를 기계가 이해할 수 있는 숫자로 바꾼 결과 또는 그 과정을 임베딩(Embedding)이라고 합니다. 
+
+## Reference 
+
+[Machine Learning at Work - 한빛미디어]
+
