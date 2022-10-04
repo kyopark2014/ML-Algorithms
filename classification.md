@@ -1,30 +1,36 @@
 # 분류 (Classification)
 
-분류 (Classification)은 어떤 대상을 정해진 범주(Class)에 구분해 넣는 작업을 뜻합니다. 머신러닝에서 분류는 주어진 Feature에 따라 어떤 대상을 유한한 범주(타깃값)로 구분하는 방법입니다. 여기서 **타깃값은 범주형 데이터** 점이 중요합니다. 범주형 데이터는 객관식 문제와 같이 선택지가 있는 값입니다. 개와 고양이를 구분하는 문제, 스팸 메일과 일반 메일을 구분하는 문제, 질병 검사 결과가 양성인지 음성인지 구분하는 문제등이 있습니다. 
+분류 (Classification)은 어떤 대상을 정해진 범주(Class)에 구분해 넣는 작업을 뜻합니다. 머신러닝에서 분류는 주어진 Feature에 따라 어떤 대상을 유한한 범주(categorical variable)로 구분하는 방법입니다. 여기서 **타깃값은 범주형 데이터** 점이 중요합니다. 범주형 데이터는 객관식 문제와 같이 선택지가 있는 값입니다. 개와 고양이를 구분하는 문제, 스팸 메일과 일반 메일을 구분하는 문제, 질병 검사 결과가 양성인지 음성인지 구분하는 문제등이 있습니다. 
 
 [회귀 (Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)
 
-## 로지스틱 회귀 (Logistic Regression)
+## 분류의 종류
+
+분류 알고리즘에는 퍼셉트론, Logistic Regression, 서포트 벡터 머신(SVM), 신경망, k-최근접 이웃(k-NN), 결정트리, 랜덤 포레스트, GBDT (Gradient Boost Decision Tree)가 있습니다. 
+
+### 로지스틱 회귀 (Logistic Regression)
 
 선형방정식을 사용한 분류 알고리즘으로 시그모이드 함수나 소프트맥스 함수를 사용하여 클래스 확률(0~1)을 출력할 수 있습니다. 
 
 [Logistic Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)에서는 상세한 로지스틱 회귀에 대해 설명합니다. 
  
-## Decision Tree
+### Decision Tree
 
 [결정트리 (Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여, 데이터에 내재되어 있는 패턴을 변수의 조합으로 나타내는 회귀/분류 모델을 Tree형태로 만들 수 있습니다. 
 
-## Random Forest
+### Random Forest
 
 [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)에서는 앙상블학습(Ensemble learning)의 하나인 Random Forest 방식에 대해 설명합니다. 
 
-## Extra Trees
+### Extra Trees
 
 [Extra Trees](https://github.com/kyopark2014/ML-Algorithms/blob/main/extra-trees.md)에 대해 설명합니다. 
 
-## Boosting
+### Boosting
 
 여러 개의 약한 예측 모델을 순차적으로 구축하여 하나의 강한 예측 모델을 만들수 있습니다. 여기서는 [Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)을 사용하는 [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting), [Histogram-based Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#histogram-based-gradient-boosting), [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#xgboost-extreme-gradient-boost), [LightGBM](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#lightgbm)에 대해 설명합니다. 
+
+
 
 
 ## Activation Function
