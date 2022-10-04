@@ -3,7 +3,7 @@
 ## 분류(Classification)의 평가 지표
 
 - [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy): 단순히 결과가 얼마나 바르게 나뉘었는지를 보여줍니다. 데이터 분포가 한쪽으로 치우치면 의미가 없습니다. 
-- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 거짓인것을 중점적으로 찾을때 중요한 지표입니다. 예) 암진단
+- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다. 거짓인것을 중점적으로 찾을때 중요한 지표입니다. 예) 암진단
 - [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall): 데이터 분포를 고려하여 특정 class가 얼마나 정확하게 예측되었는지를 보여줍니다. 참인것을 중점적으로 찾을때 중요한 지표입니다. 예) 스팸메일 
 - [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score): 정밀도와 재현율의 조화 평균입니다. F1 Score가 높으면 재현율과 정밀도가 고르게 높다는 의미입니다. 
 
