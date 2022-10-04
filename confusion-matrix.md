@@ -42,7 +42,7 @@ F1 Score는 Precision과 Recall의 harmonic mean(조화 평균)입니다. F1 sco
 
 
 
-## Confusion Matrix 예제
+## Classification report
 
 [Fraud Detection](https://github.com/kyopark2014/ML-xgboost/tree/main/jupyter-local)에서는 XGBoost을 이용해 Predict를 수행합니다. 이때의 결과는 아래와 같이 확인할 수 있습니다. 
 
