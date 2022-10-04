@@ -20,6 +20,8 @@
 
 [deep_learnig.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/deep_learnig.ipynb)는 Fashion MNIST를 가지고 classification을 하는 deep learning 예제를 보여줍니다. 
 
+1) Fassion MNIST 데이터를 로딩합니다. 
+
 ```python
 import tensorflow as tf
 
@@ -29,13 +31,26 @@ tf.config.experimental.enable_op_determinism()
 from tensorflow import keras
 
 (train_input, train_target), (test_input, test_target) = keras.datasets.fashion_mnist.load_data()
+```
+
+이때 로드된 데이터의 예는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/193933326-366d1a09-51d8-48ea-ae78-144b1b9c2408.png)
+
+2) dataset을 준비합니다. 
+
+```python
 train_scaled = train_input / 255.0
 test_scaled = test_input / 255.0
 
 from sklearn.model_selection import train_test_split
 train_scaled, val_scaled, train_target, val_target = train_test_split(
     train_scaled, train_target, test_size=0.2, random_state=42)
-    
+```
+
+3) Model을 생성합니다. 
+
+```
 def model_fn(a_layer=None):
     model = keras.Sequential(name='fashion')
     model.add(keras.layers.Flatten(input_shape=(28, 28), name='flatten'))   ## Batch Normalization
@@ -46,36 +61,63 @@ def model_fn(a_layer=None):
     return model
 
 model = model_fn(keras.layers.Dropout(0.3))    ## Dropout
+```
 
+4) optimizer, loss function, metric을 정의 합니다. 
+
+```python
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')   # Optimizer, Loss Function
+```
 
+5) 결과가 이전보다 좋으면 저장합니다. 
+
+```python
 checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5', save_best_only=True)   # Callback to save the best
+```
 
+6) 학습을 시작합니다. 
+
+```python
 history = model.fit(train_scaled, train_target, 
                     epochs=20, 
                     batch_size=32, 
                     verbose=1, 
                     validation_data=(val_scaled, val_target),
                     callbacks=[checkpoint_cb])      # epoch, batch_size
+```
 
+7) 최적의 모델을 로드 합니다. 
+
+```python
 model = keras.models.load_model('best-model.h5')
+```
 
+8) validation dataset으로 평가를 수행합니다. 
+
+```python
 model.evaluate(val_scaled, val_target)
+```
+
+이때의 결과는 아래와 같습니다. 
 
 375/375 [==============================] - 0s 873us/step - loss: 0.3125 - accuracy: 0.8909
 [0.3125297725200653, 0.890916645526886]
 ```
 
-Test dataset에 대한 결과는 아래와 같습니다. 
+9) test dataset으로 평가를 합니다. 
 
 ```python
 model.evaluate(test_scaled, test_target)
+```
+
+Test dataset에 대한 결과는 아래와 같습니다. 
+
+```python
 313/313 [==============================] - 0s 1ms/step - loss: 0.3394 - accuracy: 0.8841
 [0.33944830298423767, 0.8841000199317932]
 ```
 
-
-이때의 history graph는 아래와 같습니다. 
+10) 이때의 history graph는 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187084827-f0cf2722-13bf-46c7-ba2d-fd0778e57d8c.png)
 
