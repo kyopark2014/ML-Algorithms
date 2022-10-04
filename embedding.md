@@ -21,7 +21,7 @@
 
 
 
-## Work Embedding
+## Word Embedding
 
 단어의 의미를 최대한 담아 벡터로 바꿉니다. Word embedding에서는 One-Hot encoding과 달리 하나의 단어가 미리 정의된 차원에서 연속형의 값을 갖는 벡터로 표현됩니다. 
 
