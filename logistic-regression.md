@@ -1,10 +1,22 @@
 # 로지스틱 회귀 (Logistic Regression)
 
-로지스틱 회귀는 분류 (Classification) 알고리즘입니다. 
+로지스틱 회귀는 분류 (Classification) 알고리즘입니다. 로지스틱 회귀는 간단하면서도 파라미터 수가 많지 않아 빠르게 예측할 수 있습니다. 예) 주차장에 빈자리가 있는지를 추정
+
+## 특징 
+
+[퍼셉트론 (Perceptron)](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md)과 비슷한 특징을 가집니다. 
+
+- 출력과 별도로 출력값에 해당하는 클래스에 속할 확률을 계산할 수 있습니다.
+- 온라인 학습과 배치 학습에 모두 사용 가능하다.
+- 예측 성능은 보통이지만 학습 속도가 빠르다
+- 과적합을 방지하는 규제항이 추가되어 있다.  
+- 특히 출력의 확률을 계산할 수 있다는 특성을 가지고 있어서 광고로 인한 클릭 예측과 같은 분야에도 활용된다. 
+
+## Logstic Regression 예제 
 
 [logistic_regression.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/logistic_regression.ipynb)를 아래와 같이 설명합니다.
 
-## 데이터 준비
+### 데이터 준비
 
 아래와 같이 pandas를 통해 fish data를 로딩합니다. 이 데이터는 캐글의 [Red Wine Quality](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)에 있습니다. 또한, [fish_csv_data](https://raw.githubusercontent.com/rickiepark/hg-mldl/master/fish.csv)는 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)에서 가져왔습니다. 
 
@@ -64,7 +76,7 @@ train_scaled = ss.transform(train_input)
 test_scaled = ss.transform(test_input)
 ```
 
-## K 최근접 분류
+### K 최근접 분류
 
 Logistic regression과 비교하기 위하여 K 최근접 분류를 수행해 보았습니다. 
 
@@ -81,7 +93,7 @@ print(kn.score(test_scaled, test_target))
 0.85
 ```
 
-## 이진 Logistric Regression
+### 이진 Logistric Regression
 
 이진분류에서는 표준점수(z)을 확율로 바꾸기 위하여 [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid) 함수를 사용합니다. 
 
