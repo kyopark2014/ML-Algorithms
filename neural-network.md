@@ -1,6 +1,6 @@
 # 신경망 (Neural Network)
 
-신경망은 다중 퍼셉트론이라고 불리며, [퍼셉트론](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md)이라고도 
+신경망은 다중 퍼셉트론이라고 불리며, [퍼셉트론](https://github.com/kyopark2014/ML-Algorithms/blob/main/perceptron.md)을 하나의 노드로 하여 계층적으로 쌓아 놓은 구조입니다. 뇌의 신경세포(뉴런)들이 시냅스로 연결되어 전기신호를 통해 정보를 주고받는 모습에서 착안하였기 때문에 이런 이름이 붙였다고 합니다. 
 
 ## Perceptron
 
@@ -76,3 +76,10 @@ Artificial Neural Network의 기본인 [Perceptron의 선형분류모델과 Mult
 ## Neural Network 설계 방법
 
 [Neural Network 설계](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md)에서는 Regression, Two class classification, Multi class classification에 대해 설명합니다. 
+
+
+## Reference 
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
+[Machine Learning at Work - 한빛미디어]
