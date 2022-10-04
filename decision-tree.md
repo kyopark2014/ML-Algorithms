@@ -34,8 +34,7 @@
 ## Decision Tree 예제
 
 [decision_tree.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서는 결정트리에 대해 예를 보여주고 있는데 
-아래에서 
-아래에서 상
+아래에서 상세하게 설명합니다. 
 
 
 1) 데이터를 준비합니다. 
