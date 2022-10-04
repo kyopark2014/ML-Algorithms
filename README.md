@@ -86,21 +86,9 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 ## 모델 평가
 
-### Coefficient of determination
+[평가 (Evaluation)]은 알고리즘마다 다른 모델 평가 지표에 대해 설명합니다. 
 
-score() 호출시, 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(Coefficient of determination)을 나타내는데 1에 가까울수록 예측이 잘된것)를 의미합니다.
 
-![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
-
-아래는 K Neighbors Classifier을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. 
-
-```python
-from sklearn.neighbors import KNeighborsClassifier
-
-kn = KNeighborsClassifier()
-kn.fit(train_input, train_target)
-print(kn.score(test_input, test_target))
-```
 
 ### 모델 적합 
 
