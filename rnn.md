@@ -38,7 +38,7 @@
 
 ## Embedding
 
-단어의 표현은 Fashion MNIST처럼 One-Hot Encoding을 사용할 수 있습니다. 하지만 이 경우에 어휘 사전의 Token수 만큼 배열의 크기를 정해야해서 데이터가 커지며. 의미 유사성, Collocation(같이 쓰임) 등을 포함 할 수 없습니다. 이를 개선하기 위해 [Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md)이 사용할 수 있습니다. 
+단어의 표현은 Fashion MNIST처럼 [One-Hot Encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md#one-hot-encoding)을 사용할 수 있습니다. 하지만 이 경우에 어휘 사전의 Token수 만큼 배열의 크기를 정해야해서 데이터가 커지며. 의미 유사성, Collocation(같이 쓰임) 등을 포함 할 수 없습니다. 이를 개선하기 위해 [Embedding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md)이 사용할 수 있습니다. 
 
 
 
