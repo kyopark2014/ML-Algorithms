@@ -51,6 +51,10 @@
 
 [Softmax](https://github.com/kyopark2014/ML-Algorithms/blob/main/softmax.md)
 
+[평가 (Evaluation)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md)
+
+
+
 ## 유용한 명령어 
 
 [GPU 상태 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#gpu-%EC%83%81%ED%83%9C-%ED%99%95%EC%9D%B8)
