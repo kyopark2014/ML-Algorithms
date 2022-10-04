@@ -68,7 +68,7 @@ k-fold cross validation를 이용한 교차검증을 할수 있는데, 전체 �
 <img src="https://user-images.githubusercontent.com/52392004/186666830-cae6a8f1-43d8-4d07-8066-8979927df07f.png" width="600">
 
 
-[Cross Validation](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/cross_validation.ipynb)의 코드를 아래와 같이 설명합니다. 
+[cross_validation.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/cross_validation.ipynb)의 코드를 아래와 같이 설명합니다. 
 
 1) 데이터를 준비합니다. 
 
