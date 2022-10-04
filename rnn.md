@@ -8,7 +8,7 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/188026554-8ea74097-a8e7-45c4-a44a-979fa85c6681.png)
 
-[Activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#activation-function)으로 아래와 같은 tanh을 사용합니다. activation function로 미분이 가능한 signoid를 쓰면, 층이 깊어질수록 미분값이 계속 작아지므로(gradient vanishing), ReLU를 사용하여 0보다 큰 경우에 값이 작아지는 문제를 해결할수 있으나, 값이 계속 커지면, [gradient exploding](https://wikidocs.net/61375)의 문제가 발생할 수 있습니다. 순환신경망은 Time step(입력의 길이)이 길어지면 Layer가 깊어진 것과 같은 효과가 발생하고, 순환시 동일한 가중치를 사용하므로 잘못된 가중치에 의해 학습이 잘 이루어지지 않을 가능성이 더 높습니다. 따라서 ReLU 대신 tanh 함수를 사용하여 gradient exploding 방지하고, gradient vanishing의 영향을 줄입니다. 
+[Activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md)으로 아래와 같은 tanh을 사용합니다. activation function로 미분이 가능한 signoid를 쓰면, 층이 깊어질수록 미분값이 계속 작아지므로(gradient vanishing), ReLU를 사용하여 0보다 큰 경우에 값이 작아지는 문제를 해결할수 있으나, 값이 계속 커지면, [gradient exploding](https://wikidocs.net/61375)의 문제가 발생할 수 있습니다. 순환신경망은 Time step(입력의 길이)이 길어지면 Layer가 깊어진 것과 같은 효과가 발생하고, 순환시 동일한 가중치를 사용하므로 잘못된 가중치에 의해 학습이 잘 이루어지지 않을 가능성이 더 높습니다. 따라서 ReLU 대신 tanh 함수를 사용하여 gradient exploding 방지하고, gradient vanishing의 영향을 줄입니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/188026759-662c74eb-6add-426c-b0e4-4ca7d494bd74.png)
 
