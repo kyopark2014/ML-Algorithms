@@ -64,7 +64,7 @@ F1 Score는 Precision과 Recall의 harmonic mean(조화 평균)입니다. F1 sco
 
 ## Classification report
 
-[보험사기 검출](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)에서는 XGBoost을 이용해 Predict를 수행합니다. 이때의 결과는 아래와 같이 확인할 수 있습니다. 
+[보험사기 분석](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)에서는 XGBoost을 이용해 Predict를 수행합니다. 이때의 결과는 아래와 같이 확인할 수 있습니다. 
 
 ```python
 from sklearn.metrics import classification_report
