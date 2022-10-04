@@ -116,11 +116,6 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
 
-### Confusion Matrix (오차행렬)
-
-평가지표중 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)에 대해 설명합니다. 
-
-
 
 ## Hyperparameter Optimization (HPO)
 
