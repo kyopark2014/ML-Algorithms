@@ -20,7 +20,7 @@
 
 [순환신경망 (Recurrent Neural Network)](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)
 
-
+[강화학습 (Reinforcement Learning)](https://github.com/kyopark2014/ML-Algorithms/blob/main/reinforcement-learning.md)
 
 
 ## 용어모음
