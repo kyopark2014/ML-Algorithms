@@ -6,6 +6,7 @@
 - 실수값의 크기가 의미를 가지므로 단어간의 관계 표현이 가능합니다.
 - 실수값은 임의로 정하지 않고 데이터를 이용해 학습하여 구합니다. 
 
+[Embedding을 이용하기](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-simple.md#embedding%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0)에서는 500개의 단어를 16개의 실수로 이루어진 벡터로 변환합니다. 
 
 ## One-Hot Encoding
 
