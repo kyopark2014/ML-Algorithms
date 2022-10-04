@@ -2,6 +2,7 @@
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)을 참조하여 [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서는 결정트리에 대해 예를 보여주고 있습니다. 
 
+결정트리(Decision Tree)에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)가 있습니다. 
 
 ## 장단점
 
@@ -13,7 +14,7 @@
 - Outliner에 민감하지 않습니다.
 - 연속형 변수(Numinical feature), 범주형 변수(Category)에 모두 적용 가능합니다.
 - 대규모의 데이터 셋에서도 잘 동작합니다. 
-- 결정트리의 
+- 결정트리의 결정경계는 영역을 반복하여 나눠가는 과정에서 정해지기 때문에 직선형태를 취하지 않습니다.
 
 
 #### 단점
@@ -29,6 +30,7 @@
 - 데이터의 작은 변화에도 결과가 크게 바뀌기 쉽습니다. 
 - 예측성능은 보통입니다. 
 - 배치 학습으로만 학습할 수 있습니다. 
+
 
 
 ## Decision Tree 예제
@@ -153,6 +155,15 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
 
 
+## Impurity
+
+결정트리는 학습 데이터로부터 조건식을 만들고, 예측할 때는 트리의 루트부터 순서대로 조건 분기를 타면서 Leaf에 도달하면 예측결과를 내는 알고리즘입니다. 이때, 불순도(Imputiry)를 기준으로 가능한 같은 클래스끼리 모이도록 조건 분기를 학습합니다. 
+
+### Information Gain 
+
+정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
 
 ### Gini Impurity
 
@@ -166,11 +177,7 @@ Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니�
 
 ![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
 
-### Information Gain 
 
-정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
 
 ## Feature Importances
 
