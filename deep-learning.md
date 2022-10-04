@@ -85,7 +85,7 @@ model.evaluate(test_scaled, test_target)
 ### Loss Function 
 
 이진분류의 경우에는 binary_crossentropy를, 다중분류의 경우에는 categorical_crossentropy을 사용합니다. 또한, 만약 티셔츠를 (1,0,0,0,0,0,0,0,0,0)와 같이
-[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network-design.md#multi-class-classification)으로 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 여기서는 Keras이 [손실함수 (Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)로 "sparse_categorical_crossentropy"을 사용합니다. "sparse"를 붙이면 one hot encoding을 처리하여 줍니다. 
+[one hot encoding](https://github.com/kyopark2014/ML-Algorithms/blob/main/embedding.md#one-hot-encoding)으로 표현된다면 아래와 같이 티셔츠는 -log(a1)으로 표현됩니다. 여기서는 Keras이 [손실함수 (Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)로 "sparse_categorical_crossentropy"을 사용합니다. "sparse"를 붙이면 one hot encoding을 처리하여 줍니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187072798-c115d22c-18d5-4c89-81a9-d51ee5849269.png)
 
@@ -109,7 +109,7 @@ model.fit(train_scaled, train_target, epochs=5, batch_size=32, verbose=1)
 
 ### Activation Function
 
-신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같은 [activation function](https://github.com/kyopark2014/ML-Algorithms/edit/main/activation-function.md)을 지정할 때 지정할 수 있습니다. 신경망에서 미분시 계단함수를 쓸 수 없으므로, signoid를 사용하는데, 이것은 신경망의 층이 깊어지면 signoid의 미분값이 계속 작아져서 ReLU를 사용하기도 합니다. 
+신경망에 비선형성을 주기 위하여 dense에 Sigmoid, Relu와 같은 [activation function](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md)을 지정할 때 지정할 수 있습니다. 신경망에서 미분시 계단함수를 쓸 수 없으므로, signoid를 사용하는데, 이것은 신경망의 층이 깊어지면 signoid의 미분값이 계속 작아져서 ReLU를 사용하기도 합니다. 
 
 ```python
 model = keras.Sequential(name='fashion')
@@ -122,7 +122,7 @@ model.summary()
 
 ### Optimizer 
 
-Optimizer는 [손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)을 기반으로 네트워크 업데이트 방법을 결정합니다. Adam, RMSPrep 등이 있습니다. 
+Optimizer는 [손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)을 기반으로 네트워크 업데이트 방법을 결정합니다. Adam, RMSPrep 등이 있습니다. 
 
 [Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)는 모든 데이터를 가지고 에러값을 찾은 후에 기울기를 구해서 Weight를 업데이트 합니다. [Stochastic Gradient Descent](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)는 확율을 이용해서 속도를 개선합니다. Adam은 Momentum과 Step size를 모두 고려하여 가장 많이 사용되고 있습니다.
 
