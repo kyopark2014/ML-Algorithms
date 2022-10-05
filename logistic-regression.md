@@ -21,6 +21,9 @@
 - 온라인학습과 배치학습에 모두 적용할 수 있습니다. 
 
 
+#### Linear Regression Vs. Logistic Regression
+
+![image](https://user-images.githubusercontent.com/52392004/193993908-ec357a0c-1b54-41f9-9ecd-788b1fedb40b.png)
 
 
 ## Logstic Regression 예제 
@@ -341,3 +344,5 @@ print(lr.coef_, lr.intercept_)
 [Machine Learning at Work - 한빛미디어]
 
 [Using Machine Learning to Predict Parking Difficulty](https://ai.googleblog.com/2017/02/using-machine-learning-to-predict.html)
+
+[Understanding Logistic Regression in Python Tutorial](https://www.datacamp.com/tutorial/understanding-logistic-regression-python)
