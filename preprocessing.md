@@ -1,5 +1,9 @@
 # 데이터 전처리 (Preprocessong)
 
+## Data Loading
+
+## Scaling
+
 ### 표준점수 (Standard score)를 이용한 정규화
 
 특성값을 일정한 기준으로 맞추는 작업이 필요합니다. 이때 Z점수(표준점수, standard score)를 사용하여 각 데이터가 원점에서 몇 표준편차만큼 떨어져 있는지 나타내므로, 특성값의 크기와 상관없이 동일한 조건으로 비교가 가능합니다. 
@@ -17,6 +21,8 @@ ss.fit(train_input)
 train_scaled = ss.transform(train_input)
 test_scaled = ss.transform(test_input)
 ```
+
+## Dataset 
 
 ### Train과 Test Dataset 
 
@@ -60,6 +66,7 @@ print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
 (6497, 3) (4157, 3) (1040, 3) (1300, 3)
 ```
 
+## Cross Validation
 
 ### k-fold cross validation
 
