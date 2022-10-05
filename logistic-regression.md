@@ -23,6 +23,8 @@
 
 #### Linear Regression Vs. Logistic Regression
 
+Linear regression gives you a continuous output, but logistic regression provides a constant output. An example of the continuous output is house price and stock price. Example's of the discrete output is predicting whether a patient has cancer or not, predicting whether the customer will churn. Linear regression is estimated using Ordinary Least Squares (OLS) while logistic regression is estimated using Maximum Likelihood Estimation (MLE) approach.
+
 ![image](https://user-images.githubusercontent.com/52392004/193993908-ec357a0c-1b54-41f9-9ecd-788b1fedb40b.png)
 
 
