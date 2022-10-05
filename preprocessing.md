@@ -6,7 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/185774334-00e687e7-226e-410b-b6dd-85989f5147e1.png)
 
-아래와 같이 scikit-learn을 이용하여 표준점수로 변환할 수 있습니다. 
+scikit-learn에서는 StandardScaler, MinMaxScaler, RobustScaler Normalizer를 scaler로 제공하는데, 여기서는 StandardScaler를 이용하여, 표준점수로 변환할 수 있습니다. 
 
 ```python
 from sklearn.preprocessing import StandardScaler
