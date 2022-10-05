@@ -74,7 +74,7 @@ test_scaled = ss.transform(test_input)
 
 2) Decision Tree를 아래와 같이 구합니다.
 
-scikit-learn의 DecisionTreeClassifier로 결정계수를 아래처럼 구할 수 있습니다. 
+scikit-learn의 DecisionTreeClassifier로 [결정계수 (coefficient-of-determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)를 아래처럼 구할 수 있습니다. 
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
