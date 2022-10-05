@@ -1,6 +1,6 @@
 # 로지스틱 회귀 (Logistic Regression)
 
-로지스틱 회귀는 분류 (Classification) 알고리즘입니다. 로지스틱 회귀는 간단하면서도 파라미터 수가 많지 않아 빠르게 예측할 수 있습니다. 예) 주차장에 빈자리가 있는지를 추정
+로지스틱 회귀는 [분류 (Classification) 알고리즘](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)입니다. 로지스틱 회귀는 간단하면서도 파라미터 수가 많지 않아 빠르게 예측할 수 있습니다. 예) 주차장에 빈자리가 있는지를 추정
 
 ## 특징 
 
