@@ -37,7 +37,18 @@ y = data.iloc[:,-1]
 ```
 
 
+#### 특정 열의 값 확인하기 
 
+아래와 같이 pandas의 unique()를 이용하여 'class' 열의 값을 확인 할 수 있습니다. 
+```python
+print(pd.unique(wine['class']))
+```
+
+이때의 한 예는 아래와 같이 0, 1로 구성되어 있으므로, classification의 target으로 활용할 수 있습니다. 
+
+```java
+[0. 1.]
+```
 
 ## Scaling
 
