@@ -39,7 +39,7 @@ y = data.iloc[:,-1]
 
 ### 특정 열의 값 확인하기 
 
-아래와 같이 pandas의 unique()를 이용하여 'class' 열의 값을 확인 할 수 있습니다. [decision_tree.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)와 같이 아래에서 사용할 수 있습니다. 
+아래와 같이 pandas의 unique()를 이용하여 'class' 열의 값을 확인 할 수 있습니다. 아래와 같이 [decision_tree.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서 사용할 수 있습니다. 
 
 ```python
 print(pd.unique(wine['class']))
