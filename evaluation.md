@@ -77,7 +77,8 @@ rms = sqrt(mean_squared_error(y_true, y_pred, squared=False)
 ```python
 from sklearn.metrics import r2_score
 r2 = r2_score(y_true, y_pred)
-print(r2)
+
+print(f'Coefficient of determination: {r2}')
 ```
 
 아래는 K Neighbors Classifier을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. score() 호출시, 분류(Classification)에서는 정확도(정답을 맞춘 개숫의 비율)을 의미하고, 회귀(Regression)에서는 결정계수(Coefficient of determination)을 나타내는데 
