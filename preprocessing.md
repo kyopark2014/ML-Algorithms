@@ -2,6 +2,16 @@
 
 ## Data Loading
 
+```python
+import pandas as pd
+
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
+target = wine['class'].to_numpy()
+```
+
+
 ## Scaling
 
 ### 표준점수 (Standard score)를 이용한 정규화
