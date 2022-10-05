@@ -31,8 +31,31 @@ print(classification_report(y_true=y_test, y_pred = predictions))
 weighted avg       0.96      0.72      0.81      1000
 ```
 
+### 분류 모델의 비교 
+
+데이터의 분포차이가 있는 경우에 F score를 사용하여 튜닝을 합니다. 만약 주어진 문제가 잘못 판정하면 안되는 문제여서 정밀도(precision)이 0.9 이상이여야 한다면, 이 기준을 만족하면서 F score가 높아지도록 파라미터를 튜닝합니다. 
+ 
+
+### ROC 
+
+ROC 곡선 (receiver operating characteristics curve)
+
+### AUC 
+
+AUC (Area under the curve)는 ROC 곡선으로 부터 계산합니다.
+
+
 
 ## 회귀(Regression)의 평가 지표
+
+회귀는 연속적인 값을 예측하는데 평가지표로는 평균제곱근(RMSE)와 결정계수(Coefficient of determination)이 있습니다. 
+
+## RMSE
+
+평균제곱근(RMSE: Root Mean Squared Error)는 회귀 모델을 평가하는 주요 지표입니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/193978087-5f884bad-c6f9-428d-a241-2e6ee1bfea9f.png)
+
 
 ## Coefficient of determination
 
