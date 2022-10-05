@@ -2,7 +2,7 @@
 
 데이터를 train과 test dataset으로 분할하는 방법에 따라 결과(예 RMSE)가 달라질 수 있다면, k-fold cross validation을 사용할 수 있습니다. 데이터를 trainr과 test dataset으로 여러번 나누어서 각 결과를 평균하는 것입니다. 분할횟수인 k를 fold라고 합니다. fold의 횟수의 기본값은 5입니다. k가 클수록 평균 점수의 이상치에 덜 민감합니다. 
 
-### k-fold cross validation
+## k-fold cross validation
 
 k-fold cross validation를 이용한 교차검증을 할수 있는데, 전체 데이터셋을 k개의 fold로 분할한 후 각 iteration마다 Validation set을 겹치지 않게 할당하고 Accuracy의 평균을 모델의 성능으로 계산합니다. 
 
