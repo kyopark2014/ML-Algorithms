@@ -13,7 +13,7 @@ Boosting은 여러 개의 약한 예측 모델을 순차적으로 구축하여, 
 
 ## Gradient Boosting
 
-Gradient Boosting은 경사하강법(Gradient desecent)을 사용하여 잔여오차를 최소화하는 방향으로 트리를 앙상블에 추가합니다. 결정트리를 계속 추가하면서 가장 낮은 곳을 찾아 이동합니다.
+Gradient Boosting은 [경사하강법(Gradient desecent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)을 사용하여 잔여오차를 최소화하는 방향으로 트리를 앙상블에 추가합니다. 결정트리를 계속 추가하면서 가장 낮은 곳을 찾아 이동합니다.
 
 - 깊이가 얕은 트리를 사용하여 이전 트리의 오차를 보완하는 방식의 앙상블 방법입니다. 따라서, 과대 적합에 강하고 높은 일반화 성능을 기대할 수 있습니다.
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있습니다. (n_estimators , learning_rate)
