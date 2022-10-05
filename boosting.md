@@ -2,7 +2,8 @@
 
 ## Boosting 방식의 특징
 
-- 여러 개의 약한 예측 모델을 순차적으로 구축하여 하나의 강한 예측 모델을 만들수 있습니다.
+Boosting은 여러 개의 약한 예측 모델을 순차적으로 구축하여, 반복적으로 오차를 개선하면서, 하나의 강한 예측 모델을 만드는 방식입니다.
+
 - 앙상블 기법에 속합니다.
 - 각 단계에서 만드는 예측 모델은 이전 단계의 예측 모델의 단점을 보완합니다.
 - 각 단계를 거치면서 예측 모델의 성능이 좋아집니다.
@@ -12,7 +13,8 @@
 
 ## Gradient Boosting
 
-- 경사하강법을 사용하여 트리를 앙상블에 추가합니다. 결정트리를 계속 추가하면서 가장 낮은 곳을 찾아 이동합니다.
+Gradient Boosting은 경사하강법(Gradient desecent)을 사용하여 잔여오차를 최소화하는 방향으로 트리를 앙상블에 추가합니다. 결정트리를 계속 추가하면서 가장 낮은 곳을 찾아 이동합니다.
+
 - 깊이가 얕은 트리를 사용하여 이전 트리의 오차를 보완하는 방식의 앙상블 방법입니다. 따라서, 과대 적합에 강하고 높은 일반화 성능을 기대할 수 있습니다.
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있습니다. (n_estimators , learning_rate)
 - 일반적으로 Random forest보다 나은 성능을 기대하지만 순차적으로 계산하여야 하므로 느립니다. 
@@ -21,8 +23,6 @@
 [gradient_boosting.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient_boosting.ipynb)에 대해 설명합니다. 
 
 아래와 같이 GradientBoostingClassifier을 이용하여 n_estimators의 기본값인 100을 사용할때 아래와 같은 결과를 얻을 수 있습니다. 
-
-
 
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
