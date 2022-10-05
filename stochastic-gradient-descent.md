@@ -1,6 +1,6 @@
 # 확률적 경사 하강법 (Stochastic Gradient Descent)
 
-Loss를 줄이기 위해서 반복적으로 기울기를 계산하여 변수의 값을 변경해 나가는 과정을 수행하여 정확도를 높입니다. [상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient-descent.ipynb)에서는 물고기 데이터에 확율적 경사하강법을 적용한 예입니다.
+Loss를 줄이기 위해서 반복적으로 기울기를 계산하여 변수의 값을 변경해 나가는 과정을 수행하여 정확도를 높입니다. [gradient-descent.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient-descent.ipynb)의 물고기 데이터에 확율적 경사하강법을 적용한 예를 아래에서 설명합니다. 
 
 ## Gradient Descent
 
