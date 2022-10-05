@@ -64,9 +64,17 @@ scikit-learn으로 아래처럼 구할 수 있습니다. 여기서 mean_squared_
 from sklearn.metrics import mean_squared_error
 from math import sqrt
 
-rms = sqrt(mean_squared_error(y_true, y_pred, squared=False)
+rmse = sqrt(mean_squared_error(y_true, y_pred, squared=False)
 ```
 
+또는 아래처럼 numpy를 쓸수도 있습니다. 
+
+```python
+from sklearn.metrics import mean_squared_error
+import numpy as np
+
+rmse = np.sqrt(mean_squared_error(y_true, y_pred, squared=False)
+```
 
 ## Coefficient of determination
 
