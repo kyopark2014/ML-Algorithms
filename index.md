@@ -43,7 +43,7 @@
 
 [Error Back Propagation](https://github.com/kyopark2014/ML-Algorithms/blob/main/neural-network.md#error-back-propagation)
 
-[k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#k-fold-cross-validation)
+[k-fold cross validation를 이용한 교차검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/cross-validation.md#k-fold-cross-validation)
 
 [Epoch](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#epoch)
 
