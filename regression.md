@@ -9,11 +9,7 @@
 
 ## Linear Regression
 
-선형회귀 (Linear Regression)은 특성(feature)와 Target 사이의 관계를 "y = ax + b"와 같은 선형 방정식으로 표시합니다. 여기서, a(coefficient)는 기울기, 계수(coefficient), 가중치(weight)의 의미이고, b는 절편(intercept, constant)입니다. 
-
-<img width="331" alt="image" src="https://user-images.githubusercontent.com/52392004/185773282-73e5dd34-6a64-4c8d-87a2-0261dc4053b7.png">
-
-[Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는것에 대해 설명합니다. 
+선형회귀 (Linear Regression)은 특성(feature)과 Target 사이의 관계를 가중치(Weight)를 이용하여 선형 방정식으로 표시합니다. [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는 예제를 가지고 설명합니다. 
 
 ## Polynomial Regression
 
