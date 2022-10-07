@@ -1,8 +1,15 @@
 # 결정트리 (Decision Tree)
 
-결정트리(Decision Tree)의 특징은 아래와 같습니다. 또한 결정트리에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)가 있습니다. 
+결정트리는 특성(feature)과 Target의 관계를 [선형 회귀](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)와 로지스틱 회귀처럼 특성을 가중치와 곱하는 대신에 특성에 대한 질문에 따라 데이터를 나눕니다. 예를들어, 결정 트리가 온도 특성을 가지고 데이터를 두 그룹으로 나눈다면, 온도가 20도 이상인 그룹과 이하인 그룹을 나누고, 이어서 각 그룹을 여름인 그룹과 아닌 그룹으로 계절을 기반으로 나눌 수 있습니다. 이렇게 일정 수준의 정확도에 도달할때까지 데이터를 새로운 그룹으로 나누는 과정을 반복합니다. 
 
-## 장단점
+
+
+결정트리에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)가 있습니다. 
+
+
+## 특징
+
+결정트리(Decision Tree)의 특징은 아래와 같습니다. 
 
 #### 장점 
 
