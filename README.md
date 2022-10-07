@@ -177,3 +177,5 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 [Machine Learning at Work - 한빛미디어]
 
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
+
+[머신러닝 & 딥러닝 한글 번역 모음](https://ml-ko.kr/)
