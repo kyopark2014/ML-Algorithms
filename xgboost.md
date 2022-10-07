@@ -1,6 +1,6 @@
 # XGBoost Algorithm
 
-XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사용하는 앙상블 학습(Ensemble method)입니다. 
+XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사용하는 [앙상블 학습(Ensemble method)](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)입니다. 
 
 - Gradient Boost를 개량하여 대규모 dataset을 처리합니다. 
 - 분류/회귀/Rank문제 모두 사용 가능합니다.
