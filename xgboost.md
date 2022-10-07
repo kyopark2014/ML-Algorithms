@@ -12,6 +12,9 @@ XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사�
 - scikit-learn에서 지원하지 않습니다. 
 - XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
+## Basic learner
+
+XGBooster는 기본 학습기(Basic leaner)로 가장 많이 사용되는 방식은 [결정트리(Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)입니다. 
 
 [xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 
 
