@@ -23,6 +23,8 @@
 
 #### Linear Regression Vs. Logistic Regression
 
+Logistric Regression은 Linear Regression과 비슷한 방법으로 동작합니다. Logistic Regression은 각 특성(feature)에 대해 모델 정확도를 최대화하는 적절한 가중치(weight) 또는 계수(coefficient)를 찾습니다. 선형회귀처럼 각 항의 합의 그대로 출력하는 대신 Logistic Regression은 Sigmoid Function을 적용합니다. 
+
 Linear regression gives you a continuous output, but logistic regression provides a constant output. An example of the continuous output is house price and stock price. Example's of the discrete output is predicting whether a patient has cancer or not, predicting whether the customer will churn. Linear regression is estimated using Ordinary Least Squares (OLS) while logistic regression is estimated using Maximum Likelihood Estimation (MLE) approach.
 
 ![image](https://user-images.githubusercontent.com/52392004/193993908-ec357a0c-1b54-41f9-9ecd-788b1fedb40b.png)
