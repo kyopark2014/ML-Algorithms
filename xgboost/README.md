@@ -8,6 +8,9 @@
 
 [Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)의 데이터에 있는 날씨, 주중/주말, 온도, 습도를 이용해 그날의 자동차 대여 숫자를 이용하여 자전거 대여 횟수를 예측합니다.  
 
+![image](https://user-images.githubusercontent.com/52392004/194688735-fc3c810e-a53b-4d2e-8e9a-ac226a4a60ac.png)
+
+
 1) [wrangling-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)와 같이 전처리를 합니다. 
 
 2) [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)을 이용하여 [linear-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/linear-regression-bike.ipynb)와 같이 RMSE 898.21로 예측되었습니다. 
@@ -18,6 +21,8 @@
 ## Census Income 분류
 
 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용하여 수익이 50K 이상과 이하의 수익을 가진 사람들을 분류합니다.
+
+![image](https://user-images.githubusercontent.com/52392004/194688739-66d5a6e5-a211-4db0-8bc2-044b6a25d5ee.png)
 
 1) [wrangling-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)와 같이 전처리를 합니다. 
 
