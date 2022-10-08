@@ -1,10 +1,5 @@
 # Data Wrangling
 
-## Example
-
-#### Bike Sharing
-
-[wrangling-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)
 
 ## Data Loading
 
@@ -56,3 +51,15 @@ print(pd.unique(wine['class']))
 ```java
 [0. 1.]
 ```
+
+## Wrangling Examples
+
+#### Bike Sharing
+
+[wrangling-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)
+
+## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
+[XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
