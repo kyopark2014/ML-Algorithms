@@ -58,6 +58,12 @@ print(pd.unique(wine['class']))
 
 [wrangling-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)
 
+### Census Income
+
+![image](https://user-images.githubusercontent.com/52392004/194686432-8df77926-381b-4ade-8899-4b261bde5944.png)
+
+[wrangling-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
