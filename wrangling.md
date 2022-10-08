@@ -32,9 +32,9 @@ df_bikes.isna().sum().sum()
 df.dropna(inplace=True)
 ```
 
-### get_dummies
+### 수치형이 열을 수치형으로 변환
 
-[get_dummies](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)를 사용해 숫자가 아닌 열을 바꿉니다.
+panda의 [get_dummies()](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)를 사용해 숫자가 아닌 열을 바꿉니다. get_dummies() 사용시 데이터프레임 용량이 증가하므로 메모리 사용량을 확인해야 합니다. 반면에 희소행열(sparse matrix)라면 희소한 값을 1로 저장하므로 메모리를 줄일 수도 있습니다. 
 
 ```python
 df_census = pd.get_dummies(df_census)
