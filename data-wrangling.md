@@ -60,9 +60,16 @@ print(pd.unique(wine['class']))
 
 ### Census Income
 
+수정전의 Census [Income" dataset](https://archive.ics.uci.edu/ml/datasets/Adult)은 아래와 같습니다. 
+
 ![image](https://user-images.githubusercontent.com/52392004/194686432-8df77926-381b-4ade-8899-4b261bde5944.png)
 
-[wrangling-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)
+학습할 수 있도록 [wrangling-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)
+을 이용하여 수정한 dataset은 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/194686622-4520a168-3e17-4b3a-8f46-134d542047b3.png)
+
+
 
 ## Reference
 
