@@ -2,6 +2,11 @@
 
 여기에서는 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅](https://github.com/gilbutITbook/080263)의 예제 중심으로 설명합니다. 
 
+## 데이터 전처리 
+
+[Data Wrangling](https://github.com/kyopark2014/ML-Algorithms/blob/main/data-wrangling.md#wrangling-examples)에서 데이터 전처리를 수행합니다. 
+
+
 ## 자전거 대여 횟수 예측
 
 [Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)을 이용하여 어떤 날의 날씨, 주중/주말, 온도, 습도를 이용해 그날의 자동차 대여 숫자를 예측하는 프로그램 입니다.  
