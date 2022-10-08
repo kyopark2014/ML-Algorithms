@@ -69,6 +69,10 @@ print(data.shape, sub_input.shape, val_input.shape, test_input.shape)
 (6497, 3) (4157, 3) (1040, 3) (1300, 3)
 ```
 
+### k-fold cross validation
+
+데이터의 분할하는 방법에 따라 결과가 결과가 달라질수 있으므로, [k번 분할을 통해 교차검증(cross validation)](https://github.com/kyopark2014/ML-Algorithms/blob/main/cross-validation.md#k-fold-cross-validation)을 하면 더 좋은 결과를 얻을 수 있습니다. 
+
 ### Epoch
 
 전체 dataset에서 일정한 묶음으로 나누어 처리할 수 있는 배치와 훈련의 횟수인 epoch의 선택이 중요합니다. 이때 훈련과정에서 값의 변화를 시각적으로 표현하여 파라메터에 대한 최적의 값을 찾을 수 있어야 합니다. 
