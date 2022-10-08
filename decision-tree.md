@@ -47,6 +47,76 @@
 
 Random Forest와 XGBoost가 사용하는 방법입니다. 
 
+
+## Criterion 매개변수 
+
+결정트리에서 노드를 분할하는 기준에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
+
+아래는 Max Depth가 1인 결정트리를 아래처럼 그릴수 있습니다.
+
+```python
+plt.figure(figsize=(10,7))
+plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
+plt.show()
+```
+
+아래와 같이 Max Depth가 1인 결정트리를 그릴수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
+
+
+## Impurity
+
+결정트리는 학습 데이터로부터 조건식을 만들고, 예측할 때는 트리의 루트부터 순서대로 조건 분기를 타면서 Leaf에 도달하면 예측결과를 내는 알고리즘입니다. 이때, 불순도(Imputiry)를 기준으로 가능한 같은 클래스끼리 모이도록 조건 분기를 학습합니다. 
+
+### Information Gain 
+
+정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
+
+### Gini Impurity
+
+Gini Impurity은 정답이 아닌 값이 나올 확율을 의미 합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560214-844f1030-a80b-4190-a9cb-1b6151f01cde.png)
+
+### Entropy Imputiry
+
+Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
+
+
+
+## Feature Importances
+
+결정 트리 모델의 특성중요도(feature importances) 속성으로 특성 중요도를 알수 있습니다. 아래와 같이 "alcohol", "sugar", "pH"의 중요도는 0.15210271, 0.70481604, 0.14308125이고, 이것의 합은 1입니다. 즉, "sugar"가 가장 중요한 특성으로 불순도에 줄이는데 가장 큰 역할하고 있으므로, 직관적으로 문제를 이해하는데 도움이 됩니다. 
+
+```python
+print(dt.feature_importances_)
+
+[0.15210271 0.70481604 0.14308125]
+```
+
+
+
+## Decision Tree의 Hyperparameter
+
+‘min’값을 높이거나 ’max’값을 줄이면 모델에 규제가 커져 이용하여 과대적합(overfit)을 막을 수 있습니다. 
+
+- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수
+- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 수
+- min_weight_fraction_leaf: min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려
+- max_leaf_nodes: 리프노드의 최대 수
+- max_features: 각 노드에서 분할에 사용할 특성의 최대 수
+- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
+- max_depth: 트리의 최대 깊이 (루트 노드 깊이=0)
+
+
+
+
+
 ## Decision Tree를 이용해 Classification 문제를 푸는 예제
 
 [decision_tree.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/decision_tree.ipynb)에서는 결정트리에 대해 예를 보여주고 있는데 
@@ -64,7 +134,6 @@ wine = pd.read_csv('https://bit.ly/wine_csv_data')
 
 wine.head()
 ```
-
 
 ![image](https://user-images.githubusercontent.com/52392004/186591846-a6ee86b4-6c7a-4036-8a14-b896ce1a71e0.png)
 
@@ -153,71 +222,6 @@ print(dt.score(test_input, test_target))
 ```
 
 
-
-## Criterion 매개변수 
-
-결정트리에서 노드를 분할하는 기준에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
-
-아래는 Max Depth가 1인 결정트리를 아래처럼 그릴수 있습니다.
-
-```python
-plt.figure(figsize=(10,7))
-plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
-plt.show()
-```
-
-아래와 같이 Max Depth가 1인 결정트리를 그릴수 있습니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
-
-
-## Impurity
-
-결정트리는 학습 데이터로부터 조건식을 만들고, 예측할 때는 트리의 루트부터 순서대로 조건 분기를 타면서 Leaf에 도달하면 예측결과를 내는 알고리즘입니다. 이때, 불순도(Imputiry)를 기준으로 가능한 같은 클래스끼리 모이도록 조건 분기를 학습합니다. 
-
-### Information Gain 
-
-정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
-
-### Gini Impurity
-
-Gini Impurity은 정답이 아닌 값이 나올 확율을 의미 합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560214-844f1030-a80b-4190-a9cb-1b6151f01cde.png)
-
-### Entropy Imputiry
-
-Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
-
-
-
-## Feature Importances
-
-결정 트리 모델의 특성중요도(feature importances) 속성으로 특성 중요도를 알수 있습니다. 아래와 같이 "alcohol", "sugar", "pH"의 중요도는 0.15210271, 0.70481604, 0.14308125이고, 이것의 합은 1입니다. 즉, "sugar"가 가장 중요한 특성으로 불순도에 줄이는데 가장 큰 역할하고 있으므로, 직관적으로 문제를 이해하는데 도움이 됩니다. 
-
-```python
-print(dt.feature_importances_)
-
-[0.15210271 0.70481604 0.14308125]
-```
-
-
-
-## Decision Tree의 Hyperparameter
-
-‘min’값을 높이거나 ’max’값을 줄이면 모델에 규제가 커져 이용하여 과대적합(overfit)을 막을 수 있습니다. 
-
-- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수
-- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 수
-- min_weight_fraction_leaf: min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려
-- max_leaf_nodes: 리프노드의 최대 수
-- max_features: 각 노드에서 분할에 사용할 특성의 최대 수
-- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
-- max_depth: 트리의 최대 깊이 (루트 노드 깊이=0)
 
 
 
