@@ -2,9 +2,10 @@
 
 선형회귀 (Linear Regression)은 각 특성(feature)을 다항식의 변수로 받아서 각 값에 계수(coefficient) 또는 가중치(weight)를 곱하여 타깃(target)을 예측합니다. 즉, 특성(feature)과 타겟(target) 사이의 관계를 "y = ax + b"와 같은 선형 방정식으로 표시합니다. 여기서, x는 특성, y는 타겟인데, a(coefficient)는 기울기로서 계수(coefficient), 가중치(weight)의 의미이고, b는 절편(intercept, constant)입니다. 
 
-<img width="331" alt="image" src="https://user-images.githubusercontent.com/52392004/185773282-73e5dd34-6a64-4c8d-87a2-0261dc4053b7.png">
 
 아래에서는 농어의 길이/무게 데이터를 가지고 길이에 대한 무게를 예측하는것을 [linear_regression.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/linear_regression.ipynb)을 가지고 설명합니다. 
+
+<img width="331" alt="image" src="https://user-images.githubusercontent.com/52392004/185773282-73e5dd34-6a64-4c8d-87a2-0261dc4053b7.png">
 
 
 ## 동작 설명 
