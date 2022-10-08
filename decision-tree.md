@@ -37,6 +37,15 @@
 - 배치 학습으로만 학습할 수 있습니다. 
 
 
+## Overfit을 막는 방법
+
+결정트리는 모든 Train dataset이 정확히 매핑될때까지 그룹을 만들수도 있으몰 100% 정확도를 달성(과대적합) 할 수 있습니다. 하지만 이런 모델은 새로운 데이터에 일반화되기 어렵습니다. 과대적합을 막기 위해 아래 방법을 사용할 수 있습니다.
+
+1) Hyperparameter tunning 입니다.
+
+2) 많은 트리의 예측을 모으는 방법입니다. 
+
+Random Forest와 XGBoost가 사용하는 방법입니다. 
 
 ## Decision Tree를 이용해 Classification 문제를 푸는 예제
 
