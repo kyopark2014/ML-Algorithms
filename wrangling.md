@@ -1,7 +1,7 @@
 # Data Wrangling
 
 
-## Data Loading
+### Data Loading
 
 ```python
 import pandas as pd
@@ -10,6 +10,34 @@ wine = pd.read_csv('https://bit.ly/wine_csv_data')
 
 data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
+```
+
+### 누락된 값 확인 
+
+[df_bikes](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)에 있는 누락된 값을 출력합니다.
+
+```python
+df_bikes[df_bikes.isna().any(axis=1)]
+```
+
+누락된 값의 갯수 확인을 합니다.
+
+```python
+df_bikes.isna().sum().sum()
+```
+
+누락된 data를 삭제하는 방법입니다.
+
+```python
+df.dropna(inplace=True)
+```
+
+### get_dummies
+
+[get_dummies](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-census.ipynb)를 사용해 숫자가 아닌 열을 바꿉니다.
+
+```python
+df_census = pd.get_dummies(df_census)
 ```
 
 ### 특정 열 삭제하기 
