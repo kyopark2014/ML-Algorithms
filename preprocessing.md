@@ -2,7 +2,7 @@
 
 ## Data Wrangling
 
-[Data Wrangling](https://github.com/kyopark2014/ML-Algorithms/blob/main/data-wrangling.md)에서 데이터를 로드하여 정제, 분석, 조작을 하는 데이터 렝글링에 대해 설명하고 있습니다. 
+[Data Wrangling](https://github.com/kyopark2014/ML-Algorithms/blob/main/wrangling.md)에서 데이터를 로드하여 정제, 분석, 조작을 하는 데이터 렝글링에 대해 설명하고 있습니다. 
 
 
 ## Scaling
