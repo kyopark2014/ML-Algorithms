@@ -8,7 +8,7 @@
 
 #### Linear Regression을 이용한 예측
 
-[linear-regression.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/linear-regression.ipynb)과 같이 RMSE 898.21로 예측되었습니다. 
+[linear-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/linear-regression-bike.ipynb)과 같이 RMSE 898.21로 예측되었습니다. 
 
 #### XGBoost를 이용한 예측
 
