@@ -4,6 +4,8 @@ Loss를 줄이기 위해서 반복적으로 기울기를 계산하여 변수의 
 
 ## Gradient Descent
 
+경사하강법(Gradient Descent)은 오차를 최소화하기 위한 방법입니다. 
+
 아래와 같이 경사하강법을 수행할 수 있습니다. 
 
 1) 임의의 시작점을 Random하게 선택합니다.
@@ -139,4 +141,8 @@ print(sc.score(test_scaled, test_target))
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
+
+[XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
+
 
