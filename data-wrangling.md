@@ -54,7 +54,7 @@ print(pd.unique(wine['class']))
 
 ## Wrangling Examples
 
-#### Bike Sharing
+### Bike Sharing
 
 수정전의 [Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)은 아래와 같습니다.
 
