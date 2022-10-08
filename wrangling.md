@@ -28,9 +28,9 @@ data = data.drop('casual', 'registered'], axis=1)
 data.to_csv('data_cleaned.csv', index=False)
 ```
 
-### 특성과 target 준비하기 
+### Feature and Target
 
-아래와 같이 데이터의 마지막이 target일 경우에, data의 마지막 열을 제외한 데이터를 X로, 마지막 열을 y로 분리할 수 있습니다. 
+아래와 같이 데이터의 마지막이 타겟(target)일 경우에, data의 마지막 열을 제외한 데이터를 특징(Feature)인 X로, 마지막 열을 타겟(Target)인 y로 분리할 수 있습니다. 
 
 ```python
 X = data.iloc[:,:-1]
