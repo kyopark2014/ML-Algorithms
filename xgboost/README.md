@@ -10,6 +10,10 @@
 
 [linear-regression.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/linear-regression.ipynb)과 같이 RMSE 898.21로 예측되었습니다. 
 
+#### XGBoost를 이용한 예측
+
+[XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 자전거 대여 횟수를 예측하면 RMSE 
+
 ## Reference 
 
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
