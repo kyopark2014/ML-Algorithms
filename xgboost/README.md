@@ -14,6 +14,10 @@
 
 [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 [XGBRegressor를 이용하여 자전거 대여 횟수를 예측](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)하면 RMSE 705.11로 보통 Linear Regression보다 좋은 결과를 얻을 수 있습니다. 
 
+## Census
+
+[Adult Data Set](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용한 
+
 ## Reference 
 
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
