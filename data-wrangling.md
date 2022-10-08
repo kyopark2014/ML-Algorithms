@@ -56,11 +56,20 @@ print(pd.unique(wine['class']))
 
 #### Bike Sharing
 
-[wrangling-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)
+수정전의 [Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/194686814-5bb6e301-313a-42dd-9bad-eb4ed012e99b.png)
+
+학습할 수 있도록 [wrangling-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)을 이용하여 수정한 dataset은 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/194686869-ea8d9fbb-c094-4924-a0c7-6831e75a3256.png)
+
+
+
 
 ### Census Income
 
-수정전의 Census [Income" dataset](https://archive.ics.uci.edu/ml/datasets/Adult)은 아래와 같습니다. 
+수정전의 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)은 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/194686432-8df77926-381b-4ade-8899-4b261bde5944.png)
 
