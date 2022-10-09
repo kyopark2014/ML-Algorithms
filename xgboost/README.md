@@ -15,7 +15,9 @@
 
 2) [Linear Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)을 이용하여 [linear-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/linear-regression-bike.ipynb)와 같이 RMSE 898.21로 예측되었습니다. 
 
-3) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 [xgboost-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)와 같이 RMSE 705.11로 예측하였습니다. XGBoost는 보통 Linear Regression보다 좋은 결과를 얻을 수 있습니다. 
+3) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-bike.ipynb)와 같이 RMSE 945로 예측하였으나, HPO를 통해 855까지 개선하였습니다. 
+
+4) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 [xgboost-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)와 같이 RMSE 705.11로 예측하였습니다. XGBoost는 보통 Linear Regression보다 좋은 결과를 얻을 수 있습니다. 
 
 
 ## Census Income 분류
@@ -28,7 +30,9 @@
 
 2) [logistic regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)을 이용하여 [logistic-regression-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/logistic-regression-census.ipynb)와 같이 0.8의 정확도로 예측하였습니다. 
 
-3) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBClassifier를 이용하여 [xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이 0.86의 정확도로 예측하였습니다. XGBoost는 보통 logistic regression보다 좋은 결과를 얻을 수 있습니다. 
+3) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)와 같이 0.81로 예측하였으나 HPO를 통해 
+
+4) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBClassifier를 이용하여 [xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이 0.86의 정확도로 예측하였습니다. XGBoost는 보통 logistic regression보다 좋은 결과를 얻을 수 있습니다. 
 
 
 ## Reference 
