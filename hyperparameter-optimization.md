@@ -172,4 +172,22 @@ print(gs.best_params_)
 {'max_depth': 39, 'min_impurity_decrease': 0.00034102546602601173, 'min_samples_leaf': 7, 'min_samples_split': 13}
 ```
 
-## 
+## Decision Tree를 이용하여 Heart Disease를 에측 (Classification)
+
+[decision-tree-heart-disease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-heart-disease.ipynb)에서는 RandomizedSearchCV을 이용하여 HPO를 수행합니다. 
+
+## Decision Tree를 이용하여 Census Income를 예측 (Classification)
+
+[Decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)에서는 RandomizedSearchCV을 이용항 HPO를 수행합니다. 
+
+## Decision Tree을 이용한 Bike Rental 수요 예측 (Regression)
+
+[decision-tree-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-bike.ipynb)에서는 GridSearchCV를 이용한 HPO를 수행합니다. 
+
+
+## Reference
+
+[혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
+
+[XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
+
