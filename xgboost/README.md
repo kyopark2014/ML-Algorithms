@@ -35,6 +35,13 @@
 4) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBClassifier를 이용하여 [xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이 0.86의 정확도로 예측하였습니다. XGBoost는 보통 logistic regression보다 좋은 결과를 얻을 수 있습니다. 
 
 
+## Heart Disease를 분류
+
+[심장질환 데이터셋 (Heart Disease Data Set)](https://archive.ics.uci.edu/ml/datasets/heart+Disease)을 이용하여 심잘질환 여부를 분류합니다. 
+
+1) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-heart-disease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-heart-disease.ipynb)에서는 0.86의 정확도로 예측하였으나, HPO를 통해 0.87로 개선하였습니다. 
+
+
 ## Reference 
 
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
