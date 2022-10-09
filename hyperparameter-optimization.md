@@ -172,7 +172,7 @@ print(gs.best_params_)
 {'max_depth': 39, 'min_impurity_decrease': 0.00034102546602601173, 'min_samples_leaf': 7, 'min_samples_split': 13}
 ```
 
-## Decision Tree를 이용하여 Heart Disease를 에측 (Classification)
+## Decision Tree를 이용하여 Heart Disease를 예측 (Classification)
 
 [decision-tree-heart-disease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-heart-disease.ipynb)에서는 RandomizedSearchCV을 이용하여 HPO를 수행합니다. 
 
