@@ -22,7 +22,7 @@ x축은 중요한 파라메터이고 y축은 중요하지 않은 파라메터라
 
 ## 구현 예
 
-[Hyperparameter Tunning](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/hyperparameter_tuning.ipynb)은 아래와 같이 Grid/Random search룰 구현한 예제입니다. 
+[hyperparameter_tuning.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/hyperparameter_tuning.ipynb)은 아래와 같이 Grid/Random search룰 구현한 예제입니다. 
 
 1) 데이터를 준비합니다.
 
