@@ -18,7 +18,37 @@ x축은 중요한 파라메터이고 y축은 중요하지 않은 파라메터라
 - Random Search가 Grid Search에 더 적은 trial로 더 높은 최적화를 기대할 수 있습니다.
 - HPO에 test dataset을 사용하지 않고, validation dataset을 사용합니다. 
 
+## GridSearchCV
 
+GridSearchCV 클래스는 fit() method에서 전달한 훈련 데이터를 사용해 [k-fold 교차 검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/cross-validation.md#k-fold-cross-validation)을 수행합니다. fold 개수를 지정하는 cv의 기본값은 5입니다. [decision-tree-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-bike.ipynb)의 GridSearchCV 예제는 아래와 같습니다. 
+
+```python
+from sklearn.model_selection import GridSearchCV
+params = {'max_depth':[None,2,3,4,6,8,10,20]}
+
+dt = DecisionTreeRegressor(random_state=2)
+
+grid_reg = GridSearchCV(dt, params, scoring='neg_mean_squared_error', cv=5, return_train_score=True, n_jobs=-1)
+
+grid_reg.fit(X_train, y_train)
+
+best_params = grid_reg.best_params_
+print("Best parameters:", best_params)
+
+best_score = np.sqrt(-grid_reg.best_score_)
+print("Best score: {:.3f}".format(best_score))
+
+best_model = grid_reg.best_estimator_
+y_pred = best_model.predict(X_test)
+
+from sklearn.metrics import mean_squared_error
+rmse_test = np.sqrt(mean_squared_error(y_test, y_pred))
+print('RMSE: {:.3f}'.format(rmse_test))
+```
+
+## RandomizedSearchCV
+
+탐색할 Hyperparameter가 많을 때 GridSearchCV로 튜닝을 하면 너무 오래시간이 걸릴수 있습니다. RandomizedSearchCV는 GridSearchCV와 동일한 방식으로 동작하지만 모든 Hyperparamter 조합을 테스트하지 않고, 랜덤한 조합을 테스트 하므로, 제한된 시간 안에 최상의 조합을 찾습니다. 
 
 ## 구현 예
 
