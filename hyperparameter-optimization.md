@@ -23,11 +23,12 @@ x축은 중요한 파라메터이고 y축은 중요하지 않은 파라메터라
 GridSearchCV 클래스는 fit() method에서 전달한 훈련 데이터를 사용해 [k-fold 교차 검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/cross-validation.md#k-fold-cross-validation)을 수행합니다. fold 개수를 지정하는 cv의 기본값은 5입니다. [decision-tree-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-bike.ipynb)의 GridSearchCV 예제는 아래와 같습니다. 
 
 ```python
-from sklearn.model_selection import GridSearchCV
 params = {'max_depth':[None,2,3,4,6,8,10,20]}
 
+from sklearn.tree import DecisionTreeRegressor
 dt = DecisionTreeRegressor(random_state=2)
 
+from sklearn.model_selection import GridSearchCV
 grid_reg = GridSearchCV(dt, params, scoring='neg_mean_squared_error', cv=5, return_train_score=True, n_jobs=-1)
 
 grid_reg.fit(X_train, y_train)
