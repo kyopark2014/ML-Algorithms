@@ -62,7 +62,7 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 
 
 
-### early stopping
+### Early stopping
 
 Gradient Boosting에서는 일정한 수준 이상 손실 함수가 향상되지 않으면, 훈련을 종료할 수 있는 조기 종료(early stopping)를 제공합니다. 
 
