@@ -2,7 +2,7 @@
 
 XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사용하는 [앙상블 학습(Ensemble method)](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)입니다. 
 
-- [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)를 개량한 보다 정규화된 형태이며, Gradient Boost보다 대규모 dataset을 처리할 수 있습니다.
+- [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)를 개량하여, 보다 정규화된 형태가 되었으며, 대규모 dataset을 처리할 수 있습니다.
 - 분류/회귀/Rank문제 모두 사용 가능합니다.
 - L1, L2 regularization을 사용하여 overfitting을 막고 모델을 일반화 합니다.
 - 병렬 학습이 가능하여 빠른 학습 가능합니다.
