@@ -6,7 +6,7 @@
 
 ## 분류 (Classification)
 
-[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 다수결 투표(Majority Vote)를 사용합니다. [decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)은 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용하여 수입을 에측하는 분류모델입니다. 
+[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 <U>다수결 투표(Majority Vote)</U>를 사용합니다. [decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)은 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용하여 수입을 에측하는 분류모델입니다. 
 
 ## 회귀 (Regression)
 
