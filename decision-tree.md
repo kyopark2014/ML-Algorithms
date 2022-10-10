@@ -48,44 +48,6 @@
 Random Forest와 XGBoost가 사용하는 방법입니다. 
 
 
-## Criterion 매개변수 
-
-결정트리에서 노드를 분할하는 기준에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
-
-아래는 Max Depth가 1인 결정트리를 아래처럼 그릴수 있습니다.
-
-```python
-plt.figure(figsize=(10,7))
-plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
-plt.show()
-```
-
-아래와 같이 Max Depth가 1인 결정트리를 그릴수 있습니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
-
-
-## Impurity
-
-결정트리는 학습 데이터로부터 조건식을 만들고, 예측할 때는 트리의 루트부터 순서대로 조건 분기를 타면서 Leaf에 도달하면 예측결과를 내는 알고리즘입니다. 이때, 불순도(Imputiry)를 기준으로 가능한 같은 클래스끼리 모이도록 조건 분기를 학습합니다. 
-
-### Information Gain 
-
-정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
-
-### Gini Impurity
-
-Gini Impurity은 정답이 아닌 값이 나올 확율을 의미 합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560214-844f1030-a80b-4190-a9cb-1b6151f01cde.png)
-
-### Entropy Imputiry
-
-Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
 
 
 
@@ -111,16 +73,59 @@ print(dt.feature_importances_)
 - min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
 
 
-### DecisionTreeRegressor
-
 - max_depth: 트리의 최대 깊이를 의미합니다. (루트 노드 깊이=0)
 - min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 개수를 제한합니다. 기본값인 1을 선택하면 리프 노드는 하나의 샘플로 구성될 수 있습니다. (괴대적합이 되기 쉬움) 
 - max_leaf_nodes: 리프노드의 전체 개수를 지정합니다. 10을 지정하면 리프 노드가 최대 10을 넘을 수 없습니다. 
 - max_features: 각 노드에서 분할에 사용할 특성의 최대 수를 의미합니다. 분산을 줄이는 데 효과적인 매개변수로서 매번 지정된 개수의 특성중에서 선택합니다. None/auto는 전체를 사용하고, sqrt는 전체 특성 개숫의 제곱근을 사용하며, log2는 전체 특성 개숫의 로그를 사용하는데 32개라면 5개의 특성만을 사용하게 됩니다. 
 - min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수를 제한합니다. 기본값은 2이입니다. 
 - splitter: 노드를 분할하기 위한 특성 선택방법으로 'random'과 'best'를 선택합니다. 기본값은 'best'로 정보이득(information gain)이 가장 큰 특성을 선택합니다. splitter를 'random'으로 하면 괴대적합을 막고 다양한 트리를 만들 수 있습니다. 
-- criterion: 결정트리의 
-- splitter: 노드를 분할하기 위한 특성 선택방법으로 'random'과 'best'를 선택합니다. 기본값은 'best'로 정보이득(information gain)이 가장 큰 특성을 선택합니다. splitter를 'random'으로 하면 괴대적합을 막고 다양한 트리를 만들 수 있습니다.
+- criterion: 결정트리의 회귀와 분류 모델은 다른 criterion을 가지는데 분할 품질을 측정하는 방법을 제공합니다. 회귀 모델의 경우에 'squared_error(평균제곱오차)' (기본값), 'friedman_mse', 'absolute_error(평균 절대값 오차)', 'poisson(포아송 편차가 있습니다. 분류 모델은 'gini'(기본값)
+
+
+## Criterion  
+
+결정트리에서 노드를 분할하는 기준에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
+
+아래는 Max Depth가 1인 결정트리를 아래처럼 그릴수 있습니다.
+
+```python
+plt.figure(figsize=(10,7))
+plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
+plt.show()
+```
+
+아래와 같이 Max Depth가 1인 결정트리를 그릴수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
+
+
+## Impurity
+
+결정트리는 학습 데이터로부터 조건식을 만들고, 예측할 때는 트리의 루트부터 순서대로 조건 분기를 타면서 Leaf에 도달하면 예측결과를 내는 알고리즘입니다. 이때, 불순도(Imputiry)를 기준으로 가능한 같은 클래스끼리 모이도록 조건 분기를 학습합니다. 
+
+### Gini Impurity
+
+Gini Impurity은 정답이 아닌 값이 나올 확율을 의미 합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560214-844f1030-a80b-4190-a9cb-1b6151f01cde.png)
+
+### Entropy Imputiry
+
+Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
+
+
+
+## Splitter
+
+### Information Gain 
+
+정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
+
+
 
 
 
