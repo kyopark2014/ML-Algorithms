@@ -25,8 +25,13 @@ Gradient Boosting은 [경사하강법(Gradient desecent)](https://github.com/kyo
 
 ### Residual
 
-잔차(Residual)
+Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 수 있어야 합니다.
 
+잔차(Residual)는 타겟(Target)과 예측 사이의 차이입니다. 잔차는 모델 예측이 정답에서 얼마나 떨어져있는지 알려주며 양수 또는 음수 입니다. 
+
+선형 
+
+### Case of Gradient Boosting
 
 [gradient_boosting.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient_boosting.ipynb)에 대해 설명합니다. 
 
