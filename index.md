@@ -53,6 +53,7 @@
 
 [평가 (Evaluation)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md)
 
+[Data Wrangling](https://github.com/kyopark2014/ML-Algorithms/blob/main/wrangling.md]
 
 
 ## 유용한 명령어 
