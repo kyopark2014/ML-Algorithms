@@ -22,6 +22,7 @@ Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 손실함수�
 - 이전 트리의 예측 오차를 기반으로 완전히 새로운 트리를 훈련합니다. 여기서 새로은 트리는 올바르게 예측된 값에는 영향을 받지 않습니다. 
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있습니다. (n_estimators , learning_rate)
 - 일반적으로 Random forest보다 나은 성능을 기대하지만 순차적으로 계산하여야 하므로 느립니다. 
+- Gradient boosting regression 모델의 기본 학습기(Basic learner)는 [결정트리(Decision tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)입니다. 
 
 ### Residual
 
@@ -36,6 +37,22 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 ### Regression
 
 [GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html?highlight=gradientboostingregressor#sklearn.ensemble.GradientBoostingRegressor)
+
+### Hyperparameter
+
+기본 Hyperparameter는 아래와 같습니다.
+
+```python
+{'alpha': 0.9, 'ccp_alpha': 0.0, 'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.1, 
+'loss': 'squared_error', 'max_depth': 3, 'max_features': None, 'max_leaf_nodes': None, 
+'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 
+'n_estimators': 100, 'n_iter_no_change': None, 'random_state': 2, 'subsample': 1.0, 'tol': 0.0001, 
+'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}
+```
+
+- learning_rate: 기본 학습기(Basic learner)의 오차를 기반으로 전체 앙상블을 만들면 모델에 처음 추가된 트리의 영향이 너무 크게 되므로, 모델 구축에 대한 영향을 조절하여 개별 트리의 기여를 줄입니다 (축소: shrinkage). 일반적으로 트리 개숫(n_estimators)를 늘리면 learning_rate를 줄여야 합니다. 
+
+- 
 
 
 ## Case of Gradient Boosting
