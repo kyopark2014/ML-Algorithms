@@ -78,7 +78,7 @@ rmse = np.sqrt(mean_squared_error(y_true, y_pred, squared=False)
 
 ## Coefficient of determination
 
-결정계수(Coefficient of determination)는 R^2로 표현되는데, RMSE(편균제곱근오차)의 분모를 '평균과 예측값의 차를 제공하여 합한값'으로 나눈 다음, 그 값을 1에서 뺀값에 해당합니다. 즉, 항상 평균을 출력하는 예측모델보다 성능이 얼마나 더 좋은가를 나타낸다고 할 수 있는데, 1에 가까울수록 예측이 잘된것를 의미합니다.
+결정계수(Coefficient of determination)는 R<sup>2</sup>로 표현되는데, RMSE(편균제곱근오차)의 분모를 '평균과 예측값의 차를 제공하여 합한값'으로 나눈 다음, 그 값을 1에서 뺀값에 해당합니다. 즉, 항상 평균을 출력하는 예측모델보다 성능이 얼마나 더 좋은가를 나타낸다고 할 수 있는데, 1에 가까울수록 예측이 잘된것를 의미합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/185774224-2209e555-c3ed-4d79-b5e7-d20bef381bc1.png)
 
