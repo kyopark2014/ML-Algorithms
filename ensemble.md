@@ -4,7 +4,7 @@
 
 ## Bagging
 
-Bagging(Bootstrap Aggregating)은 개별 트리를 생성할때 부트스트랩 샘플을 사용합니다. [랜덤포레스트](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)의 회귀문제가 Bagging을 이용하여 회귀 문제를 풉니다. 여기서 Bootstraping은 중복을 허용한 셈플링을 의미합니다.
+Bagging(Bootstrap Aggregating)은 개별 트리를 생성할때 부트스트랩 샘플을 사용합니다. [랜덤포레스트](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)의 회귀문제가 Bagging을 이용하여 회귀 문제를 풉니다. 여기서 Boostraping은 중복을 허용하는 샘플링을 의미하는데, 원본 데이터셋과 동일한 크기의 Bootstraping을 이용합니다.
 
 
 
