@@ -25,19 +25,17 @@ Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 손실함수�
 
 ### Residual
 
-Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 수 있어야 합니다.
-
-잔차(Residual)는 관측된 데이터값(observed data value)인 타겟(Target)과 예측(predicted data value) 사이의 차이입니다. 잔차는 모델 예측이 정답에서 얼마나 떨어져있는지 알려주며 양수 또는 음수 입니다. 
+Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 수 있어야 합니다. 잔차(Residual)는 관측된 데이터값(observed data value)인 타겟(Target)과 예측(predicted data value) 사이의 차이입니다. 잔차는 모델 예측이 정답에서 얼마나 떨어져있는지 알려주며 양수 또는 음수 입니다. 
 
 [선형 회귀(Linear Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 데이터에 얼마나 잘 맞는지를 평가하기 위하여 잔차의 제곱인 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 사용합니다.
 
 ### Classificlation
 
-GradientBoostingClassifier
+[GradientBoostingClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)은 클래스별로 각 트리의 예측을 더한 후 [시그모이드 함수](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid)을 적용하여 예측 확율을 계산합니다. 
 
 ### Regression
 
-GradientBoostingRegressor
+[GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html?highlight=gradientboostingregressor#sklearn.ensemble.GradientBoostingRegressor)
 
 
 ## Case of Gradient Boosting
