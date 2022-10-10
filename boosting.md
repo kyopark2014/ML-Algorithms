@@ -29,7 +29,7 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 
 잔차(Residual)는 타겟(Target)과 예측 사이의 차이입니다. 잔차는 모델 예측이 정답에서 얼마나 떨어져있는지 알려주며 양수 또는 음수 입니다. 
 
-[선형 회귀(Linear Regression)]에서는 데이터에 얼마나 잘 맞는지를 평가하기 위하여 잔차의 제곱인 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 사용합니다.
+[선형 회귀(Linear Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 데이터에 얼마나 잘 맞는지를 평가하기 위하여 잔차의 제곱인 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 사용합니다.
 
 ### Case of Gradient Boosting
 
