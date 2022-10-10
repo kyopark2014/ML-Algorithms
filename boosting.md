@@ -42,6 +42,8 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 
 [GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html?highlight=gradientboostingregressor#sklearn.ensemble.GradientBoostingRegressor)
 
+
+
 ### Hyperparameter
 
 기본 Hyperparameter는 아래와 같습니다.
@@ -56,8 +58,26 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 
 - learning_rate: 기본 학습기(Basic learner)의 오차를 기반으로 전체 앙상블을 만들면 모델에 처음 추가된 트리의 영향이 너무 크게 되므로, 모델 구축에 대한 영향을 조절하여 개별 트리의 기여를 줄입니다 (축소: shrinkage). 일반적으로 트리 개숫(n_estimators)를 늘리면 learning_rate를 줄여야 합니다. 
 
-- 
+-  subsample: 기본 학습기에 사용될 셈플의 비율을 지정합니다. 기본값인 1.0보다 작으면 훈련할때 샘플의 일부만 사용하게 됩니다. 0.8이면 80%만 사용합니다. subsample이 1보다 작을때 확률적 경사 부스팅이라고 부릅니다. 확률적이라는 말은 모델에 무작위성이 주입된다는 뜻입니다. 
 
+
+
+### early stopping
+
+Gradient Boosting에서는 일정한 수준 이상 손실 함수가 향상되지 않으면, 훈련을 종료할 수 있는 조기 종료(early stopping)를 제공합니다. 
+
+validation_fraction (기본값 0.1)만큼 훈련 세트에서 검증 데이터를 덜어낸 다음 n_iter_no_change 반복 횟수동안 검증 점수가 tol(기본값 1e-4)만큼 향상되지 않으면 훈련을 종료합니다. n_iter_no_change의 기본값은 None으로 조기 종료를 수행하지 않습니다.  
+
+
+### 추가된 결정트리의 갯수 
+
+앙상블에 추가된 트리의 개수는 "estimator_"속성에서 아래처럼 확인 할 수 있습니다. 
+
+```python
+from sklearn.ensemble import GradientBoostingRegressor
+gbr = GradientBoostingRegressor(max_depth=depth, n_estimators=300, random_state=2)
+len(gbr.estimators_)
+```
 
 ## Case of Gradient Boosting
 
