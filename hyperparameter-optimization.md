@@ -20,7 +20,12 @@ x축은 중요한 파라메터이고 y축은 중요하지 않은 파라메터라
 
 ## GridSearchCV
 
+GridSearchCV는 교차 검증을 사용해 최선의 결과를 만드는 매개변수 조합을 찾습니다. 
+
+
 GridSearchCV 클래스는 fit() method에서 전달한 훈련 데이터를 사용해 [k-fold 교차 검증](https://github.com/kyopark2014/ML-Algorithms/blob/main/cross-validation.md#k-fold-cross-validation)을 수행합니다. fold 개수를 지정하는 cv의 기본값은 5입니다. [decision-tree-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-bike.ipynb)의 GridSearchCV 예제는 아래와 같습니다. 
+
+아래의 'max_depth"의 경우처럼, 매개변수 값의 사전을 만들어서 가장 작은 값과 큰 값 사이에서 일정 간격을 선택합니다. 일반적으로 max 이름을 가진 매개변수를 감소시키고, min 이름을 가진 매개변수를 증가시키면 분산을 줄이고 과대적합을 방지합니다. 
 
 ```python
 params = {'max_depth':[None,2,3,4,6,8,10,20]}
