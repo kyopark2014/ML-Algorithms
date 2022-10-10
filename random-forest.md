@@ -2,6 +2,8 @@
 
 다수의 [Decision tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)의 분류 결과를 취합해서 최종 예측값을 결정하는 [앙상블 학습](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)입니다. 랜덤 포레스트의 개별모델은 결정트리로서 최종 예측을 위해 수백 또는 수천개의 결정트리로 구성될 수 있습니다. 
 
+랜덤 포레스트는 32비트 정수 범위에서 난수를 만들어 개별트리의 random_state를 지정하여 관리하기 때문에, 언제든지 손쉽게 각 트리의 bootstraping smaple을 재현할 수 있습니다. 
+
 ## 분류 (Classification)
 
 [Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 다수결 투표를 사용합니다. [decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)은 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용하여 수입을 에측하는 분류모델입니다. 
@@ -34,6 +36,12 @@ print(rf.get_params())
 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 10, 'n_jobs': -1, 
 'oob_score': False, 'random_state': 2, 'verbose': 0, 'warm_start': False}
 ```
+
+- oob_score: Bagging에서 선택되지 않은 샘플을 테스트 샘플로 활용할 수 있습니다. "oob_score=True"로 설정하면, 랜덤 포레스트 모델 훈련후에, 각 트리에서 사용하지 않은 샘플을 사용해 개별 트리의 예측 점수를 누적하여 평균을 냅니다. 회귀 모델은 트리의 predict() mathod 출력을 누적하며, 분류 모델의 경우는 predict_probe() method의 출력을 누적합니다. predict_probe()는 leaf node에 있는 class 비율을 사용해 예측 확률을 반환합니다. 
+
+- n_estimators: 앙상블할때 사용하는 트리의 개수를 지정합니다. v0.22부터 기본값이 10에서 100으로 변경되었습니다. 
+- warm_start: "warm_start=True"로 지정하면 트리를 만들때에 이전 모델에 이어서 트리를 추가합니다. warm_start 매개변수를 사용해 n_estimators에 따라 [OOB 점수의 변화를 그래프](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-bike.ipynb)로 그릴 수 있습니다. 
+
 
 
 ## 구현방법
