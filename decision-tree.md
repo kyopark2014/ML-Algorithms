@@ -50,51 +50,6 @@ plt.show()
 - 배치 학습으로만 학습할 수 있습니다. 
 
 
-## Overfiting을 막는 방법
-
-결정트리는 모든 Train dataset이 정확히 매핑될때까지 그룹을 만들수도 있으몰 100% 정확도를 달성(과대적합) 할 수 있습니다. 하지만 이런 모델은 새로운 데이터에 일반화되기 어렵습니다. 과대적합을 막기 위해 아래 방법을 사용할 수 있습니다.
-
-1) Hyperparameter tunning 입니다.
-
-2) 많은 트리의 예측을 모으는 방법입니다. 
-
-Random Forest와 XGBoost가 사용하는 방법입니다. 
-
-
-
-
-
-## Feature Importances
-
-결정 트리 모델의 특성중요도(feature importances) 속성으로 특성 중요도를 알수 있습니다. 아래와 같이 "alcohol", "sugar", "pH"의 중요도는 0.15210271, 0.70481604, 0.14308125이고, 이것의 합은 1입니다. 즉, "sugar"가 가장 중요한 특성으로 불순도에 줄이는데 가장 큰 역할하고 있으므로, 직관적으로 문제를 이해하는데 도움이 됩니다. 
-
-```python
-print(dt.feature_importances_)
-
-[0.15210271 0.70481604 0.14308125]
-```
-
-
-
-## Decision Tree의 Hyperparameter
-
-‘min’값을 높이거나 ’max’값을 줄이면 모델에 규제가 커져 이용하여 과대적합(overfit)을 막을 수 있습니다. 
-
-- 
-
-- min_weight_fraction_leaf: min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려
-- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
-
-
-- max_depth: 트리의 최대 깊이를 의미합니다. (루트 노드 깊이=0)
-- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 개수를 제한합니다. 기본값인 1을 선택하면 리프 노드는 하나의 샘플로 구성될 수 있습니다. (괴대적합이 되기 쉬움) 
-- max_leaf_nodes: 리프노드의 전체 개수를 지정합니다. 10을 지정하면 리프 노드가 최대 10을 넘을 수 없습니다. 
-- max_features: 각 노드에서 분할에 사용할 특성의 최대 수를 의미합니다. 분산을 줄이는 데 효과적인 매개변수로서 매번 지정된 개수의 특성중에서 선택합니다. None/auto는 전체를 사용하고, sqrt는 전체 특성 개숫의 제곱근을 사용하며, log2는 전체 특성 개숫의 로그를 사용하는데 32개라면 5개의 특성만을 사용하게 됩니다. 
-- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수를 제한합니다. 기본값은 2이입니다. 
-- splitter: 노드를 분할하기 위한 특성 선택방법으로 'random'과 'best'를 선택합니다. 기본값은 'best'로 정보이득(information gain)이 가장 큰 특성을 선택합니다. splitter를 'random'으로 하면 괴대적합을 막고 다양한 트리를 만들 수 있습니다. 
-- criterion: 결정트리의 회귀와 분류 모델은 다른 criterion을 가지는데 분할 품질을 측정하는 방법을 제공합니다. 회귀 모델의 경우에 'squared_error(평균제곱오차)' (기본값), 'friedman_mse', 'absolute_error(평균 절대값 오차)', 'poisson(포아송 편차가 있습니다. 분류 모델은 'gini'(기본값)
-
-
 ## Criterion  
 
 결정트리에서 노드를 분할하는 기준(Criterion)에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
@@ -124,6 +79,47 @@ Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니�
 정보이득(Information Gain)은 부모노드가 가진 정보량에서 자식노드들의 정보량을 뺀 차이입니다.부모노드와 자식노드의 정보량의 차이가 없을때, 트리는 분기 split을 멈추게 됩니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/186560390-350d25b2-2f8d-4d06-ac66-99943b6e3e35.png)
+
+
+
+
+
+
+## Overfiting을 막는 방법
+
+결정트리는 모든 Train dataset이 정확히 매핑될때까지 그룹을 만들수도 있으몰 100% 정확도를 달성(과대적합) 할 수 있습니다. 하지만 이런 모델은 새로운 데이터에 일반화되기 어렵습니다. 과대적합을 막기 위해 아래 방법을 사용할 수 있습니다.
+
+1) Hyperparameter tunning 입니다.
+
+2) 많은 트리의 예측을 모으는 방법입니다. 
+
+Random Forest와 XGBoost가 사용하는 방법입니다. 
+
+
+
+
+
+
+
+
+
+## Decision Tree의 Hyperparameter
+
+‘min’값을 높이거나 ’max’값을 줄이면 모델에 규제가 커져 이용하여 과대적합(overfit)을 막을 수 있습니다. 
+
+- 
+
+- min_weight_fraction_leaf: min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려
+- min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
+
+
+- max_depth: 트리의 최대 깊이를 의미합니다. (루트 노드 깊이=0)
+- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 개수를 제한합니다. 기본값인 1을 선택하면 리프 노드는 하나의 샘플로 구성될 수 있습니다. (괴대적합이 되기 쉬움) 
+- max_leaf_nodes: 리프노드의 전체 개수를 지정합니다. 10을 지정하면 리프 노드가 최대 10을 넘을 수 없습니다. 
+- max_features: 각 노드에서 분할에 사용할 특성의 최대 수를 의미합니다. 분산을 줄이는 데 효과적인 매개변수로서 매번 지정된 개수의 특성중에서 선택합니다. None/auto는 전체를 사용하고, sqrt는 전체 특성 개숫의 제곱근을 사용하며, log2는 전체 특성 개숫의 로그를 사용하는데 32개라면 5개의 특성만을 사용하게 됩니다. 
+- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수를 제한합니다. 기본값은 2이입니다. 
+- splitter: 노드를 분할하기 위한 특성 선택방법으로 'random'과 'best'를 선택합니다. 기본값은 'best'로 정보이득(information gain)이 가장 큰 특성을 선택합니다. splitter를 'random'으로 하면 괴대적합을 막고 다양한 트리를 만들 수 있습니다. 
+- criterion: 결정트리의 회귀와 분류 모델은 다른 criterion을 가지는데 분할 품질을 측정하는 방법을 제공합니다. 회귀 모델의 경우에 'squared_error(평균제곱오차)' (기본값), 'friedman_mse', 'absolute_error(평균 절대값 오차)', 'poisson(포아송 편차가 있습니다. 분류 모델은 'gini'(기본값)
 
 
 
@@ -233,7 +229,13 @@ print(dt.score(test_input, test_target))
 0.8415384615384616
 ```
 
+결정 트리 모델의 특성중요도(feature importances) 속성으로 특성 중요도를 알수 있습니다. 아래와 같이 "alcohol", "sugar", "pH"의 중요도는 0.15210271, 0.70481604, 0.14308125이고, 이것의 합은 1입니다. 즉, "sugar"가 가장 중요한 특성으로 불순도에 줄이는데 가장 큰 역할하고 있으므로, 직관적으로 문제를 이해하는데 도움이 됩니다. 
 
+```python
+print(dt.feature_importances_)
+
+[0.15210271 0.70481604 0.14308125]
+```
 
 
 
