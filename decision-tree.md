@@ -105,15 +105,22 @@ print(dt.feature_importances_)
 
 ‘min’값을 높이거나 ’max’값을 줄이면 모델에 규제가 커져 이용하여 과대적합(overfit)을 막을 수 있습니다. 
 
-- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수
-- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 수
+- 
+
 - min_weight_fraction_leaf: min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려
-- max_leaf_nodes: 리프노드의 최대 수
-- max_features: 각 노드에서 분할에 사용할 특성의 최대 수
 - min_impurity_decrease: 분할로 얻어질 최소한의 불순도 감소량
-- max_depth: 트리의 최대 깊이 (루트 노드 깊이=0)
 
 
+### DecisionTreeRegressor
+
+- max_depth: 트리의 최대 깊이를 의미합니다. (루트 노드 깊이=0)
+- min_samples_leaf: 리프노드가 가지고 있어야 할 샘플 개수를 제한합니다. 기본값인 1을 선택하면 리프 노드는 하나의 샘플로 구성될 수 있습니다. (괴대적합이 되기 쉬움) 
+- max_leaf_nodes: 리프노드의 전체 개수를 지정합니다. 10을 지정하면 리프 노드가 최대 10을 넘을 수 없습니다. 
+- max_features: 각 노드에서 분할에 사용할 특성의 최대 수를 의미합니다. 분산을 줄이는 데 효과적인 매개변수로서 매번 지정된 개수의 특성중에서 선택합니다. None/auto는 전체를 사용하고, sqrt는 전체 특성 개숫의 제곱근을 사용하며, log2는 전체 특성 개숫의 로그를 사용하는데 32개라면 5개의 특성만을 사용하게 됩니다. 
+- min_samples_split: 분할되기 전에 노드가 가져야 하는 최소 샘플 수를 제한합니다. 기본값은 2이입니다. 
+- splitter: 노드를 분할하기 위한 특성 선택방법으로 'random'과 'best'를 선택합니다. 기본값은 'best'로 정보이득(information gain)이 가장 큰 특성을 선택합니다. splitter를 'random'으로 하면 괴대적합을 막고 다양한 트리를 만들 수 있습니다. 
+- criterion: 결정트리의 
+- splitter: 노드를 분할하기 위한 특성 선택방법으로 'random'과 'best'를 선택합니다. 기본값은 'best'로 정보이득(information gain)이 가장 큰 특성을 선택합니다. splitter를 'random'으로 하면 괴대적합을 막고 다양한 트리를 만들 수 있습니다.
 
 
 
