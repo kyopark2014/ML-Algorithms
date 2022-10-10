@@ -4,9 +4,9 @@
 
 랜덤 포레스트는 32비트 정수 범위에서 난수를 만들어 개별트리의 random_state를 지정하여 관리하기 때문에, 언제든지 손쉽게 각 트리의 bootstraping smaple을 재현할 수 있습니다. 
 
-## 분류 (Classification)
+= 분류 (Classification)
 
-[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 <U>다수결 투표(Majority Vote)</U>를 사용합니다. [decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)은 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용하여 수입을 에측하는 분류모델입니다. 
+[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 <u>다수결 투표(Majority Vote)</u>를 사용합니다. [decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)은 [Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Adult)을 이용하여 수입을 에측하는 분류모델입니다. 
 
 ## 회귀 (Regression)
 
