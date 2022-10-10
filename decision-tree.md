@@ -93,9 +93,7 @@ Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니�
 
 1) Hyperparameter tunning 입니다.
 
-2) 많은 트리의 예측을 모으는 방법입니다. 
-
-Random Forest와 XGBoost가 사용하는 방법입니다. 
+2) 많은 트리의 예측을 모으는 방법입니다. Random Forest와 XGBoost가 사용하는 방법입니다. 
 
 
 
