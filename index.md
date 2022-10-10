@@ -64,9 +64,9 @@
 
 ## Matrics
 
-[Coefficient of determination (결정계수)](https://github.com/kyopark2014/ML-Algorithms/blob/main/README.md#coefficient-of-determination)
+[Coefficient of determination (결정계수)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)
 
 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)
 
-[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md#loss-function)
+[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)
 
