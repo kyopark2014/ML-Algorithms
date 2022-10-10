@@ -53,7 +53,7 @@
 
 ## 외계 행성 찾기 분류
 
-[외계 해성 데이터셋은 2017년 캐글에 소개된 데이터셋](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data)으로 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)에 있는 [exoplanets.csv.zip](https://raw.githubusercontent.com/rickiepark/handson-gb/main/Chapter04/exoplanets.csv.zip)을 이용합니다.
+[외계 해성 데이터셋은 2017년 캐글에 소개된 데이터셋](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data)으로 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)에 있는 [exoplanets.csv.zip](https://raw.githubusercontent.com/rickiepark/handson-gb/main/Chapter04/exoplanets.csv.zip)을 이용하여, 어떤 행성이 별을 가지고 있는지 예측합니다. 
 
 1) [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)을 이용하여 [gradient-boosting-exoplanets.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/gradient-boosting-exoplanets.ipynb)와 같이 구하면, 0.99의 정확도로 215초가 소요됩니다.
 
