@@ -21,7 +21,7 @@
 
 5) [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)을 이용하여 [gradient-boosting-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/gradient-boosting-bike.ipynb)와 같이 RMSE가 648.426로 예측되었으나, HPO를 통해 596.954로 개선되었습니다. 
 
-6) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 [xgboost-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)와 같이 RMSE 705.11로 예측하였습니다. XGBoost는 보통 Linear Regression보다 좋은 결과를 얻을 수 있습니다. 
+6) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 [xgboost-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)와 같이 RMSE 705.11로 예측하였으나, HPO를 통해 584.34로 개선되었습니다. 이와 같이 XGBoost는 일반적으로 다른 방법들보다 더 좋은 성능을 내고 더 빠르게 결과를 얻을 수 있습니다. 
 
 
 
