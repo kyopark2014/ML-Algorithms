@@ -17,9 +17,10 @@
 
 3) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-bike.ipynb)와 같이 RMSE 945로 예측하였으나, HPO를 통해 855까지 개선하였습니다. 
 
-4) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 [xgboost-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)와 같이 RMSE 705.11로 예측하였습니다. XGBoost는 보통 Linear Regression보다 좋은 결과를 얻을 수 있습니다. 
+4) [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)를 이용하여 [random-forest-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-bike.ipynb)와 같이 RMSE가 689.644로 예측되었으나, HPO를 통해 619.01까지 개선되었습니다. 
 
-5) [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)를 이용하여 [random-forest-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-bike.ipynb)와 같이 RMSE가 689.644로 예측되었으나, HPO를 통해 619.01까지 개선되었습니다. 
+5) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBRegressor를 이용하여 [xgboost-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-regression-bike.ipynb)와 같이 RMSE 705.11로 예측하였습니다. XGBoost는 보통 Linear Regression보다 좋은 결과를 얻을 수 있습니다. 
+
 
 
 
@@ -35,9 +36,9 @@
 
 3) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-census.ipynb)와 같이 0.81로 예측하였으나 HPO를 통해 0.85까지 개선하였습니다. 
 
-4) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBClassifier를 이용하여 [xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이 0.86의 정확도로 예측하였습니다. XGBoost는 보통 logistic regression보다 좋은 결과를 얻을 수 있습니다. 
+4) [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)를 이용하여 [random-forest-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-census.ipynb)와 같이 0.84의 정확도로 예측하였으나 HPO를 통해 0.86으로 개선하였습니다.
 
-5) [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)를 이용하여 [random-forest-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-census.ipynb)와 같이 
+5) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBClassifier를 이용하여 [xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이 0.86의 정확도로 예측하였습니다. XGBoost는 보통 logistic regression보다 좋은 결과를 얻을 수 있습니다. 
 
 
 ## Heart Disease를 분류
