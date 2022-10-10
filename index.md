@@ -55,6 +55,7 @@
 
 [Data Wrangling](https://github.com/kyopark2014/ML-Algorithms/blob/main/wrangling.md)
 
+[Data Loading](https://github.com/kyopark2014/ML-Algorithms/blob/main/notebook/data-loading.md)
 
 ## 유용한 명령어 
 
