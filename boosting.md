@@ -7,7 +7,6 @@
 - [앙상블 기법](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)에 속합니다.
 - 부스팅에서는 개별 트리가 이전 트리를 기반으로 만들어집니다. 독립적으로 트리가 동작하지 않으며 다른 트리 위에 만들어집니다. 
 - 부스팅은 반복적으로 오류를 고치므로, 약한 학습기를 강력한 학습기로 변환할 수 있습니다. 
-
 - 각 단계에서 만드는 예측 모델은 이전 단계의 예측 모델의 단점을 보완합니다.
 - 각 단계를 거치면서 예측 모델의 성능이 좋아집니다.
 - Adaboost(Adaptive Boosting), GBM(Gradient Boosting Machines), XGBoost(eXtreme Gradient Boost), LightGBM(Light Gradient Boost Machines), CatBoost…
