@@ -2,7 +2,7 @@
 
 분류 (Classification)은 어떤 대상을 정해진 범주(Class)에 구분해 넣는 작업을 뜻합니다. 머신러닝에서 분류는 주어진 Feature에 따라 어떤 대상을 유한한 범주(categorical variable)로 구분하는 방법입니다. 여기서 **타깃값은 범주형 데이터** 점이 중요합니다. 범주형 데이터는 객관식 문제와 같이 선택지가 있는 값입니다. 개와 고양이를 구분하는 문제, 스팸 메일과 일반 메일을 구분하는 문제, 질병 검사 결과가 양성인지 음성인지 구분하는 문제등이 있습니다. 
 
-Classifier에서 score() 호출시, 분류(Classification)에서는 [정확도(Accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy)을 의미합니다. 반면에, [회귀 (Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서의 score()는 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 나타냅니다.
+Classifier에서 score() method 호출시, 분류(Classification)에서는 [정확도(Accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy)을 의미합니다. 반면에, [회귀 (Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서의 score()는 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 나타냅니다.
 
 
 ## 분류의 종류
