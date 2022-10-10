@@ -12,7 +12,7 @@
 
 ## 회귀 (Regression)
 
-[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 개별 트리를 만들기 위해 **Bagging(Boostrap Aggregating)**을 사용합니다. [random-forest-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-bike.ipynb)은 [Bike Rental 데이터](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)를 이용해 Bike 대여 숫자를 예측하는 회귀모델입니다. 
+[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 개별 트리를 만들기 위해 Bagging(Boostrap Aggregating)을 사용합니다. [random-forest-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-bike.ipynb)은 [Bike Rental 데이터](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)를 이용해 Bike 대여 숫자를 예측하는 회귀모델입니다. 
 
 
 
