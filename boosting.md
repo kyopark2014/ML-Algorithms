@@ -40,13 +40,13 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 
 ### Regression
 
-[GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html?highlight=gradientboostingregressor#sklearn.ensemble.GradientBoostingRegressor)
+[GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html?highlight=gradientboostingregressor#sklearn.ensemble.GradientBoostingRegressor)를 이용하여 [gradient-boosting-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/gradient-boosting-bike.ipynb)에서는 자전거 공유 서비스의 예상 사용량에 대한 회규 모델 예측을 보여주고 있습니다. 
 
 
 
 ### Hyperparameter
 
-기본 Hyperparameter는 아래와 같습니다.
+기본 Hyperparameter는 아래와 같습니다. 
 
 ```python
 {'alpha': 0.9, 'ccp_alpha': 0.0, 'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.1, 
@@ -62,7 +62,7 @@ Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 �
 
 
 
-### Early stopping
+### Early Stopping
 
 Gradient Boosting에서는 일정한 수준 이상 손실 함수가 향상되지 않으면, 훈련을 종료할 수 있는 조기 종료(early stopping)를 제공합니다. 
 
