@@ -37,7 +37,9 @@
 
 ## Heart Disease를 분류
 
-[심장질환 데이터셋 (Heart Disease Data Set)](https://archive.ics.uci.edu/ml/datasets/heart+Disease)을 이용하여 심잘질환 여부를 분류합니다. 
+[심장질환 데이터셋 (Heart Disease Data Set)](https://archive.ics.uci.edu/ml/datasets/heart+Disease)을 이용하여 심장질환 여부를 분류합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/194788662-5456298d-3adf-44db-b28d-c2a681b1ce45.png)
 
 1) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-heart-disease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-heart-disease.ipynb)에서는 0.86의 정확도로 예측하였으나, HPO를 통해 0.87로 개선하였습니다. 
 
