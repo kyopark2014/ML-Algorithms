@@ -132,7 +132,10 @@ print(params)
 이때의 결과입니다. 
 
 ```python
-{'ccp_alpha': 0.0, 'criterion': 'mse', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'random_state': 2, 'splitter': 'best'}
+{'ccp_alpha': 0.0, 'criterion': 'mse', 'max_depth': None, 'max_features': None, 
+'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 
+'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 
+'random_state': 2, 'splitter': 'best'}
 ```
 
 [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier)의 기본 Hyperparameter는 아래와 같습니다. 
@@ -148,7 +151,10 @@ print(params)
 이때의 결과는 아래와 같습니다. 
 
 ```python
-{'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'random_state': 2, 'splitter': 'best'}
+{'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': None, 
+'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 
+'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 
+'random_state': 2, 'splitter': 'best'}
 ```
 
 
