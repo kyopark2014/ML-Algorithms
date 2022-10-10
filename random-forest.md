@@ -8,7 +8,7 @@
 
 ## 회귀 (Regression)
 
-[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 모델의 예측을 평균하지만 개별 트리를 만들기 위해 Bagging(Boostrap aggreegation)을 사용합니다. 
+[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 모델의 예측을 평균하지만 개별 트리를 만들기 위해 Bagging(Boostrap Aggregating)을 사용합니다. 
 
 ## 구현방법
 
