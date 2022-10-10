@@ -40,7 +40,7 @@ print(rf.get_params())
 - oob_score: Bagging에서 선택되지 않은 샘플을 테스트 샘플로 활용할 수 있습니다. "oob_score=True"로 설정하면, 랜덤 포레스트 모델 훈련후에, 각 트리에서 사용하지 않은 샘플을 사용해 개별 트리의 예측 점수를 누적하여 평균을 냅니다. 회귀 모델은 트리의 predict() mathod 출력을 누적하며, 분류 모델의 경우는 predict_probe() method의 출력을 누적합니다. predict_probe()는 leaf node에 있는 class 비율을 사용해 예측 확률을 반환합니다. 
 
 - n_estimators: 앙상블할때 사용하는 트리의 개수를 지정합니다. v0.22부터 기본값이 10에서 100으로 변경되었습니다. 
-- warm_start: "warm_start=True"로 지정하면 트리를 만들때에 이전 모델에 이어서 트리를 추가합니다. warm_start 매개변수를 사용해 n_estimators에 따라 [OOB 점수의 변화를 그래프](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-bike.ipynb)로 그릴 수 있습니다. 
+- warm_start: "warm_start=True"로 지정하면 트리를 만들때에 이전 모델에 이어서 트리를 추가합니다. warm_start 매개변수를 사용해 n_estimators에 따라 [OOB 점수의 변화를 그래프](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/random-forest-census.ipynb)로 그릴 수 있습니다. 
 
 
 
