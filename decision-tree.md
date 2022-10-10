@@ -6,6 +6,19 @@
 
 결정트리에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)가 있습니다. 
 
+아래와 Max Depth가 1인 결정트리를 그릴 수 있습니다.
+
+```python
+plt.figure(figsize=(10,7))
+plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
+plt.show()
+```
+
+아래는 Max Depth가 1인 결정트리입니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
+
+
 
 ## 특징
 
@@ -84,20 +97,7 @@ print(dt.feature_importances_)
 
 ## Criterion  
 
-결정트리에서 노드를 분할하는 기준에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
-
-아래는 Max Depth가 1인 결정트리를 아래처럼 그릴수 있습니다.
-
-```python
-plt.figure(figsize=(10,7))
-plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])
-plt.show()
-```
-
-아래와 같이 Max Depth가 1인 결정트리를 그릴수 있습니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186655980-8b0674b7-2b0e-4c69-af3b-fed6271447dd.png)
-
+결정트리에서 노드를 분할하는 기준(Criterion)에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
 
 ## Impurity
 
