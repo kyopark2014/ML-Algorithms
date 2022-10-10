@@ -52,7 +52,7 @@ plt.show()
 
 ## Criterion  
 
-결정트리에서 노드를 분할하는 기준(Criterion)에는 Gini Impurity와 Entropy Imputiry가 있습니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
+결정트리에서 노드를 분할하는 기준(Criterion)으로 분류에서는 Gini Impurity와 Entropy Imputiry를 이용합니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
 
 ## Impurity
 
