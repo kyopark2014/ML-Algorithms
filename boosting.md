@@ -16,7 +16,7 @@
 
 ## Gradient Boosting
 
-Gradient Boosting은 [경사하강법(Gradient desecent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)을 사용하여 잔여 오차를 최소화하는 방향으로 트리를 앙상블에 추가합니다. 결정트리를 계속 추가하면서 가장 낮은 곳을 찾아 이동합니다.
+Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 손실함수를 정의하고, [경사하강법(Gradient desecent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)을 사용하여 잔차(Residual)가 최소화하는 방향으로 결정트리를 추가하는 앙상블 방법입니다. Scikit-learn의 Gradient Boosting Regression 모델의 기본 손실함수는 제곱 오차이고 분류 모델의 기본 손실 함수는 로지스틱 손실함수 입니다. 경사하강법으로 두 함수를 미분하면 y - y(sub)pred(/sub)을 얻을 수 있습니다. 
 
 - 깊이가 얕은 트리를 사용하여 이전 트리의 오차를 보완하는 방식의 앙상블 방법입니다. 따라서, 과대 적합에 강하고 높은 일반화 성능을 기대할 수 있습니다.
 - 이전 트리의 예측 오차를 기반으로 완전히 새로운 트리를 훈련합니다. 여기서 새로은 트리는 올바르게 예측된 값에는 영향을 받지 않습니다. 
@@ -27,11 +27,20 @@ Gradient Boosting은 [경사하강법(Gradient desecent)](https://github.com/kyo
 
 Boosing에서 정확한 최종 예측을 만들기 위해 오차를 계산할 수 있어야 합니다.
 
-잔차(Residual)는 타겟(Target)과 예측 사이의 차이입니다. 잔차는 모델 예측이 정답에서 얼마나 떨어져있는지 알려주며 양수 또는 음수 입니다. 
+잔차(Residual)는 관측된 데이터값(observed data value)인 타겟(Target)과 예측(predicted data value) 사이의 차이입니다. 잔차는 모델 예측이 정답에서 얼마나 떨어져있는지 알려주며 양수 또는 음수 입니다. 
 
 [선형 회귀(Linear Regression)](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)에서는 데이터에 얼마나 잘 맞는지를 평가하기 위하여 잔차의 제곱인 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 사용합니다.
 
-### Case of Gradient Boosting
+### Classificlation
+
+GradientBoostingClassifier
+
+### Regression
+
+GradientBoostingRegressor
+
+
+## Case of Gradient Boosting
 
 [gradient_boosting.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/gradient_boosting.ipynb)에 대해 설명합니다. 
 
