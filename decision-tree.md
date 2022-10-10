@@ -120,7 +120,7 @@ Random Forest와 XGBoost가 사용하는 방법입니다.
 - min_weight_fraction_leaf: 리프 노드가 되기 위한 전체 가중치의 최소 비율입니다. sample_weight를 지정하지 않으면 모두 동일한 가중치를 가집니다. min_samples_leaf과 같지만 전체 샘플에서 클래스 별 샘플 수 비율을 고려할 수 있습니다. 기본값은 0.0입니다. 0.01로 지정하고 500개의 샘플이 있다면, 리프 노드가 되기 위한 최소 샘플 갯수는 5개로 지정됩니다. 
 - ccp_alpha는 트리를 만든후 가지치기(pruning)하는 기능입니다. 
 
-DecisionTreeRegressor(https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)의 기본 Hyperparameter는 아래와 같습니다. 
+[DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)의 기본 Hyperparameter는 아래와 같습니다. 
 
 ```python
 from sklearn.tree import DecisionTreeRegressor
