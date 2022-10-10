@@ -231,3 +231,5 @@ print(dt.score(test_input, test_target))
 
 [sklearn.tree.DecisionTreeClassifie](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 
+[XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
+
