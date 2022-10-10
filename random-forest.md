@@ -16,6 +16,24 @@
 
 Bootstraping은 중복을 허용한 셈플링을 의미하는데, 랜덤 포레스트에서 개별 결정트리를 만들때에 Bootstraping을 수행합니다. 모든 결정트리가 다른 샘플을 사용하도록 원본 데이터셋과 동일한 크기의 Bootstraping을 이용합니다. 
 
+## Hyperparameter
+
+아래와 같이 Hyperpameter의 기본값을 확인할 수 있습니다. 
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=10, random_state=2, n_jobs=-1)
+print(rf.get_params())
+```
+이때의 결과는 아래와 같습니다. 
+
+```python
+{'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 
+'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'max_samples': None, 
+'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 
+'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 10, 'n_jobs': -1, 
+'oob_score': False, 'random_state': 2, 'verbose': 0, 'warm_start': False}
+```
 
 
 ## 구현방법
