@@ -1,7 +1,14 @@
-# Random Forest
+# 랜덤 포레스트 (Random Forest)
 
-다수의 [Decision tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)의 분류 결과를 취합해서 최종 예측값을 결정하는 [앙상블 학습](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)입니다. 
+다수의 [Decision tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)의 분류 결과를 취합해서 최종 예측값을 결정하는 [앙상블 학습](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)입니다. 랜덤 포레스트의 개별모델은 결정트리로서 최종 예측을 위해 수백 또는 수천개의 결정트리로 구성될 수 있습니다. 
 
+## 분류 (Classification)
+
+[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 다수결 투표를 사용합니다. 
+
+## 회귀 (Regression)
+
+[Ensemble 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)으로 모델의 예측을 평균하지만 개별 트리를 만들기 위해 Bagging(Boostrap aggreegation)을 사용합니다. 
 
 ## 구현방법
 
