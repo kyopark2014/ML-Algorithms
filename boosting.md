@@ -21,7 +21,12 @@ Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 손실함수�
 - 이전 트리의 예측 오차를 기반으로 완전히 새로운 트리를 훈련합니다. 여기서 새로은 트리는 올바르게 예측된 값에는 영향을 받지 않습니다. 
 - 결정트리 개수를 늘려도 과대 적합에 강하므로, 트리의 개수를 늘리거나 학습률을 증가시킬 수 있습니다. (n_estimators , learning_rate)
 - 일반적으로 Random forest보다 나은 성능을 기대하지만 순차적으로 계산하여야 하므로 느립니다. 
-- Gradient boosting regression 모델의 기본 학습기(Basic learner)는 [결정트리(Decision tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)입니다. 
+
+## Basic Learner
+
+Gradient boosting의 기본 학습기(Basic learner)는 [결정트리(Decision tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)로서, 높은 정확도로 튜닝을 하지 않습니다. 이것은 Gradient boosting이 기본학습기에 의존하는 모델이 아니라 오차에서 학습하는 모델을 원하기 때문입니다. 따라서, max_depth가 1인 decision stump나 max_depth가 2나 3인 결정트리를 사용합니다. 
+
+
 
 ### Residual
 
