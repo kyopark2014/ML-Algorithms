@@ -2,7 +2,7 @@
 
 여기에서는 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅](https://github.com/gilbutITbook/080263)의 예제 중심으로 설명합니다. 
 
-[XGBoost]()에서 XGBoost에 대해 설명하고 있습니다.
+[XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)를 참조하여 아래와 같은 케이스에 대해 예측합니다.
 
 ## 자전거 대여 횟수 예측
 
