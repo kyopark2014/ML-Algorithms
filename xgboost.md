@@ -17,7 +17,7 @@ XGBoost는 속도에 주안점을 두어 설계되었습니다.
 
 ### 근사 분할 탐색 알고리즘
 
-XGBoost가 사용하는 근사 분할 탐색 알고리즘은 데이터를 나누는 퍼센트인 분위수(Quantile)을 사용하여 후보 분할을 제안합니다. global proposal에서는 동일한 분위수가 전체 훈련에 사용되고, local proposal에서는 각 분할 마다 새로운 분위수를 제안합니다. Quantile sketch algorithm은 가중치가 균일한 dataset에서 잘동작합니다. XGBoost는 이론적으로 보장된 병합과 가지치기를 기반으로 새로운 가중 퀀타일 스케치를 사용합니다. 
+XGBoost가 사용하는 근사 분할 탐색 알고리즘은 데이터를 나누는 퍼센트인 분위수(Quantile)을 사용하여 후보 분할을 제안합니다. global proposal에서는 동일한 분위수가 전체 훈련에 사용되고, local proposal에서는 각 분할 마다 새로운 분위수를 제안합니다. Quantile sketch algorithm은 가중치가 균일한 dataset에서 잘동작하는데 XGBoost는 이론적으로 보장된 병합과 가지치기를 기반으로 새로운 가중 퀀타일 스케치를 사용합니다. 
 
 ### 희소성 고려 분할 탐색
 
