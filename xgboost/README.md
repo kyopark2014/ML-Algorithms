@@ -51,7 +51,7 @@
 
 1) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-heart-disease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-heart-disease.ipynb)에서는 0.86의 정확도로 예측하였으나, HPO를 통해 0.87로 개선하였습니다. 
 
-2) [XGBoost]()를 이용하여 [xgboost-heart-desease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-heart-desease.ipynb)에서는 0.83의 정확도를 예측하였으나, HPO를 통해 0.89로 개선되었습니다. 
+2) [XGBoost]()를 이용하여 [xgboost-heart-desease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-heart-desease.ipynb)에서는 0.83의 정확도를 예측하였으나, HPO를 통해 0.93로 개선되었습니다. 
 
 ## 외계 행성 찾기 분류
 
