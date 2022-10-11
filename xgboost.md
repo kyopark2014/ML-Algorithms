@@ -15,15 +15,21 @@ XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사�
 
 XGBoost는 속도에 주안점을 두어 설계되었습니다. 
 
-### 근사 분할 탐색 알고리즘
+- 근사 분할 탐색 알고리즘: XGBoost가 사용하는 근사 분할 탐색 알고리즘은 데이터를 나누는 퍼센트인 분위수(Quantile)을 사용하여 후보 분할을 제안합니다. global proposal에서는 동일한 분위수가 전체 훈련에 사용되고, local proposal에서는 각 분할 마다 새로운 분위수를 제안합니다. Quantile sketch algorithm은 가중치가 균일한 dataset에서 잘동작하는데 XGBoost는 이론적으로 보장된 병합과 가지치기를 기반으로 새로운 가중 퀀타일 스케치를 사용합니다. 
 
-XGBoost가 사용하는 근사 분할 탐색 알고리즘은 데이터를 나누는 퍼센트인 분위수(Quantile)을 사용하여 후보 분할을 제안합니다. global proposal에서는 동일한 분위수가 전체 훈련에 사용되고, local proposal에서는 각 분할 마다 새로운 분위수를 제안합니다. Quantile sketch algorithm은 가중치가 균일한 dataset에서 잘동작하는데 XGBoost는 이론적으로 보장된 병합과 가지치기를 기반으로 새로운 가중 퀀타일 스케치를 사용합니다. 
+- 희소성 고려 분할 탐색: Dataset이 주로 누락된 값으로 구성되거나, One-hot encoding되어 있는 경우에 대부분의 원소가 0이거나 NULL인 희소 데이터 형태를 가집니다. 범주형 특성을 수치형 특성으로 만들기 위해서 pandas의 get_dummies()를 사용할때에도 one-hot encoding이 이용되어 집니다. XGBoost는 희소한 행렬을 탐색할때 매우 빠릅니다. 
 
-### 희소성 고려 분할 탐색
+- 병렬 컴퓨팅: XGBoost는 데이터를 Block 단위로 정렬하고 압축하여 여러대의 머신이나 외부 메모리에 분산될 수 있습니다. 분할 탐색 알고리즘은 블록의 장점을 사용해 분위수(Quantile) 탐색을 빠르게 수행합니다. 
 
-Dataset이 주로 누락된 값으로 구성되거나, One-hot encoding되어 있는 경우에 대부분의 원소가 0이거나 NULL인 희소 데이터 형태를 가집니다. 범주형 특성을 수치형 특성으로 만들기 위해서 pandas의 get_dummies()를 사용할때에도 one-hot encoding이 이용되어 집니다. XGBoost는 희소한 행렬을 탐색할때 매우 빠릅니다. 
+- 캐시 고려 접근: XGBoost는 캐시를 고려한 Prefetching을 사용합니다. 내부 버퍼를 할당하고 Gradient 통계를 가져와 미니배치 방식으로 누적을 수행합니다. Prefetching은 읽기/쓰기 의존성을 느슨하게 만들고 많은 샘플을 가진 dataset에서 실행 부하를 50% 절감할 수 있습니다. 
 
-### 병렬 컴퓨팅 
+- 블록 압축과 샤딩: 블록 압축(block compression)은 열을 압축하여 디스크를 읽는데 도움이 되며, 블록 샤딩 (block sharding)은 번갈아 가며 여러 디스크로 데이터를 샤딩하기 때문에 데이터를 읽는 시간을 줄여줍니다. 
+
+
+## 정확도 향상 
+
+XGBoost는 Gradient Boosting이나 Random Forest와 달리 학습하려는 목적 함수의 일부로 규제를 포함하고 있습니다. 규제(Regulaization)를 추가하여 분산을 줄이고 과대적합을 방지합니다. 
+
 
 
 
