@@ -25,3 +25,18 @@ import pandas as pd
 data = pd.read_csv(datapath)
 ```
 
+### Elapsed Time
+
+시간 측정하는 방법은 아래와 같습니다. 
+
+```python
+import time
+start = time.time()
+
+# Operation
+
+end = time.time()
+elapsed = end - start
+print('\nElased time: ' + str(elapsed) + ' s')
+```
+
