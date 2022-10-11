@@ -74,6 +74,9 @@
   
 ## Higgs boson 찾기
 
+힉스 보손 데이터를 가지고 Scikit-learn API를 활용하여 [xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 분류를 수행합니다. 
+
+
 
 
 
