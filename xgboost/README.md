@@ -62,6 +62,24 @@
 
 2) [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 XGBClassifier를 이용하여 [xgboost-exoplanets.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-exoplanets.ipynb)와 같이 구하면, 0.99의 정확도로 8초가 소요됩니다.
 
+
+## 붓꽃 분류
+
+붓꽃 (iris)는 꽃받침과 꽃잎 길이와 너비를 이용하여 setosa, versicolor, virginia의 세가지의 붗꽃으로 타깃(target)을 가질 수 있습니다. [xgboost-iris.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-iris.ipynb)에서는 XGBoost classification을 이용해 붓꽃(iris)를 분류하고 있습니다. 
+
+
+## 당뇨병 예측
+
+당료병(diabetes) 데이터셋으로 [xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 회귀를 수행합니다. 
+  
+## Higgs boson 찾기
+
+
+
+
+
+
+
 ## Reference 
 
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
