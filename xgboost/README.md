@@ -51,6 +51,8 @@
 
 1) [Decision Tree](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 이용하여 [decision-tree-heart-disease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/decision-tree-heart-disease.ipynb)에서는 0.86의 정확도로 예측하였으나, HPO를 통해 0.87로 개선하였습니다. 
 
+2) [XGBoost]()를 이용하여 [xgboost-heart-desease.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-heart-desease.ipynb)에서는 0.83의 정확도를 예측하였으나, HPO를 통해 0.89로 개선되었습니다. 
+
 ## 외계 행성 찾기 분류
 
 [외계 해성 데이터셋은 2017년 캐글에 소개된 데이터셋](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data)으로 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)에 있는 [exoplanets.csv.zip](https://raw.githubusercontent.com/rickiepark/handson-gb/main/Chapter04/exoplanets.csv.zip)을 이용하여, 어떤 행성이 별을 가지고 있는지(LABEL)을 예측합니다. 
