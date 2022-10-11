@@ -1,6 +1,6 @@
 # 앙상블 학습
 
-앙상블 학습(Ensemble learning)은 여러 개의 분류기를 생성하고, 그 예측을 결합함으로써 보다 정확한 예측을 도출하는 기법을 의미합니다. 여러 모델의 결과를 연결하기 때문에 오차를 줄이고 더 나은 성능을 내는 경향이 있습니다. 
+앙상블 학습(Ensemble learning)은 여러 개의 분류기를 생성하고, 그 예측을 결합함으로써 보다 정확한 예측을 도출하는 기법을 의미합니다. 여러 모델의 결과를 연결하기 때문에 오차를 줄이고 더 나은 성능을 내는 경향이 있습니다. [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)는 Bagging(Bootstrap Aggregating)을 사용하고, [Gradient Boosting](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)이나 [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)는 Boosting을 사용합니다.
 
 ## Bagging
 
