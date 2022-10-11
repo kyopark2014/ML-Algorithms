@@ -80,6 +80,17 @@ print(pd.unique(wine['class']))
 [0. 1.]
 ```
 
+### Shuffle
+
+dataset을 섞습니다. 
+
+```python
+from sklearn.utils import shuffle
+df = shuffle(df, random_state=2)
+
+df.head()
+```
+
 ## Wrangling Examples
 
 ### Bike Sharing
