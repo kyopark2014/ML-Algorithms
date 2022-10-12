@@ -85,7 +85,7 @@ print('Avg. Accuracy: %0.2f' % (scores.mean()))
 
 ### classification_report
 
-분류에서 accuracy, precision, recall, f1-score을 아래와 같이 확인합니다. 
+[xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 분류에서 accuracy, precision, recall, f1-score을 아래와 같이 확인합니다. 
 
 ```python
 from sklearn.metrics import classification_report
