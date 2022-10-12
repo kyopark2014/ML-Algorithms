@@ -12,7 +12,7 @@ data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
 ```
 
-### load한 데이터의 특성 파악 
+### Load한 데이터의 특성 파악 
 
 [xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 scikit-learn에서 로드한 diabetes 데이터에서 'X'에 대한 속성 확인을 아래와 같이 info() method를 수행할 수 있습니다. 마찬가지로 describe(), head(), value_counts() 등을 사용할 수 있습니다. 
 
