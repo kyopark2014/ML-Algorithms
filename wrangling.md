@@ -12,6 +12,26 @@ data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
 ```
 
+### Target의 value count 하기
+
+[xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이, Panda로 읽은 데이터에서 Target의 현황을 value_counts()로 확인할 수 있습니다. 
+
+```python
+import pandas as pd
+df_census = pd.read_csv('census_income_cleaned.csv')
+df_census.head()
+
+df_census['income_ >50K'].value_counts()
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+0    24719
+1     7841
+Name: income_ >50K, dtype: int64
+```
+
 ### 누락된 값 확인 
 
 [df_bikes](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)에 있는 누락된 값을 출력합니다.
