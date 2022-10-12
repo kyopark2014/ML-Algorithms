@@ -49,6 +49,23 @@ df_census['income_ >50K'].value_counts()
 Name: income_ >50K, dtype: int64
 ```
 
+### Feature의 value를 replace 하기
+
+[xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 feature의 값을 다른 값으로 바꿀 수 있습니다. 먼저 label열의 값을 확인하면 아래와 같이 's', 'b'를 가지고 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/195362960-2d54bc7c-56bc-4f35-ac18-0d2996facdac.png)
+
+이것을 아래와 같이 replace 합니다. 
+
+```python
+df['Label'].replace(('s', 'b'), (1, 0), inplace=True)
+```
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/195363305-a436de67-9855-496d-9fec-4176b35591c6.png)
+
+
 ### 누락된 값 확인 
 
 [df_bikes](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-bike.ipynb)에 있는 누락된 값을 출력합니다.
