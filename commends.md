@@ -60,7 +60,7 @@ y_pred = model.predict(X_test)
 from sklearn.metrics import accuracy_score
 score = accuracy_score(y_pred, y_test)
 
-print('Accuracy:', np.round(score, 2))
+print('Accuracy: %0.2f' % (score))
 ```
 
 이때의 결과는 아래와 같습니다. 
