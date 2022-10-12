@@ -96,3 +96,29 @@ print(classification_report(y_true=y_test, y_pred = y_pred))
 
 ![image](https://user-images.githubusercontent.com/52392004/195368069-24441412-b3d4-43cb-a9be-2ebd2f888d06.png)
 
+### Feature Importance
+
+[xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 Feature Importance의 값을 아래와 같이 확인합니다. 
+
+```python
+print(model.feature_importances_)
+```
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/195369225-fc8ea777-a16e-436e-ba7f-2249809c8937.png)
+
+중요도를 그림으로 표시합니다. 
+
+```python
+import xgboost as xgb
+
+feature_data = xgb.DMatrix(X_test)
+model.get_booster().feature_names = feature_data.feature_names
+model.get_booster().feature_types = feature_data.feature_types
+
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(15, 8))
+```
+
+![image](https://user-images.githubusercontent.com/52392004/195369423-47f2340a-bcb2-4aa2-a656-d847f3825595.png)
