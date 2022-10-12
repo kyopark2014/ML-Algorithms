@@ -120,5 +120,6 @@ model.get_booster().feature_types = feature_data.feature_types
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(figsize=(15, 8))
 ```
+이때의 결과는 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/195369423-47f2340a-bcb2-4aa2-a656-d847f3825595.png)
