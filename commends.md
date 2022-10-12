@@ -71,6 +71,8 @@ Accuracy: 0.84
 
 ### cross_val_score
 
+#### Classification 
+
 [xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 교차검증(cross validation)으로 분류에서 Accuacy를 구합니다. 
 
 ```python
@@ -82,6 +84,24 @@ scores = cross_val_score(best_model, X, y, cv=5)
 print('Accuracy:', np.round(scores, 2))
 print('Avg. Accuracy: %0.2f' % (scores.mean()))
 ```
+
+#### Regression
+
+[linear-regression-bike.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/linear-regression-bike.ipynb)와 같이 교차검증으로 회귀에서 RMSE를 구할 수 있습니다. 
+
+```python
+from sklearn.model_selection import cross_val_score
+
+model = LinearRegression()
+
+scores = cross_val_score(model, X, y, scoring='neg_mean_squared_error', cv=50)
+
+rmse = np.sqrt(-scores)
+
+print('RMSE:', np.round(rmse, 2))
+print('Avg. RMSE: %0.2f' % (rmse.mean()))
+```
+
 
 ### classification_report
 
