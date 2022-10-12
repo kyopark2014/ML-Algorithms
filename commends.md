@@ -48,7 +48,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=2)
 ```
 
-### cross_val_score
+### accuracy_score
 
 [xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 분류에서 score(accuracy)를 확인합니다. 
 
