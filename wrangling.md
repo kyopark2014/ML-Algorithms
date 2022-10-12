@@ -12,6 +12,23 @@ data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
 ```
 
+### load한 데이터의 특성 파악 
+
+[xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 scikit-learn에서 로드한 diabetes 데이터에서 'X'에 대한 속성 확인을 아래와 같이 info() method를 수행할 수 있습니다. 마찬가지로 describe(), head(), value_counts() 등을 사용할 수 있습니다. 
+
+```python
+from sklearn import datasets
+X, y = datasets.load_diabetes(return_X_y=True)
+
+import pandas as pd
+pd.DataFrame(X).info()
+```
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/195358289-50927a7c-ad6b-4f80-b231-abd9919d24b3.png)
+
+
 ### Target의 value count 하기
 
 [xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이, Panda로 읽은 데이터에서 Target의 현황을 value_counts()로 확인할 수 있습니다. 
