@@ -68,3 +68,31 @@ print('Accuracy:', np.round(score, 2))
 ```python
 Accuracy: 0.84
 ```
+
+### cross_val_score
+
+[xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 교차검증(cross validation)으로 분류에서 Accuacy를 구합니다. 
+
+```python
+from sklearn.model_selection import cross_val_score
+import numpy as np
+
+scores = cross_val_score(best_model, X, y, cv=5)
+
+print('Accuracy:', np.round(scores, 2))
+print('Avg. Accuracy: %0.2f' % (scores.mean()))
+```
+
+### classification_report
+
+분류에서 accuracy, precision, recall, f1-score을 아래와 같이 확인합니다. 
+
+```python
+from sklearn.metrics import classification_report
+print(classification_report(y_true=y_test, y_pred = y_pred))
+```
+
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/195368069-24441412-b3d4-43cb-a9be-2ebd2f888d06.png)
+
