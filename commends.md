@@ -35,8 +35,36 @@ start = time.time()
 
 # Operation
 
-end = time.time()
-elapsed = end - start
-print('\nElased time: ' + str(elapsed) + ' s')
+print('Elased time: %0.2fs' % (time.time()-start))
 ```
 
+### train_test_split
+
+Train/Test dataset 분리를 합니다. 
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=2)
+```
+
+### cross_val_score
+
+[xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 분류에서 score(accuracy)를 확인합니다. 
+
+```python
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+from sklearn.metrics import accuracy_score
+score = accuracy_score(y_pred, y_test)
+
+print('Accuracy:', np.round(score, 2))
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+Accuracy: 0.84
+```
