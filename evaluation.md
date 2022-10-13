@@ -31,6 +31,21 @@ print(classification_report(y_true=y_test, y_pred = predictions))
 weighted avg       0.96      0.72      0.81      1000
 ```
 
+
+
+https://www.scikit-yb.org/en/latest/api/classifier/classification_report.html
+
+- precision
+Precision can be seen as a measure of a classifier’s exactness. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, “for all instances classified positive, what percent was correct?”
+
+- recall
+Recall is a measure of the classifier’s completeness; the ability of a classifier to correctly find all positive instances. For each class, it is defined as the ratio of true positives to the sum of true positives and false negatives. Said another way, “for all instances that were actually positive, what percent was classified correctly?”
+
+- f1 score
+The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. Generally speaking, F1 scores are lower than accuracy measures as they embed precision and recall into their computation. As a rule of thumb, the weighted average of F1 should be used to compare classifier models, not global accuracy.
+
+
+
 ### 분류 모델의 비교 
 
 데이터의 분포차이가 있는 경우에 F score를 사용하여 튜닝을 합니다. 만약 주어진 문제가 잘못 판정하면 안되는 문제여서 정밀도(precision)이 0.9 이상이여야 한다면, 이 기준을 만족하면서 F score가 높아지도록 파라미터를 튜닝합니다. 
