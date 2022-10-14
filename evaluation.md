@@ -53,7 +53,7 @@ The F1 score is a weighted harmonic mean of precision and recall such that the b
 
 ### ROC 
 
-ROC 곡선 (receiver operating characteristics curve)
+ROC 곡선 (receiver operating characteristics curve)은 거짓 양성 비율(FPR) 대비 양성 비율(TPR) 그래프입니다. FPR은 FP / (FP+TN)이며 TPR은 재현율의 다른이름입니다. 아래의 면적이 roc_auc_score()입니다. 
 
 ### AUC 
 
