@@ -4,11 +4,11 @@
 
 - [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy): 단순히 결과가 얼마나 바르게 나뉘었는지를 보여줍니다. 데이터 분포가 한쪽으로 치우치면 의미가 없습니다. 
 
-- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다. 예) 스펨을 검출할때 스펨을 정확히 찾는것 (스펨을 놓칠수도 있으나 정상은 메일이 스펨으로 분류되지 않음)
+- [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다. 예로서는 스펨을 검출할때 스펨을 정확히 찾는것을 말하는데, 스펨을 놓칠수도 있으나 정상은 메일이 스펨으로 분류되지 않도록 하는것을 의미합니다. 올바르게 양성으로 예측된 양성 셈플의 수인 진짜 양성(true positive)와 올바르지 않게 양성으로 예측된 음성 샘플의 수인 거짓 양성(false positive)로 정의됩니다. 정밀도의 정의는 TP / (TP + FP) 입니다. 여기서 TP는 진짜 양성이고 FP는 가짜 양성입니다. 
 
-- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall): 데이터 분포를 고려하여 특정 class가 얼마나 정확하게 예측되었는지를 보여줍니다. 예) 암을 검출할때 놓치지 않는것 (정상이 암으로 판정될 수 있음)
+- [재현율 (Recall)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#recall): 데이터 분포를 고려하여 특정 class가 얼마나 정확하게 예측되었는지를 보여주는데 예측하지 못한 양성 클랫의 비율을 의미합니다. 예로서는 암을 검출할때 놓치지 않는것을 의미하는데, recall이 높으면 암을 잘 찾지만, 정상이 암으로 판정될 수 있습니다. recall의 정의는 TP / (TP + FN)으로서 TP는 진자 양성이고 FN은 거짓 음성입니다. 거짓음성은 올바르지 않게 음성으로 예측된 양성 셈풀의 개수입니다. 
 
-- [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score): 정밀도와 재현율의 조화 평균입니다. F1 Score가 높으면 재현율과 정밀도가 고르게 높다는 의미입니다. 
+- [F1 Score](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#f1-score): 정밀도와 재현율의 분포가 다르기 때문에 조화 평균을 사용입니다. F1 Score가 높으면 재현율과 정밀도가 고르게 높다는 의미입니다. 
 
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
 
@@ -36,7 +36,7 @@ weighted avg       0.96      0.72      0.81      1000
 https://www.scikit-yb.org/en/latest/api/classifier/classification_report.html
 
 - precision
-Precision can be seen as a measure of a classifier’s exactness. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, “for all instances classified positive, what percent was correct?”
+. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, “for all instances classified positive, what percent was correct?”
 
 - recall
 Recall is a measure of the classifier’s completeness; the ability of a classifier to correctly find all positive instances. For each class, it is defined as the ratio of true positives to the sum of true positives and false negatives. Said another way, “for all instances that were actually positive, what percent was classified correctly?”
@@ -126,3 +126,8 @@ print(kn.score(test_input, test_target))
 [위키백과 - 평균 제곱근 편차](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0_%EC%A0%9C%EA%B3%B1%EA%B7%BC_%ED%8E%B8%EC%B0%A8)
 
 [sklearn.metrics.mean_squared_error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)
+
+[Classification Report](https://www.scikit-yb.org/en/latest/api/classifier/classification_report.html)
+
+[Metrics and scoring: quantifying the quality of predictions](https://www.scikit-yb.org/en/latest/api/classifier/classification_report.html)
+
