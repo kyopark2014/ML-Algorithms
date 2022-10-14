@@ -33,18 +33,6 @@ weighted avg       0.96      0.72      0.81      1000
 
 
 
-https://www.scikit-yb.org/en/latest/api/classifier/classification_report.html
-
-- precision
-. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, “for all instances classified positive, what percent was correct?”
-
-- recall
-Recall is a measure of the classifier’s completeness; the ability of a classifier to correctly find all positive instances. For each class, it is defined as the ratio of true positives to the sum of true positives and false negatives. Said another way, “for all instances that were actually positive, what percent was classified correctly?”
-
-- f1 score
-The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. Generally speaking, F1 scores are lower than accuracy measures as they embed precision and recall into their computation. As a rule of thumb, the weighted average of F1 should be used to compare classifier models, not global accuracy.
-
-
 
 ### 분류 모델의 비교 
 
