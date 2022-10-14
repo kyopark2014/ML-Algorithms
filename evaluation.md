@@ -2,7 +2,7 @@
 
 ## 분류(Classification)의 평가 지표
 
-- [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy): 단순히 결과가 얼마나 바르게 나뉘었는지를 보여줍니다. 데이터 분포가 한쪽으로 치우치면 의미가 없습니다. 
+- [정확도 (accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy): 단순히 결과가 얼마나 바르게 나뉘었는지를 보여줍니다. 데이터 분포가 한쪽으로 치우치면 의미가 없습니다.  
 
 - [정밀도 (Precision)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#precision): 데이터 분포를 고려하여 제대로 예측된 비중을 보여줍니다. 예로서는 스펨을 검출할때 스펨을 정확히 찾는것을 말하는데, 스펨을 놓칠수도 있으나 정상은 메일이 스펨으로 분류되지 않도록 하는것을 의미합니다. 올바르게 양성으로 예측된 양성 셈플의 수인 진짜 양성(true positive)와 올바르지 않게 양성으로 예측된 음성 샘플의 수인 거짓 양성(false positive)로 정의됩니다. 정밀도의 정의는 TP / (TP + FP) 입니다. 여기서 TP는 진짜 양성이고 FP는 가짜 양성입니다. 
 
