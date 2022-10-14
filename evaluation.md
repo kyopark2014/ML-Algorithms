@@ -106,7 +106,7 @@ print(f'Coefficient of determination: {r2}')
 
 아래는 K Neighbors Classifier을 이용한 예제입니다. 여기서 score는 결정계수를 의미합니다. score() 호출시, 분류(Classification)에서는 [정확도(Accuracy)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#accuracy)을 의미하고, 회귀(Regression)에서는 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 나타냅니다.
 
-
+ 
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 
