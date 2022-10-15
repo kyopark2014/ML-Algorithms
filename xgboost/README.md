@@ -73,7 +73,10 @@
 ## 당뇨병 예측
 
 [당뇨병(diabetes) 데이터셋](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_diabetes.html)으로 [xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 회귀를 수행합니다. 
-  
+
+![image](https://user-images.githubusercontent.com/52392004/195969474-5742ecf5-f80a-4ebe-819b-609666de364d.png)
+
+
 ## Higgs boson 찾기
 
 힉스 보손 데이터를 가지고 Scikit-learn API를 활용하여 [xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 분류를 수행합니다. 
