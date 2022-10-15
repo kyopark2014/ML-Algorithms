@@ -240,7 +240,9 @@ df.head()
 
 ![image](https://user-images.githubusercontent.com/52392004/195975998-59d29719-67a3-4994-9ec9-ab92f6925d32.png)
 
+이것을 [wrangling-student-Performance](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-student-por.ipynb)을 이용하여 아래와 같이 수정할 수 있습니다.
 
+![image](https://user-images.githubusercontent.com/52392004/195976251-c6ada97b-a416-434c-ac89-f1b649c2698c.png)
 
 
 ## Reference
