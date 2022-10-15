@@ -137,7 +137,7 @@ df['rush_hour'] = df.apply(rush_hour, axis=1)
 
 이때의 결과는 아래와 같습니다.
 
-![image](https://user-images.githubusercontent.com/52392004/195972984-b4983147-b5a5-48ce-ba6e-d4153493e2f0.png)
+![image](https://user-images.githubusercontent.com/52392004/195973003-a5bac706-e074-4ea2-b481-ed282550575f.png)
 
 
 ### CSV 파일로 저장하기 
