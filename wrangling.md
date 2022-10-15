@@ -115,6 +115,10 @@ df['hour'] = df['date'].dt.hour
 df['dayofweek'] = df['date'].dt.dayofweek
 ```
 
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/195972877-b2649761-28f1-4859-b2cf-b299749dad78.png)
+
 
 ### CSV 파일로 저장하기 
 
