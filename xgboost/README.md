@@ -67,7 +67,7 @@
 
 ## 붓꽃 분류
 
-붓꽃 (iris)는 꽃받침과 꽃잎 길이와 너비를 이용하여 setosa, versicolor, virginia의 세가지의 붗꽃으로 타깃(target)을 가질 수 있습니다. [xgboost-iris.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-iris.ipynb)에서는 XGBoost classification을 이용해 붓꽃(iris)를 분류하고 있습니다. 
+[붓꽃 (iris) 데이터셋](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)은 꽃받침과 꽃잎 길이와 너비를 이용하여 setosa, versicolor, virginia의 세가지의 붗꽃으로 타깃(target)을 가지고 있습니다. [xgboost-iris.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-iris.ipynb)에서는 XGBoost classification을 이용해 붓꽃(iris)를 분류하고 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/195969499-7fcc415f-3d7b-4c72-aa94-659dd85d55f1.png)
 
