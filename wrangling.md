@@ -102,6 +102,20 @@ df_census = pd.get_dummies(df_census)
 data = data.drop('casual', 'registered'], axis=1)
 ```
 
+### Timestamp
+
+[wrangling-cab-rides.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-cab-rides.ipynb)와 같이 Timestamp에서 date 추출은 아래와 같이 수행합니다. 더불어 datatime을 이용하여 아래와 같이 'month', 'hour', 'dayofweek'를 추출할 수 있습니다. 
+
+```python
+df['date'] = pd.to_datetime(df['time_stamp']*(10**6))
+
+import datetime as dt
+df['month'] = df['date'].dt.month
+df['hour'] = df['date'].dt.hour
+df['dayofweek'] = df['date'].dt.dayofweek
+```
+
+
 ### CSV 파일로 저장하기 
 
 향후에 사용할 수 있도록 dataset을 csv 파일로 저장할 수 있습니다. 여기서 'index=False'로 지정하면 데이터프레임의 인덱스가 하나의 열로 저장되는것을 막아줍니다. 
