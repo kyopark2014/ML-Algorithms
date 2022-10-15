@@ -78,6 +78,8 @@
 
 힉스 보손 데이터를 가지고 Scikit-learn API를 활용하여 [xgboost-higgs-boson.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-higgs-boson.ipynb)와 같이 분류를 수행합니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/195969399-46d1679a-a0bf-4d11-a4f5-7d9e07e50067.png)
+
 ## Breast Canser
 
 [Scikit-lean에서 제공하는 위스콘신 유방암 데이터셋](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)을 이용한 [xgboost-breast-cancer.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-breast-cancer.ipynb)와 같이 분류를 수행합니다. 
