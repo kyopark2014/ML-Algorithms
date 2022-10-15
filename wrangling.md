@@ -172,6 +172,19 @@ df.head()
 ![image](https://user-images.githubusercontent.com/52392004/194688720-b70da40d-3bec-41e7-b49b-b2ff09bc52f4.png)
 
 
+### 우버와 리프트의 텍시 데이터 
+
+[Uber & Lyft Cab prices](https://www.kaggle.com/datasets/ravi72munde/uber-lyft-cab-prices)의 데이터셋은 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/195972136-19e63d75-91cb-4166-a746-7b56fde41743.png)
+
+
+[wrangling-cab-rides.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-cab-rides.ipynb)을 이용하여 수정한 dataset은 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/195972276-cf4d1719-b617-48a7-9486-33ec287d4e29.png)
+
+
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
