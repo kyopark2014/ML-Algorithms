@@ -12,9 +12,15 @@ data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
 ```
 
-[Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/student+performance)의 경우에 
+[Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/student+performance)의 경우에 [student-performance-data-set](https://github.com/kyopark2014/ML-Algorithms/blob/main/wrangling.md#student-performance-data-set)와 같이 하나의 column에 데이터가 모여 있습니다. 이런 경우에 아래와 같이 분리할 수 있습니다. 
 
-이것을 
+```python
+df = pd.read_csv('https://raw.githubusercontent.com/rickiepark/handson-gb/main/Chapter10/student-por.csv', sep=';')
+df.head()
+```
+
+이때의 결과는 아래와 같습니다. 
+
 ![image](https://user-images.githubusercontent.com/52392004/195976014-622a61a0-ea26-4bc2-962a-bcfe23579508.png)
 
 
