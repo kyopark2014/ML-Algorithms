@@ -72,7 +72,7 @@
 
 ## 당뇨병 예측
 
-당료병(diabetes) 데이터셋으로 [xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 회귀를 수행합니다. 
+[당뇨병(diabetes) 데이터셋](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_diabetes.html)으로 [xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 회귀를 수행합니다. 
   
 ## Higgs boson 찾기
 
