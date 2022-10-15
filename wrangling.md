@@ -12,6 +12,12 @@ data = wine[['alcohol', 'sugar', 'pH']].to_numpy()
 target = wine['class'].to_numpy()
 ```
 
+[Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/student+performance)의 경우에 
+
+이것을 
+![image](https://user-images.githubusercontent.com/52392004/195976014-622a61a0-ea26-4bc2-962a-bcfe23579508.png)
+
+
 ### Load한 데이터의 특성 파악 
 
 [xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 scikit-learn에서 로드한 diabetes 데이터에서 'X'에 대한 속성 확인을 아래와 같이 info() method를 수행할 수 있습니다. 마찬가지로 describe(), head(), value_counts() 등을 사용할 수 있습니다. 
@@ -220,6 +226,14 @@ df.head()
 [wrangling-cab-rides.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/wrangling-cab-rides.ipynb)을 이용하여 수정한 dataset은 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/195972276-cf4d1719-b617-48a7-9486-33ec287d4e29.png)
+
+
+### Student Performance Data Set
+
+[Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/student+performance)의 데이터는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/195975998-59d29719-67a3-4994-9ec9-ab92f6925d32.png)
+
 
 
 
