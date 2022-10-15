@@ -115,9 +115,29 @@ df['hour'] = df['date'].dt.hour
 df['dayofweek'] = df['date'].dt.dayofweek
 ```
 
+이것으로 아래와 같이 weekend와 rush_hour를 계산할 수 있습니다. 
+
+```python
+def weekend(row):
+    if row['dayofweek'] in [5,6]:
+        return 1
+    else:
+        return 0
+
+df['weekend'] = df.apply(weekend, axis=1)
+
+def rush_hour(row):
+    if (row['hour'] in [6,7,8,9,15,16,17,18]) & (row['weekend'] == 0):
+        return 1
+    else:
+        return 0
+
+df['rush_hour'] = df.apply(rush_hour, axis=1)
+```
+
 이때의 결과는 아래와 같습니다.
 
-![image](https://user-images.githubusercontent.com/52392004/195972877-b2649761-28f1-4859-b2cf-b299749dad78.png)
+![image](https://user-images.githubusercontent.com/52392004/195972984-b4983147-b5a5-48ce-ba6e-d4153493e2f0.png)
 
 
 ### CSV 파일로 저장하기 
