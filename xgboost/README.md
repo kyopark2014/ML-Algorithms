@@ -82,6 +82,8 @@
 
 [Scikit-lean에서 제공하는 위스콘신 유방암 데이터셋](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)을 이용한 [xgboost-breast-cancer.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-breast-cancer.ipynb)와 같이 분류를 수행합니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/195969266-8f5ee200-9c20-409c-9845-fb1edb16cccf.png)
+
 
 
 
