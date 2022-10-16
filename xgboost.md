@@ -56,7 +56,7 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 ## Hyperparameters
 
-XGBClassifier 기본 파라메터는 아래와 같습니다.
+[XGBClassifier 기본 파라메터](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)는 아래와 같습니다.
  
  ```java
 {'objective': 'binary:logistic',
@@ -99,7 +99,7 @@ XGBClassifier 기본 파라메터는 아래와 같습니다.
  'verbosity': None}
  ```
  
- XGBRegressor의 기본 파라메터는 아래와 같습니다.
+ [XGBRegressor의 기본 파라메터](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)는 아래와 같습니다.
  
  ```java
  {'objective': 'reg:squarederror',
@@ -133,9 +133,109 @@ XGBClassifier 기본 파라메터는 아래와 같습니다.
  'verbosity': None}
  ```
 
+#### n_estimators
+
+앙상불의 트리 개수를 의미합니다. 
+
+- 범위: [1, inf], 기본값: 100
+- 값을 늘리면 대용량 데이터에서 성능을 높일 수 있습니다.
+
+#### learning_rate
+
+부스팅의 각 단계에서 트리의 기여도를 줄입니다. eta로도 불립니다. 
+
+- 범위: [0, 1], 기본값: 0.3
+- 값을 줄이면 과대적합을 방지합니다. 
 
 
-## Example 
+#### max_depth
+
+트리의 깊이를 의미합니다. 0은 tree_method='hist', grow_policy='Lossguide'일때 선택할수 있으며 깊이에 제한이 없다는 의미입니다. 
+
+- 범위: [0, inf], 기본값: 6
+- 값을 줄이면 과대적합을 방지합니다. 
+
+#### gamma
+
+min_split_loss로도 불립니다. 보통 10보다 작은 값으로 설정합니다.
+
+- 범위: [0, inf], 기본값: 0
+- 값을 늘리면 과대적합을 방지합니다. 
+
+#### min_child_weight
+
+노드 분할을 위해 필요한 최소 가중치 합입니다. 
+
+- 범위: [0, inf], 기본값: 1
+- 값을 늘리면 과대적합을 방지합니다. 
+
+#### subsample
+
+부스팅 단계마다 사용할 훈련 샘플 개수의 비율입니다. 
+
+- 범위: [0, 1], 기본값: 1
+- 값을 줄이면 과대적합을 방지합니다. 
+
+#### colsample_bytree
+
+부스팅 단계마다 사용할 특성 개숫의 비율입니다.
+
+- 범위: [0, 1], 기본값: 1
+- 값을 줄이면 과대적합을 방지합니다. 
+
+#### colsample_bylevel
+
+트리 깊이마다 사용할 특성 개수의 비율입니다.
+
+- 범위: [0, 1], 기본값: 1
+- 값을 줄이면 과대적합을 방지합니다. 
+
+#### colsample_bynode
+
+각 노드의 분할에 사용할 특성 개수의 비율입니다. 
+
+- 범위: [0, 1], 기본값: 1
+- 값을 줄이면 과대적합을 방지합니다. 
+
+#### scale_pos_weight
+
+불균형한 데이터에 사용합니다. 분류에만 사용합니다.
+
+- 범위: [0, inf], 기본값: 1
+- sum(음성 샘플)/sum(양성 샘플)로서 데이터의 불균형을 제어합니다. 
+
+#### max_delta_step
+
+불균형이 매우 심한 데이터셋에만 권장 됩니다. 
+
+- 범위: [0, inf], 기본값: 0
+- 값을 늘리면 과대적합을 방지합니다. 
+
+#### reg_lambda
+
+가중치 L2 규제입니다. 
+
+- 범위: [0, inf], 기본값: 1
+- 값을 늘리면 과대적합을 방지합니다. 
+
+#### reg_alpha
+
+가중치 L1 규제입니다. 
+
+- 범위: [0, inf], 기본값: 0
+- 값을 늘리면 과대적합을 방지합니다. 
+
+#### missing
+
+누락된 값을 -999.0과 같은 수치로 대체합니다. 
+
+- 범위: [-inf, inf], 기본값: None
+- 누락된 값을 자동으로 처리합니다. 
+
+
+
+
+## 기본 예제
 
 아래에서는 [xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 추가적인 예제는 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 예제 분석](https://github.com/kyopark2014/ML-Algorithms/tree/main/xgboost)을 참조합니다. 
 
