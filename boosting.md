@@ -24,7 +24,7 @@ Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 [손실함수]
 
 ### Basic Learner
 
-Gradient boosting의 기본 학습기(Basic learner)는 [결정트리(Decision tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)로서, 높은 정확도로 튜닝을 하지 않습니다. 이것은 Gradient boosting이 기본학습기에 의존하는 모델이 아니라 오차에서 학습하는 모델을 원하기 때문입니다. 따라서, max_depth가 1인 decision stump나 max_depth가 2나 3인 결정트리를 사용합니다. 
+Gradient boosting의 기본 학습기(Basic learner)는 [결정트리(Decision tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)로서, 높은 정확도로 튜닝을 하지 않습니다. 이것은 Gradient boosting이 기본학습기에 의존하는 모델이 아니라 오차에서 학습하는 모델을 원하기 때문입니다. 따라서, max_depth가 1인 decision stump나 max_depth가 2나 3인 결정트리를 사용합니다. [XGBoost Basic Learner](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md#xgboost-basic-learner)에서는 gbtree, gblinear, DART와 같은 여러방식에 대해 설명하고 있습니다. 
 
 
 
