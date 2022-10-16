@@ -42,9 +42,19 @@ XGBooster는 기본 학습기(Basic leaner)로 가장 많이 사용되는 방식
 
 ### gblinear
 
-데이터가 선형이라면 결정트리보다 선형모델을 기본학습기로 쓰는것을 바람직합니다. 선형 부스팅 모델의 동작은 트리 부스팅 모델과 동일합니다. 기본 모델을 만들고 이어지는 후속 모델의 [잔차(Residual)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#residual)을  
+데이터가 선형이라면 결정트리보다 선형모델을 기본학습기로 쓰는것을 바람직합니다. 선형 부스팅 모델에서는 앙상븗되는 각 모델이 선형일뿐, 기본 동작은 트리 부스팅 모델과 동일합니다. 기본 모델을 만들고 이어지는 후속 모델의 [잔차(Residual)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#residual)를 바탕으로 학습하고, 개별 모델을 합하여 최종 결과를 만듭니다. 
 
+gblinear는 선형 회귀에 규제항을 추가하는데, 여러번 부스팅하면 라소 회귀가 됩니다. 
 
+또한, gblinear는 [로지스틱 회귀](https://github.com/kyopark2014/ML-Algorithms/blob/main/logistic-regression.md)로 분류문제에 사용할 수 있습니다. 
+
+### DART
+
+DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태이지만, 규제 방법으로 [신경망의 드롭아웃(Dropout)](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#dropout) 기법을 사용합니다. 
+
+새로운 부스팅 단계마다 새로운 모델을 만들기 위하여 이전 트리의 잔차를 더하지 않고 이전 트리를 랜덤하게 선택하고 1/k 배율로 리프 노드를 정규화합니다. 여기서 k는 드롭아웃된 트리의 개숫입니다. 
+
+### Example 
 
 아래에서는 [xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 추가적인 예제는 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 예제 분석](https://github.com/kyopark2014/ML-Algorithms/tree/main/xgboost)을 참조합니다. 
 
