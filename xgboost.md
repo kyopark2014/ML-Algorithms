@@ -54,7 +54,55 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 새로운 부스팅 단계마다 새로운 모델을 만들기 위하여 이전 트리의 잔차를 더하지 않고 이전 트리를 랜덤하게 선택하고 1/k 배율로 리프 노드를 정규화합니다. 여기서 k는 드롭아웃된 트리의 개숫입니다. 
 
-### Example 
+## Hyperparameters
+
+기본 
+기본 파라메터는 
+기본 파라메터는 아래와 
+기본 파라메터는 아래와 같습니다.
+ 
+ ```json
+ {'objective': 'binary:logistic',
+ 'use_label_encoder': False,
+ 'base_score': None,
+ 'booster': None,
+ 'callbacks': None,
+ 'colsample_bylevel': None,
+ 'colsample_bynode': None,
+ 'colsample_bytree': None,
+ 'early_stopping_rounds': None,
+ 'enable_categorical': False,
+ 'eval_metric': None,
+ 'gamma': None,
+ 'gpu_id': None,
+ 'grow_policy': None,
+ 'importance_type': None,
+ 'interaction_constraints': None,
+ 'learning_rate': None,
+ 'max_bin': None,
+ 'max_cat_to_onehot': None,
+ 'max_delta_step': None,
+ 'max_depth': None,
+ 'max_leaves': None,
+ 'min_child_weight': None,
+ 'missing': nan,
+ 'monotone_constraints': None,
+ 'n_estimators': 100,
+ 'n_jobs': None,
+ 'num_parallel_tree': None,
+ 'predictor': None,
+ 'random_state': 42,
+ 'reg_alpha': None,
+ 'reg_lambda': None,
+ 'sampling_method': None,
+ 'scale_pos_weight': None,
+ 'subsample': None,
+ 'tree_method': 'hist',
+ 'validate_parameters': None,
+ 'verbosity': None}
+ ```
+
+## Example 
 
 아래에서는 [xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 추가적인 예제는 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 예제 분석](https://github.com/kyopark2014/ML-Algorithms/tree/main/xgboost)을 참조합니다. 
 
