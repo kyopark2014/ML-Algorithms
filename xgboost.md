@@ -31,7 +31,7 @@ XGBoost는 속도에 주안점을 두어 설계되었습니다.
 XGBoost는 Gradient Boosting이나 Random Forest와 달리 학습하려는 목적 함수의 일부로 규제를 포함하고 있습니다. 규제(Regulaization)를 추가하여 분산을 줄이고 과대적합을 방지합니다. 
 
 
-## Basic learner
+## XGboost Basic learner
 
 ### gbtree 
 
