@@ -2,7 +2,7 @@
 
 다수의 [결정트리(Decision tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)의 분류 결과를 취합해서 최종 예측값을 결정하는 [앙상블 학습](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)입니다. 랜덤 포레스트의 개별모델은 결정트리로서 최종 예측을 위해 수백 또는 수천개의 결정트리로 구성될 수 있습니다. 
 
-랜덤 포레스트는 32비트 정수 범위에서 난수를 만들어 개별트리의 random_state를 지정하여 관리하기 때문에, 언제든지 손쉽게 각 트리의 bootstraping smaple을 재현할 수 있습니다. 
+랜덤 포레스트는 32비트 정수 범위에서 난수를 만들어 개별트리의 random_state를 지정하여 관리하기 때문에, 언제든지 손쉽게 각 트리의 bootstraping sample을 재현할 수 있습니다. 
 
 ## 분류 (Classification)
 
