@@ -27,7 +27,7 @@
 
 ### 7장. [경진대회] 범주형 데이터 이진분류
 
-- 탐색적 데이터 분석:
+- 탐색적 데이터 분석: [ch7-EDA.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-EDA.ipynb)
 - 베이스라인 모델: [Baseline](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-baseline.ipynb)
 - 성능 개선 I: [ch7-modeling.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-modeling.ipynb)
 - 성능 개선 II: [ch7-modeling2.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-modeling2.ipynb)
