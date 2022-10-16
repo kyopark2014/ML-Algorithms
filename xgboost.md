@@ -168,9 +168,7 @@ for value in learning_rate_values:
     y_pred = model.predict(X_test)
     
     score = accuracy_score(y_pred, y_test)
-
     print('Accuracy:', np.round(score, 3))    
-    
 print('\nElased time: %0.2fs' % (time.time()-start))    
 ```
 
