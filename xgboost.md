@@ -144,8 +144,10 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 부스팅의 각 단계에서 [기본학습기(base learner)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#basic-learner)의 기여도를 줄입니다. eta로도 불립니다. 기본학습기의 영향도를 줄이는것을 축소(shrinkage)라고 부르는데, 기본 학습기의 영향이 너무 크지 않도록 조정합니다. 
 
+
+
 - 범위: [0, 1], 기본값: 0.3
-- 값을 줄이면 과대적합을 방지합니다. 
+- 값을 줄이면 좋은 성능을 위해 더 많은 트리가 필요하지만, 과대적합을 방지합니다. 
 - learning_rate이 1이면 어떤 어떤 조정도 하지 않는다는 의미입니다. 
 
 아래는 [xgboost-heart-desease-hpo.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-heart-desease-hpo.ipynb)와 같이 learning_rate으로 HPO하는 것을 보여줍니다. 
@@ -174,14 +176,19 @@ print('\nElased time: %0.2fs' % (time.time()-start))
 
 #### max_depth
 
-트리의 깊이를 의미합니다. 0은 tree_method='hist', grow_policy='Lossguide'일때 선택할수 있으며 깊이에 제한이 없다는 의미입니다. 
+분할 회수에 해당하는 트리의 깊이를 결정합니다. 개별 트리가 max_depth까지만 성정할 수 있기 때문에 max_depth를 제한하면 과대적합을 방지합니다. 
 
 - 범위: [0, inf], 기본값: 6
 - 값을 줄이면 과대적합을 방지합니다. 
+- 0은 tree_method='hist', grow_policy='Lossguide'일때 선택할수 있으며 깊이에 제한이 없다는 의미입니다. 
+
 
 #### gamma
 
-min_split_loss로도 불립니다. 보통 10보다 작은 값으로 설정합니다.
+라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. gamma는 노드 분할을 위한 최소 손실 감소를 지정합니다. 10이면 보다 작은 값으로 설정합니다.
+라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. 보통 10매우 보다 작은 값으로 설정합니다.
+라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. 보통 10높은 보다 작은 값으로 설정합니다.
+라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. 보통 10보다 작은 값으로 설정합니다.
 
 - 범위: [0, inf], 기본값: 0
 - 값을 늘리면 과대적합을 방지합니다. 
