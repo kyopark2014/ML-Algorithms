@@ -135,18 +135,44 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 #### n_estimators
 
-앙상불의 트리 개수를 의미합니다. 
+앙상불의 트리 개수를 의미합니다. [잔차(Residual)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#residual)에 훈련되는 트리 개수로서 n_estimators를 늘리면 learning_rate을 줄여야 합니다. 
 
 - 범위: [1, inf], 기본값: 100
 - 값을 늘리면 대용량 데이터에서 성능을 높일 수 있습니다.
 
 #### learning_rate
 
-부스팅의 각 단계에서 트리의 기여도를 줄입니다. eta로도 불립니다. 
+부스팅의 각 단계에서 [기본학습기(base learner)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#basic-learner)의 기여도를 줄입니다. eta로도 불립니다. 기본학습기의 영향도를 줄이는것을 축소(shrinkage)라고 부르는데, 기본 학습기의 영향이 너무 크지 않도록 조정합니다. 
 
 - 범위: [0, 1], 기본값: 0.3
 - 값을 줄이면 과대적합을 방지합니다. 
+- learning_rate이 1이면 어떤 어떤 조정도 하지 않는다는 의미입니다. 
 
+아래는 learning_rate으로 HPO하는 것을 보여줍니다. 
+
+```python
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import StratifiedKFold
+
+learning_rate_values = [0.001, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 1.0]
+
+import time
+start = time.time()
+
+for value in learning_rate_values:
+    xgb = XGBClassifier(booster='gbtree', objective='binary:logistic', 
+                        random_state=2, verbosity=0, use_label_encoder=False, learning_rate=value)
+    
+    xgb.fit(X_train, y_train)
+    
+    y_pred = model.predict(X_test)
+    
+    score = accuracy_score(y_pred, y_test)
+
+    print('Accuracy:', np.round(score, 3))    
+    
+print('\nElased time: %0.2fs' % (time.time()-start))    
+```
 
 #### max_depth
 
