@@ -11,7 +11,7 @@ XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사�
 - scikit-learn에서 지원하지 않습니다. 
 - XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
-## 속도 향상
+### 속도 향상
 
 XGBoost는 속도에 주안점을 두어 설계되었습니다. 
 
@@ -26,18 +26,24 @@ XGBoost는 속도에 주안점을 두어 설계되었습니다.
 - 블록 압축과 샤딩: 블록 압축(block compression)은 열을 압축하여 디스크를 읽는데 도움이 되며, 블록 샤딩 (block sharding)은 번갈아 가며 여러 디스크로 데이터를 샤딩하기 때문에 데이터를 읽는 시간을 줄여줍니다. 
 
 
-## 정확도 향상 
+### 정확도 향상 
 
 XGBoost는 Gradient Boosting이나 Random Forest와 달리 학습하려는 목적 함수의 일부로 규제를 포함하고 있습니다. 규제(Regulaization)를 추가하여 분산을 줄이고 과대적합을 방지합니다. 
 
 
-
-
 ## Basic learner
 
-XGBooster는 기본 학습기(Basic leaner)로 가장 많이 사용되는 방식은 [결정트리(Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)입니다. 
+### gbtree 
 
-[xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 
+XGBooster는 기본 학습기(Basic leaner)로 가장 많이 사용되는 방식은 [결정트리(Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)입니다. 데이터는 일반적으로 비선형이기 때문에 필요한만큼 데이터를 분할하여 셈플에 도달하는 결정트리는 비선형 데이터에 좋은 선택입니다.
+
+### gblinear
+
+데이터가 선형이라면 결정트리보다 선형모델을 기본학습기로 쓰는것을 바람직합니다. 선형 부스팅 모델의 동작은 트리 부스팅 모델과 동일합니다. 기본 모델을 만들고 이어지는 후속 모델의 [잔차(Residual)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#residual)을  
+
+
+
+아래에서는 [xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)에 대해 설명합니다. 추가적인 예제는 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 예제 분석](https://github.com/kyopark2014/ML-Algorithms/tree/main/xgboost)을 참조합니다. 
 
 ```python
 from xgboost import XGBClassifier
