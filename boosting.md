@@ -15,7 +15,7 @@
 
 ## Gradient Boosting
 
-Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 [손실함수](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)를 정의하고, [경사하강법(Gradient desecent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)을 사용하여 잔차(Residual)가 최소화하는 방향으로 결정트리를 추가하는 앙상블 방법입니다. Scikit-learn의 Gradient Boosting Regression 모델의 기본 손실함수는 제곱 오차이고 분류 모델의 기본 손실 함수는 로지스틱 손실함수 입니다. 경사하강법으로 두 함수를 미분하면 y - y<sub>pred</sub>을 얻을 수 있습니다. 
+Gradient Boosting은 타깃(Target)과 모델의 예측 사이에 [손실함수](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)를 정의하고, [경사하강법(Gradient desecent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-descent)을 사용하여 [잔차(Residual)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#residual)가 최소화하는 방향으로 결정트리를 추가하는 앙상블 방법입니다. Scikit-learn의 Gradient Boosting Regression 모델의 기본 손실함수는 제곱 오차이고 분류 모델의 기본 손실 함수는 로지스틱 손실함수 입니다. 경사하강법으로 두 함수를 미분하면 y - y<sub>pred</sub>을 얻을 수 있습니다. 
 
 - 깊이가 얕은 [결정트리](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)를 사용하여 이전 트리의 오차를 보완하는 방식의 앙상블 방법입니다. 따라서, 과대 적합에 강하고 높은 일반화 성능을 기대할 수 있습니다.
 - 이전 트리의 예측 오차를 기반으로 완전히 새로운 트리를 훈련합니다. 여기서 새로은 트리는 올바르게 예측된 값에는 영향을 받지 않습니다. 
