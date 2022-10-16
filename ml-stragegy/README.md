@@ -42,10 +42,9 @@
 
 ### 9장. [경진대회] 향후 판매량 예측
 
-- 탐색적 데이터 분석: 
-- 베이스라인 모델: 
-- 성능 개선 I:
-- 성능 개선 II:
+- 탐색적 데이터 분석: [ch9-EDA.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch9-EDA.ipynb)
+- 베이스라인 모델: [ch9-baseline.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch9-baseline.ipynb)
+- 성능 개선 : [ch9-modeling.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch9-modeling.ipynb)
 
 ### 11장. [경진대회] 항공 사진 내 선인장 식별
 
