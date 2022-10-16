@@ -6,6 +6,8 @@
 
 결정트리에서 응용된 기법으로 [랜덤 포레스트(Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)와 [경사 부스팅 결정트리 (Gradient Boosted Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#gradient-boosting)가 있습니다. 
 
+결정트리는 [부스팅(Boosting)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)했을때에 우수한 성능을 제공하기 때문에 [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)의 기본 학습기(base learner)로 선호됩니다. XGBoost는 [앙상블 모델](https://github.com/kyopark2014/ML-Algorithms/blob/main/ensemble.md)을 만드는데 사용하는 머신러닝 모델로서, 오류로부터 학습하기 위하여 기본학습기를 사용합니다. 
+
 아래와 Max Depth가 1인 결정트리를 그릴 수 있습니다.
 
 ```python
