@@ -148,7 +148,7 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 - 값을 줄이면 과대적합을 방지합니다. 
 - learning_rate이 1이면 어떤 어떤 조정도 하지 않는다는 의미입니다. 
 
-아래는 learning_rate으로 HPO하는 것을 보여줍니다. 
+아래는 [xgboost-heart-desease-hpo.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-heart-desease-hpo.ipynb)와 같이 learning_rate으로 HPO하는 것을 보여줍니다. 
 
 ```python
 from sklearn.metrics import accuracy_score
