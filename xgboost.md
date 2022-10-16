@@ -56,12 +56,9 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 ## Hyperparameters
 
-기본 
-기본 파라메터는 
-기본 파라메터는 아래와 
 기본 파라메터는 아래와 같습니다.
  
- ```json
+ ```java
  {'objective': 'binary:logistic',
  'use_label_encoder': False,
  'base_score': None,
