@@ -185,17 +185,15 @@ print('\nElased time: %0.2fs' % (time.time()-start))
 
 #### gamma
 
-라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. gamma는 노드 분할을 위한 최소 손실 감소를 지정합니다. 10이면 보다 작은 값으로 설정합니다.
-라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. 보통 10매우 보다 작은 값으로 설정합니다.
-라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. 보통 10높은 보다 작은 값으로 설정합니다.
-라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. 보통 10보다 작은 값으로 설정합니다.
+라그랑주 승수(Lagrange multiplier) 또는 min_split_loss로도 불립니다. gamma는 노드 분할을 위한 최소 손실 감소를 지정합니다. 10이면 매우 높은 값이므로 이보다 작은 값으로 설정합니다. gamma를 높이면 보수적인 모델이 만들어집니다. 
 
 - 범위: [0, inf], 기본값: 0
 - 값을 늘리면 과대적합을 방지합니다. 
 
+
 #### min_child_weight
 
-노드 분할을 위해 필요한 최소 가중치 합입니다. 
+노드 분할을 위해 필요한 최소 가중치 합입니다. 샘플 자중치 합이 min_child_weight보다 작으면 더이상 분할하지 않습니다. 
 
 - 범위: [0, inf], 기본값: 1
 - 값을 늘리면 과대적합을 방지합니다. 
@@ -209,7 +207,7 @@ print('\nElased time: %0.2fs' % (time.time()-start))
 
 #### colsample_bytree
 
-부스팅 단계마다 사용할 특성 개숫의 비율입니다.
+부스팅 단계마다 사용할 특성의 비율입니다. subsample과 비슷하게 colsample_bytree는 각 부스팅 단계마다 사용할 특성의 비율을 제한합니다. colsample_bytree는 특성의 영향을 제한하고 분산을 줄이는데 유용합니다. 
 
 - 범위: [0, 1], 기본값: 1
 - 값을 줄이면 과대적합을 방지합니다. 
@@ -223,7 +221,7 @@ print('\nElased time: %0.2fs' % (time.time()-start))
 
 #### colsample_bynode
 
-각 노드의 분할에 사용할 특성 개수의 비율입니다. 
+노드를 분할할 때마다 사용할 특성 개수의 비율입니다. 
 
 - 범위: [0, 1], 기본값: 1
 - 값을 줄이면 과대적합을 방지합니다. 
