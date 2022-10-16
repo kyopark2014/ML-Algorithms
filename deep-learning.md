@@ -76,7 +76,7 @@ optimizer를 최적화할때는 accuracy가 최적인 상태로 수렴하는 시
 
 ### Dropout
 
-Neural Network에서 불필요한 일부 Node를 제외함으로써 과적합(Overfitting) 문제를 해결할 수 있습니다. 
+Neural Network에서 불필요한 일부 Node를 랜덤하게 제외함으로써 과적합(Overfitting) 문제를 해결할 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187076792-5a5db38e-8f53-48f4-b4d4-e3886b6edf3f.png)
 
