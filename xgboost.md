@@ -33,6 +33,9 @@ XGBoost는 Gradient Boosting이나 Random Forest와 달리 학습하려는 목�
 
 ## XGboost Basic learner
 
+XGBoost는 [Basic Learner](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md#basic-learner)를 이용하여 오류로부터 
+합습을 수행합니다.
+
 ### gbtree 
 
 XGBooster는 기본 학습기(Basic leaner)로 가장 많이 사용되는 방식은 [결정트리(Decision Tree)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)입니다. 데이터는 일반적으로 비선형이기 때문에 필요한만큼 데이터를 분할하여 셈플에 도달하는 결정트리는 비선형 데이터에 좋은 선택입니다.
