@@ -30,7 +30,7 @@
 - 탐색적 데이터 분석:
 - 베이스라인 모델: [Baseline](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-baseline.ipynb)
 - 성능 개선 I: [ch7-modeling.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-modeling.ipynb)
-- 성능 개선 II:
+- 성능 개선 II: [ch7-modeling2.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-modeling2.ipynb)
 - 환경 세팅된 노트북 양식:
 
 ### 8장. [경진대회] 안전 운전자 예측
