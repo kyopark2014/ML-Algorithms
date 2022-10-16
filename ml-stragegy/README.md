@@ -48,10 +48,10 @@
 
 ### 11장. [경진대회] 항공 사진 내 선인장 식별
 
-- 탐색적 데이터 분석: 
-- 베이스라인 모델: 
-- 성능 개선 I:
-- 성능 개선 II:
+- 탐색적 데이터 분석: [ch11-EDA.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch11-EDA.ipynb)
+- 베이스라인 모델: [ch11-baseline.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch11-baseline.ipynb)
+- 성능 개선 I: [ch11-modeling.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch11-modeling.ipynb)
+- 성능 개선 II: [ch11-modeling2.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch11-modeling2.ipynb)
 
 
 ### 12장. [경진대회] 병든 잎사귀 식별
