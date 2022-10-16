@@ -31,16 +31,36 @@
 - 베이스라인 모델: [Baseline](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-baseline.ipynb)
 - 성능 개선 I: [ch7-modeling.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-modeling.ipynb)
 - 성능 개선 II: [ch7-modeling2.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/ch7-modeling2.ipynb)
-- 환경 세팅된 노트북 양식:
+
 
 ### 8장. [경진대회] 안전 운전자 예측
 
+- 탐색적 데이터 분석: 
+- 베이스라인 모델: 
+- 성능 개선 I:
+- 성능 개선 II:
+
 ### 9장. [경진대회] 향후 판매량 예측
+
+- 탐색적 데이터 분석: 
+- 베이스라인 모델: 
+- 성능 개선 I:
+- 성능 개선 II:
 
 ### 11장. [경진대회] 항공 사진 내 선인장 식별
 
+- 탐색적 데이터 분석: 
+- 베이스라인 모델: 
+- 성능 개선 I:
+- 성능 개선 II:
+
+
 ### 13장. [데이터셋] 흉부 엑스선 기반 폐렴 진단
 
+- 탐색적 데이터 분석: 
+- 베이스라인 모델: 
+- 성능 개선 I:
+- 성능 개선 II:
 
 
 
