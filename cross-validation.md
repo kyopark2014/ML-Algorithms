@@ -1,5 +1,7 @@
 # Cross Validation
 
+교차 검증(Cross Validation)은 학습 데이터를 여러 그룹으로 나누어 일부는 학습시 사용하고 일부는 검증시 사용해서 모델 성능을 측정하는 기법입니다. 
+
 데이터를 train과 test dataset으로 분할하는 방법에 따라 결과(예 RMSE)가 달라질 수 있다면, k-fold cross validation을 사용할 수 있습니다. 데이터를 trainr과 test dataset으로 여러번 나누어서 각 결과를 평균하는 것입니다. 분할횟수인 k를 fold라고 합니다. fold의 횟수의 기본값은 5입니다. k가 클수록 평균 점수의 이상치에 덜 민감합니다. 
 
 ## k-fold cross validation
@@ -72,6 +74,12 @@ print(np.mean(scores['test_score']))
 
 0.8574181117533719
 ```
+
+## Stratified K-Fold Cross Validation
+
+층화 K 폴드 교차검증 (Stratified K-Fold Cross Validation)은 타깃값이 골고루 분포되어 폴드를 나누는 K 폴드 교차 검증 방법입니다. 타깃값이 불균형하게 분포되어 있는 경우 층화 K 폴드를 사용하는것이 좋습니다. 
+
+특정 타깃값이 다른 타깃값보다 굉장히 적은 경우에 주로 층화 K 폴드 교차검증을 사용합니다. 폴드가 5개인데 타깃이 10개이면 각 폴드에 2개씩 골고루 분배하여 교차 검증을 수행합니다. 회귀 문제는 타깃값이 연속된 값이어서 폴드마다 균등하게 나누는게 불가능하므로, 분류에만 사용할 수 있습니다. 
 
 ## Reference 
 
