@@ -54,21 +54,21 @@ plt.show()
 
 ## Criterion  
 
-결정트리에서 노드를 분할하는 기준(Criterion)으로 분류에서는 Gini Impurity와 Entropy Imputiry를 이용합니다. scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
-
-## Impurity
+결정트리에서 노드를 분할하는 기준(Criterion)으로 불순도(Impurity)를 사용합니다. 이것은 노드 내 데이터의 불순도를 최소화하는 방향으로 분할함을 의미합니다. 불순도는 한 범주 안에 서로 다른 데이터가 얼마나 섞여 있는지를 나타내는 정도입니다. 한 범주에 한 종류만 있다면 불순도가 최소(혹은 순도가 최대)고, 서로 다른 데이터가 같은 비율로 있다면 불순도가 최대(혹은 순도가 최소)입니다. 
 
 결정트리는 학습 데이터로부터 조건식을 만들고, 예측할 때는 트리의 루트부터 순서대로 조건 분기를 타면서 Leaf에 도달하면 예측결과를 내는 알고리즘입니다. 이때, 불순도(Imputiry)를 기준으로 가능한 같은 클래스끼리 모이도록 조건 분기를 학습합니다. 
 
+분류에서는 Gini Impurity와 Entropy Imputiry를 이용합니다.
+
 ### Gini Impurity
 
-Gini Impurity은 정답이 아닌 값이 나올 확율을 의미 합니다. 
+지니 불순도(Gini Impurity)은 정답이 아닌 값이 나올 확율을 의미 합니다. 지니 불순도 값이 클수록 불순도는 높고 작을수록 불순도는 낮습니다. 엔트로피와 마찬가지로 지니 불순도가 낮아지는 방향으로 노드를 분할 합니다. Scikit-learn에서는 기본값으로 Gini impurity을 사용합니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/186560214-844f1030-a80b-4190-a9cb-1b6151f01cde.png)
 
 ### Entropy Imputiry
 
-Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니다. 
+Entropy Imputiry는 정보의 불확실성 또는 무질서도를 의미합니다. 엔트로피 값이 클수록 불순도가 높고, 작을수록 불순도가 낮습니다. 1에서 엔트로피를 뺀 수치(1-엔트로피)를 정보이득(Information Gain)이라 하는데, 결정트리는 정보 이득을 최대화하는 방향(엔트로피를 최소화)으로 분할합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/186560305-1651f4e1-880b-49e5-bea4-bf9d00bb6dd6.png)
 
