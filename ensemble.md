@@ -4,13 +4,15 @@
 
 ## Bagging
 
-Bagging(Bootstrap Aggregating)은 개별 트리를 생성할때 부트스트랩 샘플을 사용합니다. [랜덤포레스트](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)의 회귀문제가 Bagging을 이용하여 회귀 문제를 풉니다. 여기서 Boostraping은 중복을 허용하는 샘플링을 의미하는데, 원본 데이터셋과 동일한 크기의 Bootstraping을 이용합니다.
+Bagging(Bootstrap Aggregating)은 개별 트리를 생성할때 부트스트랩 샘플을 사용합니다. 여기서 Boostraping은 중복을 허용하는 샘플링을 의미하는데, 원본 데이터셋과 동일한 크기의 Bootstraping을 이용합니다.
+
+Bagging은 개별 모델로 예측한 결과를 결합해 최종 예측을 정하는 기법으로 개별 모델이 서로 다른 샘플링 데이터를 활용하는 특징이 있습니다. Bagging은 원리가 간단하면서도 성능을 높일수 있는 효과적인 방법입니다. [랜덤포레스트](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)의 회귀문제가 Bagging을 이용합니다.
 
 배깅 모델에서는 새로운 트리가 이전 트리에 주의를 기울이지 않습니다. 또한 새로운 트리는 부트스트래핑을 사용해 처음부터 훈련되며, 최종 모델은 모든 개별 트리의 결과를 합칩니다. 
 
 ## Boosting
 
-[부스팅(Boositng)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)에서는 이전 트리의 오차를 기반으로 새로운 트리를 훈련합니다.
+[부스팅(Boositng)](https://github.com/kyopark2014/ML-Algorithms/blob/main/boosting.md)에서는 이전 트리의 오차를 기반으로 새로운 트리를 훈련합니다. 가중치를 활용하여 분류 성능이 약한 모델을 강하게 만드는 기법입니다. 
 
 
 ## Ensemble Classification
