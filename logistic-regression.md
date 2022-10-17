@@ -2,7 +2,7 @@
 
 로지스틱 회귀(Logistic Regression)는 [선형 회귀 방식](https://github.com/kyopark2014/ML-Algorithms/blob/main/linear-regression.md)을 응용해 [분류 (Classification)](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)에 적용한 모델입니다. 로지스틱 회귀는 간단하면서도 파라미터 수가 많지 않아 빠르게 예측할 수 있습니다. 예) 주차장에 빈자리가 있는지를 추정
 
-로지스틱 회귀는 
+로지스틱 회귀는 Sigmoid function을 활용해 타깃값에 포함될 확률을 예측합니다.
 
 ## 특징 
 
