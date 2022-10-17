@@ -45,7 +45,7 @@ ROC 곡선 (receiver operating characteristics curve)은 거짓 양성 비율(FP
 
 ### AUC 
 
-AUC (Area under the curve)는 ROC 곡선으로 부터 계산합니다.
+AUC (Area under the curve)는 ROC 곡선 아래 면적을 말합니다. 예측값이 확률인 분류 문제에 사용합니다. 
 
 
 
