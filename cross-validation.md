@@ -86,3 +86,5 @@ print(np.mean(scores['test_score']))
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
 
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
+
+[머신러닝·딥러닝 문제해결 전략 - 신백균, 골든래빗](https://github.com/BaekKyunShin/musthave_mldl_problem_solving_strategy)
