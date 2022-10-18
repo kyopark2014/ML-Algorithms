@@ -139,6 +139,7 @@ model.get_booster().feature_types = feature_data.feature_types
 
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(figsize=(15, 8))
+xgb.plot_importance(model, ax=ax, importance_type='gain')
 ```
 이때의 결과는 아래와 같습니다. 
 
