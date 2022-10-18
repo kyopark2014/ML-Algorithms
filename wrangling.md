@@ -214,8 +214,9 @@ train = train.drop(['Fare'], axis=1)
 
 train['Level'].value_counts()
 ```
+#### 데이터의 분포로 분류 
 
-범위를 4개로 잘라서 level을 붙일 수 있습니다. 
+데이터의 분포를 4개로 나누어서, level을 붙일 수 있습니다. 
 
 ```
 def get_categorise(df):
