@@ -195,6 +195,41 @@ df = shuffle(df, random_state=2)
 df.head()
 ```
 
+### 범위를 분류하기 
+
+[xgboost-titanic.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/xgboost-titanic.ipynb)과 같이 요금의 범위를 분류할 수 있습니다. 
+
+#### 정해진 범위로 분류 
+
+아래와 같이 요금(Fare)를 가지고 Level을 구분할 수 있습니다. 
+
+```python
+train.loc[train['Fare'] <= 20, 'Level'] = 'L1'
+train.loc[(train['Fare'] > 20) & (train['Fare'] <= 40), 'Level'] = 'L2'
+train.loc[(train['Fare'] > 40) & (train['Fare'] <= 60), 'Level'] = 'L3'
+train.loc[(train['Fare'] > 60) & (train['Fare'] <= 80), 'Level'] = 'L4'
+train.loc[train['Fare'] > 80, 'Fare'] = 'L4'
+
+train = train.drop(['Fare'], axis=1)
+
+train['Level'].value_counts()
+```
+
+범위를 4개로 잘라서 level을 붙일 수 있습니다. 
+
+```
+def get_categorise(df):
+    return pd.qcut(df, q=4, labels = ['low','medium','high','very_high'])
+    
+FareLevel = get_categorise(train['Fare'])
+FareLevel.value_counts()
+
+train['Fare'] = FareLevel
+```
+
+
+
+
 ## Wrangling Examples
 
 ### Bike Sharing
