@@ -229,6 +229,14 @@ train['Fare'] = FareLevel
 ```
 
 
+### Downcasting
+
+더 작은 타입으로 변환할때 아래와 같이 처리할 수 있습니다. 
+
+```python
+import pandas as pd
+df[col] = pd.to_numeric(df[col], downcast='integer')
+```
 
 
 ## Wrangling Examples
