@@ -4,6 +4,10 @@
 
 회귀의 대표적인 평가지표는 [평균제곱근(RMSE)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#rmse)이며, Regressor에서 score() method 호출시에 [결정계수(Coefficient of determination)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md#coefficient-of-determination)을 보여줍니다. 
 
+아래에서는 회귀와 분류의 차이점을 보여줍니다. 
+
+<img src="https://user-images.githubusercontent.com/52392004/193483246-85a5fe3c-4c33-40ef-aa58-994970f54d66.png" width="500">
+
 ## k-Nearest Neighbors
 
 [k-최근접 이웃 회귀 (k-Nearest Neighbors)](https://github.com/kyopark2014/ML-Algorithms/blob/main/KNN.md)은 가장 가까운 이웃 샘플을 찾고 이 샘플들의 타깃 값을 평균하여 예측값으로 삼습니다. 
