@@ -38,28 +38,17 @@
 
 ## Machine Learning
 
-### 1) Supervised Learning
+### Supervised Learning
 
+회귀(Regression)은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
 
-#### Regression
+분류(Classification)은 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다. [Classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 예제 중심으로 설명합니다. 
 
-Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머신러닝 방법입니다. [Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/regression.md)에서는 Regression에 대한 기본 설명 및 구현하는 코드를 예제로 설명합니다. 
+### Unsupervised Learning
 
-#### Classification
+Clustering의 대표적인 예로 k-Means가 있습니다. [k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 label이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
 
-[Classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/classification.md)을 통해 Sample을 몇개의 Class중에 하나로 분류할 수 있습니다.
-
-
-### 2) Unsupervised Learning
-
-#### Clustering: k-Means
-
-[k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 label이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
-
-#### Dimensionally Reduction: PCA (Principal Component Analysis)
-
-[PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
-
+Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 있습니다. [PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
 
 ## Deep Learning
 
@@ -76,27 +65,16 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 순환신경망(Recurrent Neural Network)을 이용하여, 영화리뷰(Text)의 내용이 positive/negative인지 분류하는 예제를 설명합니다. 
 
-#### 1) RNN - Simple
-
-[Simple 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)을 설명합니다. 
-
-#### 2) RNN - LSTM
+[Simple 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)에서는 가장 기본적인 RNN에 대해 설명합니다. 
 
 [LSTM(Long Short-Term Memory)을 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-lstm.md)에 대해 설명합니다.
 
-#### 3) RNN - GRU
-
 [GRU(Gated Recurrent Unit)를 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-gru.md)에 대해 설명합니다. 
-
-
 
 
 ## 모델 과적합 방지
 
 [regularization](https://github.com/kyopark2014/ML-Algorithms/blob/main/regularization.md)에서는 모델 과적합을 방지하는 방법에 대해 설명합니다. 
-
-
-
 
 
 ## 모델 평가
