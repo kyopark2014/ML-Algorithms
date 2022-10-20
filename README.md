@@ -127,7 +127,9 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ## ML application
 
-![image](https://user-images.githubusercontent.com/52392004/187052254-d12b4cb5-8835-457c-80d9-0c279de9f9dc.png)
+[ML로 수행할수 있는 응용 영역](https://github.com/kyopark2014/ML-Algorithms/blob/main/applications.md)에 대해 설명합니다. 
+
+
 
 ## Machine Learning Examples
 
@@ -141,7 +143,10 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 ## AWS 제공 알고리즘
 
-[AWS Built-in Algorithms](https://github.com/kyopark2014/ML-Algorithms/blob/main/built-in.md)
+[Built-in Algorithms](https://github.com/kyopark2014/ML-Algorithms/blob/main/built-in.md)에서는 AWS에서 제공하는 ML 알고리즘에 대해 설명합니다. 
+
+
+
 
 ## Reference
 
