@@ -1,5 +1,7 @@
 # 규제 (Regularization)
 
+## 모델 적합도 
+
 모델의 복잡도가 증가 할수록 보통 Training Error는 감소합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/187076574-013e9c72-36af-4e6f-a2ab-54872eb19622.png)
@@ -22,7 +24,7 @@ Regularization과 Epoch를 비교하면 아래와 같습니다.
 
 
 
-
+## 과적합 방지 방법 
 
 
 모델이 과적합 되게 학습하지 않고 일반성을 가질 수 있도록 파라미터값에 제약을 주는것을 말합니다. L1 규제(Lasso), L2 규제(Ridge), alpha 값으로 규제량을 조정합니다. 
