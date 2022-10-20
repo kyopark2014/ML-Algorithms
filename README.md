@@ -15,16 +15,7 @@
 <!-- <img width="381" alt="image" src="https://user-images.githubusercontent.com/52392004/187052186-e3c810ed-1487-425e-8e91-93307dccfbc9.png"> -->
 
 
-
-## Binary Classification (HelloWorld)
-
-[kNN(k-Nearest Neighbors)을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
-
-
-
-
 ## 데이터전처리 
-
 
 [Preprocessing](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md)에서는 [표준점수(z)를 이용한 데이터 정규화](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-standard-score%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A0%95%EA%B7%9C%ED%99%94) 및 [Train/Test Dataset](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#train%EA%B3%BC-test-dataset)을 준비하는 과정을 설명합니다. 
 
@@ -50,6 +41,7 @@ Clustering의 대표적인 예로 k-Means가 있습니다. [k-Means](https://git
 
 Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 있습니다. [PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
 
+
 ## Deep Learning
 
 ### Feed Forward Neural Network
@@ -65,11 +57,11 @@ Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 �
 
 순환신경망(Recurrent Neural Network)을 이용하여, 영화리뷰(Text)의 내용이 positive/negative인지 분류하는 예제를 설명합니다. 
 
-[Simple 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)에서는 가장 기본적인 RNN에 대해 설명합니다. 
+- [Simple 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn.md)에서는 가장 기본적인 RNN에 대해 설명합니다. 
 
-[LSTM(Long Short-Term Memory)을 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-lstm.md)에 대해 설명합니다.
+- [LSTM(Long Short-Term Memory)을 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-lstm.md)에 대해 설명합니다.
 
-[GRU(Gated Recurrent Unit)를 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-gru.md)에 대해 설명합니다. 
+- [GRU(Gated Recurrent Unit)를 이용한 순환신경망](https://github.com/kyopark2014/ML-Algorithms/blob/main/rnn-gru.md)에 대해 설명합니다. 
 
 
 ## 모델 과적합 방지
