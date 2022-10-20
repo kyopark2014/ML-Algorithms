@@ -40,7 +40,6 @@
 
 ### 1) Supervised Learning
 
-<img src="https://user-images.githubusercontent.com/52392004/193483246-85a5fe3c-4c33-40ef-aa58-994970f54d66.png" width="500">
 
 #### Regression
 
