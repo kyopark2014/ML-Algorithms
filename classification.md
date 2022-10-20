@@ -9,6 +9,12 @@ Classifier에서 score() method 호출시, 분류(Classification)에서는 [정�
 
 분류 알고리즘에는 퍼셉트론, Logistic Regression, 서포트 벡터 머신(SVM), 신경망, k-최근접 이웃(k-NN), 결정트리, 랜덤 포레스트, GBDT (Gradient Boost Decision Tree)가 있습니다. 
 
+
+## k-최근접 이웃(k-NN)
+
+[kNN(k-Nearest Neighbors)을 이용한 binary classification](https://github.com/kyopark2014/ML-Algorithms/blob/main/helloworld.md)에서는 기본 이진분류를 노트북으로 구현합니다. 
+
+
 ### 로지스틱 회귀 (Logistic Regression)
 
 선형방정식을 사용한 분류 알고리즘으로 시그모이드 함수나 소프트맥스 함수를 사용하여 클래스 확률(0~1)을 출력할 수 있습니다. 
