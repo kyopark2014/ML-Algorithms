@@ -101,7 +101,9 @@ Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 �
 
 [Built-in Algorithms](https://github.com/kyopark2014/ML-Algorithms/blob/main/built-in.md)에서는 AWS에서 제공하는 ML 알고리즘에 대해 설명합니다. 
 
+## ML 알고리즘을 Python 코드로 변환
 
+노트북으로 작성한 ML 알고리즘을 [Python 코드로 변환](https://github.com/kyopark2014/ML-Algorithms/blob/main/python-translation.md)합니다. 
 
 
 ## Reference
