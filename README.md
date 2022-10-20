@@ -25,9 +25,16 @@
 
 ## 데이터전처리 
 
+
 [Preprocessing](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md)에서는 [표준점수(z)를 이용한 데이터 정규화](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#%ED%91%9C%EC%A4%80%EC%A0%90%EC%88%98-standard-score%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A0%95%EA%B7%9C%ED%99%94) 및 [Train/Test Dataset](https://github.com/kyopark2014/ML-Algorithms/blob/main/preprocessing.md#train%EA%B3%BC-test-dataset)을 준비하는 과정을 설명합니다. 
 
 머신러닝에서 특성(Feature)는 원하는 값을 예측하기 위해 활용하는 데이터를 의미하고, 타깃(Target)은 예측해야 할 값입니다. 
+
+## 특성공학 
+
+특성공학(Feature Engineering)은 주어진 특성을 조합하여 새로운 특성을 만드는 과정입니다. 
+
+
 
 ## Machine Learning
 
@@ -85,38 +92,18 @@ Regression은 예측하고 싶은 종속변수가 숫자일때 사용하는 머�
 
 
 
+## 모델 과적합 방지
+
+[regularization](https://github.com/kyopark2014/ML-Algorithms/blob/main/regularization.md)에서는 모델 과적합을 방지하는 방법에 대해 설명합니다. 
+
+
+
+
 
 ## 모델 평가
 
 [평가 (Evaluation)](https://github.com/kyopark2014/ML-Algorithms/blob/main/evaluation.md)은 알고리즘에  모델 평가 지표에 대해 설명합니다. 
 
-
-
-### 모델 적합 
-
-모델의 복잡도가 증가 할수록 보통 Training Error는 감소합니다.
-
-![image](https://user-images.githubusercontent.com/52392004/187076574-013e9c72-36af-4e6f-a2ab-54872eb19622.png)
-
-
-일반적으로 train set의 score가 test set보다 조금 높음습니다.
-
-- 과대적합(Overfitting): 모델의 train set 성능이 test set보다 훨씬 높은 경우입니다.
-- 과소적합(Underfitting): train set와 test set 성능이 모두 낮거나, test set 성능이 오히려 더 높은 경우 입니다.
-
-아래와 같이 Linear regression에서 과적합(Overfitting)이 발생할 수 있습니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/187076564-174edbf0-26ba-434f-937c-6a8e8e9e46e7.png)
-
-
-
-- 특성공학(Feature Engineering): 주어진 특성을 조합하여 새로운 특성을 만드는 과정입니다. 
-
-[규제 (Regularization)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regularization.md)을 이용하여 과대적합을 방지할 수 있습니다. 
-
-Regularization과 Epoch를 비교하면 아래와 같습니다. 
-
-![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
 
 
 ## Hyperparameter Optimization (HPO)
