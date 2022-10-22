@@ -13,7 +13,7 @@
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
 
 
-[xgboost-exoplanets.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-exoplanets.ipynb)와 같이 confusion matrix를 구하면 아래와 같습니다. 
+[xgboost-breast-cancer.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-breast-cancer.ipynb)와 같이 confusion matrix를 구하면 아래와 같습니다. 
 
 ```python
 from sklearn.metrics import confusion_matrix
@@ -22,8 +22,8 @@ confusion_matrix(y_test, y_pred)
 
 아때의 결과는 아래와 같습니다.
 ```python
-array([[1261,    0],
-       [  11,    0]])
+array([[53,  3],
+       [ 6, 81]])
 ```
 
 scikit-learn의 classification_report를 이용하여 [아래처럼 acuracy, precision, recall, f1 score를 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#classification-report)할 수 있습니다. 
@@ -37,12 +37,12 @@ print(classification_report(y_true=y_test, y_pred = y_pred))
 ```python
               precision    recall  f1-score   support
 
-           0       0.99      1.00      1.00      1261
-           1       0.00      0.00      0.00        11
+           0       0.90      0.95      0.92        56
+           1       0.96      0.93      0.95        87
 
-    accuracy                           0.99      1272
-   macro avg       0.50      0.50      0.50      1272
-weighted avg       0.98      0.99      0.99      1272
+    accuracy                           0.94       143
+   macro avg       0.93      0.94      0.93       143
+weighted avg       0.94      0.94      0.94       143
 ```
 
 세부 값은 아래와 같이 구할 수 있습니다. 
@@ -59,10 +59,10 @@ print('F1 Score: %0.2f' % (f1_score(y_test,y_pred)))
 이때의 결과는 아래와 같습니다. 
 
 ```python
-Accuracy Score: 0.99
-Precision Score: 0.00
-Recall Score: 0.00
-F1 Score: 0.00
+Accuracy Score: 0.94
+Precision Score: 0.96
+Recall Score: 0.93
+F1 Score: 0.95
 ```
 
 
