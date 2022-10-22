@@ -12,38 +12,58 @@
 
 평가지표에는 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md), 마이크로 평균 / 매크로 평균이 있습니다. 
 
+
+[xgboost-exoplanets.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-exoplanets.ipynb)와 같이 confusion matrix를 구하면 아래와 같습니다. 
+
+```python
+from sklearn.metrics import confusion_matrix
+confusion_matrix(y_test, y_pred)
+```
+
+아때의 결과는 아래와 같습니다.
+```python
+array([[1261,    0],
+       [  11,    0]])
+```
+
 scikit-learn의 classification_report를 이용하여 [아래처럼 acuracy, precision, recall, f1 score를 확인](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md#classification-report)할 수 있습니다. 
 
 ```python
 from sklearn.metrics import classification_report
-print(classification_report(y_true=y_test, y_pred = predictions))
+print(classification_report(y_true=y_test, y_pred = y_pred))
 ```
 
 이때의 결과의 예는 아래와 같습니다. 
 ```python
               precision    recall  f1-score   support
 
-           0       0.99      0.72      0.83       967
-           1       0.09      0.79      0.16        33
+           0       0.99      1.00      1.00      1261
+           1       0.00      0.00      0.00        11
 
-    accuracy                           0.72      1000
-   macro avg       0.54      0.75      0.50      1000
-weighted avg       0.96      0.72      0.81      1000
+    accuracy                           0.99      1272
+   macro avg       0.50      0.50      0.50      1272
+weighted avg       0.98      0.99      0.99      1272
 ```
 
-[xgboost-titanic.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/ml-stragegy/src/xgboost-titanic.ipynb)와 같이 아래처럼 특정값만 확인할 수 있습니다.
+세부 값은 아래와 같이 구할 수 있습니다. 
 
 ```python
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 
-print('Accuracy Score: %0.2f' % (accuracy_score(y,y_pred)))
-print('Precision Score: %0.2f' % (precision_score(y,y_pred)))
-print('Recall Score: %0.2f' % (recall_score(y,y_pred)))
-print('F1 Score: %0.2f' % (f1_score(y,y_pred)))
+print('Accuracy Score: %0.2f' % (accuracy_score(y_test,y_pred)))
+print('Precision Score: %0.2f' % (precision_score(y_test,y_pred)))
+print('Recall Score: %0.2f' % (recall_score(y_test,y_pred)))
+print('F1 Score: %0.2f' % (f1_score(y_test,y_pred)))
 ```
 
 이때의 결과는 아래와 같습니다. 
 
+```python
+Accuracy Score: 0.99
+Precision Score: 0.00
+Recall Score: 0.00
+F1 Score: 0.00
+```
 
 
 ### 분류 모델의 비교 
