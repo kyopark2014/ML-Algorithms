@@ -19,3 +19,6 @@ Jupyter 코드를 함수로 변경합니다. 함수로 변경하면 refactoring�
 ## Reference 
 
 [ML 실험을 프로덕션 Python 코드로 변환](https://learn.microsoft.com/ko-kr/azure/machine-learning/v1/how-to-convert-ml-experiment-to-production)
+
+[SageMaker basic - XGBoost](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/xgboost)
+
