@@ -22,3 +22,4 @@ Jupyter 코드를 함수로 변경합니다. 함수로 변경하면 refactoring�
 
 [SageMaker basic - XGBoost](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/xgboost)
 
+[xgboost_starter_script.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/xgboost_starter_script.py)
