@@ -304,3 +304,6 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
 
 [Using XGBoost in Python Tutorial](https://www.datacamp.com/tutorial/xgboost-in-python)
+
+[SageMaker basic - XGBoost](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/xgboost)
+
