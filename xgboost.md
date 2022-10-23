@@ -56,6 +56,19 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 ## Hyperparameters
 
+#### booster
+
+기본학습기(base learner)를 지정합니다. gbtree(default), gblinear, dart를 지정할 수 있습니다. 
+
+#### objective
+
+손실함수(Loss function)을 지정합니다. 
+
+- reg:logistic은 decision을 위한 분류 문제에 사용합니다.
+- binary:logistic은 probability로 분류 문제를 해결할때 사용합니다.
+- reg:linear: linear한 회귀 문제에 사용
+- reg:squarederror: 회귀(regression)에서 사용합니다. 
+
 
 #### n_estimators
 
@@ -98,18 +111,7 @@ for value in learning_rate_values:
 print('\nElased time: %0.2fs' % (time.time()-start))    
 ```
 
-#### booster
 
-기본학습기(base learner)를 지정합니다. gbtree(default), gblinear, dart를 지정할 수 있습니다. 
-
-#### objective
-
-손실함수(Loss function)을 지정합니다. 
-
-- reg:logistic은 decision을 위한 분류 문제에 사용합니다.
-- binary:logistic은 probability로 분류 문제를 해결할때 사용합니다.
-- reg:linear: linear한 회귀 문제에 사용
-- reg:squarederror: 회귀(regression)에서 사용합니다. 
 
 
 #### max_depth
