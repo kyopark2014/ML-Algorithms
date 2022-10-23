@@ -305,5 +305,3 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 
 [Using XGBoost in Python Tutorial](https://www.datacamp.com/tutorial/xgboost-in-python)
 
-[SageMaker basic - XGBoost](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/xgboost)
-
