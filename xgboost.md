@@ -56,82 +56,6 @@ DART(Dropouts meet Multiple Additive Regression)은 결정트리의 한 형태�
 
 ## Hyperparameters
 
-[XGBClassifier 기본 파라메터](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)는 아래와 같습니다.
- 
- ```java
-{'objective': 'binary:logistic',
- 'use_label_encoder': False,
- 'base_score': None,
- 'booster': None,
- 'callbacks': None,
- 'colsample_bylevel': None,
- 'colsample_bynode': None,
- 'colsample_bytree': None,
- 'early_stopping_rounds': None,
- 'enable_categorical': False,
- 'eval_metric': None,
- 'gamma': None,
- 'gpu_id': None,
- 'grow_policy': None,
- 'importance_type': None,
- 'interaction_constraints': None,
- 'learning_rate': None,
- 'max_bin': None,
- 'max_cat_to_onehot': None,
- 'max_delta_step': None,
- 'max_depth': None,
- 'max_leaves': None,
- 'min_child_weight': None,
- 'missing': nan,
- 'monotone_constraints': None,
- 'n_estimators': 100,
- 'n_jobs': None,
- 'num_parallel_tree': None,
- 'predictor': None,
- 'random_state': None,
- 'reg_alpha': None,
- 'reg_lambda': None,
- 'sampling_method': None,
- 'scale_pos_weight': None,
- 'subsample': None,
- 'tree_method': None,
- 'validate_parameters': None,
- 'verbosity': None}
- ```
- 
- [XGBRegressor의 기본 파라메터](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)는 아래와 같습니다.
- 
- ```java
- {'objective': 'reg:squarederror',
- 'base_score': None,
- 'booster': None,
- 'colsample_bylevel': None,
- 'colsample_bynode': None,
- 'colsample_bytree': None,
- 'enable_categorical': False,
- 'gamma': None,
- 'gpu_id': None,
- 'importance_type': None,
- 'interaction_constraints': None,
- 'learning_rate': None,
- 'max_delta_step': None,
- 'max_depth': None,
- 'min_child_weight': None,
- 'missing': nan,
- 'monotone_constraints': None,
- 'n_estimators': 100,
- 'n_jobs': None,
- 'num_parallel_tree': None,
- 'predictor': None,
- 'random_state': None,
- 'reg_alpha': None,
- 'reg_lambda': None,
- 'scale_pos_weight': None,
- 'subsample': None,
- 'tree_method': None,
- 'validate_parameters': None,
- 'verbosity': None}
- ```
 
 #### n_estimators
 
@@ -275,7 +199,84 @@ print('\nElased time: %0.2fs' % (time.time()-start))
 - 범위: [-inf, inf], 기본값: None
 - 누락된 값을 자동으로 처리합니다. 
 
+#### 기본값
 
+[XGBClassifier 기본 파라메터](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/xgboost.ipynb)는 아래와 같습니다.
+ 
+ ```java
+{'objective': 'binary:logistic',
+ 'use_label_encoder': False,
+ 'base_score': None,
+ 'booster': None,
+ 'callbacks': None,
+ 'colsample_bylevel': None,
+ 'colsample_bynode': None,
+ 'colsample_bytree': None,
+ 'early_stopping_rounds': None,
+ 'enable_categorical': False,
+ 'eval_metric': None,
+ 'gamma': None,
+ 'gpu_id': None,
+ 'grow_policy': None,
+ 'importance_type': None,
+ 'interaction_constraints': None,
+ 'learning_rate': None,
+ 'max_bin': None,
+ 'max_cat_to_onehot': None,
+ 'max_delta_step': None,
+ 'max_depth': None,
+ 'max_leaves': None,
+ 'min_child_weight': None,
+ 'missing': nan,
+ 'monotone_constraints': None,
+ 'n_estimators': 100,
+ 'n_jobs': None,
+ 'num_parallel_tree': None,
+ 'predictor': None,
+ 'random_state': None,
+ 'reg_alpha': None,
+ 'reg_lambda': None,
+ 'sampling_method': None,
+ 'scale_pos_weight': None,
+ 'subsample': None,
+ 'tree_method': None,
+ 'validate_parameters': None,
+ 'verbosity': None}
+ ```
+ 
+ [XGBRegressor의 기본 파라메터](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)는 아래와 같습니다.
+ 
+ ```java
+ {'objective': 'reg:squarederror',
+ 'base_score': None,
+ 'booster': None,
+ 'colsample_bylevel': None,
+ 'colsample_bynode': None,
+ 'colsample_bytree': None,
+ 'enable_categorical': False,
+ 'gamma': None,
+ 'gpu_id': None,
+ 'importance_type': None,
+ 'interaction_constraints': None,
+ 'learning_rate': None,
+ 'max_delta_step': None,
+ 'max_depth': None,
+ 'min_child_weight': None,
+ 'missing': nan,
+ 'monotone_constraints': None,
+ 'n_estimators': 100,
+ 'n_jobs': None,
+ 'num_parallel_tree': None,
+ 'predictor': None,
+ 'random_state': None,
+ 'reg_alpha': None,
+ 'reg_lambda': None,
+ 'scale_pos_weight': None,
+ 'subsample': None,
+ 'tree_method': None,
+ 'validate_parameters': None,
+ 'verbosity': None}
+ ```
 
 
 ## 기본 예제
