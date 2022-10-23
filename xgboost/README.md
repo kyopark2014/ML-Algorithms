@@ -4,7 +4,7 @@
 
 [XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost.md)를 참조하여 아래와 같은 케이스에 대해 예측합니다.
 
-## 자전거 대여 횟수 예측
+## Bike Sharing
 
 [Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)의 데이터에 있는 날씨, 주중/주말, 온도, 습도를 이용해 그날의 자동차 대여 숫자를 이용하여 자전거 대여 횟수를 예측합니다.  
 
