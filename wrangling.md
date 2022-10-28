@@ -43,23 +43,35 @@ pd.DataFrame(X).info()
 
 ### Target의 value count 하기
 
-[xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이, Panda로 읽은 데이터에서 Target의 현황을 value_counts()로 확인할 수 있습니다. 
+[xgboost-exoplanets.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-exoplanets.ipynb)와 같이, Panda로 읽은 데이터에서 Target의 현황을 value_counts()로 확인할 수 있습니다. 
 
 ```python
 import pandas as pd
-df_census = pd.read_csv('census_income_cleaned.csv')
-df_census.head()
+df = pd.read_csv('exoplanets.csv')
+df.head()
 
-df_census['income_ >50K'].value_counts()
+df['LABEL'].value_counts()
 ```
 
 이때의 결과는 아래와 같습니다. 
 
 ```python
-0    24719
-1     7841
-Name: income_ >50K, dtype: int64
+1    5050
+2      37
+Name: LABEL, dtype: int64
 ```
+
+또한 아래와 같이 일부만 sample을 확인할 수 있습니다.
+
+```python
+df.groupby('LABEL').sample(n=5)
+```
+
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/198635700-0e665181-a41c-497c-a9c8-ce15a353c05f.png)
+
+
 
 ### Feature의 value를 replace 하기
 
