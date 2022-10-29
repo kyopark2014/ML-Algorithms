@@ -2,7 +2,7 @@
 
 [Bayesian Optimization with XGBoost](https://www.kaggle.com/code/lucamassaron/tutorial-bayesian-optimization-with-xgboost)에 대해 설명합니다. 
 
-[Bayesian optimization for Hyperparameter Tuning of XGboost classifier]에서는 아래와 같이 사용합니다. 
+[Bayesian optimization for Hyperparameter Tuning of XGboost classifier](https://ayguno.github.io/curious/portfolio/bayesian_optimization.html)에서는 아래와 같이 사용합니다. 
 
 ```python
 seed = 112 # Random seed
@@ -64,7 +64,7 @@ xgbcBO.maximize(init_points=3,n_iter=10,acq='ucb', kappa= 3, **gp_params)
 
 [Bayesian Optimization](https://github.com/fmfn/BayesianOptimization)
 
-[Bayesian optimization for Hyperparameter Tuning of XGboost classifier]
+[Bayesian optimization for Hyperparameter Tuning of XGboost classifier](https://ayguno.github.io/curious/portfolio/bayesian_optimization.html)
 
 
 [30-Days-of-ML-Kaggle](https://github.com/rojaAchary/30-Days-of-ML-Kaggle)
