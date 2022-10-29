@@ -59,7 +59,7 @@ print('RMSE: {:.3f}'.format(rmse_test))
 ## Bayesian Optimizatin
 
 사전 정보를 바탕으로 최적 하이퍼라라미터 값을 확률적으로 추정하여 탐색하는 기법입니다. 그리드서치나 랜덤서치보다 최적 하이퍼라라미터를 더 빠르고 효과적으로 찾아줍니다. 
-
+[Bayesian Optimization with XGBoost](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/bayesian-optimization-with-xgboost/README.md)은 Bayesian Optimization을 이용하여 분류와 회귀 문제에서 Hyperparameter를 최적화할 수 있습니다. 
 
 
 
