@@ -1,6 +1,37 @@
 # Bayesian Optimization with XGBoost
 
-[Bayesian Optimization with XGBoost](https://www.kaggle.com/code/lucamassaron/tutorial-bayesian-optimization-with-xgboost)에 대해 설명합니다. 
+### bayesian-optimization-with-xgboost.ipynb
+
+[bayesian-optimization-with-xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/bayesian-optimization-with-xgboost/bayesian-optimization-with-xgboost.ipynb)은 아래와 같이 사용하고 있습니다. 
+
+```python
+reg = XGBRegressor(random_state=0, booster='gbtree', objective='reg:squarederror', tree_method='gpu_hist')
+
+scoring = make_scorer(partial(mean_squared_error, squared=False), greater_is_better=False)
+
+skf = StratifiedKFold(n_splits=7, shuffle=True, random_state=0)
+cv_strategy = list(skf.split(X_train, y_stratified))
+
+opt = BayesSearchCV(estimator=reg,                                    
+                    search_spaces=search_spaces,                      
+                    scoring=scoring,                                  
+                    cv=cv_strategy,                                           
+                    n_iter=120,                                       # max number of trials
+                    n_points=1,                                       # number of hyperparameter sets evaluated at the same time
+                    n_jobs=1,                                         # number of jobs
+                    iid=False,                                        # if not iid it optimizes on the cv score
+                    return_train_score=False,                         
+                    refit=False,                                      
+                    optimizer_kwargs={'base_estimator': 'GP'},        # optmizer parameters: we use Gaussian Process (GP)
+                    random_state=0)                                   # random state for replicability
+
+# Running the optimizer
+overdone_control = DeltaYStopper(delta=0.0001)                    # We stop if the gain of the optimization becomes too small
+time_limit_control = DeadlineStopper(total_time=60*60*4)          # We impose a time limit (7 hours)
+
+best_params = report_perf(opt, X_train, y_train,'XGBoost_regression', 
+                          callbacks=[overdone_control, time_limit_control])
+```
 
 ### 2019-2nd-ML-month-with-KaKR.ipynb
 
