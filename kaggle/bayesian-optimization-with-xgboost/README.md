@@ -11,3 +11,5 @@
 [30-Days-of-ML-Kaggle](https://github.com/rojaAchary/30-Days-of-ML-Kaggle)
 
 [Bayes Optimization 기초부터 XGB까지](https://www.kaggle.com/code/toastls93/bayes-optimization-xgb/notebook)
+
+[Bayesian Optimization](https://github.com/fmfn/BayesianOptimization)
