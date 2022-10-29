@@ -2,6 +2,48 @@
 
 [Bayesian Optimization with XGBoost](https://www.kaggle.com/code/lucamassaron/tutorial-bayesian-optimization-with-xgboost)에 대해 설명합니다. 
 
+### 2019-2nd-ML-month-with-KaKR.ipynb
+
+[2019-2nd-ML-month-with-KaKR.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/bayesian-optimization-with-xgboost/2019-2nd-ML-month-with-KaKR/2019-2nd-ML-month-with-KaKR.ipynb)에서는 아래와 같이 사용합니다. 
+
+```python
+def XGB_cv(max_depth,learning_rate, n_estimators, gamma
+           ,min_child_weight, max_delta_step, subsample
+           ,colsample_bytree, silent=True, nthread=-1):
+    model = xgb.XGBClassifier(max_depth=int(max_depth),
+                              learning_rate=learning_rate,
+                              n_estimators=int(n_estimators),
+                              silent=silent,
+                              nthread=nthread,
+                              gamma=gamma,
+                              min_child_weight=min_child_weight,
+                              max_delta_step=max_delta_step,
+                              subsample=subsample,
+                              colsample_bytree=colsample_bytree)
+    RMSE = cross_val_score(model, X, y, scoring='accuracy', cv=5).mean()
+    return -RMSE
+
+# 주어진 범위 사이에서 적절한 값을 찾는다.
+pbounds = {'max_depth': (5, 10),
+          'learning_rate': (0.01, 0.3),
+          'n_estimators': (50, 1000),
+          'gamma': (1., 0.01),
+          'min_child_weight': (2, 10),
+          'max_delta_step': (0, 0.1),
+          'subsample': (0.7, 0.8),
+          'colsample_bytree' :(0.5, 0.99)
+          }
+
+xgboostBO = BayesianOptimization(f = XGB_cv,pbounds = pbounds, verbose = 2, random_state = 1 )
+
+# 메소드를 이용해 최대화!
+xgboostBO.maximize(init_points=2, n_iter = 10)
+
+xgboostBO.max # 찾은 파라미터 값 확인
+```
+
+### Bayesian optimization for Hyperparameter Tuning of XGboost classifier
+
 [Bayesian optimization for Hyperparameter Tuning of XGboost classifier](https://ayguno.github.io/curious/portfolio/bayesian_optimization.html)에서는 아래와 같이 사용합니다. 
 
 ```python
