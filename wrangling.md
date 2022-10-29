@@ -174,13 +174,19 @@ data.to_csv('data_cleaned.csv', index=False)
 
 ### Feature and Target
 
-아래와 같이 데이터의 마지막이 타겟(target)일 경우에, data의 마지막 열을 제외한 데이터를 특징(Feature)인 X로, 마지막 열을 타겟(Target)인 y로 분리할 수 있습니다. 
+[xgboost-census.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-census.ipynb)와 같이 데이터의 마지막이 타겟(target)일 경우에, data의 마지막 열을 제외한 데이터를 특징(Feature)인 X로, 마지막 열을 타겟(Target)인 y로 분리할 수 있습니다. 
 
 ```python
-X = data.iloc[:,:-1]
-y = data.iloc[:,-1]
+X = df.iloc[:,:-1]
+y = df.iloc[:,-1]
 ```
 
+[xgboost-exoplanets.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-exoplanets.ipynb)와 같이 데이터의 처음을 target으로 할 경우에 아래와 같이 처리 합니다.
+
+```python
+X = df.iloc[:,1:]
+y = df.iloc[:,0] - 1
+```
 
 ### 특정 열의 값 확인하기 
 
