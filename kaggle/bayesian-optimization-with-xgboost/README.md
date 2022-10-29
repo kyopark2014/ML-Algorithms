@@ -114,3 +114,5 @@ xgbcBO.maximize(init_points=3,n_iter=10,acq='ucb', kappa= 3, **gp_params)
 [Bayes Optimization 기초부터 XGB까지](https://www.kaggle.com/code/toastls93/bayes-optimization-xgb/notebook)
 
 [2019_2nd_ml_month_with_kakr](https://github.com/noveline4530/2019_2nd_ml_month_with_kakr)
+
+[Hyperparameter Optimization using bayesian optimization](https://medium.com/spikelab/hyperparameter-optimization-using-bayesian-optimization-f1f393dcd36d)
