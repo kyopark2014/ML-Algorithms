@@ -1,5 +1,113 @@
 # Bayesian Optimization with XGBoost
 
+## Classification
+
+[xgboost-heart-desease-hpo.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-heart-desease-hpo.ipynb)와 같이 Bayesian Optimization을 분류문제 적용할 수 있습니다. 
+
+```python
+from bayes_opt import BayesianOptimization
+
+def xgbc_cv(n_estimators, learning_rate, max_depth, gamma, min_child_weight, subsample, colsample_bytree, ):
+    xgb = XGBClassifier(booster='gbtree', objective='binary:logistic', 
+                        n_estimators=int(n_estimators),
+                        learning_rate=learning_rate,
+                        max_depth=int(max_depth),
+                        gamma=gamma,
+                        min_child_weight=min_child_weight,
+                        subsample=subsample,
+                        colsample_bytree=colsample_bytree,
+                        random_state=2, verbosity=0, use_label_encoder=False, n_jobs=-1)
+
+    xgb.fit(X_train, y_train)    
+    y_pred = xgb.predict(X_test)
+    score = accuracy_score(y_pred, y_test)
+    print('score=', score)
+    return score
+
+hyperparameter_space = {
+    'n_estimators': (50, 800),
+    'learning_rate': (0.01, 1.0),
+    'max_depth': (1, 8),
+    'gamma' : (0.01, 1),
+    'min_child_weight': (1, 20),
+    'subsample': (0.5, 1),
+    'colsample_bytree': (0.1, 1)
+}
+
+optimizer = BayesianOptimization(f=xgbc_cv, pbounds=hyperparameter_space, random_state=2, verbose=0)
+optimizer.maximize(init_points=3, n_iter=5, acq='ei')
+optimizer.max
+```
+
+이때의 결과는 아래와 같습니다.
+
+```java
+{'target': 0.868421052631579,
+ 'params': {'colsample_bytree': 0.2659958790822238,
+  'gamma': 0.7874817963385067,
+  'learning_rate': 0.8554355397130939,
+  'max_depth': 4.459657861673495,
+  'min_child_weight': 17.08466822179189,
+  'n_estimators': 109.73410775679574,
+  'subsample': 0.752623045060852}}
+```
+
+## Regression
+
+[xgboost-diabetes.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/xgboost/src/xgboost-diabetes.ipynb)와 같이 Bayesian Optimization을 회귀 문제에 적용할 수 있습니다. 
+
+```python
+from bayes_opt import BayesianOptimization
+
+def xgbc_cv(n_estimators, learning_rate, max_depth, gamma, min_child_weight, subsample, colsample_bytree, ):
+    xgb = XGBRegressor(booster='gbtree', objective='reg:squarederror',
+                        n_estimators=int(n_estimators),
+                        learning_rate=learning_rate,
+                        max_depth=int(max_depth),
+                        gamma=gamma,
+                        min_child_weight=min_child_weight,
+                        subsample=subsample,
+                        colsample_bytree=colsample_bytree,
+                        random_state=2, verbosity=0, use_label_encoder=False, n_jobs=-1)
+
+    xgb.fit(X_train, y_train)    
+    y_pred = xgb.predict(X_test)
+    reg_mse = mean_squared_error(y_test, y_pred)
+    reg_rmse = np.sqrt(reg_mse)
+    print('RMSE: %0.3f' % (reg_rmse))   
+    return -reg_rmse
+
+hyperparameter_space = {
+    'n_estimators': (50, 800),
+    'learning_rate': (0.01, 1.0),
+    'max_depth': (1, 8),
+    'gamma' : (0.01, 1),
+    'min_child_weight': (1, 20),
+    'subsample': (0.5, 1),
+    'colsample_bytree': (0.1, 1)
+}
+
+optimizer = BayesianOptimization(f=xgbc_cv, pbounds=hyperparameter_space, random_state=2, verbose=0)
+optimizer.maximize(init_points=3, n_iter=5, acq='ei')
+optimizer.max 
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```java
+{'target': -58.61492962200877,
+ 'params': {'colsample_bytree': 0.11682121232665195,
+  'gamma': 0.5363937166546405,
+  'learning_rate': 0.20820799345993884,
+  'max_depth': 1.701452973304049,
+  'min_child_weight': 8.675113792944344,
+  'n_estimators': 151.92975674856012,
+  'subsample': 0.500269214951824}}
+```  
+
+
+## Examples 
+
 ### bayesian-optimization-with-xgboost.ipynb
 
 [bayesian-optimization-with-xgboost.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/bayesian-optimization-with-xgboost/bayesian-optimization-with-xgboost.ipynb)은 아래와 같이 사용하고 있습니다. 
