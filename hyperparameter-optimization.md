@@ -56,6 +56,11 @@ print('RMSE: {:.3f}'.format(rmse_test))
 
 탐색할 Hyperparameter가 많을 때 GridSearchCV로 튜닝을 하면 너무 오래시간이 걸릴수 있습니다. RandomizedSearchCV는 GridSearchCV와 동일한 방식으로 동작하지만 모든 Hyperparamter 조합을 테스트하지 않고, 랜덤한 조합을 테스트 하므로, 제한된 시간 안에 최상의 조합을 찾습니다. 
 
+## Bayesian Optimizatin
+
+사전 
+
+
 ## 구현 예
 
 ### Decision Tree를 이용하여 Wine을 구분
@@ -228,3 +233,5 @@ print(gs.best_params_)
 [XGBoost와 사이킷런을 활용한 그레이디언트 부스팅 - 한빛 미디어](https://github.com/rickiepark/handson-gb)
 
 [Comparing randomized search and grid search for hyperparameter estimation](https://scikit-learn.org/stable/auto_examples/model_selection/plot_randomized_search.html)
+
+[머신러닝·딥러닝 문제해결 전략 - 신백균, 골든래빗](https://github.com/BaekKyunShin/musthave_mldl_problem_solving_strategy)
