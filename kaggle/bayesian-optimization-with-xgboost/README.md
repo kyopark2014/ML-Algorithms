@@ -13,3 +13,5 @@
 [Bayes Optimization 기초부터 XGB까지](https://www.kaggle.com/code/toastls93/bayes-optimization-xgb/notebook)
 
 [Bayesian Optimization](https://github.com/fmfn/BayesianOptimization)
+
+[2019_2nd_ml_month_with_kakr](https://github.com/noveline4530/2019_2nd_ml_month_with_kakr)
