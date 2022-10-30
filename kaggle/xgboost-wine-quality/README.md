@@ -1,9 +1,16 @@
 # XGBoost를 이용한 Wine Quality 
 
-[Wine Quality Data Set](https://archive.ics.uci.edu/ml/datasets/wine+quality)를 이용하여 Regression 문제에 XGBoost를 사용합니다.
+[Wine Quality Data Set](https://archive.ics.uci.edu/ml/datasets/wine+quality)를 이용하여 Regression 문제에 XGBoost를 사용합니다. 이때 dataset의 형태는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/198870165-4992a598-8aa4-4682-a93f-3c2de1285449.png)
 
 [xgboost-wine-quality-EDA.ipynb
 ](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-EDA.ipynb)에서 data를 불러와서 Wrangling을 수행합니다. 
+
+이때의 Feature/Target의 Dataset은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/198870199-ee856ffb-d3a7-4a39-ac33-1c05c0dedd64.png)
+
 
 [wine_concat.csv](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/data/wine_concat.csv)와 같이 수정된 데이터를 저장한 후에, [xgboost-wine-quality.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality.ipynb)에서 로드하여 Regression 작업을 수행합니다. 여기서 얻어진 RMSE는 0.686 입니다. 
 
