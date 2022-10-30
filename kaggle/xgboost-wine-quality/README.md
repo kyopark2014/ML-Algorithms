@@ -7,7 +7,7 @@
 [xgboost-wine-quality-EDA.ipynb
 ](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-EDA.ipynb)에서 data를 불러와서 Wrangling을 수행합니다. 
 
-이때의 Feature/Target의 Dataset은 아래와 같습니다.
+이때의 수정된 특성(Feature) Dataset은 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/198870199-ee856ffb-d3a7-4a39-ac33-1c05c0dedd64.png)
 
