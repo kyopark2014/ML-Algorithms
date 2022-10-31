@@ -8,9 +8,13 @@ jupyter notebook으로 작성한 코드의 일부는 데이터의 구조를 이�
 
 [xgboost-wine-quality.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality.ipynb)는 [step1-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step1-xgboost-wine-quality.py)와 같이 변환됩니다.
 
-## Jupyter Notebook 코드를 함수로 리팩터링
+2) Python 함수로 리팩터링
 
-Jupyter 코드를 함수로 변경합니다. 함수로 변경하면 refactoring이 쉬워지고 유지 관리가 수월해집니다. 
+함수로 변경하면 refactoring이 쉬워지고 유지 관리가 수월하여 지므로, Jupyter 코드를 Python 함수로 변경합니다.
+
+[step1-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step1-xgboost-wine-quality.py)은 [step2-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step2-xgboost-wine-quality.py)로 변환할 수 있습니다. 
+
+
 
 ## 관련 작업을 위한 Python 스크립트 만들기
 
