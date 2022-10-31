@@ -280,6 +280,10 @@ print('\nElased time: %0.2fs' % (time.time()-start))
  'verbosity': None}
  ```
 
+## Model Saving
+[How to save and load Xgboost in Python?](https://mljar.com/blog/xgboost-save-load-python/)와 같이 model.save_model()로 'json' 또는 'txt'를 사용할 수 있습니다.
+
+또한, pickle.dump()로 memory snapshop을 만들어서 학습을 Resume 할 수 있습니다. 하지만 이 경우에 version에 주의하여야 합니다. 
 
 ## 기본 예제
 
@@ -305,3 +309,4 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 
 [Using XGBoost in Python Tutorial](https://www.datacamp.com/tutorial/xgboost-in-python)
 
+[How to save and load Xgboost in Python?](https://mljar.com/blog/xgboost-save-load-python/)
