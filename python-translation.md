@@ -2,9 +2,11 @@
 
 Jupyter 노트북으로 생성한 ML 알고리즘을 Python 코드로 변환하는 과정에 대해 설명합니다. 
 
-## 불필요한 코드 정리
+1) 불필요한 코드 정리
 
-실험중에 작성된 탐색등의 목적으로 작성한 코드를 제거합니다. 
+jupyter notebook으로 작성한 코드의 일부는 데이터의 구조를 이해하고, 도표로 이해하는 코드로서 본격적인 학습에서는 사용되지 않습니다. 
+
+[xgboost-wine-quality.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality.ipynb)는 [step1-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step1-xgboost-wine-quality.py)와 같이 변환됩니다.
 
 ## Jupyter Notebook 코드를 함수로 리팩터링
 
