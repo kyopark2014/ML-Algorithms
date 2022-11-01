@@ -29,6 +29,7 @@ if __name__ == '__main__':
     main()
 ```
 
+4) model
 
 
 ## 관련 작업을 위한 Python 스크립트 만들기
