@@ -1,5 +1,7 @@
 # XGBoost를 이용한 Wine Quality 
 
+## Training 
+
 [Wine Quality Data Set](https://archive.ics.uci.edu/ml/datasets/wine+quality)를 이용하여 Regression 문제에 XGBoost를 사용합니다. 이때 dataset의 형태는 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/198870165-4992a598-8aa4-4682-a93f-3c2de1285449.png)
@@ -93,7 +95,25 @@ RMSE: 0.734
 ![image](https://user-images.githubusercontent.com/52392004/198870049-3baa08af-6e8b-4cde-a61e-c9b5fbac0daa.png)
 
 
+## Inference 
 
+[Json 형태로 저장 및 읽기](https://github.com/kyopark2014/technical-summary/blob/main/json-manupulation.md#json-for-ml)을 참조하여, [xgboost-wine-quality-inference.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-inference.ipynb)와 같이 test dataset을 생성한 후에 학습되어 자장된 모델을 로드하여 Inference를 수행할 수 있습니다. 
+
+1) [xgboost-wine-quality.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality.ipynb)와 같이 model을 저장합니다. 
+
+```python
+model_name = "./output/xgboost_wine_quality.json"
+
+model.save_model(model_name)
+```
+
+2) [xgboost-wine-quality-inference.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-inference.ipynb)와 같이 test dataset에서 일부를 sample로 저장합니다. 
+
+```python
+X_test[:2].to_json('samples.json',orient='records')
+```
+
+3)
 
 ## Reference
 
