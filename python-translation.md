@@ -25,7 +25,13 @@ jupyter notebook에서 데이터의 구조를 이해하고, 도표를 작성할�
 
 [step1-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step1-xgboost-wine-quality.py)은 [step2-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step2-xgboost-wine-quality.py)와 같이 함수로 변환할 수 있습니다. 
 
-4) 
+여기서, main은 진입점(entry point)이므로 실행중인지 여부를 확인하여 아래처럼 사용합니다. 
+
+```python
+if __name__ == '__main__':
+    main()
+```
+
 
 
 ## 관련 작업을 위한 Python 스크립트 만들기
