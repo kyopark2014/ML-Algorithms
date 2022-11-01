@@ -113,7 +113,20 @@ model.save_model(model_name)
 X_test[:2].to_json('samples.json',orient='records')
 ```
 
-3)
+3) json으로된 "sample.json"을 로드후 inference를 수행합니다.
+
+```python
+records = pd.read_json('samples.json')
+data = pd.DataFrame(records)
+
+model.predict(data)
+```
+
+이때의 결과는 아래와 같습니다. 
+
+```python
+array([6.4810886, 4.7421913], dtype=float32)
+```
 
 ## Reference
 
