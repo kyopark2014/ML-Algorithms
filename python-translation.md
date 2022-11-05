@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
 4) Inference
 
-[xgboost-wine-quality-inference.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-inference.ipynb)을 참조하여 inference를 위한 python을 [xgboost-wine-quality-inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/xgboost-wine-quality-inference.py)과 같이 생성합니다 
+[xgboost-wine-quality-inference.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-inference.ipynb)을 참조하여 추론(inference)를 위한 python을 [inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)을 생성합니다. 추론 동작을 확인하기 위해 [inference-test.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference-test.py)에서는 [samples.json](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/data/samples.json)을 로드하여, event 입력을 생성하여 [inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)의 handler 함수를 호출합니다. 
 
 
 ## Reference 
