@@ -26,7 +26,10 @@ if __name__ == '__main__':
 
 4) Inference
 
-[xgboost-wine-quality-inference.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-inference.ipynb)을 참조하여 추론(inference)를 위한 [inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)을 생성합니다. 추론 동작을 확인하기 위해 [inference-test.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference-test.py)에서는 [samples.json](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/data/samples.json)을 로드하여, event 입력을 생성하여 [inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)의 handler 함수를 호출합니다. 
+[xgboost-wine-quality-inference.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality-inference.ipynb)을 참조하여 추론(inference)를 위한 python 코드를 생성합니다. 추론을 위해서는 학습시 저장한 모델을 부르고, RESTful API 특성에 맞춰서 event를 처리할 수 있어야 합니다. 
+[inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)은 학습한 모델을 로드하고, event를 parsing하여 predict()에서 사용할 수 있는 포맷으로 변환한 다음에 추론을 수행하고, 결과를 리턴값으로 전달하는 것을 보여줍니다. 
+
+추론 동작을 확인하기 위해 [inference-test.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference-test.py)에서는 [samples.json](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/data/samples.json)을 로드하여, RESTful API에서 사용하는 event의 형태를 만든후에, [inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)의 handler 통해 추론 동작을 수행합니다. 따라서, 실제 인프라를 구축하여 추론 API를 생성하기 전에 [inference.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/inference.py)의 동작을 검증할 수 있습니다. 
 
 
 ## Reference 
