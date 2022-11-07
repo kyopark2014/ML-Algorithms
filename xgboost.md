@@ -9,7 +9,6 @@ XGBoost는 여러개의 머신러닝 모델(basic learner)를 연결하여 사�
 - 학습데이터셋의 missing value도 처리 가능합니다.
 - 높은 성능을 보여줍니다. 
 - scikit-learn에서 지원하지 않습니다. 
-- XGBClassifier 클래스에서 tree_method=‘hist’로 지정하여 히스토그램 기반 그레이디언트 부스팅 알고리즘을 사용합니다. 
 
 ### 속도 향상
 
