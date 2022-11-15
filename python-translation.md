@@ -6,7 +6,7 @@ Jupyter 노트북으로 생성한 ML 알고리즘을 Python 코드로 변환하�
 1) 확장자가 ipyb인 jupyter notebook 파일을 아래 명령어를 이용하여 python 파일로 변환 합니다. 
 
 ```java
-jupyter nbconvert jupyter nbconvert xgboost-wine-quality.ipynb --to script --output step0-xgboost-wine-quality
+jupyter nbconvert xgboost-wine-quality.ipynb --to script --output step0-xgboost-wine-quality
 ```
 [xgboost-wine-quality.ipynb](https://github.com/kyopark2014/ML-Algorithms/blob/main/kaggle/xgboost-wine-quality/xgboost-wine-quality.ipynb)을 상기 명령어로 변환하면, [step0-xgboost-wine-quality.py](https://github.com/kyopark2014/ML-xgboost/blob/main/wine-quality/src/step0-xgboost-wine-quality.py)와 같이 python 파일로 변환할 수 있습니다. 
 
