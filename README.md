@@ -10,7 +10,7 @@
 
 - 머신러닝(ML, Machine Learning)은 규칙을 프로그래밍하지 않아도 자동으로 데이터에서 규칙을 학습합니다.
 
-- [딥러닝(DL, Deep Learning)](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md)은 인공 신경망에 기반한 머신러닝으로서 TensorFlow, PyTorch가 해당됩니다. 
+- [딥러닝(DL, Deep Learning)](https://github.com/kyopark2014/deep-learning-algorithms/blob/main/deep-learning.md)은 인공 신경망에 기반한 머신러닝으로서 TensorFlow, PyTorch가 해당됩니다. 
 
 <!-- <img width="381" alt="image" src="https://user-images.githubusercontent.com/52392004/187052186-e3c810ed-1487-425e-8e91-93307dccfbc9.png"> -->
 
@@ -44,6 +44,7 @@ Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 �
 
 ## Deep Learning
 
+[Deep Learning Algorithms](https://github.com/kyopark2014/deep-learning-algorithms)에서는 Deep Learning에 대한 설명 및 예제에 대해 다루고 있습니다. 
 
 ## 모델 과적합 방지
 
