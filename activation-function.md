@@ -69,6 +69,10 @@ Leaky ReLU는 아래와 같은 그래프입니다.
 <img width="459" alt="image" src="https://user-images.githubusercontent.com/52392004/193482494-bcac05ec-8200-4875-82eb-fc0d7bbbcc3d.png">
 
 
+
+
+
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
