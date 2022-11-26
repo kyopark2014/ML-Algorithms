@@ -71,9 +71,7 @@ Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 �
 
 ## Machine Learning Examples
 
-[XGBoost로 보험 사기 검출](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)
-
-[XGBoost로 Breast cancer 분석](https://github.com/kyopark2014/ML-xgboost/tree/main/breast-cancer)
+[XGBoost Algorithms](https://github.com/kyopark2014/ML-xgboost)에서는 XGBoost를 사용한 다양한 사례에 대해 설명합니다. 
 
 ## 각종 유용한 라이브러리
 
