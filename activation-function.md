@@ -38,7 +38,7 @@ Hyperbolic Tangent(tanh)는 선형함수의 결과를 -1에서 1사이에서 비
 
 - 입력(x)이 음수일때는 0을 출력하고, 양수일때는 x를 출력합니다. 
 
-- 경사 하강법(Gradent descent)에 영향을 주지 않아서 학습 속도가 빠릅니다. 
+- 경사 하강법(Gradent descent)에 영향을 주지 않아서 학습 속도가 빠릅니다. Hyperbolic Tangent(tanh)에 비하여 속도가 6배 빠릅니다. 
 
 - 음수값을 입력 받으면 항상 0을 출력하기 때문에 학습능력이 감소하므로 [Leaky ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#leaky-relu) 함수를 사용하기도 합니다. 
 
