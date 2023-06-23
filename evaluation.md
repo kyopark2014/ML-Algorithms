@@ -75,6 +75,10 @@ F1 Score: 0.95
 
 ROC 곡선 (receiver operating characteristics curve)은 거짓 양성 비율(FPR) 대비 양성 비율(TPR) 그래프입니다. FPR은 FP / (FP+TN)이며 TPR은 재현율의 다른이름입니다. 아래의 면적이 roc_auc_score()입니다. 
 
+-  What is a receiver operating characteristic (ROC) curve? A graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied
+
+-  The ROC curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. The true positive rate is also known as sensitivity, recall, or probability of detection in machine learning. The false positive rate is also known as the fallout or probability of false alarm and can be calculated as (1 − specificity).
+
 ### AUC 
 
 AUC (Area under the curve)는 ROC 곡선 아래 면적을 말합니다. 예측값이 확률인 분류 문제에 사용합니다. 
