@@ -25,9 +25,11 @@
 
 특성공학(Feature Engineering)은 주어진 특성을 조합하여 새로운 특성을 만드는 과정입니다. 
 
-Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work (e.g., separating time from a date/time field, combining fields — height/weight). Feature engineering can improve model accuracy and speed up training.
+- Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work (e.g., separating time from a date/time field, combining fields — height/weight). Feature engineering can improve model accuracy and speed up training.
 
 - Feature transfomation: Putting data in a format optimized for machine learning and generalization
+
+- Feature selection (variable selection, attribute selection) is the process of selecting a subset of relevant features (independent variables, predictors) for use in model construction. Feature selection can improve model accuracy, simplify models, shorten model training times, and reduce overfitting.
 
 - Correlation analysis is a method of statistical evaluation used to study the strength of a relationship between two, numerically measured, continuous variables (e.g., height and weight). This particular type of analysis is useful when a researcher wants to establish if there are possible connections between variables.
 
