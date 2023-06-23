@@ -47,6 +47,8 @@
 
 Clustering의 대표적인 예로 k-Means가 있습니다. [k-Means](https://github.com/kyopark2014/ML-Algorithms/blob/main/k-means.md)는 비지도학습(Unsupervised Learning)으로 정답 label이 없는 데이터에서 유사도를 기준으로 k개의 군집으로 분류할 수 있습니다. 
 
+-  K-means is an unsupervised learning algorithm. It attempts to find discrete groupings within data, where members of a group are as similar as possible to one another and as different as possible from members of other groups. You define the attributes you want the algorithm to use to determine similarity.
+
 Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 있습니다. [PCA](https://github.com/kyopark2014/ML-Algorithms/blob/main/pca.md)를 이용해 데이터의 분산(variance)을 최대한 보존하면서 축소된 데이터를 학습데이터로 사용할수 있습니다. 
 
 
