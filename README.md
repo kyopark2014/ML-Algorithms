@@ -31,6 +31,8 @@ Feature engineering is the process of using domain knowledge of the data to crea
 
 - Correlation analysis is a method of statistical evaluation used to study the strength of a relationship between two, numerically measured, continuous variables (e.g., height and weight). This particular type of analysis is useful when a researcher wants to establish if there are possible connections between variables.
 
+- Label encoding: Converting categorical text data into model-understandable numerical data
+
 ## Machine Learning
 
 ### Supervised Learning
