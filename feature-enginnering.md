@@ -1,5 +1,8 @@
 # 특성공학(Feature Engineering)을 이용한 농어 예측
 
+Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work (e.g., separating time from a date/time field, combining fields — height/weight). Feature engineering can improve model accuracy and speed up training.
+
+
 [Feature Engineering 상세코드](https://github.com/kyopark2014/ML-Algorithms/blob/main/src/feature_enginnering.ipynb)에서는 농어의 무게를 예측하는 예제입니다. 
 
 1) [Polynomial Regression](https://github.com/kyopark2014/ML-Algorithms/blob/main/polynomial-regression.md)에서 이용한 데이터를 로드하고, train/test set을 분리합니다. 
