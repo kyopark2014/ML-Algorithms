@@ -27,6 +27,7 @@
 
 Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work (e.g., separating time from a date/time field, combining fields — height/weight). Feature engineering can improve model accuracy and speed up training.
 
+* Feature transfomation: Putting data in a format optimized for machine learning and generalization
 
 ## Machine Learning
 
