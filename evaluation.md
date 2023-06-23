@@ -79,7 +79,7 @@ ROC 곡선 (receiver operating characteristics curve)은 거짓 양성 비율(FP
 
 AUC (Area under the curve)는 ROC 곡선 아래 면적을 말합니다. 예측값이 확률인 분류 문제에 사용합니다. 
 
-
+AUC/ROC: The Area Under the ROC (Receiver Operating Characteristic) Curve (AUC). AUC measures the ability of the model to predict a higher score for positive examples as compared to negative examples. Because it is independent of the score cut-off, you can get a sense of the prediction accuracy of your model from the AUC metric without picking a threshold.
 
 ## 회귀(Regression)의 평가 지표
 
