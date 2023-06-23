@@ -48,7 +48,7 @@ Sensitivity 또는 true positive rate (TPR)로도 생각할 수 있습니다.
 
 - 스팸을 분류할때 스팸을 많이 찾기 위하여 재현율(Recall)을 중시하면, 정상 메일이 스펨으로 분류될수 있어서, 바람직하지 않은 결과일 수 있습니다. 
 
-
+- Recall measures the fraction of actual positives predicted as positive. In this case, we want to filter out content unacceptable for children and would prefer to include false positives where the model is uncertain. Since Recall may include false positives, we can be more confident that the model is excluding unsafe content, even if it may incorrectly classify some content that would otherwise be considered safe.
 
 
 
