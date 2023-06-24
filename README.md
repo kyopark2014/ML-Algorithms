@@ -8,7 +8,7 @@
 
 - 인공지능(AI, Artificial Intelligence)은 사람처럼 학습하고 추론할 수 있는 지능을 가진 시스템을 만드는 기술을 의미합니다.
 
-- 머신러닝(ML, Machine Learning)은 규칙을 프로그래밍하지 않아도 자동으로 데이터에서 규칙을 학습합니다. 범용적인 목적에 적합하지만, 주어진 데이터에 대한 특성 추출(Feature Extraction)을 인간이 처리(전처리)합니다. 
+- 머신러닝(ML, Machine Learning)은 규칙을 프로그래밍하지 않아도 자동으로 데이터에서 규칙을 학습합니다. 범용적인 목적에 적합하지만, 주어진 데이터에 대한 특성 추출(Feature Extraction)을 인간이 처리(전처리)해야 합니다.
 
 - [딥러닝(DL, Deep Learning)](https://github.com/kyopark2014/deep-learning-algorithms/blob/main/deep-learning.md)은 인공 신경망에 기반한 머신러닝으로서 TensorFlow, PyTorch가 해당됩니다. 대량의 데이터를 신경망에 적용하면 컴퓨터가 스스로 분석하여 특성 추출(Feature Extraction)을 수행합니다. 
 
