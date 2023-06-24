@@ -6,7 +6,7 @@
 
 
 
-Activation Function에는 Hard Limit, [Signoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid), [ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#relu), [Leaky ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#leaky-relu)가 있으며, 아래와 같이 여러종류의 Activation Function이 Deep Learning등에서 활용되고 있습니다. 
+Activation Function에는 Hard Limit, [Sigmoid](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#sigmoid), [ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#relu), [Leaky ReLU](https://github.com/kyopark2014/ML-Algorithms/blob/main/activation-function.md#leaky-relu)가 있으며, 아래와 같이 여러종류의 Activation Function이 Deep Learning등에서 활용되고 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/187075789-d80d2ec9-f16e-4fbe-90f8-16ebaca88752.png)
 
@@ -23,7 +23,7 @@ CNN의 Conv2D에서 activation function의 기본값입니다. 입력 뉴런과 
 
 ![image](https://user-images.githubusercontent.com/52392004/185773923-7ca38926-f792-46c6-b339-f8459c2fea8c.png)
 
-signoid를 쓰면 미분값이 0.25이 되므로 [Gradient vanishing problem](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-vanishing--exploding)이 발생하는데 이를 해결하기 위해 ReLU등이 활용됩니다. 
+sigmoid를 쓰면 미분값이 0.25이 되므로 [Gradient vanishing problem](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md#gradient-vanishing--exploding)이 발생하는데 이를 해결하기 위해 ReLU등이 활용됩니다. 
 
 ### tanh
 
