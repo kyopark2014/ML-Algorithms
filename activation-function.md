@@ -10,7 +10,7 @@ Activation Function에는 Hard Limit, [Sigmoid](https://github.com/kyopark2014/M
 
 ![image](https://user-images.githubusercontent.com/52392004/187075789-d80d2ec9-f16e-4fbe-90f8-16ebaca88752.png)
 
-[Nueral Network - Activation Function](https://github.com/kyopark2014/ML-Algorithms/blob/main/deep-learning.md#activation-function)에서는 신경망에서 Activation Function에 대해 예제를 보여주고 있습니다. 
+[Neural Network - Activation Function](https://github.com/kyopark2014/deep-learning-algorithms/blob/main/deep-learning.md#activation-function-1)에서는 신경망에서 Activation Function에 대해 예제를 보여주고 있습니다. 
 
 
 ### Linear
