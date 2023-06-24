@@ -70,5 +70,5 @@
 
 [Confusion Matrix (오차행렬)](https://github.com/kyopark2014/ML-Algorithms/blob/main/confusion-matrix.md)
 
-[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)
+[손실함수(Loss Function)](https://github.com/kyopark2014/deep-learning-algorithms/blob/main/loss-function.md)
 
