@@ -51,7 +51,7 @@ Classifier에서 score() method 호출시, 분류(Classification)에서는 [정�
  
 ## Stochastic Gradient Descent
 
-[확률적경사하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/ML-Algorithms/blob/main/stochastic-gradient-descent.md)은 Train set에서 샘플을 무작위로 하나씩 꺼내 손실 함수의 경사를 계산하고 손실이 작아지는 방향으로 파라미터를 업데이트하는 알고리즘입니다. 
+[확률적경사하강법 (Stochastic Gradient Descent)](https://github.com/kyopark2014/deep-learning-algorithms/blob/main/stochastic-gradient-descent.md)은 Train set에서 샘플을 무작위로 하나씩 꺼내 손실 함수의 경사를 계산하고 손실이 작아지는 방향으로 파라미터를 업데이트하는 알고리즘입니다. 
 
 Hyperper Parameter로 learning rate(step size와 epoch가 있습니다.
 
