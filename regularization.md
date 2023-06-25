@@ -16,8 +16,6 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/187076564-174edbf0-26ba-434f-937c-6a8e8e9e46e7.png)
 
-[규제 (Regularization)](https://github.com/kyopark2014/ML-Algorithms/blob/main/regularization.md)을 이용하여 과대적합을 방지할 수 있습니다. 
-
 Regularization과 Epoch를 비교하면 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/186548434-d12e684a-d139-414a-8fe6-e449b4348354.png)
