@@ -75,7 +75,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/186549328-8373f016-8cf1-4099-9bca-8f11ed8359fc.png)
 
-alpha=1일때의 결정게수를 아래처럼 구할 수 있습니다. 
+alpha=1일때의 결정계수를 아래처럼 구할 수 있습니다. 
 
 ```python
 ridge = Ridge(alpha=1)
