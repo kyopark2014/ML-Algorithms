@@ -47,7 +47,7 @@ Classifier에서 score() method 호출시, 분류(Classification)에서는 [정�
 
 ## Loss Function
 
-[손실함수(Loss Function)](https://github.com/kyopark2014/ML-Algorithms/blob/main/loss-function.md)는 예측값과 실제 정답간의 차이를 표현하는 함수입니다. 
+[손실함수(Loss Function)](https://github.com/kyopark2014/deep-learning-algorithms/blob/main/loss-function.md)는 예측값과 실제 정답간의 차이를 표현하는 함수입니다. 
  
 ## Stochastic Gradient Descent
 
