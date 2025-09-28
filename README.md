@@ -98,6 +98,10 @@ Dimensionally Reduction의 예로서는 PCA (Principal Component Analysis)가 �
 노트북으로 작성한 ML 알고리즘을 [Python 코드로 변환](https://github.com/kyopark2014/ML-Algorithms/blob/main/python-translation.md)합니다. 
 
 
+## LLM
+
+[Transformer 모델의 이론적 이해](./transformer.md)
+
 ## Reference
 
 [혼자 공부하는 머신러닝+딥러닝](https://github.com/rickiepark/hg-mldl)
