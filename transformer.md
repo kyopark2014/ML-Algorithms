@@ -1,7 +1,7 @@
 # Transformer 모델의 이론적 이해
 
 ## 1. Transformer 모델의 기본 개념과 등장 배경
-Transformer 모델은 2017년 Google의 연구팀이 "Attention Is All You Need"라는 논문에서 처음 소개한 신경망 아키텍처입니다. 이전까지 자연어 처리(NLP) 분야에서는 주로 RNN(Recurrent Neural Network), LSTM(Long Short-Term Memory), GRU(Gated Recurrent Unit)와 같은 순환 신경망이 사용되었어요.
+Transformer 모델은 2017년 Google의 연구팀이 "Attention Is All You Need"라는 논문에서 처음 소개한 신경망 아키텍처입니다. 이전까지 자연어 처리(NLP) 분야에서는 주로 RNN(Recurrent Neural Network), LSTM(Long Short-Term Memory), GRU(Gated Recurrent Unit)와 같은 순환 신경망이 사용되었습니다.
 
 순환 신경망 모델들은 두 가지 큰 한계가 있었습니다:
 
