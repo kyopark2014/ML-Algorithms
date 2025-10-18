@@ -156,5 +156,6 @@ Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중
 5. [[1706.03762] Attention Is All You Need](https://arxiv.org/abs/1706.03762), |  |  | --- || Comments: | 15 pages, 5 figures || Subjects: | Computation and Language (cs.CL); Mach...
 
 
+[LLM 설명 (요약버전](https://www.youtube.com/watch?v=HnvitMTkXro)
 
 [트랜스포머, ChatGPT가 트랜스포머로 만들어졌죠. - DL5](https://www.youtube.com/watch?v=g38aoGttLhI)
