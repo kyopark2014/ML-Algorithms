@@ -146,7 +146,12 @@ Transformer는 현대 AI의 발전에 혁명적인 영향을 미쳤습니다:
 
 Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중요한 아키텍처로 자리 잡았으며, 현재 ChatGPT와 같은 대화형 AI 시스템의 기반 기술로 활용되고 있습니다. 이러한 영향력은 앞으로도 계속될 것으로 예상됩니다.
 
-이상으로 Transformer 모델의 이론적 이해에 대한 설명을 마치겠습니다. 혹시 더 자세히 알고 싶은 부분이 있으시면 편하게 질문해 주세요!
+
+## 요점
+
+Transformer의 입력은 Word embedding + Positional encoding으로 구성됩니다. Word embedding은 문장을 token 단위 변환하고, Positional encoding(위치)를 추가합니다.
+
+
 
 ### Reference
 1. [Attention Is All You Need](https://en.wikipedia.org/wiki/Attention_Is_All_You_Need), "Attention Is All You Need" is a 2017 landmark research paper in machine learning authored by eight ...
