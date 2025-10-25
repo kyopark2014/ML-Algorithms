@@ -150,7 +150,7 @@ Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중
 ## 요점
 
 - Transformer의 입력은 Word embedding + Positional encoding으로 구성됩니다. Word embedding은 문장을 token 단위 변환하고, Positional encoding(위치)를 추가합니다.
-- Attention score는 현재의 query vector와 모든 key vector를 내적하고 이를 softmax를 이용해 총합이 1인 score로 만듧니다.
+- Attention score는 현재의 query vector와 모든 key vector를 내적하고 이를 number of head로 나눈 후, softmax를 이용해 총합이 1인 score로 만듧니다.
 
 
 
