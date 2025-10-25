@@ -150,7 +150,9 @@ Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중
 ## 요점
 
 - Transformer의 입력은 Word embedding + Positional encoding으로 구성됩니다. Word embedding은 문장을 token 단위 변환하고, Positional encoding(위치)를 추가합니다.
-- Attention score는 현재의 query vector와 모든 key vector를 내적하고 이를 number of head로 나눈 후, softmax를 이용해 총합이 1인 score로 만듧니다.
+- Attention score는 현재의 query vector와 모든 key vector를 내적하고 이를 number of head로 나눈 후, softmax를 이용해 총합이 1인 score로 만듧니다. 이것은 [핵심 머신러닝 Transformer](https://www.youtube.com/watch?v=a_-YgMO0u0E)와 같이 나타낼 수 있습니다.
+
+<img width="496" height="225" alt="image" src="https://github.com/user-attachments/assets/60c09346-991f-410d-b708-33f6d54c0eb2" />
 
 
 
@@ -165,3 +167,5 @@ Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중
 [LLM 설명 (요약버전](https://www.youtube.com/watch?v=HnvitMTkXro)
 
 [트랜스포머, ChatGPT가 트랜스포머로 만들어졌죠. - DL5](https://www.youtube.com/watch?v=g38aoGttLhI)
+
+[핵심 머신러닝 Transformer](https://www.youtube.com/watch?v=a_-YgMO0u0E)
