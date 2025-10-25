@@ -154,6 +154,8 @@ Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중
 
 <img width="496" height="225" alt="image" src="https://github.com/user-attachments/assets/60c09346-991f-410d-b708-33f6d54c0eb2" />
 
+- 서로 다른 weight (multi head)를 사용하면, 해당 문장에 대한 다른 view를 반영할 수 있습니다.
+- 
 
 
 ### Reference
