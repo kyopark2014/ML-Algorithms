@@ -171,3 +171,6 @@ Transformer는 2017년 등장 이후 AI 연구와 응용 분야에서 가장 중
 [트랜스포머, ChatGPT가 트랜스포머로 만들어졌죠. - DL5](https://www.youtube.com/watch?v=g38aoGttLhI)
 
 [핵심 머신러닝 Transformer](https://www.youtube.com/watch?v=a_-YgMO0u0E)
+
+[Lecture 9. Attention Mechanism & Transformers I](https://www.youtube.com/watch?v=DVCbOfd09w8)
+
